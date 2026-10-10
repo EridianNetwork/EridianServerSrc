@@ -326,7 +326,7 @@ func (s *EnetServer) opGetAllFriendsPresence(sess *ClientSession, opCode byte, p
 			log.Printf("[PHOTON] GetCharacterByID error: %v", err)
 			continue
 		}
-		resp[idx] = s.presenceHT(ch.CharID, charToHashtable(ch, realInventoryHashtable(ch.CharID)), s.isCharOnline(ch.CharID), charLastSeenUnix(ch))
+		resp[idx] = s.presenceHT(ch.CharID, ch, s.isCharOnline(ch.CharID), charLastSeenUnix(ch))
 		idx++
 	}
 	s.sendOpResponse(sess, opCode, 0, resp)
@@ -345,7 +345,7 @@ func (s *EnetServer) opSearchCharacter(sess *ClientSession, opCode byte, params 
 		s.sendOpResponse(sess, opCode, -1, map[byte]any{})
 		return
 	}
-	s.sendOpResponse(sess, opCode, 0, map[byte]any{0: s.presenceHT(ch.CharID, charToHashtable(ch, realInventoryHashtable(ch.CharID)), s.isCharOnline(ch.CharID), charLastSeenUnix(ch))})
+	s.sendOpResponse(sess, opCode, 0, map[byte]any{0: s.presenceHT(ch.CharID, ch, s.isCharOnline(ch.CharID), charLastSeenUnix(ch))})
 }
 
 func (s *EnetServer) opUpdateCharacterInfo(sess *ClientSession, opCode byte, params map[byte]any) {
@@ -779,24 +779,33 @@ func charLastSeenUnix(ch *domain.Character) int32 {
 	return int32(t.Unix())
 }
 
-func (s *EnetServer) presenceHT(charID int64, charHT map[int]any, online bool, lastSeen int32) map[int]any {
-	gold := int32(0)
-	if stats, ok := charHT[10].(map[int]any); ok {
-		gold = asInt32(stats[1])
+func (s *EnetServer) presenceHT(charID int64, ch *domain.Character, online bool, lastSeen int32) map[int]any {
+	avatarType := ch.ClassType
+	avatarID := int(AvatarDefaultBkID[avatarType])
+	if ch.AvatarID != 0 {
+		avatarID = int(ch.AvatarID)
+	}
+	avatarParts := ch.AvatarParts
+	if avatarParts == "" || !strings.Contains(avatarParts, ",") {
+		avatarParts = AvatarDefaultParts
+	}
+	avatarMats := ch.AvatarMaterials
+	if avatarMats == "" || !strings.Contains(avatarMats, ",") {
+		avatarMats = AvatarDefaultParts
 	}
 	ht := map[int]any{
-		0:  charHT[0],
+		0:  int32(ch.CharID),
 		1:  online,
 		2:  lastSeen,
 		3:  int32(0),
-		4:  charHT[4],
-		5:  charHT[3],
-		6:  gold,
-		7:  charHT[5],
-		8:  charHT[6],
-		9:  charHT[7],
-		10: charHT[8],
-		11: charHT[2],
+		4:  int32(ch.Level),
+		5:  int32(ch.Experience),
+		6:  int32(ch.Money),
+		7:  int32(avatarType),
+		8:  avatarParts,
+		9:  avatarMats,
+		10: avatarID,
+		11: ch.Name,
 		13: int32(0),
 		14: int32(0),
 		15: int32(0),
@@ -811,7 +820,7 @@ func (s *EnetServer) broadcastPresenceUpdate(charID int64) {
 	if err != nil {
 		return
 	}
-	ht := s.presenceHT(charID, charToHashtable(ch, realInventoryHashtable(charID)), s.isCharOnline(charID), charLastSeenUnix(ch))
+	ht := s.presenceHT(charID, ch, s.isCharOnline(charID), charLastSeenUnix(ch))
 	friendIDs, err := db.GetFriendCharIDs(charID)
 	if err != nil {
 		return

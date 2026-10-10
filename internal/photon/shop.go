@@ -43,7 +43,11 @@ func shopItemHashtable(it *domain.InventoryItem) map[int]any {
 	ht := itemDNAHashtable(it)
 	n := len(ht)
 	ht[n] = int32(it.Price)
-	ht[n+1] = int32(1)
+	quantity := int32(1)
+	if it.ItemKind == domain.ItemTypeMaterial {
+		quantity = materialShopItemQuantity(it.ResourceID)
+	}
+	ht[n+1] = quantity
 	return ht
 }
 

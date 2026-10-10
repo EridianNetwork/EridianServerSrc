@@ -59,11 +59,89 @@ type xmlEconomicSettings struct {
 	PriceSettings []xmlItemPriceSetting `xml:"m_priceSettings>m_itemPriceSetting"`
 }
 
+type xmlMaterialShopItem struct {
+	ItemType     string `xml:"m_itemType"`
+	MaterialType string `xml:"m_materialType"`
+	Value        int    `xml:"m_value"`
+	Quantity     int    `xml:"m_quantity"`
+}
+
+type xmlMaterialShopEntry struct {
+	ID    int                   `xml:"m_id"`
+	Items []xmlMaterialShopItem `xml:"m_items>m_item"`
+}
+
+type xmlMaterialShopFile struct {
+	Shops []xmlMaterialShopEntry `xml:"m_shop"`
+}
+
+type materialShopEntry struct {
+	MaterialType int
+	Stack        int
+	Stock        int
+}
+
 var (
 	shopConfigOnce sync.Once
 	shopSetup      xmlShopSetup
 	economicSetup  xmlEconomicSettings
+
+	materialShopOnce    sync.Once
+	materialShopCatalog = map[int][]materialShopEntry{}
 )
+
+func loadMaterialShopCatalog() {
+	materialShopOnce.Do(func() {
+		raw, err := os.ReadFile("data/shop/MaterialShop.xml")
+		if err != nil {
+			log.Printf("[SHOP] data/shop/MaterialShop.xml not found: %v", err)
+			return
+		}
+		var file xmlMaterialShopFile
+		if err := xml.Unmarshal(raw, &file); err != nil {
+			log.Printf("[SHOP] bad MaterialShop.xml: %v", err)
+			return
+		}
+		total := 0
+		for _, shop := range file.Shops {
+			var entries []materialShopEntry
+			for _, it := range shop.Items {
+				if it.ItemType != "Material" && it.ItemType != "Materials" {
+					log.Printf("[SHOP] MaterialShop.xml shop %d: skipped unsupported item type %q", shop.ID, it.ItemType)
+					continue
+				}
+				mt, ok := materialTypeValues[it.MaterialType]
+				if !ok {
+					log.Printf("[SHOP] MaterialShop.xml shop %d: unknown material %q", shop.ID, it.MaterialType)
+					continue
+				}
+				stack, stock := it.Value, it.Quantity
+				if stack < 1 {
+					stack = 1
+				}
+				if stock < 1 {
+					stock = 1
+				}
+				entries = append(entries, materialShopEntry{MaterialType: mt, Stack: stack, Stock: stock})
+				total++
+			}
+			materialShopCatalog[shop.ID] = entries
+		}
+		log.Printf("[SHOP] loaded %d material shop entries across %d shops", total, len(materialShopCatalog))
+	})
+}
+
+func materialShopItemQuantity(resourceID int) int32 {
+	loadMaterialShopCatalog()
+	for _, entries := range materialShopCatalog {
+		for _, e := range entries {
+			if e.MaterialType == resourceID {
+				return int32(e.Stock)
+			}
+		}
+	}
+	return 1
+}
 
 func loadShopConfig() {
 	shopConfigOnce.Do(func() {
@@ -381,6 +459,7 @@ var (
 
 func getShopStock(shopID int, charID int64, level, class int) (*shopStock, *xmlShop) {
 	loadShopConfig()
+	loadMaterialShopCatalog()
 	var cfg *xmlShop
 	for i := range shopSetup.Shops {
 		if shopSetup.Shops[i].ID == shopID {
@@ -402,11 +481,24 @@ func getShopStock(shopID int, charID int64, level, class int) (*shopStock, *xmlS
 		return stock, cfg
 	}
 
-	items := make([]*domain.InventoryItem, 0, shopStockSlots)
-	for i := 0; i < shopStockSlots && len(cfg.Availability) > 0; i++ {
-		avail := cfg.Availability[i%len(cfg.Availability)]
-		if it := rollShopItem(avail, level, class); it != nil {
-			items = append(items, it)
+	var items []*domain.InventoryItem
+	if entries, ok := materialShopCatalog[shopID]; ok {
+		for _, e := range entries {
+			items = append(items, &domain.InventoryItem{
+				ItemKind:   domain.ItemTypeMaterial,
+				ResourceID: e.MaterialType,
+				Quantity:   e.Stack,
+				Price:      shopItemPrice(domain.ItemTypeMaterial, 0, 1),
+				UID:        newShopItemUID(),
+			})
+		}
+	} else {
+		items = make([]*domain.InventoryItem, 0, shopStockSlots)
+		for i := 0; i < shopStockSlots && len(cfg.Availability) > 0; i++ {
+			avail := cfg.Availability[i%len(cfg.Availability)]
+			if it := rollShopItem(avail, level, class); it != nil {
+				items = append(items, it)
+			}
 		}
 	}
 	stock = &shopStock{LastGenerated: now, Items: items}

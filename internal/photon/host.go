@@ -7020,9 +7020,10 @@ func (s *EnetServer) hostPersistPickup(room *Room, sess *ClientSession, view int
 		return -1
 	}
 	log.Printf("[HOST] user=%s picked up %q (kind=%d) view=%d -> backpack slot=%d", sess.userID, granted.ItemName, granted.ItemKind, view, slot)
-	s.sendEventTo(sess, EvInventoryUpdated, map[byte]any{0: realInventoryHashtable(sess.hostChar.CharID)})
+	invHT := realInventoryHashtable(sess.hostChar.CharID)
+	s.sendEventTo(sess, EvInventoryUpdated, map[byte]any{0: invHT})
 	if online := s.sessionOnline(sess.userID); online != nil {
-		s.sendEventTo(online, EvInventoryUpdated, map[byte]any{0: realInventoryHashtable(sess.hostChar.CharID)})
+		s.sendEventTo(online, EvInventoryUpdated, map[byte]any{0: invHT})
 	}
 	gamemode := gamemodeName(room)
 	if gamemode != "GameModeTown" && gamemode != "GamemodeRV" && sess.avatarBase != 0 {

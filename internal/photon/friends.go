@@ -76,7 +76,7 @@ func (s *EnetServer) opFriendAccept(sess *ClientSession, opCode byte, params map
 	log.Printf("[PHOTON] FriendAccept charID=%d + charID=%d", sess.selectedCharID, senderCharID)
 
 	if ch, err := db.GetCharacterByID(sess.selectedCharID); err == nil {
-		selfPresence := s.presenceHT(ch.CharID, charToHashtable(ch, realInventoryHashtable(ch.CharID)), s.isCharOnline(ch.CharID), charLastSeenUnix(ch))
+		selfPresence := s.presenceHT(ch.CharID, ch, s.isCharOnline(ch.CharID), charLastSeenUnix(ch))
 		for _, other := range s.sessions {
 			if other.selectedCharID == senderCharID {
 				s.sendEventTo(other, EvNewFriend, map[byte]any{0: selfPresence})
@@ -85,7 +85,7 @@ func (s *EnetServer) opFriendAccept(sess *ClientSession, opCode byte, params map
 	}
 	if ch, err := db.GetCharacterByID(senderCharID); err == nil {
 		log.Printf("[PHOTON] GetCharacterByID error: %v", err)
-		s.sendEventTo(sess, EvNewFriend, map[byte]any{0: s.presenceHT(ch.CharID, charToHashtable(ch, realInventoryHashtable(ch.CharID)), s.isCharOnline(ch.CharID), charLastSeenUnix(ch))})
+		s.sendEventTo(sess, EvNewFriend, map[byte]any{0: s.presenceHT(ch.CharID, ch, s.isCharOnline(ch.CharID), charLastSeenUnix(ch))})
 	}
 }
 

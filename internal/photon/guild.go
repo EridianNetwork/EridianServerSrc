@@ -158,7 +158,7 @@ func (s *EnetServer) opGetGuildApplications(sess *ClientSession, opCode byte, pa
 			log.Printf("[PHOTON] GetGuildApplications: applicant char %d missing: %v", a.CharID, err)
 			continue
 		}
-		result[byte(i)] = s.presenceHT(ch.CharID, charToHashtable(ch, realInventoryHashtable(ch.CharID)), s.isCharOnline(ch.CharID), charLastSeenUnix(ch))
+		result[byte(i)] = s.presenceHT(ch.CharID, ch, s.isCharOnline(ch.CharID), charLastSeenUnix(ch))
 		i++
 	}
 	log.Printf("[PHOTON] GetGuildApplications user=%s guild=%d → %d applicants", sess.userID, guildID, i)
@@ -334,7 +334,7 @@ func (s *EnetServer) guildMemberPresenceList(guildID int64) TypedArray {
 				ch = c
 			}
 		}
-		list = append(list, s.presenceHT(ch.CharID, charToHashtable(ch, realInventoryHashtable(ch.CharID)), s.isCharOnline(ch.CharID), charLastSeenUnix(ch)))
+		list = append(list, s.presenceHT(ch.CharID, ch, s.isCharOnline(ch.CharID), charLastSeenUnix(ch)))
 	}
 	return TypedArray{ElementType: THash, Items: list}
 }

@@ -95,5 +95,14 @@
         </m_itemAvailabilitySettings>
       </m_itemAvailabilitySettingsList>
     </m_shop>
+    <m_shop>
+      <m_id>4</m_id>
+      <m_refreshTime>86400</m_refreshTime>
+      <m_itemAvailabilitySettingsList>
+        <m_itemAvailabilitySettings>
+          <m_itemType>Materials</m_itemType>
+        </m_itemAvailabilitySettings>
+      </m_itemAvailabilitySettingsList>
+    </m_shop>
   </m_shops>
 </ShopSetup>
