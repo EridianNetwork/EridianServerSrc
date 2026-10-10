@@ -81,6 +81,15 @@ type materialShopEntry struct {
 	Stock        int
 }
 
+type xmlMaterialRarityEntry struct {
+	MaterialType string `xml:"m_materialType"`
+	Rarity       string `xml:"m_rarity"`
+}
+
+type xmlMaterialRarityFile struct {
+	Entries []xmlMaterialRarityEntry `xml:"m_material"`
+}
+
 var (
 	shopConfigOnce sync.Once
 	shopSetup      xmlShopSetup
@@ -88,7 +97,47 @@ var (
 
 	materialShopOnce    sync.Once
 	materialShopCatalog = map[int][]materialShopEntry{}
+
+	materialRarityOnce sync.Once
+	materialRarity     = map[int]int{}
 )
+
+func loadMaterialRarity() {
+	materialRarityOnce.Do(func() {
+		raw, err := os.ReadFile("data/shop/MaterialRarity.xml")
+		if err != nil {
+			log.Printf("[SHOP] data/shop/MaterialRarity.xml not found: %v", err)
+			return
+		}
+		var file xmlMaterialRarityFile
+		if err := xml.Unmarshal(raw, &file); err != nil {
+			log.Printf("[SHOP] bad MaterialRarity.xml: %v", err)
+			return
+		}
+		for _, e := range file.Entries {
+			mt, ok := materialTypeValues[e.MaterialType]
+			if !ok {
+				log.Printf("[SHOP] MaterialRarity.xml: unknown material %q", e.MaterialType)
+				continue
+			}
+			rarity, ok := itemRarityValues[e.Rarity]
+			if !ok {
+				log.Printf("[SHOP] MaterialRarity.xml: unknown rarity %q for %s", e.Rarity, e.MaterialType)
+				continue
+			}
+			materialRarity[mt] = rarity
+		}
+		log.Printf("[SHOP] loaded %d material rarities", len(materialRarity))
+	})
+}
+
+func materialRarityFor(materialType int) int {
+	loadMaterialRarity()
+	if r, ok := materialRarity[materialType]; ok {
+		return r
+	}
+	return itemRarityValues["Common"]
+}
 
 func loadMaterialShopCatalog() {
 	materialShopOnce.Do(func() {
@@ -484,11 +533,13 @@ func getShopStock(shopID int, charID int64, level, class int) (*shopStock, *xmlS
 	var items []*domain.InventoryItem
 	if entries, ok := materialShopCatalog[shopID]; ok {
 		for _, e := range entries {
+			rarity := materialRarityFor(e.MaterialType)
 			items = append(items, &domain.InventoryItem{
 				ItemKind:   domain.ItemTypeMaterial,
 				ResourceID: e.MaterialType,
+				Rarity:     rarity,
 				Quantity:   e.Stack,
-				Price:      shopItemPrice(domain.ItemTypeMaterial, 0, 1),
+				Price:      shopItemPrice(domain.ItemTypeMaterial, rarity, 1),
 				UID:        newShopItemUID(),
 			})
 		}
