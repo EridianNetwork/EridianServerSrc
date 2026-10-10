@@ -185,6 +185,16 @@ func (s *EnetServer) hostSyncGroupUnlocks(sess *ClientSession) {
 	}
 }
 
+func sessCharID(sess *ClientSession) int64 {
+	if sess.selectedCharID != 0 {
+		return sess.selectedCharID
+	}
+	if sess.hostChar != nil {
+		return sess.hostChar.CharID
+	}
+	return 0
+}
+
 func (s *EnetServer) opGetPlayerQuests(sess *ClientSession, opCode byte, params map[byte]any) {
 	arr := toSlice(params[112])
 	charID := int64(0)
@@ -192,14 +202,14 @@ func (s *EnetServer) opGetPlayerQuests(sess *ClientSession, opCode byte, params 
 		charID = int64(asInt32(arr[0]))
 	}
 	if charID == 0 {
-		charID = sess.selectedCharID
+		charID = sessCharID(sess)
 	}
 	s.sendOpResponse(sess, opCode, 0, map[byte]any{0: int32(charID), 1: questProgressHashtable(charID)})
 }
 
 func (s *EnetServer) opUpdateQuestRequirement(sess *ClientSession, opCode byte, params map[byte]any) {
 	arr := toSlice(params[112])
-	charID := int64(sess.selectedCharID)
+	charID := sessCharID(sess)
 	questID, taskID, taskProgress := 0, 0, 0
 	if len(arr) > 0 {
 		charID = int64(asInt32(arr[0]))
@@ -223,7 +233,7 @@ func (s *EnetServer) opUpdateQuestRequirement(sess *ClientSession, opCode byte, 
 
 func (s *EnetServer) opRejectQuest(sess *ClientSession, opCode byte, params map[byte]any) {
 	arr := toSlice(params[112])
-	charID := int32(sess.selectedCharID)
+	charID := int32(sessCharID(sess))
 	questID := int32(0)
 	if len(arr) > 0 {
 		charID = asInt32(arr[0])
@@ -248,7 +258,7 @@ func (s *EnetServer) opRejectQuest(sess *ClientSession, opCode byte, params map[
 
 func (s *EnetServer) opCompleteQuest(sess *ClientSession, opCode byte, params map[byte]any) {
 	arr := toSlice(params[112])
-	charID := int32(sess.selectedCharID)
+	charID := int32(sessCharID(sess))
 	questID := int32(0)
 	if len(arr) > 0 {
 		charID = asInt32(arr[0])
@@ -322,7 +332,7 @@ func (s *EnetServer) hostValidateQuestStep(room *Room, questID, stepID int, clus
 }
 
 func (s *EnetServer) opGetDailyQuests(sess *ClientSession, opCode byte, params map[byte]any) {
-	s.sendOpResponse(sess, opCode, 0, map[byte]any{0: dailyQuestsPanelHashtable(sess.selectedCharID)})
+	s.sendOpResponse(sess, opCode, 0, map[byte]any{0: dailyQuestsPanelHashtable(sessCharID(sess))})
 }
 
 func dailyQuestsPanelHashtable(charID int64) map[int]any {
@@ -346,7 +356,7 @@ func (s *EnetServer) opTalkToNPC(sess *ClientSession, opCode byte, params map[by
 	if len(arr) > 1 {
 		taskID = int(asInt32(arr[1]))
 	}
-	charID := sess.selectedCharID
+	charID := sessCharID(sess)
 	level := 1
 	if ch, err := db.GetCharacterByID(charID); err == nil && ch != nil {
 		level = int(ch.Level)
@@ -578,7 +588,7 @@ func (s *EnetServer) hostAdvancePvPQuestTasks(sess *ClientSession, charID int64)
 
 func (s *EnetServer) opAcceptQuest(sess *ClientSession, opCode byte, params map[byte]any) {
 	arr := toSlice(params[112])
-	charID := int32(sess.selectedCharID)
+	charID := int32(sessCharID(sess))
 	questID := int32(0)
 	if len(arr) > 0 {
 		charID = asInt32(arr[0])
@@ -685,7 +695,7 @@ func (s *EnetServer) grantQuestRewards(sess *ClientSession, charID int64, reward
 
 func (s *EnetServer) opClaimQuestRewards(sess *ClientSession, opCode byte, params map[byte]any) {
 	arr := toSlice(params[112])
-	charID := int32(sess.selectedCharID)
+	charID := int32(sessCharID(sess))
 	questID := int32(0)
 	if len(arr) > 0 {
 		charID = asInt32(arr[0])
@@ -742,7 +752,7 @@ func (s *EnetServer) opClaimQuestRewards(sess *ClientSession, opCode byte, param
 }
 
 func (s *EnetServer) opGetUnlockedInstances(sess *ClientSession, opCode byte, params map[byte]any) {
-	charID := sess.selectedCharID
+	charID := sessCharID(sess)
 	log.Printf("[PHOTON] GetUnlockedInstances user=%s char=%d", sess.userID, charID)
 	dict := DictIntInt(unlockedInstancesForChar(charID, charLevel(charID)))
 	s.sendOpResponse(sess, opCode, 0, map[byte]any{0: dict})
