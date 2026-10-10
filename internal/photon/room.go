@@ -160,6 +160,7 @@ type spawnedNpc struct {
 
 	aggroRadiusScale float32
 	pendingAggroAt   time.Time
+	aggroEngaged     bool
 
 	dazedUntil    time.Time
 	confusedUntil time.Time

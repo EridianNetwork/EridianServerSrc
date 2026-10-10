@@ -4326,6 +4326,7 @@ func (s *EnetServer) hostTickNpcAI(room *Room, dt float64) bool {
 				acted = true
 			}
 			npc.pendingAggroAt = time.Time{}
+			npc.aggroEngaged = false
 			releaseCover(room, npc)
 			if s.hostTickNpcPatrol(npc, m2level(room), now) {
 				acted = true
@@ -4470,12 +4471,13 @@ func (s *EnetServer) hostTickNpcAI(room *Room, dt float64) bool {
 		if bestD > float32(engage*engage) || forceRelocate {
 			if !npc.moving && usedForcedAggro {
 				npc.pendingAggroAt = time.Time{}
-				if now.Sub(npc.lastForcedAggroLogAt) > 2*time.Second {
+				if !npc.aggroEngaged && now.Sub(npc.lastForcedAggroLogAt) > 2*time.Second {
 					npc.lastForcedAggroLogAt = now
+					npc.aggroEngaged = true
 					log.Printf("[AI] npc %d (%s) forced-aggro (was shot) on view=%d dist=%.1f room=%s",
 						npc.viewBase, npc.kit, p.view, math.Sqrt(float64(bestD)), room.Name)
 				}
-			} else if !npc.moving && !alreadyInRealRange {
+			} else if !npc.moving && !alreadyInRealRange && !npc.aggroEngaged {
 				if npc.pendingAggroAt.IsZero() {
 					delayMaxMs := 500.0
 					if cfg := npcConfigFor(npc.kit); cfg != nil && cfg.SelectTargetTimer > 0 {
@@ -4487,6 +4489,7 @@ func (s *EnetServer) hostTickNpcAI(room *Room, dt float64) bool {
 					continue
 				}
 				npc.pendingAggroAt = time.Time{}
+				npc.aggroEngaged = true
 				log.Printf("[AI] npc %d (%s) aggro on view=%d dist=%.1f room=%s",
 					npc.viewBase, npc.kit, p.view, math.Sqrt(float64(bestD)), room.Name)
 			}
@@ -4744,7 +4747,8 @@ func (s *EnetServer) hostExplodeNpcGrenade(room *Room, g pendingNpcGrenade) {
 	const r2 = float32(playerGrenadeBlowUpRadius * playerGrenadeBlowUpRadius)
 	level := m2level(room)
 	_, dmgMult := s.npcCombatScale(room)
-	dmg := int32(float32(grenadeBlowUpDamage) * levelDamageModifier(level) * dmgMult)
+	rating := float32(powerRatingForLevel(s.roomEffectiveInstanceLevel(room)))
+	dmg := int32(float32(grenadeBlowUpDamage) * levelDamageModifier(level) * dmgMult * rating)
 	for _, uid := range room.Players {
 		target := s.sessionInRoom(uid, room.Name)
 		if target == nil || target.avatarBase == 0 {
