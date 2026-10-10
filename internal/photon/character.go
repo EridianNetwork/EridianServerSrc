@@ -34,7 +34,7 @@ func (s *EnetServer) opGetCharacterList(sess *ClientSession, opCode byte, params
 	}
 	result := map[int]any{}
 	for _, ch := range chars {
-		result[int(ch.CharID)] = charToHashtable(ch, realInventoryHashtable(ch.CharID))
+		result[int(ch.CharID)] = charToHashtable(ch, charListInventoryHashtable(ch.CharID))
 	}
 	log.Printf("[PHOTON] GetCharacterList user=%s dbID=%d → %d chars", sess.userID, sess.dbAccountID, len(result))
 	s.sendOpResponse(sess, opCode, 0, map[byte]any{ParamAccountID: result})

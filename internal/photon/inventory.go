@@ -588,6 +588,12 @@ func realInventoryHashtable(charID int64) map[int]any {
 	return buildInventoryHashtable(ch, items)
 }
 
+func charListInventoryHashtable(charID int64) map[int]any {
+	ht := realInventoryHashtable(charID)
+	ht[10] = map[int]any{}
+	return ht
+}
+
 func hasEquippedWeapon(items []*domain.InventoryItem) bool {
 	return firstEquippedWeaponSlot(items) >= 0
 }

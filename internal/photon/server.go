@@ -652,6 +652,19 @@ func buildCmdSendUnreliable(channel byte, reliableSeq, unreliableSeq uint32, pay
 	out = binary.BigEndian.AppendUint32(out, unreliableSeq)
 	return append(out, payload...)
 }
+const maxFragmentPayload = 1200
+func buildCmdSendFragment(channel byte, seq, startSeq, fragCount, fragNumber, totalLen, fragOff uint32, fragData []byte) []byte {
+	size := 12 + 20 + len(fragData)
+	out := []byte{CTSendFragment, channel, 1, 4}
+	out = binary.BigEndian.AppendUint32(out, uint32(size))
+	out = binary.BigEndian.AppendUint32(out, seq)
+	out = binary.BigEndian.AppendUint32(out, startSeq)
+	out = binary.BigEndian.AppendUint32(out, fragCount)
+	out = binary.BigEndian.AppendUint32(out, fragNumber)
+	out = binary.BigEndian.AppendUint32(out, totalLen)
+	out = binary.BigEndian.AppendUint32(out, fragOff)
+	return append(out, fragData...)
+}
 func buildPacket(peerID uint16, challenge uint32, commands [][]byte) []byte {
 	hdr := make([]byte, 12)
 	binary.BigEndian.PutUint16(hdr[0:], peerID)
@@ -717,8 +730,41 @@ func (s *EnetServer) reliableCmd(sess *ClientSession, payload []byte) []byte {
 	sess.mu.Unlock()
 	return cmd
 }
+func (s *EnetServer) reliableFragments(sess *ClientSession, payload []byte) [][]byte {
+	fragCount := (len(payload) + maxFragmentPayload - 1) / maxFragmentPayload
+	totalLen := uint32(len(payload))
+	cmds := make([][]byte, 0, fragCount)
+	var startSeq uint32
+	for i := 0; i < fragCount; i++ {
+		off := i * maxFragmentPayload
+		end := off + maxFragmentPayload
+		if end > len(payload) {
+			end = len(payload)
+		}
+		seq := sess.nextSeq()
+		if i == 0 {
+			startSeq = seq
+		}
+		cmd := buildCmdSendFragment(0, seq, startSeq, uint32(fragCount), uint32(i), totalLen, uint32(off), payload[off:end])
+		now := time.Now()
+		sess.mu.Lock()
+		if sess.pending == nil {
+			sess.pending = make(map[uint32]*pendingCmd)
+		}
+		sess.pending[seq] = &pendingCmd{cmd: cmd, sentAt: now, origSentAt: now}
+		sess.mu.Unlock()
+		cmds = append(cmds, cmd)
+	}
+	return cmds
+}
 func (s *EnetServer) sendReliable(sess *ClientSession, payload []byte) {
-	s.sendPacket(sess, s.reliableCmd(sess, payload))
+	if len(payload) <= maxFragmentPayload {
+		s.sendPacket(sess, s.reliableCmd(sess, payload))
+		return
+	}
+	for _, cmd := range s.reliableFragments(sess, payload) {
+		s.sendPacket(sess, cmd)
+	}
 }
 func (s *EnetServer) sendUnreliable(sess *ClientSession, payload []byte) {
 	cmd := buildCmdSendUnreliable(0, sess.currentSeq(), sess.nextUnreliableSeq(), payload)
