@@ -102,6 +102,7 @@ type InventoryItem struct {
 	Description      string `json:"description"`
 	StarLevel      int `json:"star_level"`
 	StarExperience int `json:"star_experience"`
+	Subparts       string `json:"subparts"`
 }
 
 type WarehouseItem struct {
