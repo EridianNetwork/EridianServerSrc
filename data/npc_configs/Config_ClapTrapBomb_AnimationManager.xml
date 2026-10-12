@@ -1,0 +1,11 @@
+<BHVAnimationManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_settings>
+    <m_hasDeathAnimation>false</m_hasDeathAnimation>
+    <m_animationSpeedFactor>1</m_animationSpeedFactor>
+  </m_settings>
+  <m_animationStateList>
+    <m_stateName>Idle</m_stateName>
+    <m_stateName>AttachBomb</m_stateName>
+    <m_stateName>DropBomb</m_stateName>
+  </m_animationStateList>
+</BHVAnimationManagerSetup>

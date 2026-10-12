@@ -1,0 +1,26 @@
+<BHVTaskManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<m_entityType>CHR_Rakk</m_entityType>	
+  <m_settings>
+    <m_taskSettings xsi:type="BHVDazeEffectSettings">
+      <m_bDazeResist>false</m_bDazeResist>
+      <m_dazeDuration>3</m_dazeDuration>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVFlyingSettings">
+      <m_hoverPatrolRadius>8</m_hoverPatrolRadius>
+      <m_gatherRadius>3</m_gatherRadius>
+      <m_patrolFlyingSpeed>8</m_patrolFlyingSpeed>
+      <m_gatherFlyingSpeed>10</m_gatherFlyingSpeed>
+      <m_meleeFlyingSpeed>20</m_meleeFlyingSpeed>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVFlyMeleeAttackSettings">
+      <m_meleeAttackDistanceMin>0</m_meleeAttackDistanceMin>
+      <m_meleeAttackDistanceMax>3.6</m_meleeAttackDistanceMax>
+      <m_meleeAttackIdleTimeMin>1</m_meleeAttackIdleTimeMin>
+      <m_meleeAttackIdleTimeMax>3</m_meleeAttackIdleTimeMax>
+      <m_canKnockBack>false</m_canKnockBack>
+	  <m_knockBackForce>4</m_knockBackForce>
+      <m_attackDamage>10</m_attackDamage>
+    </m_taskSettings>
+  </m_settings>
+</BHVTaskManagerSetup>
+

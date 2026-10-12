@@ -1,0 +1,33 @@
+<BHVTaskManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<m_entityType>CHR_BatistaTheRocketLord</m_entityType>		
+  <m_settings>
+    <m_taskSettings xsi:type="BHVDazeEffectSettings">
+      <m_bDazeResist>false</m_bDazeResist>
+      <m_dazeDuration>1.5</m_dazeDuration>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVMeleeAttackSettings">
+      <m_attackDamage>60</m_attackDamage>
+      <m_attackRange>4</m_attackRange>
+      <m_canKnockBack>true</m_canKnockBack>
+	  <m_knockBackForce>5</m_knockBackForce>
+	  <m_knockBackAngle>45</m_knockBackAngle>
+      <m_attackSubTypeList>
+        <m_attackSubType>MeleeAxe</m_attackSubType>
+        <m_attackSubType>MeleeAxe</m_attackSubType>
+        <m_attackSubType>MeleeAxe</m_attackSubType>
+      </m_attackSubTypeList>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVNavAgentSettings">
+      <m_walkSpeed>1.8</m_walkSpeed>
+      <m_walkCombatSpeed>2.8</m_walkCombatSpeed>
+      <m_runSpeed>5</m_runSpeed>
+      <m_sprintSpeed>5.63</m_sprintSpeed>
+      <m_canUseFacingLogic>false</m_canUseFacingLogic>
+      <m_combatSpawnDuration>0.4</m_combatSpawnDuration>
+    </m_taskSettings>
+  </m_settings>
+</BHVTaskManagerSetup>
+
+
+
+

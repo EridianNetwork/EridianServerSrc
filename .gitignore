@@ -1,0 +1,14 @@
+.zed/debug.json
+__debug_bin*
+eridian-server.exe
+*.log
+*.db-wal
+/dist/
+tools/package-release.ps1
+.vscode/tasks.json
+logs/client_debug.log
+logs/bol_output_*.html
+*_test.go
+/tests/
+scripts/eridian-game.service
+scripts/eridian-master.service

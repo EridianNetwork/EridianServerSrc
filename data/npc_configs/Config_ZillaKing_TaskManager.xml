@@ -1,0 +1,50 @@
+<BHVTaskManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<m_entityType>CHR_ZillaKing</m_entityType>	
+  <m_settings>
+    <m_taskSettings xsi:type="BHVChargeAttackSettings">
+      <m_attackDamage>40</m_attackDamage>
+      <m_checkRadius>3</m_checkRadius>
+      <m_attackSubType>MeleePaw</m_attackSubType>
+      <m_canKnockBack>true</m_canKnockBack>
+	  <m_knockBackForce>5</m_knockBackForce>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVDazeEffectSettings">
+      <m_bDazeResist>false</m_bDazeResist>
+      <m_dazeDuration>3</m_dazeDuration>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVFurySettings">
+      <m_damageModifier>1.5</m_damageModifier>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVJumpAttackSettings">
+      <m_attackDamage>35</m_attackDamage>
+      <m_attackSubType>MeleeBite</m_attackSubType>
+      <m_onTheSpotAttackDamage>100</m_onTheSpotAttackDamage>
+      <m_onTheSpotAttackRange>15</m_onTheSpotAttackRange>
+      <m_onTheSpotAttackSubType>AreaGeneric</m_onTheSpotAttackSubType>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVMeleeAttackSettings">
+      <m_attackDamage>40</m_attackDamage>
+      <m_attackRange>4.5</m_attackRange>
+      <m_attackSubTypeList>
+        <m_attackSubType>MeleeBite</m_attackSubType>
+        <m_attackSubType>MeleePaw</m_attackSubType>
+        <m_attackSubType>MeleeBite</m_attackSubType>
+        <m_attackSubType>MeleePaw</m_attackSubType>
+      </m_attackSubTypeList>
+      <m_canKnockBack>true</m_canKnockBack>
+	  <m_knockBackForce>4</m_knockBackForce>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVNavAgentSettings">
+      <m_walkSpeed>0.98</m_walkSpeed>
+      <m_runSpeed>5.5</m_runSpeed>
+      <m_chargeSpeed>13</m_chargeSpeed>
+      <m_canUseFacingLogic>false</m_canUseFacingLogic>
+	  <m_stopDistance>0.5</m_stopDistance>
+    </m_taskSettings>
+  </m_settings>
+</BHVTaskManagerSetup>
+
+
+
+
+

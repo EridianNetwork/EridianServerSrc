@@ -1,0 +1,974 @@
+{
+  "lvl_arid_cave_part2": [
+    {
+      "pid": 8278,
+      "go": "0600_OBJ_Destroyable4_Shoot",
+      "pos": [
+        -7.300171,
+        0.7217388,
+        -1.4379349
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 8297,
+      "go": "0600_OBJ_Destroyable8_Shoot",
+      "pos": [
+        -2.9538574,
+        0.515682,
+        0.96419525
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 8329,
+      "go": "0600_OBJ_Destroyable1_Shoot",
+      "pos": [
+        -46.545334,
+        3.7752213,
+        -47.017292
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 8400,
+      "go": "0600_OBJ_Destroyable7_Shoot",
+      "pos": [
+        -2.9922714,
+        1.1728768,
+        0.7523041
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 8432,
+      "go": "0600_OBJ_Destroyable5_Shoot",
+      "pos": [
+        -7.2698975,
+        1.0780039,
+        -1.8381348
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 8456,
+      "go": "0600_OBJ_Destroyable2_Shoot",
+      "pos": [
+        -46.548264,
+        3.52544,
+        -47.062363
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 8741,
+      "go": "0600_OBJ_Destroyable3_Shoot",
+      "pos": [
+        -7.2052994,
+        1.5358143,
+        -1.3453941
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 8753,
+      "go": "0600_OBJ_Destroyable6_Shoot",
+      "pos": [
+        -2.996849,
+        0.97903395,
+        0.89590454
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    }
+  ],
+  "lvl_gym_charactercontrol": [
+    {
+      "pid": 4386,
+      "go": "OBJ_DestroyableA_Shoot",
+      "pos": [
+        -18,
+        1.48,
+        22.92
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 1000
+    },
+    {
+      "pid": 4392,
+      "go": "OBJ_DestroyableA_Shoot",
+      "pos": [
+        -18.002,
+        1.48,
+        18.69
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 1000
+    },
+    {
+      "pid": 4397,
+      "go": "OBJ_DestroyableA_Shoot",
+      "pos": [
+        -18.002,
+        1.48,
+        19.741
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 1000
+    },
+    {
+      "pid": 4451,
+      "go": "OBJ_DestroyableA_Shoot",
+      "pos": [
+        -18.002,
+        1.48,
+        21.851
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 1000
+    },
+    {
+      "pid": 4466,
+      "go": "OBJ_DestroyableA_Shoot",
+      "pos": [
+        -18,
+        1.48,
+        25.03
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 1000
+    },
+    {
+      "pid": 4477,
+      "go": "OBJ_DestroyableA_Shoot",
+      "pos": [
+        -18,
+        1.48,
+        23.98
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 1000
+    },
+    {
+      "pid": 4506,
+      "go": "OBJ_DestroyableA_Shoot",
+      "pos": [
+        -18.002,
+        1.48,
+        17.64
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 1000
+    },
+    {
+      "pid": 4515,
+      "go": "OBJ_DestroyableA_Shoot",
+      "pos": [
+        -18.002,
+        1.48,
+        20.801
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 1000
+    },
+    {
+      "pid": 4536,
+      "go": "OBJ_DestroyableA_Shoot",
+      "pos": [
+        -18.002,
+        1.48,
+        16.58
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 1000
+    }
+  ],
+  "lvl_sm_icecave_part1": [
+    {
+      "pid": 6191,
+      "go": "0600_OBJ_DestroyableB_Shoot",
+      "pos": [
+        63.16039,
+        10.838997,
+        59.913868
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 6208,
+      "go": "0600_OBJ_DestroyableA_Shoot",
+      "pos": [
+        62.779236,
+        10.081366,
+        59.90319
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    }
+  ],
+  "lvl_autotest_1": [
+    {
+      "pid": 872,
+      "go": "DestroyableObj",
+      "pos": [
+        515.2258,
+        2.6141977,
+        502.979
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 882,
+      "go": "DestroyableObj",
+      "pos": [
+        515.2258,
+        2.6141977,
+        502.979
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 918,
+      "go": "DestroyableObj",
+      "pos": [
+        515.2258,
+        2.6141977,
+        502.979
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 926,
+      "go": "DestroyableObj",
+      "pos": [
+        515.2258,
+        2.6141977,
+        502.979
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 955,
+      "go": "DestroyableObj",
+      "pos": [
+        515.2258,
+        2.6141977,
+        502.979
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    },
+    {
+      "pid": 969,
+      "go": "DestroyableObj",
+      "pos": [
+        515.2258,
+        2.6141977,
+        502.979
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 100
+    }
+  ],
+  "lvl_sm_spaceship_part2": [
+    {
+      "pid": 7543,
+      "go": "0600_OBJ_DestroyableA_Shoot_1",
+      "pos": [
+        -10.992937,
+        -2.6083546,
+        -7.8511963
+      ],
+      "name": "DestoryableObj_Battery",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 25000
+    },
+    {
+      "pid": 7589,
+      "go": "0600_OBJ_DestroyableA_Shoot_4",
+      "pos": [
+        -0.21174622,
+        -2.6083546,
+        6.1876526
+      ],
+      "name": "DestoryableObj_Battery",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 25000
+    },
+    {
+      "pid": 7667,
+      "go": "0600_OBJ_DestroyableA_Shoot_3",
+      "pos": [
+        -0.21174622,
+        -2.608354,
+        -3.0931625
+      ],
+      "name": "DestoryableObj_Battery",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 25000
+    },
+    {
+      "pid": 7672,
+      "go": "0600_OBJ_DestroyableA_Shoot",
+      "pos": [
+        -11.035223,
+        -2.608354,
+        11.09346
+      ],
+      "name": "DestoryableObj_Battery",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 25000
+    },
+    {
+      "pid": 7778,
+      "go": "0600_OBJ_DestroyableA_Shoot_5",
+      "pos": [
+        -22.282522,
+        -2.6083546,
+        -3.7946777
+      ],
+      "name": "DestoryableObj_Battery",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 25000
+    },
+    {
+      "pid": 7883,
+      "go": "0600_OBJ_DestroyableA_Shoot_6",
+      "pos": [
+        -22.282522,
+        -2.6083546,
+        6.296959
+      ],
+      "name": "DestoryableObj_Battery",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 25000
+    },
+    {
+      "pid": 7911,
+      "go": "PRO_CoolingTower",
+      "pos": [
+        17.423777,
+        -2.9735246,
+        -75.40129
+      ],
+      "name": "DestoryableObj",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": true,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 5000
+    }
+  ],
+  "lvl_tutorial_part1_4x": [
+    {
+      "pid": 12072,
+      "go": "0600_OBJ_DestroyableB_Shoot",
+      "pos": [
+        35.19595,
+        1.0335722,
+        59.979046
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 5
+    },
+    {
+      "pid": 12142,
+      "go": "0600_OBJ_DestroyableB_Shoot",
+      "pos": [
+        35.19595,
+        1.0335722,
+        59.979046
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 5
+    },
+    {
+      "pid": 12261,
+      "go": "2200_OBJ_Destroyable_GrenadeA",
+      "pos": [
+        46.009857,
+        -0.012325583,
+        51.008167
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 12330,
+      "go": "0600_OBJ_DestroyableB_Shoot",
+      "pos": [
+        35.19595,
+        1.0335722,
+        59.979046
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 5
+    },
+    {
+      "pid": 12401,
+      "go": "2200_OBJ_Destroyable_GrenadeC",
+      "pos": [
+        48.117268,
+        -0.06471366,
+        46.46719
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 12451,
+      "go": "2200_OBJ_Destroyable_GrenadeD",
+      "pos": [
+        49.632984,
+        0.017150648,
+        48.79417
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 12469,
+      "go": "2200_OBJ_Destroyable_GrenadeA",
+      "pos": [
+        46.009857,
+        -0.012325583,
+        51.008167
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 12772,
+      "go": "2200_OBJ_Destroyable_GrenadeC",
+      "pos": [
+        48.117268,
+        -0.06471366,
+        46.46719
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 12783,
+      "go": "2200_OBJ_Destroyable_GrenadeC",
+      "pos": [
+        48.117268,
+        -0.06471366,
+        46.46719
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 12964,
+      "go": "0600_OBJ_DestroyableA_Shoot",
+      "pos": [
+        35.08238,
+        1.1351848,
+        60.060272
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 5
+    },
+    {
+      "pid": 12998,
+      "go": "2200_OBJ_Destroyable_GrenadeD",
+      "pos": [
+        49.632984,
+        0.017150648,
+        48.79417
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 13075,
+      "go": "2200_OBJ_Destroyable_GrenadeD",
+      "pos": [
+        49.632984,
+        0.017150648,
+        48.79417
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 13124,
+      "go": "2200_OBJ_Destroyable_GrenadeB",
+      "pos": [
+        44.262714,
+        0.12545422,
+        49.56009
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 13160,
+      "go": "0600_OBJ_DestroyableA_Shoot",
+      "pos": [
+        35.08238,
+        1.1351848,
+        60.060272
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 5
+    },
+    {
+      "pid": 13320,
+      "go": "2200_OBJ_Destroyable_GrenadeA",
+      "pos": [
+        46.009857,
+        -0.012325583,
+        51.008167
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 13345,
+      "go": "0600_OBJ_DestroyableA_Shoot",
+      "pos": [
+        35.08238,
+        1.1351848,
+        60.060272
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 5
+    },
+    {
+      "pid": 13393,
+      "go": "0600_OBJ_DestroyableB_Shoot",
+      "pos": [
+        35.19595,
+        1.0335722,
+        59.979046
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 5
+    },
+    {
+      "pid": 13434,
+      "go": "2200_OBJ_Destroyable_GrenadeC",
+      "pos": [
+        48.117268,
+        -0.06471366,
+        46.46719
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 13450,
+      "go": "0600_OBJ_DestroyableA_Shoot",
+      "pos": [
+        35.08238,
+        1.1351848,
+        60.060272
+      ],
+      "name": "DestoryableObj_WoodBar",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": true,
+      "receiveNpc": false,
+      "initHP": 5
+    },
+    {
+      "pid": 13494,
+      "go": "2200_OBJ_Destroyable_GrenadeD",
+      "pos": [
+        49.632984,
+        0.017150648,
+        48.79417
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 13544,
+      "go": "0600_OBJ_DestroyableA",
+      "pos": [
+        41.734463,
+        0.07079053,
+        50.255714
+      ],
+      "name": "DestoryableObj_WoodBarrel",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 5
+    },
+    {
+      "pid": 13566,
+      "go": "2200_OBJ_Destroyable_GrenadeB",
+      "pos": [
+        44.262714,
+        0.12545422,
+        49.56009
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 13625,
+      "go": "2200_OBJ_Destroyable_GrenadeB",
+      "pos": [
+        44.262714,
+        0.12545422,
+        49.56009
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 13711,
+      "go": "0600_OBJ_DestroyableA",
+      "pos": [
+        41.734463,
+        0.07079053,
+        50.255714
+      ],
+      "name": "DestoryableObj_WoodBarrel",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 5
+    },
+    {
+      "pid": 13767,
+      "go": "2200_OBJ_Destroyable_GrenadeB",
+      "pos": [
+        44.262714,
+        0.12545422,
+        49.56009
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    },
+    {
+      "pid": 13786,
+      "go": "0600_OBJ_DestroyableA",
+      "pos": [
+        41.734463,
+        0.07079053,
+        50.255714
+      ],
+      "name": "DestoryableObj_WoodBarrel",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 5
+    },
+    {
+      "pid": 13821,
+      "go": "0600_OBJ_DestroyableA",
+      "pos": [
+        41.734463,
+        0.07079053,
+        50.255714
+      ],
+      "name": "DestoryableObj_WoodBarrel",
+      "hideUI": false,
+      "receiveMelee": true,
+      "receiveArea": false,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 5
+    },
+    {
+      "pid": 13861,
+      "go": "2200_OBJ_Destroyable_GrenadeA",
+      "pos": [
+        46.009857,
+        -0.012325583,
+        51.008167
+      ],
+      "name": "DestoryableObj",
+      "hideUI": true,
+      "receiveMelee": false,
+      "receiveArea": true,
+      "receiveShoot": false,
+      "receiveNpc": false,
+      "initHP": 1
+    }
+  ]
+}

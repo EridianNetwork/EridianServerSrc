@@ -1,0 +1,16 @@
+<BHVBrainSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_fsmType>BHVDestoryableObjFSM</m_fsmType>
+  <m_BHVPropertySettingsList>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsBasic">
+        <m_healthPoint>10</m_healthPoint>
+        <m_shieldPoint>0</m_shieldPoint>
+    </m_BHVPropertySettings>
+  </m_BHVPropertySettingsList>
+</BHVBrainSetup>
+
+
+
+
+
+
+

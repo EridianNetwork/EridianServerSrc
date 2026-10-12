@@ -1,0 +1,86 @@
+{
+    "auth_server": {
+        "host": "0.0.0.0",
+        "http_port": 80,
+        "https_port": 443,
+        "secret_key": "7nHBMalDg0zZFoOtAPO59uUr3qyasoddq0weprfjkepriej09sdj0fa9sdf0q9je09em1f2e0q9wjd0eq829=="
+    },
+    "online_server": {
+        "host": "0.0.0.0",
+        "port": 2001,
+        "max_clients": 100
+    },
+    "photon_server": {
+        "host": "0.0.0.0",
+        "tcp_port": 4530,
+        "udp_port": 5055,
+        "ws_port": 9090
+    },
+    "master_server": {
+        "listen_host": "0.0.0.0",
+        "listen_port": 27900,
+        "report_enabled": false,
+        "report_address": "169.58.207.95:27900",
+        "magic_value": "DAMSECRETVALUE",
+        "server_name": "Eridian Official EU Server",
+        "max_players": 100,
+        "heartbeat_interval_seconds": 5,
+        "stale_timeout_seconds": 15
+    },
+    "database": {
+        "path": "db/borderlands.db"
+    },
+    "rcon": {
+        "password": "SOMEIEPASSWORD"
+    },
+    "game": {
+        "version": "1.6.1.8",
+        "build_hash": "38e08e13",
+        "max_players_per_room": 4,
+        "enable_pvp": true,
+        "afk_kick_seconds": 3600,
+        "unreliable_movement_sync": false,
+        "tutorial_free_actions": true,
+        "new_account_can_play": false,
+        "npc_difficulty": {
+            "normal": {
+                "hp_multiplier": 0.5,
+                "damage_multiplier": 0.5
+            },
+            "hard": {
+                "hp_multiplier": 1,
+                "damage_multiplier": 1
+            },
+            "hell": {
+                "hp_multiplier": 3,
+                "damage_multiplier": 3
+            }
+        },
+        "npc_per_level_growth": 0.03,
+        "boss_hp_multiplier": {
+            "hard": 10,
+            "hell": 30
+        },
+        "xp_multiplier": 1.5,
+        "npc_kill_xp": {
+            "base": 2,
+            "badass_multiplier": 4,
+            "boss_multiplier": 20
+        },
+        "pvp": {
+            "match_duration_seconds": 600,
+            "kill_target": 10,
+            "claptrap": {
+                "round_seconds": 180,
+                "target_score": 3
+            }
+        },
+        "player_melee_damage_ratio": 1.5,
+        "fire_bird_cooldown_seconds": 20,
+        "berserk_cooldown_seconds": 30,
+        "turret_cooldown_short_seconds": 10,
+        "turret_cooldown_long_seconds": 30,
+        "hunter_cooldown_short_seconds": 15,
+        "hunter_cooldown_long_seconds": 20
+    }
+}

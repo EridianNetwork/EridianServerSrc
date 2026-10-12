@@ -1,0 +1,490 @@
+[
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": -1,
+    "element": 2,
+    "procCoef": 0.7,
+    "dmg": -9.0
+  },
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": 1,
+    "element": 1,
+    "procCoef": 0.05,
+    "dmg": 1.0
+  },
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": 2,
+    "element": 2,
+    "procCoef": 0.0,
+    "dmg": 5.0
+  },
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": 3,
+    "element": 3,
+    "procCoef": 0.1,
+    "dmg": 0.0
+  },
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": 4,
+    "element": 1,
+    "procCoef": 0.1,
+    "dmg": 2.0
+  },
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": 5,
+    "element": 2,
+    "procCoef": 0.05,
+    "dmg": 8.0
+  },
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": 6,
+    "element": 3,
+    "procCoef": 0.15,
+    "dmg": 0.5
+  },
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": 7,
+    "element": 1,
+    "procCoef": 0.15,
+    "dmg": 3.0
+  },
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": 8,
+    "element": 2,
+    "procCoef": 0.1,
+    "dmg": 11.0
+  },
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": 9,
+    "element": 3,
+    "procCoef": 0.2,
+    "dmg": 1.0
+  },
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": 10,
+    "element": 1,
+    "procCoef": 0.2,
+    "dmg": 4.0
+  },
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": 11,
+    "element": 2,
+    "procCoef": 0.15,
+    "dmg": 14.0
+  },
+  {
+    "type": "SMG",
+    "partType": "ACC",
+    "index": 12,
+    "element": 3,
+    "procCoef": 0.25,
+    "dmg": 1.5
+  },
+  {
+    "type": "SniperRifle",
+    "partType": "ACC",
+    "index": 1,
+    "element": 1,
+    "procCoef": 0.05,
+    "dmg": 1.0
+  },
+  {
+    "type": "SniperRifle",
+    "partType": "ACC",
+    "index": 2,
+    "element": 2,
+    "procCoef": 0.0,
+    "dmg": 5.0
+  },
+  {
+    "type": "SniperRifle",
+    "partType": "ACC",
+    "index": 3,
+    "element": 3,
+    "procCoef": 0.1,
+    "dmg": 0.0
+  },
+  {
+    "type": "SniperRifle",
+    "partType": "ACC",
+    "index": 4,
+    "element": 1,
+    "procCoef": 0.1,
+    "dmg": 2.0
+  },
+  {
+    "type": "SniperRifle",
+    "partType": "ACC",
+    "index": 5,
+    "element": 2,
+    "procCoef": 0.05,
+    "dmg": 8.0
+  },
+  {
+    "type": "SniperRifle",
+    "partType": "ACC",
+    "index": 6,
+    "element": 3,
+    "procCoef": 0.15,
+    "dmg": 0.5
+  },
+  {
+    "type": "SniperRifle",
+    "partType": "ACC",
+    "index": 7,
+    "element": 1,
+    "procCoef": 0.15,
+    "dmg": 3.0
+  },
+  {
+    "type": "SniperRifle",
+    "partType": "ACC",
+    "index": 8,
+    "element": 2,
+    "procCoef": 0.1,
+    "dmg": 11.0
+  },
+  {
+    "type": "SniperRifle",
+    "partType": "ACC",
+    "index": 9,
+    "element": 3,
+    "procCoef": 0.2,
+    "dmg": 1.0
+  },
+  {
+    "type": "SniperRifle",
+    "partType": "ACC",
+    "index": 10,
+    "element": 1,
+    "procCoef": 0.2,
+    "dmg": 4.0
+  },
+  {
+    "type": "SniperRifle",
+    "partType": "ACC",
+    "index": 11,
+    "element": 2,
+    "procCoef": 0.15,
+    "dmg": 14.0
+  },
+  {
+    "type": "SniperRifle",
+    "partType": "ACC",
+    "index": 12,
+    "element": 3,
+    "procCoef": 0.25,
+    "dmg": 1.5
+  },
+  {
+    "type": "ShotGun",
+    "partType": "ACC",
+    "index": 1,
+    "element": 1,
+    "procCoef": 0.05,
+    "dmg": 1.0
+  },
+  {
+    "type": "ShotGun",
+    "partType": "ACC",
+    "index": 2,
+    "element": 2,
+    "procCoef": 0.0,
+    "dmg": 5.0
+  },
+  {
+    "type": "ShotGun",
+    "partType": "ACC",
+    "index": 3,
+    "element": 3,
+    "procCoef": 0.1,
+    "dmg": 0.0
+  },
+  {
+    "type": "ShotGun",
+    "partType": "ACC",
+    "index": 4,
+    "element": 1,
+    "procCoef": 0.1,
+    "dmg": 2.0
+  },
+  {
+    "type": "ShotGun",
+    "partType": "ACC",
+    "index": 5,
+    "element": 2,
+    "procCoef": 0.05,
+    "dmg": 8.0
+  },
+  {
+    "type": "ShotGun",
+    "partType": "ACC",
+    "index": 6,
+    "element": 3,
+    "procCoef": 0.15,
+    "dmg": 0.5
+  },
+  {
+    "type": "ShotGun",
+    "partType": "ACC",
+    "index": 7,
+    "element": 1,
+    "procCoef": 0.15,
+    "dmg": 3.0
+  },
+  {
+    "type": "ShotGun",
+    "partType": "ACC",
+    "index": 8,
+    "element": 2,
+    "procCoef": 0.1,
+    "dmg": 11.0
+  },
+  {
+    "type": "ShotGun",
+    "partType": "ACC",
+    "index": 9,
+    "element": 3,
+    "procCoef": 0.2,
+    "dmg": 1.0
+  },
+  {
+    "type": "ShotGun",
+    "partType": "ACC",
+    "index": 10,
+    "element": 1,
+    "procCoef": 0.2,
+    "dmg": 4.0
+  },
+  {
+    "type": "ShotGun",
+    "partType": "ACC",
+    "index": 11,
+    "element": 2,
+    "procCoef": 0.15,
+    "dmg": 14.0
+  },
+  {
+    "type": "ShotGun",
+    "partType": "ACC",
+    "index": 12,
+    "element": 3,
+    "procCoef": 0.25,
+    "dmg": 1.5
+  },
+  {
+    "type": "RepeaterPistol",
+    "partType": "ACC",
+    "index": 1,
+    "element": 1,
+    "procCoef": 0.05,
+    "dmg": 1.0
+  },
+  {
+    "type": "RepeaterPistol",
+    "partType": "ACC",
+    "index": 2,
+    "element": 2,
+    "procCoef": 0.0,
+    "dmg": 5.0
+  },
+  {
+    "type": "RepeaterPistol",
+    "partType": "ACC",
+    "index": 3,
+    "element": 3,
+    "procCoef": 0.1,
+    "dmg": 0.0
+  },
+  {
+    "type": "RepeaterPistol",
+    "partType": "ACC",
+    "index": 4,
+    "element": 1,
+    "procCoef": 0.1,
+    "dmg": 2.0
+  },
+  {
+    "type": "RepeaterPistol",
+    "partType": "ACC",
+    "index": 5,
+    "element": 2,
+    "procCoef": 0.05,
+    "dmg": 8.0
+  },
+  {
+    "type": "RepeaterPistol",
+    "partType": "ACC",
+    "index": 6,
+    "element": 3,
+    "procCoef": 0.15,
+    "dmg": 0.5
+  },
+  {
+    "type": "RepeaterPistol",
+    "partType": "ACC",
+    "index": 7,
+    "element": 1,
+    "procCoef": 0.15,
+    "dmg": 3.0
+  },
+  {
+    "type": "RepeaterPistol",
+    "partType": "ACC",
+    "index": 8,
+    "element": 2,
+    "procCoef": 0.1,
+    "dmg": 11.0
+  },
+  {
+    "type": "RepeaterPistol",
+    "partType": "ACC",
+    "index": 9,
+    "element": 3,
+    "procCoef": 0.2,
+    "dmg": 1.0
+  },
+  {
+    "type": "RepeaterPistol",
+    "partType": "ACC",
+    "index": 10,
+    "element": 1,
+    "procCoef": 0.2,
+    "dmg": 4.0
+  },
+  {
+    "type": "RepeaterPistol",
+    "partType": "ACC",
+    "index": 11,
+    "element": 2,
+    "procCoef": 0.15,
+    "dmg": 14.0
+  },
+  {
+    "type": "RepeaterPistol",
+    "partType": "ACC",
+    "index": 12,
+    "element": 3,
+    "procCoef": 0.25,
+    "dmg": 1.5
+  },
+  {
+    "type": "CombatRifle",
+    "partType": "ACC",
+    "index": 1,
+    "element": 1,
+    "procCoef": 0.05,
+    "dmg": 1.0
+  },
+  {
+    "type": "CombatRifle",
+    "partType": "ACC",
+    "index": 2,
+    "element": 2,
+    "procCoef": 0.0,
+    "dmg": 5.0
+  },
+  {
+    "type": "CombatRifle",
+    "partType": "ACC",
+    "index": 3,
+    "element": 3,
+    "procCoef": 0.1,
+    "dmg": 0.0
+  },
+  {
+    "type": "CombatRifle",
+    "partType": "ACC",
+    "index": 4,
+    "element": 1,
+    "procCoef": 0.1,
+    "dmg": 2.0
+  },
+  {
+    "type": "CombatRifle",
+    "partType": "ACC",
+    "index": 5,
+    "element": 2,
+    "procCoef": 0.05,
+    "dmg": 8.0
+  },
+  {
+    "type": "CombatRifle",
+    "partType": "ACC",
+    "index": 6,
+    "element": 3,
+    "procCoef": 0.15,
+    "dmg": 0.5
+  },
+  {
+    "type": "CombatRifle",
+    "partType": "ACC",
+    "index": 7,
+    "element": 1,
+    "procCoef": 0.15,
+    "dmg": 3.0
+  },
+  {
+    "type": "CombatRifle",
+    "partType": "ACC",
+    "index": 8,
+    "element": 2,
+    "procCoef": 0.1,
+    "dmg": 11.0
+  },
+  {
+    "type": "CombatRifle",
+    "partType": "ACC",
+    "index": 9,
+    "element": 3,
+    "procCoef": 0.2,
+    "dmg": 1.0
+  },
+  {
+    "type": "CombatRifle",
+    "partType": "ACC",
+    "index": 10,
+    "element": 1,
+    "procCoef": 0.2,
+    "dmg": 4.0
+  },
+  {
+    "type": "CombatRifle",
+    "partType": "ACC",
+    "index": 11,
+    "element": 2,
+    "procCoef": 0.15,
+    "dmg": 14.0
+  },
+  {
+    "type": "CombatRifle",
+    "partType": "ACC",
+    "index": 12,
+    "element": 3,
+    "procCoef": 0.25,
+    "dmg": 1.5
+  }
+]

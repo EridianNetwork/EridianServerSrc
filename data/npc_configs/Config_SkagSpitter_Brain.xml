@@ -1,0 +1,105 @@
+<BHVBrainSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <m_fsmType>CHR_SkagSpitter</m_fsmType>
+
+  <m_BHVPropertySettingsList>
+
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsSpitAttack">
+
+      <m_attackMode>NAM_SpitAttack</m_attackMode>
+
+      <m_attackChanceWeight>1</m_attackChanceWeight>
+
+      <m_attackDistanceMax>4</m_attackDistanceMax>
+
+      <m_attackDistanceMin>3</m_attackDistanceMin>
+
+      <m_attackAngle>120</m_attackAngle>
+
+      <m_attackIdleTime>0</m_attackIdleTime>
+
+      <m_spitAttackAnimCount>2</m_spitAttackAnimCount>
+
+    </m_BHVPropertySettings>
+
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsMeleeAttack">
+
+      <m_attackMode>NAM_MeleeAttack</m_attackMode>
+
+      <m_attackChanceWeight>0</m_attackChanceWeight>
+
+      <m_meleeAttackDistanceMin>0.5</m_meleeAttackDistanceMin>
+
+      <m_meleeAttackDistanceMax>1.5</m_meleeAttackDistanceMax>
+
+      <m_meleeAttackAngle>120</m_meleeAttackAngle>
+
+      <m_meleeAttackIdleTime>0.5</m_meleeAttackIdleTime>
+
+    </m_BHVPropertySettings>
+
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsBasic">
+
+      <m_healthPoint>150</m_healthPoint>
+
+      <m_shieldPoint>0</m_shieldPoint>
+
+      <m_beenShotAtDuration>20</m_beenShotAtDuration>
+
+    </m_BHVPropertySettings>
+
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsThreat">
+
+      <m_distanceFactor>-0.5</m_distanceFactor>
+
+      <m_damageFactor>0.5</m_damageFactor>
+
+    </m_BHVPropertySettings>
+
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsWarcry">
+
+      <m_damageAmount>60</m_damageAmount>
+
+      <m_time>2</m_time>
+
+    </m_BHVPropertySettings>
+
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsDetection">
+
+      <m_visualDetectionRange>40</m_visualDetectionRange>
+
+      <m_visualDetectionAngle>360</m_visualDetectionAngle>
+
+      <m_auditionDetectionRange>10</m_auditionDetectionRange>
+
+    </m_BHVPropertySettings>
+
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsPatrol">
+
+      <m_patrolRadius>20</m_patrolRadius>
+
+      <m_patrolTime>10</m_patrolTime>
+
+      <m_chanceToIdleWhenReachPatrolPoint>100</m_chanceToIdleWhenReachPatrolPoint>
+
+      <m_stayIdleTimeMin>1</m_stayIdleTimeMin>
+
+      <m_stayIdleTimeMax>4</m_stayIdleTimeMax>
+
+    </m_BHVPropertySettings>
+
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsTimers">
+
+      <m_selectTargetTimer>2</m_selectTargetTimer>
+
+      <m_selectPositionTimer>3</m_selectPositionTimer>
+
+      <m_alertFightTimer>3.5</m_alertFightTimer>
+
+      <m_alertTimer>12</m_alertTimer>
+
+    </m_BHVPropertySettings>
+
+  </m_BHVPropertySettingsList>
+
+</BHVBrainSetup>

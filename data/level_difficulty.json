@@ -1,0 +1,52 @@
+{
+  "lvl_tutorial_part1_4x": [
+    {
+      "pid": 12462,
+      "go": "Enemy",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "hpModifier": 0.3,
+      "damageModifier": 0.3,
+      "throwGrenadeChanceModifier": 0
+    },
+    {
+      "pid": 12934,
+      "go": "Enemy",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "hpModifier": 0.3,
+      "damageModifier": 0.3,
+      "throwGrenadeChanceModifier": 0
+    },
+    {
+      "pid": 13144,
+      "go": "Enemy",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "hpModifier": 0.3,
+      "damageModifier": 0.3,
+      "throwGrenadeChanceModifier": 0
+    },
+    {
+      "pid": 13213,
+      "go": "Enemy",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "hpModifier": 0.3,
+      "damageModifier": 0.3,
+      "throwGrenadeChanceModifier": 0
+    }
+  ]
+}

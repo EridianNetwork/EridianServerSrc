@@ -1,0 +1,40 @@
+<BHVTaskManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<m_entityType>CHR_BanditApollyon</m_entityType>		
+  <m_settings>
+    <m_taskSettings xsi:type="BHVHammerJumpSettings">
+      <m_hammerDamage>400</m_hammerDamage>
+      <m_jumpSpeed>15</m_jumpSpeed>
+      <m_hammerDamageRange>5</m_hammerDamageRange>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVDazeEffectSettings">
+      <m_bDazeResist>false</m_bDazeResist>
+      <m_dazeDuration>1.5</m_dazeDuration>
+      <m_speedRate>0.5</m_speedRate>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVFireStyleSettings">
+      <m_burstSingle_FireTimeMin>0.4</m_burstSingle_FireTimeMin>
+      <m_burstSingle_FireTimeMax>0.4</m_burstSingle_FireTimeMax>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVMeleeAttackSettings">
+      <m_attackDamage>80</m_attackDamage>
+      <m_attackRange>5</m_attackRange>
+      <m_canKnockBack>false</m_canKnockBack>
+	  <m_knockBackForce>10</m_knockBackForce>
+      <m_attackSubTypeList>
+        <m_attackSubType>MeleeGeneric</m_attackSubType>
+      </m_attackSubTypeList>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVNavAgentSettings">
+      <m_walkSpeed>1.5</m_walkSpeed>
+      <m_walkCombatSpeed>2.04</m_walkCombatSpeed>
+      <m_runSpeed>2.04</m_runSpeed>
+      <m_canUseFacingLogic>true</m_canUseFacingLogic>
+    </m_taskSettings>
+  </m_settings>
+</BHVTaskManagerSetup>
+
+
+
+
+
+

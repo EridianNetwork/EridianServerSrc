@@ -1,0 +1,128 @@
+<BHVBrainSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_fsmType>CHR_TheInsane</m_fsmType>
+  <m_BHVPropertySettingsList>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsEyeLaserPlus">
+      <m_attackMode>NAM_EyeLaserPlus</m_attackMode>
+      <m_laserPlusDamage>125</m_laserPlusDamage>
+      <m_laserPlusDelay>1.5</m_laserPlusDelay>
+      <m_laserPlusDuration>10</m_laserPlusDuration>
+      <m_laserPlusRange>30</m_laserPlusRange>
+      <m_coolDownTime>35</m_coolDownTime>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsEyeLaser">
+      <m_attackMode>NAM_EyeLaser</m_attackMode>
+      <m_laserDamage>35</m_laserDamage>
+      <m_laserDelay>5</m_laserDelay>
+      <m_laserDuration>8</m_laserDuration>
+      <m_laserRotateSpeed>2.5</m_laserRotateSpeed>
+      <m_coolDownTime>10</m_coolDownTime>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsPlayerTeleport">
+      <m_attackMode>NAM_PlayerTeleport</m_attackMode>
+      <m_teleportRange>3</m_teleportRange>
+	  <m_speedSlowRate>0.9</m_speedSlowRate>
+	  <m_warningTime>2</m_warningTime>
+	  <m_coolDownTime>3</m_coolDownTime>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsTentacleSweep">
+      <m_attackMode>NAM_TentacleSweep</m_attackMode>
+      <m_sweepDamage>30</m_sweepDamage>
+      <m_sweepDistanceMin>0</m_sweepDistanceMin>
+      <m_sweepDistanceMax>35</m_sweepDistanceMax>
+      <m_knockbackDistance>1</m_knockbackDistance>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsTentacleSpawn">
+      <m_attackMode>NAM_TentacleSpawn</m_attackMode>
+      <m_tentacleDamage>100</m_tentacleDamage>
+      <m_tentacleNumberMin>2</m_tentacleNumberMin>
+      <m_tentacleNumberMax>4</m_tentacleNumberMax>
+      <m_tentacleDuration>8</m_tentacleDuration>
+      <m_tentacleSpawnRange>20</m_tentacleSpawnRange>
+      <m_knockbackDistance>4</m_knockbackDistance>
+      <m_coolDownTime>14</m_coolDownTime>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsSpacing"/>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsBasic">
+      <m_healthPoint>11000</m_healthPoint>
+      <m_shieldPoint>0</m_shieldPoint>
+      <m_beenShotAtDuration>20</m_beenShotAtDuration>
+      <m_startMoveDistance>2</m_startMoveDistance>
+      <m_bHasCoverAbility>false</m_bHasCoverAbility>
+      <m_alertCoverChanceWeight>0</m_alertCoverChanceWeight>
+      <m_alertMoveToGPPChanceWeight>1</m_alertMoveToGPPChanceWeight>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsThreat">
+      <m_distanceFactor>-0.5</m_distanceFactor>
+      <m_damageFactor>0.5</m_damageFactor>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsDetection">
+      <m_visualDetectionRange>1000</m_visualDetectionRange>
+      <m_visualDetectionAngle>360</m_visualDetectionAngle>
+      <m_auditionDetectionRange>100</m_auditionDetectionRange>
+      <m_shootAtAngle>0.9</m_shootAtAngle>
+      <m_shootDistance>30</m_shootDistance>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsTimers">
+      <m_selectTargetTimer>4</m_selectTargetTimer>
+      <m_selectPositionTimer>5</m_selectPositionTimer>
+      <m_alertFightTimer>3.5</m_alertFightTimer>
+      <m_alertTimer>12</m_alertTimer>
+    </m_BHVPropertySettings>
+  </m_BHVPropertySettingsList>
+  <m_BHVPropertySettingsPhaseList>
+    <m_BHVPropertySettingsPhase xsi:type="BHVFSMSettingsTheInsane">
+      <m_phaseId>1</m_phaseId>
+      <m_exitPhase_hp>0.66</m_exitPhase_hp>
+      <m_spacingTime>4</m_spacingTime>
+      <m_playerTeleportWeight>0</m_playerTeleportWeight>
+      <m_tentacleSweepWeight>0</m_tentacleSweepWeight>
+      <m_tentacleSpawnWeight>1</m_tentacleSpawnWeight>
+      <m_eyeLaserWeight>1</m_eyeLaserWeight>
+      <m_eyeLaserPlusWeight>0</m_eyeLaserPlusWeight>
+      <m_playerTeleportCancleSpacing>false</m_playerTeleportCancleSpacing>
+    </m_BHVPropertySettingsPhase>
+    <m_BHVPropertySettingsPhase xsi:type="BHVFSMSettingsTheInsane">
+      <m_phaseId>2</m_phaseId>
+      <m_exitPhase_hp>0.33</m_exitPhase_hp>
+      <m_spacingTime>2</m_spacingTime>
+      <m_playerTeleportWeight>0</m_playerTeleportWeight>
+      <m_tentacleSweepWeight>0</m_tentacleSweepWeight>
+      <m_tentacleSpawnWeight>0</m_tentacleSpawnWeight>
+      <m_eyeLaserWeight>0</m_eyeLaserWeight>
+      <m_eyeLaserPlusWeight>0</m_eyeLaserPlusWeight>
+      <m_playerTeleportCancleSpacing>false</m_playerTeleportCancleSpacing>
+    </m_BHVPropertySettingsPhase>
+    <m_BHVPropertySettingsPhase xsi:type="BHVFSMSettingsTheInsane">
+      <m_phaseId>3</m_phaseId>
+      <m_exitPhase_hp>0</m_exitPhase_hp>
+      <m_spacingTime>3</m_spacingTime>
+      <m_playerTeleportWeight>0.8</m_playerTeleportWeight>
+      <m_tentacleSweepWeight>0</m_tentacleSweepWeight>
+      <m_tentacleSpawnWeight>1</m_tentacleSpawnWeight>
+      <m_eyeLaserWeight>1</m_eyeLaserWeight>
+      <m_eyeLaserPlusWeight>1</m_eyeLaserPlusWeight>
+      <m_playerTeleportCancleSpacing>false</m_playerTeleportCancleSpacing>
+    </m_BHVPropertySettingsPhase>
+  </m_BHVPropertySettingsPhaseList>
+</BHVBrainSetup>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

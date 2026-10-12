@@ -1,0 +1,29 @@
+<BHVBrainSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_fsmType>CHR_Rakk</m_fsmType>
+  <m_BHVPropertySettingsList>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsBasic">
+      <m_healthPoint>50</m_healthPoint>
+      <m_shieldPoint>0</m_shieldPoint>
+      <m_beenShotAtDuration>20</m_beenShotAtDuration>
+      <m_startMoveDistance>2</m_startMoveDistance>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsThreat">
+      <m_distanceFactor>-0.8</m_distanceFactor>
+      <m_damageFactor>0.2</m_damageFactor>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsDetection">
+      <m_visualDetectionRange>150</m_visualDetectionRange>
+      <m_visualDetectionAngle>360</m_visualDetectionAngle>
+      <m_auditionDetectionRange>30</m_auditionDetectionRange>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsTimers">
+      <m_selectTargetTimer>2</m_selectTargetTimer>
+      <m_selectPositionTimer>1.5</m_selectPositionTimer>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsHoverPatrol">
+      <m_patrolTime>3</m_patrolTime>
+      <m_chanceToOtherPatrolPoint>50</m_chanceToOtherPatrolPoint>
+    </m_BHVPropertySettings>
+  </m_BHVPropertySettingsList>
+</BHVBrainSetup>
+

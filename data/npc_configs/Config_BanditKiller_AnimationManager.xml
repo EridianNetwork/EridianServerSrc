@@ -1,0 +1,10 @@
+<BHVAnimationManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_settings>
+    <m_weaponHolderName>Bip01 R Hand_SMG</m_weaponHolderName>
+    <m_hasDeathAnimation>true</m_hasDeathAnimation>
+    <m_animationHostName>CHR_BanditKiller</m_animationHostName>
+    <m_animationSpeedFactor>0.9</m_animationSpeedFactor>
+    <m_normalDeathAnimCount>2</m_normalDeathAnimCount>
+    <m_headShotDeathAnimCount>3</m_headShotDeathAnimCount>
+  </m_settings>
+</BHVAnimationManagerSetup>

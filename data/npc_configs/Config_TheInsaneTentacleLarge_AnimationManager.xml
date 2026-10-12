@@ -1,0 +1,8 @@
+<BHVAnimationManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_settings>
+    <m_hasDeathAnimation>true</m_hasDeathAnimation>
+    <m_animationHostName>CHR_TheInsane_Tentacle</m_animationHostName>
+    <m_animationSpeedFactor>1.0</m_animationSpeedFactor>
+	<m_normalDeathAnimCount>3</m_normalDeathAnimCount>
+  </m_settings>
+</BHVAnimationManagerSetup>

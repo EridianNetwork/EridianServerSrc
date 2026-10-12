@@ -1,0 +1,35 @@
+<BHVAnimationManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_settings>
+    <m_weaponHolderName>Bip01 R Hand_SMG</m_weaponHolderName>
+    <m_hasDeathAnimation>true</m_hasDeathAnimation>
+    <m_normalDeathAnimCount>2</m_normalDeathAnimCount>
+    <m_headShotDeathAnimCount>2</m_headShotDeathAnimCount>
+  </m_settings>
+  <m_animationStateList>
+    <m_stateName>PlayerMove</m_stateName>
+    <m_stateName>PlayerIdle</m_stateName>
+    <m_stateName>PlayerCrouchMove</m_stateName>
+    <m_stateName>PlayerCrouchIdle</m_stateName>
+    <m_stateName>PlayerJumpStart</m_stateName>
+	<m_stateName>PlayerJumpIdle</m_stateName>
+	<m_stateName>PlayerJumpLand</m_stateName>
+    <m_stateName>PlayerDie</m_stateName>
+  </m_animationStateList>
+  <m_animationUpperBodyStateList>
+    <m_stateName>PlayerFire</m_stateName>
+    <m_stateName>PlayerAim</m_stateName>
+    <m_stateName>PlayerReload</m_stateName>
+    <m_stateName>PlayerSwitchDown</m_stateName>
+	<m_stateName>PlayerSwitchUp</m_stateName>
+    <m_stateName>PlayerPickupWeapon</m_stateName>
+    <m_stateName>PlayerMelee</m_stateName>
+	<m_stateName>PlayerMeleeSkill</m_stateName>
+    <m_stateName>PlayerThrowGrenade</m_stateName>
+    <m_stateName>PlayerFireBird</m_stateName>
+    <m_stateName>PlayerCallback</m_stateName>
+    <m_stateName>PlayerBerserkCharge</m_stateName>
+    <m_stateName>PlayerBerserkDash</m_stateName>
+    <m_stateName>PlayerBerserkPunch</m_stateName>
+    <m_stateName>Empty</m_stateName>
+  </m_animationUpperBodyStateList>
+</BHVAnimationManagerSetup>

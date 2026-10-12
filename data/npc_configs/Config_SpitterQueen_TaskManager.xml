@@ -1,0 +1,28 @@
+<BHVTaskManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_settings>
+    <m_taskSettings xsi:type="BHVDazeEffectSettings">
+      <m_bDazeResist>false</m_bDazeResist>
+      <m_dazeDuration>3</m_dazeDuration>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVMeleeAttackSettings">
+      <m_attackRange>12</m_attackRange>
+	  <m_attackAngle>120</m_attackAngle>
+	  <m_canKnockBack>true</m_canKnockBack>
+	  <m_knockBackForce>10</m_knockBackForce>
+    </m_taskSettings>		
+    <m_taskSettings xsi:type="BHVNavAgentSettings">
+      <m_walkSpeed>0.98</m_walkSpeed>
+      <m_walkCombatSpeed>2</m_walkCombatSpeed>
+      <m_runSpeed>5</m_runSpeed>
+      <m_jumpSpeed>15</m_jumpSpeed>
+      <m_chargeSpeed>4.2</m_chargeSpeed>
+      <m_canUseFacingLogic>false</m_canUseFacingLogic>
+      <m_combatSpawnDuration>0.5</m_combatSpawnDuration>
+	  <m_radius>0.5</m_radius>
+	  <m_stopDistance>1</m_stopDistance>
+    </m_taskSettings>
+  </m_settings>
+  <m_entityType>CHR_SpitterQueen</m_entityType>
+</BHVTaskManagerSetup>
+
+

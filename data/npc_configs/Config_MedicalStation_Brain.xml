@@ -1,0 +1,26 @@
+<BHVBrainSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_fsmType>CHR_MedicalStation</m_fsmType>
+  <m_BHVPropertySettingsList>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsBasic">
+      <m_healthPoint>30</m_healthPoint>
+      <m_shieldPoint>0</m_shieldPoint>
+      <m_beenShotAtDuration>20</m_beenShotAtDuration>
+      <m_bHasCoverAbility>false</m_bHasCoverAbility>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsThreat">
+      <m_distanceFactor>-0.3</m_distanceFactor>
+      <m_damageFactor>0.7</m_damageFactor>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsDetection">
+      <m_visualDetectionRange>200</m_visualDetectionRange>
+      <m_visualDetectionAngle>360</m_visualDetectionAngle>
+      <m_auditionDetectionRange>10</m_auditionDetectionRange>
+      <m_shootAtAngle>0.9</m_shootAtAngle>
+      <m_shootDistance>60</m_shootDistance>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsTimers">
+      <m_selectTargetTimer>2</m_selectTargetTimer>
+    </m_BHVPropertySettings>
+  </m_BHVPropertySettingsList>
+</BHVBrainSetup>
+

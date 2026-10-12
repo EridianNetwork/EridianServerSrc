@@ -1,0 +1,2799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Instance>
+  <Maps>
+    <Map name="lvl_Arid_SkagGully_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_SkagGully_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Arid_SkagGully_Part1_scn.assetbundle" type="Map" map="Arid_SkagGully_Part1" />
+        <AssetBundle name="lvl_Arid_SkagGully_Part1.assetbundle" type="LevelData">
+          <ProbeDataNear path="nearlightProbes" />
+          <ProbeDataFar path="farlightProbes" />
+          <Cubemap path="Arid_SkagGully_Part1_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2164623713.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_skagspitter.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1452651928.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_trashcanlootable.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1129135071.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3238229738.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_sgp01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1500" />
+          <CameraEffect value="EffectCamera_Arid_SkagGully_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassVkag" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagAlpha" />
+        <NPC value="SkagPup" />
+        <NPC value="SkagSpitter" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Arid_SkagGully_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_SkagGully_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Arid_SkagGully_Part2_scn.assetbundle" type="Map" map="Arid_SkagGully_Part2" />
+        <AssetBundle name="lvl_Arid_SkagGully_Part2.assetbundle" type="LevelData">
+          <ProbeDataNear path="nearlightProbes" />
+          <ProbeDataFar path="farlightProbes" />
+          <Cubemap path="Arid_SkagGully_Part2_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_chesttreasure.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_skagspitter.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1452651928.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1129135071.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3238229738.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_sgp01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1500" />
+          <CameraEffect value="EffectCamera_Arid_SkagGully_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassVkag" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagAlpha" />
+        <NPC value="SkagPup" />
+        <NPC value="SkagSpitter" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Arid_SkagGully2_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_SkagGully2_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Arid_SkagGully2_Part1_scn.assetbundle" type="Map" map="Arid_SkagGully2_Part1" />
+        <AssetBundle name="lvl_Arid_SkagGully2_Part1.assetbundle" type="LevelData">
+          <ProbeDataNear path="nearlightProbes" />
+          <ProbeDataFar path="farlightProbes" />
+          <Cubemap path="Arid_SkagGully_Part2_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_hangingcage.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_ptc_fire.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1158854664.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1129135071.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3238229738.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_sgp01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Arid_SkagGully2_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BanditBruiser" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Arid_SkagGully2_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_SkagGully2_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Arid_SkagGully2_Part2_scn.assetbundle" type="Map" map="Arid_SkagGully2_Part2" />
+        <AssetBundle name="lvl_Arid_SkagGully2_Part2.assetbundle" type="LevelData">
+          <ProbeDataNear path="nearlightProbes" />
+          <ProbeDataFar path="farlightProbes" />
+          <Cubemap path="Arid_SkagGully2_Part2_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1158854664.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1129135071.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3238229738.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_sgp01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Arid_SkagGully2_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BanditBruiser" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Arid_SkagNest">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_SkagNest_scn.assetbundle" type="Map" map="Arid_SkagNest" />
+        <AssetBundle name="lvl_Arid_SkagNest.assetbundle" type="LevelData">
+          <Cubemap path="Arid_SkagNest_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3388120056.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_640422811.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1177534636.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_671976011.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_skagspitter.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1452651928.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_spitterqueen.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="cutscene_arid_skagnest.assetbundle" type="ResourceDependency" behaviour="cutscene" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="600" />
+          <CameraEffect value="EffectCamera_Arid_SkagNest" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="SkagAdult" />
+        <NPC value="SkagAlpha" />
+        <NPC value="SkagPup" />
+        <NPC value="SkagSpitter" />
+        <NPC value="SpitterQueen" />
+        <NPC value="ZillaKing" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Trash_ZillaArena">
+      <AssetBundles>
+        <AssetBundle name="lvl_Trash_ZillaArena_scn.assetbundle" type="Map" map="Trash_ZillaArena" />
+        <AssetBundle name="lvl_Trash_ZillaArena.assetbundle" type="LevelData">
+          <ProbeDataNear path="nearlightProbes" />
+          <ProbeDataFar path="farlightProbes" />
+          <Cubemap path="Trash_ZillaArena_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1177534636.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_671976011.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2726083406.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="cutscene_trash_zillaarena.assetbundle" type="ResourceDependency" behaviour="cutscene" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Trash_ZillaArena" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassSpiderantWorker" />
+        <NPC value="SpiderantWidowmaker" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Survival">
+      <AssetBundles>
+        <AssetBundle name="lvl_Survival_scn.assetbundle" type="Map" map="Survival" />
+        <AssetBundle name="lvl_Survival.assetbundle" type="LevelData">
+          <ProbeDataNear path="nearlightProbes" />
+          <ProbeDataFar path="farlightProbes" />
+          <Cubemap path="SurvivalTest_Survival" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_chesttreasure.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3388120056.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1177534636.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_671976011.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Survival" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BadassVkag" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagAlpha" />
+        <NPC value="SkagPup" />
+        <NPC value="SkagZilla" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_PVP_Prototype">
+      <AssetBundles>
+        <AssetBundle name="lvl_PvP_Prototype_scn.assetbundle" type="Map" map="SM_PvP_Relic" />
+        <AssetBundle name="lvl_PvP_Prototype.assetbundle" type="LevelData">
+          <Cubemap path="SM_PvP_Relic" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_PVP_Relic" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_autotest_1">
+      <AssetBundles>
+        <AssetBundle name="lvl_autotest_1_scn.assetbundle" type="Map" map="lvl_autotest_1" />
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1629811088.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1767305925.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1158854664.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_skagspitter.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1452651928.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2065905060.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_rakk.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3388120056.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_theinsane_tentacle.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_icespiderboss.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2726083406.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_theinsane.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_archangel.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1949042057.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_4236140158.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <NPCSetting>
+        <NPC value="ArchAngel" />
+        <NPC value="ArchAngel_EnergyBlast" />
+        <NPC value="ArchAngel_EnergyMissile" />
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BadassVkag" />
+        <NPC value="BanditBruiser" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditScout" />
+        <NPC value="BanditScout_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="CrimsonLanceDefender" />
+        <NPC value="CrimsonLanceMedic" />
+        <NPC value="GuardianWraith" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="Rakk" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagAlpha" />
+        <NPC value="SkagPup" />
+        <NPC value="SkagSpitter" />
+        <NPC value="SkagZilla" />
+        <NPC value="SpiderantTalos" />
+        <NPC value="SpiderantWidowmaker" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="TheInsane" />
+        <NPC value="TheInsaneEye" />
+        <NPC value="TheInsaneTentacle" />
+        <NPC value="TheInsaneTentacleLarge" />
+        <NPC value="TowerLaser" />
+        <NPC value="TowerWarningLaser" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Trash_oasis_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_Trash_oasis_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Trash_oasis_Part1_scn.assetbundle" type="Map" map="Trash_oasis_Part1" />
+        <AssetBundle name="lvl_Trash_oasis_Part1.assetbundle" type="LevelData">
+          <Cubemap path="Trash_oasis_Part1_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1158854664.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1177534636.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_671976011.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2065905060.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_rakk.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="800" />
+          <CameraEffect value="EffectCamera_Trash_oasis_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BanditBruiser" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditScout" />
+        <NPC value="BanditScout_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="Rakk" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Trash_oasis_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_Trash_oasis_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Trash_oasis_Part2_scn.assetbundle" type="Map" map="Trash_oasis_Part2" />
+        <AssetBundle name="lvl_Trash_oasis_Part2.assetbundle" type="LevelData">
+          <Cubemap path="Trash_oasis_Part2_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1158854664.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1177534636.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_671976011.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Trash_oasis_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BanditBruiser" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditScout" />
+        <NPC value="BanditScout_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Trash_oasis2_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_Trash_oasis2_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Trash_oasis2_Part1_scn.assetbundle" type="Map" map="Trash_oasis2_Part1" />
+        <AssetBundle name="lvl_Trash_oasis2_Part1.assetbundle" type="LevelData">
+          <Cubemap path="Trash_oasis_Part2_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_trashcanlootable.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2065905060.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_rakk.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1177534636.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_671976011.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Trash_oasis2_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassSpiderantWorker" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="Rakk" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Trash_oasis2_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_Trash_oasis2_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Trash_oasis2_Part2_scn.assetbundle" type="Map" map="Trash_oasis2_Part2" />
+        <AssetBundle name="lvl_Trash_oasis2_Part2.assetbundle" type="LevelData">
+          <Cubemap path="Trash_oasis_Part1_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_trashcanlootable.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_skagspitter.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1452651928.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_55830138.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1177534636.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_671976011.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Trash_oasis2_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassSpiderantWorker" />
+        <NPC value="BadassVkag" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagAlpha" />
+        <NPC value="SkagSpitter" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Scrap_TrashCoastA_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_Scrap_TrashCoastA_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Scrap_TrashCoastA_Part1_scn.assetbundle" type="Map" map="Scrap_TrashcoastA_Part1" />
+        <AssetBundle name="lvl_Scrap_TrashCoastA_Part1.assetbundle" type="LevelData">
+          <Cubemap path="Scrap_TrashcoastA_Part1_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_trashcanlootable.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1177534636.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_671976011.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_skagspitter.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1452651928.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Scrap_TrashcoastA_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassSpiderantWorker" />
+        <NPC value="BadassVkag" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditScout" />
+        <NPC value="BanditScout_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagAlpha" />
+        <NPC value="SkagPup" />
+        <NPC value="SkagSpitter" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Scrap_TrashCoastA_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_Scrap_TrashCoastA_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Scrap_TrashCoastA_Part2_scn.assetbundle" type="Map" map="Scrap_TrashcoastA_Part2" />
+        <AssetBundle name="lvl_Scrap_TrashCoastA_Part2.assetbundle" type="LevelData">
+          <Cubemap path="Scrap_TrashcoastA_Part2_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_chesttreasure.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1177534636.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_671976011.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_trashcanlootable.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Scrap_Trashcoast_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassVkag" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagAlpha" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Scrap_TrashCoastB_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_Scrap_TrashCoastB_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Scrap_TrashCoastB_Part1_scn.assetbundle" type="Map" map="Scrap_TrashcoastB_Part1" />
+        <AssetBundle name="lvl_Scrap_TrashCoastB_Part1.assetbundle" type="LevelData">
+          <Cubemap path="Scrap_TrashcoastB_Part1_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_trashcanlootable.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_ptc_fire.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1177534636.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_671976011.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Scrap_TrashcoastB_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditScout" />
+        <NPC value="BanditScout_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Scrap_TrashCoastB_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_Scrap_TrashCoastB_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Scrap_TrashCoastB_Part2_scn.assetbundle" type="Map" map="Scrap_TrashcoastB_Part2" />
+        <AssetBundle name="lvl_Scrap_TrashCoastB_Part2.assetbundle" type="LevelData">
+          <Cubemap path="Scrap_TrashcoastB_Part2_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1177534636.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_671976011.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Scrap_TrashcoastB_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BadassSpiderantWorker" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Arid_Cave_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_Cave_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Arid_Cave_Part1_scn.assetbundle" type="Map" map="Arid_Cave_Part1" />
+        <AssetBundle name="lvl_Arid_Cave_Part1.assetbundle" type="LevelData">
+          <Cubemap path="Arid_Cave_Part1_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_acp01_amb2d.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3258714326.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_windcavedebris001.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_crabworm.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_55830138.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1158854664.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Arid_Cave_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BanditBruiser" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditScout" />
+        <NPC value="BanditScout_L" />
+        <NPC value="Crabworm" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Arid_Cave_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_Cave_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Arid_Cave_Part2_scn.assetbundle" type="Map" map="Arid_Cave_Part2" />
+        <AssetBundle name="lvl_Arid_Cave_Part2.assetbundle" type="LevelData">
+          <Cubemap path="Arid_Cave_Part2_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_799690633.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_crabworm.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1158854664.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_ptc_smoke.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_windcavedebris001.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3258714326.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_acp01_amb2d.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_skagspitter.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1452651928.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Arid_Cave_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BadassVkag" />
+        <NPC value="BanditBruiser" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="Crabworm" />
+        <NPC value="SkagSpitter" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Arid_InfinityTrain_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_InfinityTrain_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Arid_InfinityTrain_Part1_scn.assetbundle" type="Map" map="Arid_InfinityTrain_Part1" />
+        <AssetBundle name="lvl_Arid_InfinityTrain_Part1.assetbundle" type="LevelData">
+          <Cubemap path="Arid_InfinityTrain_Part1_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2304569424.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1476349051.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3529966057.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_918347912.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_itp01_amb2d.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_trainhorn_far.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_trainhorn_near.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_360781711.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Arid_InfinityTrain_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditScout" />
+        <NPC value="BanditScout_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Arid_InfinityTrain_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_InfinityTrain_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Arid_InfinityTrain_Part2_scn.assetbundle" type="Map" map="Arid_InfinityTrain_Part2" />
+        <AssetBundle name="lvl_Arid_InfinityTrain_Part2.assetbundle" type="LevelData">
+          <Cubemap path="Arid_InfinityTrain_Part2_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3241903434.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_trainhorn_far.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_918347912.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_itp01_amb2d.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2304569424.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3529966057.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1476349051.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_360781711.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Arid_InfinityTrain_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditScout" />
+        <NPC value="BanditScout_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Arid_Mine_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_mine_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Arid_mine_Part1_scn.assetbundle" type="Map" map="Arid_Mine_Part1" />
+        <AssetBundle name="lvl_Arid_mine_Part1.assetbundle" type="LevelData">
+          <Cubemap path="Arid_Mine_Part1_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1158854664.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_crystal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1129135071.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3238229738.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_sgp01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Arid_Mine_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BanditBruiser" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditScout" />
+        <NPC value="BanditScout_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Arid_Mine_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_mine_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Arid_mine_Part2_scn.assetbundle" type="Map" map="Arid_Mine_Part2" />
+        <AssetBundle name="lvl_Arid_mine_Part2.assetbundle" type="LevelData">
+          <Cubemap path="Arid_Mine_Part2_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1129135071.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3238229738.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_sgp01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1158854664.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_crystal.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Arid_Mine_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BanditBruiser" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Arid_Mine_Part3">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_mine_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Arid_mine_Part3_scn.assetbundle" type="Map" map="Arid_Mine_Part3" />
+        <AssetBundle name="lvl_Arid_mine_Part3.assetbundle" type="LevelData">
+          <Cubemap path="Arid_Mine_Part3_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1158854664.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_chesttreasure.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_crystal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1129135071.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3238229738.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_sgp01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Arid_Mine_Part3" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BanditBruiser" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditScout" />
+        <NPC value="BanditScout_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Ancient_Glacier_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_Ancient_Glacier_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Ancient_Glacier_Part1_scn.assetbundle" type="Map" map="SM_Glacier_Part1" />
+        <AssetBundle name="lvl_Ancient_Glacier_Part1.assetbundle" type="LevelData">
+          <Cubemap path="SM_Glacier_Part1_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1767305925.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_smpt01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_Glacier_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassCrimsonLanceDefender" />
+        <NPC value="BadassSpiderantWorker" />
+        <NPC value="CrimsonLanceDefender" />
+        <NPC value="CrimsonLanceInfantry" />
+        <NPC value="CrimsonLanceSniper" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Ancient_Glacier_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_Ancient_Glacier_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_Ancient_Glacier_Part2_scn.assetbundle" type="Map" map="SM_Glacier_Part2" />
+        <AssetBundle name="lvl_Ancient_Glacier_Part2.assetbundle" type="LevelData">
+          <Cubemap path="SM_Glacier_Part2_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1629811088.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1767305925.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_smpt01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_Glacier_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassCrimsonLanceDefender" />
+        <NPC value="BadassGuardianWraith" />
+        <NPC value="CrimsonLanceDefender" />
+        <NPC value="CrimsonLanceInfantry" />
+        <NPC value="CrimsonLanceMedic" />
+        <NPC value="CrimsonLanceSniper" />
+        <NPC value="GuardianWraith" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_IceCave_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_IceCave_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_SM_IceCave_Part1_scn.assetbundle" type="Map" map="IceCave_Part1" />
+        <AssetBundle name="lvl_SM_IceCave_Part1.assetbundle" type="LevelData">
+          <Cubemap path="IceCave_Part1_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_799690633.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_icp01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_acp01_amb2d.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_windcavedebris001.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_sfx_water_waterfall_01_lp.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_702337483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_crabworm.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_skagspitter.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1452651928.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_IceCave_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassSpiderantWorker" />
+        <NPC value="BadassVkag" />
+        <NPC value="Crabworm" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagAlpha" />
+        <NPC value="SkagSpitter" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_IceCave_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_IceCave_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_SM_IceCave_Part2_scn.assetbundle" type="Map" map="IceCave_Part2" />
+        <AssetBundle name="lvl_SM_IceCave_Part2.assetbundle" type="LevelData">
+          <Cubemap path="SM_IceCave_Part2_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_icp01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3388120056.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_acp01_amb2d.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_windcavedebris001.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2065905060.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_rakk.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_skagspitter.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1452651928.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_IceCave_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassSpiderantWorker" />
+        <NPC value="BadassVkag" />
+        <NPC value="Rakk" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagAlpha" />
+        <NPC value="SkagSpitter" />
+        <NPC value="SkagZilla" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_Spaceship_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_Spaceship_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_SM_Spaceship_Part1_scn.assetbundle" type="Map" map="SM_Spaceship_Part1" />
+        <AssetBundle name="lvl_SM_Spaceship_Part1.assetbundle" type="LevelData">
+          <Cubemap path="SM_Spaceship_Part1_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1767305925.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_assassin.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_floatingjetboat.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_spaceship_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="3000" />
+          <CameraEffect value="EffectCamera_SM_Spaceship_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassCrimsonLanceDefender" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="CrimsonLanceAssassin" />
+        <NPC value="CrimsonLanceDefender" />
+        <NPC value="CrimsonLanceInfantry" />
+        <NPC value="CrimsonLanceMedic" />
+        <NPC value="CrimsonLanceSniper" />
+        <NPC value="SwordSlash" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_Spaceship_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_Spaceship_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_SM_Spaceship_Part2_scn.assetbundle" type="Map" map="SM_Spaceship_Part2" />
+        <AssetBundle name="lvl_SM_Spaceship_Part2.assetbundle" type="LevelData">
+          <Cubemap path="SM_Spaceship_Part2_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1767305925.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3749175852.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_spaceship_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2219151489.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amd3d_computer_beeps_rnd.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_sfx_cutscene_dragonlady_mix.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="cutscene_sm_spaceship_part2.assetbundle" type="ResourceDependency" behaviour="cutscene" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_Spaceship_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassCrimsonLanceDefender" />
+        <NPC value="CrimsonLanceDefender" />
+        <NPC value="CrimsonLanceInfantry" />
+        <NPC value="CrimsonLanceMedic" />
+        <NPC value="CrimsonLanceSniper" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_AlienAltar_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_AlienAltar_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_SM_AlienAltar_Part1_scn.assetbundle" type="Map" map="SM_AlienAltar_Part1" />
+        <AssetBundle name="lvl_SM_AlienAltar_Part1.assetbundle" type="LevelData">
+          <Cubemap path="SM_AlienAltar_Part1_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1629811088.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_glacier_icewall_fall.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2065905060.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_rakk.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_alienaltarp01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_cave_echo.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_wind_blizzard_loop.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_wind_blizzard_gusts.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_tonal_cave_loop.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_AlienAltar_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassGuardianWraith" />
+        <NPC value="BadassSpiderantWorker" />
+        <NPC value="GuardianWraith" />
+        <NPC value="Rakk" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_AlienAltar_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_AlienAltar_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_SM_AlienAltar_Part2_scn.assetbundle" type="Map" map="SM_AlienAltar_Part2" />
+        <AssetBundle name="lvl_SM_AlienAltar_Part2.assetbundle" type="LevelData">
+          <Cubemap path="SM_AlienAltar_Part2_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1629811088.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_alienaltarp02_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_cave_echo.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_tonal_cave_loop.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_crabworm.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="2000" />
+          <CameraEffect value="EffectCamera_SM_AlienAltar_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassGuardianWraith" />
+        <NPC value="BadassSpiderantWorker" />
+        <NPC value="Crabworm" />
+        <NPC value="GuardianWraith" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_IntoTheBunker_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_IntoTheBunker_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_SM_IntoTheBunker_Part1_scn.assetbundle" type="Map" map="SM_IntoTheBunker_Part1" />
+        <AssetBundle name="lvl_SM_IntoTheBunker_Part1.assetbundle" type="LevelData">
+          <Cubemap path="SM_IntoTheBunker_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1767305925.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_floatingjetboat.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_jetboat.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_roomtone01.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3258714326.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_assassin.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_IntoTheBunker_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassCrimsonLanceDefender" />
+        <NPC value="CrimsonLanceAssassin" />
+        <NPC value="CrimsonLanceDefender" />
+        <NPC value="CrimsonLanceInfantry" />
+        <NPC value="CrimsonLanceMedic" />
+        <NPC value="CrimsonLanceSniper" />
+        <NPC value="SwordSlash" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_IntoTheBunker_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_IntoTheBunker_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_SM_IntoTheBunker_Part2_scn.assetbundle" type="Map" map="SM_IntoTheBunker_Part2" />
+        <AssetBundle name="lvl_SM_IntoTheBunker_Part2.assetbundle" type="LevelData">
+          <Cubemap path="SM_IntoTheBunker_Part2_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_ptc_smoke.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_roomtone03.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1767305925.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3258714326.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_roomtone01.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_roomtone02.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_IntoTheBunker_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassCrimsonLanceDefender" />
+        <NPC value="CrimsonLanceDefender" />
+        <NPC value="CrimsonLanceInfantry" />
+        <NPC value="CrimsonLanceMedic" />
+        <NPC value="CrimsonLanceSniper" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Lance_Bunker_Part3">
+      <AssetBundles>
+        <AssetBundle name="lvl_Lance_Bunker_Part3_scn.assetbundle" type="Map" map="SM_LanceBunker_Part3" />
+        <AssetBundle name="lvl_Lance_Bunker_Part3.assetbundle" type="LevelData">
+          <Cubemap path="SM_LanceBunker_Part3_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1198622483.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1767305925.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_assassin.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_smpt01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_LanceBunker_Part3" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassCrimsonLanceDefender" />
+        <NPC value="CrimsonLanceAssassin" />
+        <NPC value="CrimsonLanceDefender" />
+        <NPC value="CrimsonLanceInfantry" />
+        <NPC value="CrimsonLanceMedic" />
+        <NPC value="CrimsonLanceSniper" />
+        <NPC value="SwordSlash" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_Peak_of_Alcaid">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_Peak_of_Alcaid_scn.assetbundle" type="Map" map="SM_Peak_of_Alcaid" />
+        <AssetBundle name="lvl_SM_Peak_of_Alcaid.assetbundle" type="LevelData">
+          <Cubemap path="Arid_mine_Part1_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1767305925.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_smpt01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_chesttreasure.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_crimson_mecha_knoxx.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_94477129.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="cutscene_sm_peak_of_alcaid.assetbundle" type="ResourceDependency" behaviour="cutscene" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="3000" />
+          <CameraEffect value="EffectCamera_SM_LanceBunker_Part3" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassCrimsonLanceDefender" />
+        <NPC value="CrimsonLanceDefender" />
+        <NPC value="CrimsonMechaKnoxx" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Tutorial_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_Tutorial_Part1_scn.assetbundle" type="Map" map="Tutorial_Part1" />
+        <AssetBundle name="lvl_Tutorial_Part1.assetbundle" type="LevelData">
+          <Cubemap path="Tutorial_Part1_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_4120314479.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_799690633.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_433393807.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2897433573.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_floatingjetboat.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_tutorial01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_535401569.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_sfx_ocean_wave_loop.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_claptrap.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="cutscene_tutorial_part1.assetbundle" type="ResourceDependency" behaviour="cutscene" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Tutorial" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BanditKiller" />
+        <NPC value="ClapTrapTutor" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagPup" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Tutorial_Part1_4x">
+      <AssetBundles>
+        <AssetBundle name="lvl_Tutorial_Part1_4x_scn.assetbundle" type="Map" map="Tutorial_Part1_4x" />
+        <AssetBundle name="lvl_Tutorial_Part1_4x.assetbundle" type="LevelData">
+          <Cubemap path="Tutorial_Part1_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_sfx_ocean_wave_loop.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_4120314479.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_799690633.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_433393807.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2897433573.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_floatingjetboat.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_claptrap.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_tutorial01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_535401569.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="cutscene_tutorial_part1_4x.assetbundle" type="ResourceDependency" behaviour="cutscene" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="3000" />
+          <CameraEffect value="EffectCamera_Tutorial" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BanditKiller" />
+        <NPC value="ClapTrapTutor" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagPup" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_GYM_CharacterControl">
+      <AssetBundles>
+        <AssetBundle name="lvl_GYM_CharacterControl_scn.assetbundle" type="Map" map="GYM_CharacterControl" />
+        <AssetBundle name="lvl_GYM_CharacterControl.assetbundle" type="LevelData">
+          <Cubemap path="SM_Talos_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_chesttreasure.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_skagspitter.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1452651928.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3388120056.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1767305925.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1158854664.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_Talos" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassCrimsonLanceDefender" />
+        <NPC value="BadassVkag" />
+        <NPC value="BanditBruiser" />
+        <NPC value="BanditKiller" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditRaider" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditScout" />
+        <NPC value="BanditScout_L" />
+        <NPC value="CrimsonLanceDefender" />
+        <NPC value="CrimsonLanceInfantry" />
+        <NPC value="CrimsonLanceMedic" />
+        <NPC value="CrimsonLanceSniper" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagAlpha" />
+        <NPC value="SkagPup" />
+        <NPC value="SkagSpitter" />
+        <NPC value="SkagZilla" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_Talos">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_Talos_scn.assetbundle" type="Map" map="SM_Talos" />
+        <AssetBundle name="lvl_SM_Talos.assetbundle" type="LevelData">
+          <Cubemap path="SM_Talos_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_smpt01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_icespiderboss.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="cutscene_sm_talos.assetbundle" type="ResourceDependency" behaviour="cutscene" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_Talos" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassSpiderantWorker" />
+        <NPC value="SpiderantTalos" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_PleyadeTemple_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_PleyadeTemple_Part1_scn.assetbundle" type="Map" map="SM_PleyadeTemple_Part1" />
+        <AssetBundle name="lvl_SM_PleyadeTemple_Part1.assetbundle" type="LevelData">
+          <Cubemap path="SM_PleyadeTemple_Part1_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1629811088.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3740988690.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2163313995.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_smbridge_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2425088967.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_archangel.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1949042057.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_4236140158.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="cutscene_sm_pleyadetemple_part1.assetbundle" type="ResourceDependency" behaviour="cutscene" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_PleyadeTemple" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="ArchAngel" />
+        <NPC value="ArchAngel_EnergyBlast" />
+        <NPC value="ArchAngel_EnergyMissile" />
+        <NPC value="BadassGuardianWraith" />
+        <NPC value="GuardianWraith" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_PleyadeTemple_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_PleyadeTemple_Part2_scn.assetbundle" type="Map" map="SM_PleyadeTemple_Part2" />
+        <AssetBundle name="lvl_SM_PleyadeTemple_Part2.assetbundle" type="LevelData">
+          <Cubemap path="SM_PleyadeTemple_Part2_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_smtemple_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2169181711.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1642207833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1394614268.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_theinsane.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_archangel.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1949042057.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_4236140158.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1629811088.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_theinsane_tentacle.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="cutscene_sm_pleyadetemple_part2.assetbundle" type="ResourceDependency" behaviour="cutscene" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="3000" />
+          <CameraEffect value="EffectCamera_SM_PleyadeTemple_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="ArchAngel_EnergyBlast" />
+        <NPC value="BadassGuardianWraith" />
+        <NPC value="GuardianWraith" />
+        <NPC value="TheInsane" />
+        <NPC value="TheInsaneCrystal" />
+        <NPC value="TheInsaneEye" />
+        <NPC value="TheInsaneTentacle" />
+        <NPC value="TheInsaneTentacleLarge" />
+        <NPC value="TowerLaser" />
+        <NPC value="TowerWarningLaser" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Arid_Mine_Forge">
+      <AssetBundles>
+        <AssetBundle name="lvl_Arid_Mine_Forge_scn.assetbundle" type="Map" map="Arid_Mine_Forge" />
+        <AssetBundle name="lvl_Arid_Mine_Forge.assetbundle" type="LevelData">
+          <Cubemap path="Arid_Mine_Forge_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3258714326.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1718316863.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3731361148.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1158854664.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditapollyon.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="cutscene_arid_mine_forge.assetbundle" type="ResourceDependency" behaviour="cutscene" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Arid_Mine_Forge" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BanditApollyon" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_LanceTurret">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_LanceTurret_scn.assetbundle" type="Map" map="SM_LanceTurret" />
+        <AssetBundle name="lvl_SM_LanceTurret.assetbundle" type="LevelData">
+          <Cubemap path="SM_LanceTurret_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_roomtone01.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_roomtone02.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_roomtone03.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3258714326.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_243474698.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_midgetshotgunner.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1767305925.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1631917778.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_94477129.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_crimson_mecha_knoxx.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2721139862.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="cutscene_sm_lanceturret.assetbundle" type="ResourceDependency" behaviour="cutscene" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_LanceTurret" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassCrimsonLanceDefender" />
+        <NPC value="CrimsonLanceDefender" />
+        <NPC value="CrimsonLanceInfantry" />
+        <NPC value="CrimsonLanceMedic" />
+        <NPC value="CrimsonLanceSniper" />
+        <NPC value="CrimsonMechaKnoxx" />
+        <NPC value="MidgetShotgunner" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Floasm_Small">
+      <AssetBundles>
+        <AssetBundle name="lvl_Floasm_Small_scn.assetbundle" type="Map" map="Floasm_Small" />
+        <AssetBundle name="lvl_Floasm_Small.assetbundle" type="LevelData">
+          <Cubemap path="Floasm_Small_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_dr_nod.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_captaindick.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2164623713.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_amelia_tereshkova.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3241903434.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_miramira.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_claptrap.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1129135071.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2484131278.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_hartsinelighton.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2540813167.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_clarence.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Floasm" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_RV">
+      <AssetBundles>
+        <AssetBundle name="lvl_RV_scn.assetbundle" type="Map" map="RV" />
+        <AssetBundle name="lvl_RV.assetbundle" type="LevelData">
+          <Cubemap path="Floasm_Small_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2219151489.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_4248169551.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3241903434.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_music_moving_bell_lp.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_prop_mf_tarp_c.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb_wind_loop_02.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2164623713.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_sfx_toilet_flush_issue_lp.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_rv_amb_2d.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_rv_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3749175852.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_flower_dandelion_04.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_sfx_buzz_blink_fast_crackle_lp.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_RVFloasm" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_RV_4x">
+      <AssetBundles>
+        <AssetBundle name="lvl_RV_4x_scn.assetbundle" type="Map" map="RV_4x" />
+        <AssetBundle name="lvl_RV_4x.assetbundle" type="LevelData">
+          <Cubemap path="Floasm_Small_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2164623713.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_flower_dandelion_04.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_sfx_buzz_blink_fast_crackle_lp.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_music_moving_bell_lp.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_prop_mf_tarp_c.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3241903434.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_sfx_toilet_flush_issue_lp.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_4248169551.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2219151489.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3749175852.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb_wind_loop_02.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_rv_amb_2d.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_rv_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="900" />
+          <CameraEffect value="EffectCamera_RV_Floasm" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Metropolis">
+      <AssetBundles>
+        <AssetBundle name="lvl_Metropolis_scn.assetbundle" type="Map" map="Metropolis" />
+        <AssetBundle name="lvl_Metropolis.assetbundle" type="LevelData">
+          <Cubemap path="Metropolis_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_amelia_tereshkova.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_tutorial01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_4120314479.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_433393807.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_799690633.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_535401569.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2897433573.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_dr_nod.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_captaindick.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_music_speaker_moxxi_saloon_lp_wide.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_claptrap.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_nick_primer.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_miramira.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2164623713.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_veteran.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_dragon_lady.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1104363782.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2540813167.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_Metropolis" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_Union_City">
+      <AssetBundles>
+        <AssetBundle name="lvl_Union_City_scn.assetbundle" type="Map" map="Union_City" />
+        <AssetBundle name="lvl_Union_City.assetbundle" type="LevelData">
+          <Cubemap path="Union_City_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3241903434.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_claptrap.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_dr_nod.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_nick_primer.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2540813167.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_captaindick.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_veteran.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_amelia_tereshkova.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_miramira.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1104363782.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_dragon_lady.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_train_engine.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2164623713.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_ptl_shiningstartlight.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_tutorial01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_4120314479.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_433393807.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_799690633.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_535401569.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2897433573.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_UnionStation" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_Digsite_Part1">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_Digsite_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_SM_Digsite_Part1_scn.assetbundle" type="Map" map="SM_Digsite_Part1" />
+        <AssetBundle name="lvl_SM_Digsite_Part1.assetbundle" type="LevelData">
+          <Cubemap path="SM_Digsite_Part1_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1211666229.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1043868943.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_glacier_icewall_fall.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_arrow_comp_open.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2065905060.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_rakk.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_smpt01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3955167970.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_skagspitter.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1452651928.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_Digsite_Part1" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassSpiderantWorker" />
+        <NPC value="BadassVkag" />
+        <NPC value="Rakk" />
+        <NPC value="SkagAdult" />
+        <NPC value="SkagAlpha" />
+        <NPC value="SkagSpitter" />
+        <NPC value="SpiderantWorker" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_SM_Digsite_Part2">
+      <AssetBundles>
+        <AssetBundle name="lvl_SM_Digsite_Shared.assetbundle" type="ResourceDependency" behaviour="shared" />
+        <AssetBundle name="lvl_SM_Digsite_Part2_scn.assetbundle" type="Map" map="SM_Digsite_Part2" />
+        <AssetBundle name="lvl_SM_Digsite_Part2.assetbundle" type="LevelData">
+          <Cubemap path="SM_Digsite_Part2_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_313473189.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3978974500.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_pro_glacier_icewall_fall.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_337662733.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_chesttreasure.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3759434714.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_storagelocker.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1564167833.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_675348052.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_chr_banditsuicidepsycho.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_604726064.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_smpt01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3348460416.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_Digsite_Part2" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassBanditKiller" />
+        <NPC value="BadassBanditPsycho" />
+        <NPC value="BanditKiller_L" />
+        <NPC value="BanditPsycho" />
+        <NPC value="BanditRaider_L" />
+        <NPC value="BanditScout_L" />
+        <NPC value="BanditSuicidePsycho" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_PvP_Fort">
+      <AssetBundles>
+        <AssetBundle name="lvl_PvP_Fort_scn.assetbundle" type="Map" map="PvP_Fort" />
+        <AssetBundle name="lvl_PvP_Fort.assetbundle" type="LevelData">
+          <Cubemap path="PvP_Fort_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_PvP_Fort" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_PvP_Shipment">
+      <AssetBundles>
+        <AssetBundle name="lvl_PvP_Shipment_scn.assetbundle" type="Map" map="PvP_Shipment" />
+        <AssetBundle name="lvl_PvP_Shipment.assetbundle" type="LevelData">
+          <Cubemap path="PvP_Fort_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_PvP_Fort" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_PvP_Waterfall">
+      <AssetBundles>
+        <AssetBundle name="lvl_PvP_Waterfall_scn.assetbundle" type="Map" map="PvP_WaterFall" />
+        <AssetBundle name="lvl_PvP_Waterfall.assetbundle" type="LevelData">
+          <Cubemap path="PvP_WaterFall_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_pvp_waterfall_far.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_pvp_waterfall_close.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_637250237.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_PvP_WaterFall" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_PvP_Mine">
+      <AssetBundles>
+        <AssetBundle name="lvl_PvP_Mine_scn.assetbundle" type="Map" map="PvP_Mine" />
+        <AssetBundle name="lvl_PvP_Mine.assetbundle" type="LevelData">
+          <Cubemap path="PvP_Fort_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="3000" />
+          <CameraEffect value="EffectCamera_PvP_Fort" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting />
+    </Map>
+    <Map name="lvl_PvP_Town">
+      <AssetBundles>
+        <AssetBundle name="lvl_PvP_Town_scn.assetbundle" type="Map" map="PvP_Town" />
+        <AssetBundle name="lvl_PvP_Town.assetbundle" type="LevelData">
+          <Cubemap path="PvP_Town_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_metal.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_amb3d_distant_bird.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_PVP_Town" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_PvP_ClaptrapSoccer_Town">
+      <AssetBundles>
+        <AssetBundle name="lvl_PvP_ClaptrapSoccer_Town_scn.assetbundle" type="Map" map="PvP_SoccerMode_ValleyTown" />
+        <AssetBundle name="lvl_PvP_ClaptrapSoccer_Town.assetbundle" type="LevelData">
+          <Cubemap path="PvP_Town_Cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1245201782.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="10000" />
+          <CameraEffect value="EffectCamera_PvP_SoccerMode_ValleyTown" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_MetropolisSurvival">
+      <AssetBundles>
+        <AssetBundle name="lvl_MetropolisSurvival_scn.assetbundle" type="Map" map="SM_MetropolisSurvival" />
+        <AssetBundle name="lvl_MetropolisSurvival.assetbundle" type="LevelData">
+          <Cubemap path="SM_MetropolisSurvival_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1854366180.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_319508803.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_391369271.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_aud_tgr_smpt01_music.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3885547695.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3681376247.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_1767305925.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_3877943792.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_2428753100.assetbundle" type="ResourceDependency" behaviour="audio" />
+        <AssetBundle name="aud_pkg_template_chesttreasure.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <MapSetting>
+        <CameraSetting>
+          <FarClip value="1000" />
+          <CameraEffect value="EffectCamera_SM_MetropolisSurvival" />
+        </CameraSetting>
+      </MapSetting>
+      <NPCSetting>
+        <NPC value="BadassCrimsonLanceDefender" />
+        <NPC value="CrimsonLanceDefender" />
+        <NPC value="CrimsonLanceInfantry" />
+        <NPC value="CrimsonLanceMedic" />
+        <NPC value="CrimsonLanceSniper" />
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+    <Map name="lvl_raid_arid_depths">
+      <AssetBundles>
+        <AssetBundle name="lvl_raid_arid_depths_scn.assetbundle" type="Map" map="raid_arid_depths" />
+        <AssetBundle name="lvl_raid_arid_depths.assetbundle" type="LevelData">
+          <Cubemap path="raid_arid_depths_cubemap" />
+        </AssetBundle>
+        <AssetBundle name="light_pillar.assetbundle" type="ResourceDependency" behaviour="light_pillar" />
+        <AssetBundle name="vfxmanager.assetbundle" type="ResourceDependency" behaviour="vfxmanager" />
+        <AssetBundle name="vfxmanagersndprefab.assetbundle" type="ResourceDependency" behaviour="audio" />
+      </AssetBundles>
+      <NPCSetting>
+        <NPC value="BloodWing" />
+        <NPC value="SoldierTurretBasic" />
+        <NPC value="SoldierTurretAdvanced" />
+        <NPC value="MedicalStation" />
+      </NPCSetting>
+    </Map>
+  </Maps>
+</Instance>

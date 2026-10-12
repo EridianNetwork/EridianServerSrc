@@ -1,0 +1,8 @@
+<BHVAnimationManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_settings>
+    <m_weaponHolderName>Bip01 R Hand_AXE</m_weaponHolderName>
+    <m_weaponPrefabName>WPN_Axe_BadassNPC</m_weaponPrefabName>
+    <m_hasDeathAnimation>true</m_hasDeathAnimation>
+    <m_animationHostName>CHR_BadassPsycho</m_animationHostName>
+  </m_settings>
+</BHVAnimationManagerSetup>

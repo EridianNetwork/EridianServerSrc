@@ -1,0 +1,401 @@
+[
+ {
+  "name": "Killer SMG",
+  "id": 0,
+  "type": "SMG",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Raider SMG",
+  "id": 1,
+  "type": "SMG",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Medic SMG",
+  "id": 21,
+  "type": "SMG",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": -1,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Badass Fire CR",
+  "id": 16,
+  "type": "CombatRifle",
+  "rarity": "Common",
+  "level": 4,
+  "subparts": {
+   "ACC": 1,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Badass Shock CR",
+  "id": 17,
+  "type": "CombatRifle",
+  "rarity": "Common",
+  "level": 4,
+  "subparts": {
+   "ACC": 2,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Badass Acid CR",
+  "id": 18,
+  "type": "CombatRifle",
+  "rarity": "Common",
+  "level": 4,
+  "subparts": {
+   "ACC": 3,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Infantry CR",
+  "id": 22,
+  "type": "CombatRifle",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 2,
+   "BODY": 7,
+   "GRIP": 0,
+   "MAG": 10,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Badass SMG",
+  "id": 11,
+  "type": "SMG",
+  "rarity": "Common",
+  "level": 4,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Bruiser Shotgun",
+  "id": 3,
+  "type": "ShotGun",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Midget Shotgun",
+  "id": 23,
+  "type": "ShotGun",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": -1,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Bandit Sniper",
+  "id": 4,
+  "type": "SniperRifle",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Lance Sniper",
+  "id": 24,
+  "type": "SniperRifle",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Soldier Turret Gun",
+  "id": 5,
+  "type": "SMG",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -3
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Soldier Turret Gun Shock",
+  "id": 6,
+  "type": "SMG",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 2,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -3
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Mob Pistol",
+  "id": 7,
+  "type": "RepeaterPistol",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": 0,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": -1,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Badass Pistol",
+  "id": 14,
+  "type": "RepeaterPistol",
+  "rarity": "Common",
+  "level": 7,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": 0,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 3,
+   "SIGHT": 0,
+   "STOCK": -1,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Badass Fire SMG",
+  "id": 9,
+  "type": "SMG",
+  "rarity": "Common",
+  "level": 4,
+  "subparts": {
+   "ACC": 1,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Badass Electric SMG",
+  "id": 10,
+  "type": "SMG",
+  "rarity": "Common",
+  "level": 4,
+  "subparts": {
+   "ACC": 2,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Badass Fire Pistol",
+  "id": 12,
+  "type": "RepeaterPistol",
+  "rarity": "Common",
+  "level": 7,
+  "subparts": {
+   "ACC": 1,
+   "ACTION": 0,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 3,
+   "SIGHT": 0,
+   "STOCK": -1,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Badass Electric Pistol",
+  "id": 13,
+  "type": "RepeaterPistol",
+  "rarity": "Common",
+  "level": 7,
+  "subparts": {
+   "ACC": 2,
+   "ACTION": 0,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 3,
+   "SIGHT": 0,
+   "STOCK": -1,
+   "MATERIAL": -2
+  },
+  "extraSlot": 0
+ },
+ {
+  "name": "Apollyon Shotgun",
+  "id": 15,
+  "type": "ShotGun",
+  "rarity": "Common",
+  "level": 4,
+  "subparts": {
+   "ACC": 1,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": -3
+  },
+  "extraSlot": 0
+ }
+]

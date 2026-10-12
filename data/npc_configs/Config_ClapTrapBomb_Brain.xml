@@ -1,0 +1,24 @@
+<BHVBrainSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_fsmType>BHVClapTrapBombFSM</m_fsmType>
+  <m_BHVPropertySettingsList>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsBasic">
+      <m_healthPoint>500</m_healthPoint>
+      <m_shieldPoint>0</m_shieldPoint>
+      <m_beenShotAtDuration>20</m_beenShotAtDuration>
+      <m_bHasCoverAbility>false</m_bHasCoverAbility>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsPatrol">
+      <m_patrolRadius>20</m_patrolRadius>
+      <m_patrolTime>20</m_patrolTime>
+      <m_chanceToIdleWhenReachPatrolPoint>100</m_chanceToIdleWhenReachPatrolPoint>
+      <m_stayIdleTimeMin>1</m_stayIdleTimeMin>
+      <m_stayIdleTimeMax>2</m_stayIdleTimeMax>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsTimers">
+      <m_selectTargetTimer>4</m_selectTargetTimer>
+      <m_selectPositionTimer>5</m_selectPositionTimer>
+      <m_alertFightTimer>3.5</m_alertFightTimer>
+      <m_alertTimer>12</m_alertTimer>
+    </m_BHVPropertySettings>
+  </m_BHVPropertySettingsList>
+</BHVBrainSetup>

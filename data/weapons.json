@@ -1,0 +1,1522 @@
+[
+ {
+  "id": 1,
+  "name": "SMG_BARREL_0",
+  "type": "SMG",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 3,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 3,
+   "MATERIAL": -1
+  },
+  "extraSlot": 0
+ },
+ {
+  "id": 2,
+  "name": "SHN_BARREL_0",
+  "type": "ShotGun",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 2,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 3,
+   "MATERIAL": -1
+  },
+  "extraSlot": 0
+ },
+ {
+  "id": 3,
+  "name": "SNR_BARREL_0",
+  "type": "SniperRifle",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 0,
+   "SIGHT": 0,
+   "STOCK": 3,
+   "MATERIAL": -1
+  },
+  "extraSlot": 0
+ },
+ {
+  "id": 4,
+  "name": "PIS_BARREL_0",
+  "type": "RepeaterPistol",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": 5,
+   "BARREL": 5,
+   "BODY": 0,
+   "GRIP": 0,
+   "MAG": 2,
+   "SIGHT": 3,
+   "STOCK": -1,
+   "MATERIAL": -1
+  },
+  "extraSlot": 0
+ },
+ {
+  "id": 5,
+  "name": "COR_BARREL_0",
+  "type": "CombatRifle",
+  "rarity": "Common",
+  "level": 1,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 0,
+   "BODY": 4,
+   "GRIP": 4,
+   "MAG": 4,
+   "SIGHT": 0,
+   "STOCK": 3,
+   "MATERIAL": -1
+  },
+  "extraSlot": 0
+ },
+ {
+  "id": 21,
+  "name": "WPN_EX_RecoilReduction PIS_BARREL_4",
+  "type": "RepeaterPistol",
+  "rarity": "Uncommon",
+  "level": 2,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": 2,
+   "BARREL": 2,
+   "BODY": 4,
+   "GRIP": 3,
+   "MAG": 1,
+   "SIGHT": 0,
+   "STOCK": -1,
+   "MATERIAL": 1
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 22,
+  "name": "WPN_EX_ReloadSpeed SMG_BARREL_4",
+  "type": "SMG",
+  "rarity": "Uncommon",
+  "level": 2,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 2,
+   "BODY": 4,
+   "GRIP": 3,
+   "MAG": 1,
+   "SIGHT": 0,
+   "STOCK": 2,
+   "MATERIAL": 1
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 23,
+  "name": "WPN_EX_SwapSpeed COR_BARREL_4",
+  "type": "CombatRifle",
+  "rarity": "Uncommon",
+  "level": 2,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 2,
+   "BODY": 4,
+   "GRIP": 3,
+   "MAG": 1,
+   "SIGHT": 0,
+   "STOCK": 2,
+   "MATERIAL": 1
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 24,
+  "name": "WPN_EX_RecoilReduction SHN_BARREL_4",
+  "type": "ShotGun",
+  "rarity": "Uncommon",
+  "level": 2,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 2,
+   "BODY": 4,
+   "GRIP": 3,
+   "MAG": 1,
+   "SIGHT": 0,
+   "STOCK": 2,
+   "MATERIAL": 1
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 25,
+  "name": "WPN_EX_WeaponSway SNR_BARREL_4",
+  "type": "SniperRifle",
+  "rarity": "Uncommon",
+  "level": 2,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 2,
+   "BODY": 4,
+   "GRIP": 3,
+   "MAG": 1,
+   "SIGHT": 0,
+   "STOCK": 2,
+   "MATERIAL": 1
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 65,
+  "name": "WPN_EX_ReloadSpeed SNR_BARREL_4",
+  "type": "SniperRifle",
+  "rarity": "Uncommon",
+  "level": 6,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 1,
+   "BODY": 2,
+   "GRIP": 2,
+   "MAG": 3,
+   "SIGHT": 0,
+   "STOCK": 4,
+   "MATERIAL": 22
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 64,
+  "name": "WPN_EX_SwapSpeed SHN_BARREL_4",
+  "type": "ShotGun",
+  "rarity": "Uncommon",
+  "level": 6,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 1,
+   "BODY": 1,
+   "GRIP": 2,
+   "MAG": 2,
+   "SIGHT": 0,
+   "STOCK": 4,
+   "MATERIAL": 22
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 63,
+  "name": "WPN_EX_WeaponSway COR_BARREL_4",
+  "type": "CombatRifle",
+  "rarity": "Uncommon",
+  "level": 6,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 1,
+   "BODY": 4,
+   "GRIP": 2,
+   "MAG": 4,
+   "SIGHT": 0,
+   "STOCK": 4,
+   "MATERIAL": 22
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 62,
+  "name": "WPN_EX_RecoilReduction SMG_BARREL_4",
+  "type": "SMG",
+  "rarity": "Uncommon",
+  "level": 6,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 1,
+   "BODY": 3,
+   "GRIP": 2,
+   "MAG": 2,
+   "SIGHT": 0,
+   "STOCK": 4,
+   "MATERIAL": 22
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 61,
+  "name": "WPN_EX_SwapSpeed PIS_BARREL_4",
+  "type": "RepeaterPistol",
+  "rarity": "Uncommon",
+  "level": 6,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": 4,
+   "BARREL": 1,
+   "BODY": 3,
+   "GRIP": 2,
+   "MAG": 2,
+   "SIGHT": 0,
+   "STOCK": -1,
+   "MATERIAL": 22
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 91,
+  "name": "WPN_EX_ReloadSpeed PIS_BARREL_3",
+  "type": "RepeaterPistol",
+  "rarity": "Uncommon",
+  "level": 9,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": 3,
+   "BARREL": 3,
+   "BODY": 3,
+   "GRIP": 3,
+   "MAG": 3,
+   "SIGHT": 0,
+   "STOCK": -1,
+   "MATERIAL": 8
+  },
+  "extraSlot": 2
+ },
+ {
+  "id": 92,
+  "name": "WPN_EX_WeaponSway SMG_BARREL_3",
+  "type": "SMG",
+  "rarity": "Uncommon",
+  "level": 9,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 3,
+   "BODY": 3,
+   "GRIP": 3,
+   "MAG": 3,
+   "SIGHT": 0,
+   "STOCK": 3,
+   "MATERIAL": 8
+  },
+  "extraSlot": 2
+ },
+ {
+  "id": 93,
+  "name": "WPN_EX_SwapSpeed COR_BARREL_3",
+  "type": "CombatRifle",
+  "rarity": "Uncommon",
+  "level": 9,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 3,
+   "BODY": 3,
+   "GRIP": 3,
+   "MAG": 3,
+   "SIGHT": 0,
+   "STOCK": 3,
+   "MATERIAL": 8
+  },
+  "extraSlot": 2
+ },
+ {
+  "id": 94,
+  "name": "WPN_EX_ReloadSpeed SHN_BARREL_3",
+  "type": "ShotGun",
+  "rarity": "Uncommon",
+  "level": 9,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 3,
+   "BODY": 3,
+   "GRIP": 3,
+   "MAG": 3,
+   "SIGHT": 0,
+   "STOCK": 3,
+   "MATERIAL": 8
+  },
+  "extraSlot": 2
+ },
+ {
+  "id": 95,
+  "name": "WPN_EX_RecoilReduction SNR_BARREL_4",
+  "type": "SniperRifle",
+  "rarity": "Uncommon",
+  "level": 9,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 3,
+   "BODY": 3,
+   "GRIP": 3,
+   "MAG": 3,
+   "SIGHT": 0,
+   "STOCK": 3,
+   "MATERIAL": 8
+  },
+  "extraSlot": 2
+ },
+ {
+  "id": 141,
+  "name": "WPN_EX_WeaponSway PIS_BARREL_6",
+  "type": "RepeaterPistol",
+  "rarity": "Uncommon",
+  "level": 14,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": 0,
+   "BARREL": 6,
+   "BODY": 4,
+   "GRIP": 1,
+   "MAG": 5,
+   "SIGHT": 0,
+   "STOCK": -1,
+   "MATERIAL": 15
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 142,
+  "name": "WPN_EX_RecoilReduction SMG_BARREL_5",
+  "type": "SMG",
+  "rarity": "Uncommon",
+  "level": 14,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 2,
+   "BODY": 4,
+   "GRIP": 5,
+   "MAG": 1,
+   "SIGHT": 0,
+   "STOCK": 4,
+   "MATERIAL": 15
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 143,
+  "name": "WPN_EX_ReloadSpeed COR_BARREL_5",
+  "type": "CombatRifle",
+  "rarity": "Uncommon",
+  "level": 14,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 5,
+   "BODY": 2,
+   "GRIP": 4,
+   "MAG": 4,
+   "SIGHT": 1,
+   "STOCK": 1,
+   "MATERIAL": 15
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 144,
+  "name": "WPN_EX_RecoilReduction SHN_BARREL_4",
+  "type": "ShotGun",
+  "rarity": "Uncommon",
+  "level": 14,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 2,
+   "BODY": 4,
+   "GRIP": 3,
+   "MAG": 3,
+   "SIGHT": 1,
+   "STOCK": 4,
+   "MATERIAL": 15
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 145,
+  "name": "WPN_EX_SwapSpeed SNR_BARREL_5",
+  "type": "SniperRifle",
+  "rarity": "Uncommon",
+  "level": 14,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 1,
+   "BODY": 2,
+   "GRIP": 4,
+   "MAG": 4,
+   "SIGHT": 1,
+   "STOCK": 5,
+   "MATERIAL": 15
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 191,
+  "name": "WPN_EX_RecoilReduction PIS_BARREL_5",
+  "type": "RepeaterPistol",
+  "rarity": "Uncommon",
+  "level": 19,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": 5,
+   "BARREL": 2,
+   "BODY": 1,
+   "GRIP": 3,
+   "MAG": 3,
+   "SIGHT": 2,
+   "STOCK": -1,
+   "MATERIAL": 2
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 192,
+  "name": "WPN_EX_ReloadSpeed SMG_BARREL_5",
+  "type": "SMG",
+  "rarity": "Uncommon",
+  "level": 19,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 2,
+   "BODY": 1,
+   "GRIP": 3,
+   "MAG": 3,
+   "SIGHT": 0,
+   "STOCK": 5,
+   "MATERIAL": 2
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 193,
+  "name": "WPN_EX_SwapSpeed COR_BARREL_4",
+  "type": "CombatRifle",
+  "rarity": "Uncommon",
+  "level": 19,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 4,
+   "BODY": 5,
+   "GRIP": 4,
+   "MAG": 2,
+   "SIGHT": 0,
+   "STOCK": 3,
+   "MATERIAL": 2
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 194,
+  "name": "WPN_EX_ReloadSpeed SHN_BARREL_6",
+  "type": "ShotGun",
+  "rarity": "Uncommon",
+  "level": 19,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 4,
+   "BODY": 4,
+   "GRIP": 5,
+   "MAG": 5,
+   "SIGHT": 0,
+   "STOCK": 3,
+   "MATERIAL": 2
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 195,
+  "name": "WPN_EX_ReloadSpeed SNR_BARREL_6",
+  "type": "SniperRifle",
+  "rarity": "Uncommon",
+  "level": 19,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 1,
+   "BODY": 1,
+   "GRIP": 2,
+   "MAG": 1,
+   "SIGHT": 0,
+   "STOCK": 6,
+   "MATERIAL": 2
+  },
+  "extraSlot": 1
+ },
+ {
+  "id": 241,
+  "name": "WPN_EX_SwapSpeed PIS_BARREL_6",
+  "type": "RepeaterPistol",
+  "rarity": "Uncommon",
+  "level": 24,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": 6,
+   "BARREL": 1,
+   "BODY": 2,
+   "GRIP": 4,
+   "MAG": 4,
+   "SIGHT": 0,
+   "STOCK": -1,
+   "MATERIAL": 23
+  },
+  "extraSlot": 2
+ },
+ {
+  "id": 243,
+  "name": "WPN_EX_ReloadSpeed COR_BARREL_6",
+  "type": "CombatRifle",
+  "rarity": "Uncommon",
+  "level": 24,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 1,
+   "BODY": 5,
+   "GRIP": 3,
+   "MAG": 2,
+   "SIGHT": 0,
+   "STOCK": 6,
+   "MATERIAL": 23
+  },
+  "extraSlot": 2
+ },
+ {
+  "id": 244,
+  "name": "WPN_EX_RecoilReduction SHN_BARREL_7",
+  "type": "ShotGun",
+  "rarity": "Uncommon",
+  "level": 24,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 7,
+   "BODY": 2,
+   "GRIP": 3,
+   "MAG": 5,
+   "SIGHT": 2,
+   "STOCK": 0,
+   "MATERIAL": 23
+  },
+  "extraSlot": 2
+ },
+ {
+  "id": 245,
+  "name": "WPN_EX_WeaponSway SNR_BARREL_7",
+  "type": "SniperRifle",
+  "rarity": "Uncommon",
+  "level": 24,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 7,
+   "BODY": 3,
+   "GRIP": 3,
+   "MAG": 4,
+   "SIGHT": 0,
+   "STOCK": 0,
+   "MATERIAL": 23
+  },
+  "extraSlot": 2
+ },
+ {
+  "id": 242,
+  "name": "WPN_EX_WeaponSway SMG_BARREL_7",
+  "type": "SMG",
+  "rarity": "Uncommon",
+  "level": 24,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 7,
+   "BODY": 4,
+   "GRIP": 4,
+   "MAG": 2,
+   "SIGHT": 2,
+   "STOCK": 0,
+   "MATERIAL": 23
+  },
+  "extraSlot": 2
+ },
+ {
+  "id": 291,
+  "name": "WPN_EX_ClipSize PIS_BARREL_4",
+  "type": "RepeaterPistol",
+  "rarity": "Rare",
+  "level": 29,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": 4,
+   "BARREL": 4,
+   "BODY": 5,
+   "GRIP": 3,
+   "MAG": 0,
+   "SIGHT": 2,
+   "STOCK": -1,
+   "MATERIAL": 9
+  },
+  "extraSlot": 3
+ },
+ {
+  "id": 294,
+  "name": "WPN_EX_MeleeDamageBonus SHN_BARREL_4",
+  "type": "ShotGun",
+  "rarity": "Rare",
+  "level": 29,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 4,
+   "BODY": 3,
+   "GRIP": 4,
+   "MAG": 4,
+   "SIGHT": 1,
+   "STOCK": 4,
+   "MATERIAL": 9
+  },
+  "extraSlot": 3
+ },
+ {
+  "id": 295,
+  "name": "WPN_EX_ZoomTransition SNR_BARREL_4",
+  "type": "SniperRifle",
+  "rarity": "Rare",
+  "level": 29,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 4,
+   "BODY": 3,
+   "GRIP": 4,
+   "MAG": 4,
+   "SIGHT": 0,
+   "STOCK": 4,
+   "MATERIAL": 9
+  },
+  "extraSlot": 3
+ },
+ {
+  "id": 292,
+  "name": "WPN_EX_ClipSize SMG_BARREL_4",
+  "type": "SMG",
+  "rarity": "Rare",
+  "level": 29,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 4,
+   "BODY": 3,
+   "GRIP": 4,
+   "MAG": 4,
+   "SIGHT": 1,
+   "STOCK": 4,
+   "MATERIAL": 9
+  },
+  "extraSlot": 3
+ },
+ {
+  "id": 293,
+  "name": "WPN_EX_GrenadeDamage COR_BARREL_4",
+  "type": "CombatRifle",
+  "rarity": "Rare",
+  "level": 29,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 4,
+   "BODY": 3,
+   "GRIP": 4,
+   "MAG": 4,
+   "SIGHT": 1,
+   "STOCK": 4,
+   "MATERIAL": 9
+  },
+  "extraSlot": 3
+ },
+ {
+  "id": 331,
+  "name": "WPN_EX_MeleeDamageBonus PIS_BARREL_6",
+  "type": "RepeaterPistol",
+  "rarity": "Rare",
+  "level": 33,
+  "subparts": {
+   "ACC": 4,
+   "ACTION": 3,
+   "BARREL": 6,
+   "BODY": 5,
+   "GRIP": 5,
+   "MAG": 3,
+   "SIGHT": 1,
+   "STOCK": -1,
+   "MATERIAL": 16
+  },
+  "extraSlot": 3
+ },
+ {
+  "id": 334,
+  "name": "WPN_EX_ClipSize SHN_BARREL_8",
+  "type": "ShotGun",
+  "rarity": "Rare",
+  "level": 33,
+  "subparts": {
+   "ACC": 5,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 1,
+   "GRIP": 6,
+   "MAG": 6,
+   "SIGHT": 2,
+   "STOCK": 1,
+   "MATERIAL": 16
+  },
+  "extraSlot": 3
+ },
+ {
+  "id": 335,
+  "name": "WPN_EX_ClipSize SNR_BARREL_7",
+  "type": "SniperRifle",
+  "rarity": "Rare",
+  "level": 33,
+  "subparts": {
+   "ACC": 4,
+   "ACTION": -1,
+   "BARREL": 7,
+   "BODY": 3,
+   "GRIP": 4,
+   "MAG": 6,
+   "SIGHT": 0,
+   "STOCK": 2,
+   "MATERIAL": 16
+  },
+  "extraSlot": 3
+ },
+ {
+  "id": 332,
+  "name": "WPN_EX_GrenadeDamage SMG_BARREL_7",
+  "type": "SMG",
+  "rarity": "Rare",
+  "level": 33,
+  "subparts": {
+   "ACC": 5,
+   "ACTION": -1,
+   "BARREL": 7,
+   "BODY": 3,
+   "GRIP": 7,
+   "MAG": 3,
+   "SIGHT": 2,
+   "STOCK": 2,
+   "MATERIAL": 16
+  },
+  "extraSlot": 3
+ },
+ {
+  "id": 333,
+  "name": "WPN_EX_ZoomTransition COR_BARREL_7",
+  "type": "CombatRifle",
+  "rarity": "Rare",
+  "level": 33,
+  "subparts": {
+   "ACC": 6,
+   "ACTION": -1,
+   "BARREL": 7,
+   "BODY": 2,
+   "GRIP": 6,
+   "MAG": 5,
+   "SIGHT": 2,
+   "STOCK": 2,
+   "MATERIAL": 16
+  },
+  "extraSlot": 3
+ },
+ {
+  "id": 2001,
+  "name": "PIS_MATERIAL_28",
+  "type": "RepeaterPistol",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": 9,
+   "BARREL": 8,
+   "BODY": 0,
+   "GRIP": 5,
+   "MAG": 6,
+   "SIGHT": 10,
+   "STOCK": -1,
+   "MATERIAL": 28
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2002,
+  "name": "SMG_MATERIAL_28",
+  "type": "SMG",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 10,
+   "ACTION": -1,
+   "BARREL": 5,
+   "BODY": 5,
+   "GRIP": 5,
+   "MAG": 7,
+   "SIGHT": 6,
+   "STOCK": 9,
+   "MATERIAL": 28
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2003,
+  "name": "SMG_MATERIAL_29",
+  "type": "SMG",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 11,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 4,
+   "GRIP": 5,
+   "MAG": 8,
+   "SIGHT": 7,
+   "STOCK": 8,
+   "MATERIAL": 29
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2004,
+  "name": "SMG_MATERIAL_30",
+  "type": "SMG",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 12,
+   "ACTION": -1,
+   "BARREL": 10,
+   "BODY": 4,
+   "GRIP": 5,
+   "MAG": 9,
+   "SIGHT": 8,
+   "STOCK": 9,
+   "MATERIAL": 30
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2005,
+  "name": "COR_MATERIAL_28",
+  "type": "CombatRifle",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 10,
+   "ACTION": -1,
+   "BARREL": 5,
+   "BODY": 4,
+   "GRIP": 7,
+   "MAG": 6,
+   "SIGHT": 6,
+   "STOCK": 9,
+   "MATERIAL": 28
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2006,
+  "name": "COR_MATERIAL_29",
+  "type": "CombatRifle",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 11,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 3,
+   "GRIP": 8,
+   "MAG": 6,
+   "SIGHT": 7,
+   "STOCK": 8,
+   "MATERIAL": 29
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2007,
+  "name": "COR_MATERIAL_31",
+  "type": "CombatRifle",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 12,
+   "ACTION": -1,
+   "BARREL": 10,
+   "BODY": 3,
+   "GRIP": 9,
+   "MAG": 6,
+   "SIGHT": 8,
+   "STOCK": 9,
+   "MATERIAL": 31
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2008,
+  "name": "SHN_MATERIAL_29",
+  "type": "ShotGun",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 10,
+   "ACTION": -1,
+   "BARREL": 5,
+   "BODY": 5,
+   "GRIP": 5,
+   "MAG": 5,
+   "SIGHT": 6,
+   "STOCK": 9,
+   "MATERIAL": 29
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2009,
+  "name": "SHN_MATERIAL_30",
+  "type": "ShotGun",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 11,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 7,
+   "GRIP": 5,
+   "MAG": 6,
+   "SIGHT": 7,
+   "STOCK": 8,
+   "MATERIAL": 30
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2010,
+  "name": "SHN_MATERIAL_31",
+  "type": "ShotGun",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 12,
+   "ACTION": -1,
+   "BARREL": 10,
+   "BODY": 3,
+   "GRIP": 5,
+   "MAG": 7,
+   "SIGHT": 8,
+   "STOCK": 9,
+   "MATERIAL": 31
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2011,
+  "name": "SNR_MATERIAL_28",
+  "type": "SniperRifle",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 0,
+   "ACTION": -1,
+   "BARREL": 10,
+   "BODY": 0,
+   "GRIP": 10,
+   "MAG": 6,
+   "SIGHT": 10,
+   "STOCK": 10,
+   "MATERIAL": 28
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 1000,
+  "name": "PIS_MATERIAL_29",
+  "type": "RepeaterPistol",
+  "rarity": "MetaEpic",
+  "level": 10,
+  "subparts": {
+   "ACC": 4,
+   "ACTION": 5,
+   "BARREL": 8,
+   "BODY": 0,
+   "GRIP": 5,
+   "MAG": 6,
+   "SIGHT": 6,
+   "STOCK": -1,
+   "MATERIAL": 29
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 1001,
+  "name": "SMG_MATERIAL_31",
+  "type": "SMG",
+  "rarity": "MetaEpic",
+  "level": 20,
+  "subparts": {
+   "ACC": 6,
+   "ACTION": -1,
+   "BARREL": 5,
+   "BODY": 6,
+   "GRIP": 5,
+   "MAG": 4,
+   "SIGHT": 3,
+   "STOCK": 7,
+   "MATERIAL": 31
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 1003,
+  "name": "COR_MATERIAL_32",
+  "type": "CombatRifle",
+  "rarity": "MetaEpic",
+  "level": 30,
+  "subparts": {
+   "ACC": 5,
+   "ACTION": -1,
+   "BARREL": 6,
+   "BODY": 3,
+   "GRIP": 7,
+   "MAG": 6,
+   "SIGHT": 6,
+   "STOCK": 8,
+   "MATERIAL": 32
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 1002,
+  "name": "SHN_MATERIAL_32",
+  "type": "ShotGun",
+  "rarity": "MetaEpic",
+  "level": 20,
+  "subparts": {
+   "ACC": 6,
+   "ACTION": -1,
+   "BARREL": 7,
+   "BODY": 4,
+   "GRIP": 5,
+   "MAG": 6,
+   "SIGHT": 0,
+   "STOCK": 4,
+   "MATERIAL": 32
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 1004,
+  "name": "SNR_MATERIAL_29",
+  "type": "SniperRifle",
+  "rarity": "MetaEpic",
+  "level": 30,
+  "subparts": {
+   "ACC": 5,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 0,
+   "GRIP": 5,
+   "MAG": 6,
+   "SIGHT": 4,
+   "STOCK": 5,
+   "MATERIAL": 29
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10051,
+  "name": "PIS_MATERIAL_30",
+  "type": "RepeaterPistol",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 7,
+   "ACTION": 8,
+   "BARREL": 8,
+   "BODY": 3,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": -1,
+   "MATERIAL": 30
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10052,
+  "name": "PIS_MATERIAL_30",
+  "type": "RepeaterPistol",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 8,
+   "ACTION": 8,
+   "BARREL": 8,
+   "BODY": 3,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": -1,
+   "MATERIAL": 30
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10053,
+  "name": "PIS_MATERIAL_30",
+  "type": "RepeaterPistol",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 9,
+   "ACTION": 8,
+   "BARREL": 8,
+   "BODY": 3,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": -1,
+   "MATERIAL": 30
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10061,
+  "name": "SMG_MATERIAL_32",
+  "type": "SMG",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 7,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 6,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": 8,
+   "MATERIAL": 32
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10062,
+  "name": "SMG_MATERIAL_32",
+  "type": "SMG",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 8,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 6,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": 8,
+   "MATERIAL": 32
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10063,
+  "name": "SMG_MATERIAL_32",
+  "type": "SMG",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 9,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 6,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": 8,
+   "MATERIAL": 32
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10071,
+  "name": "COR_MATERIAL_30",
+  "type": "CombatRifle",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 7,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 3,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": 8,
+   "MATERIAL": 30
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10072,
+  "name": "COR_MATERIAL_30",
+  "type": "CombatRifle",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 8,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 3,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": 8,
+   "MATERIAL": 30
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10073,
+  "name": "COR_MATERIAL_30",
+  "type": "CombatRifle",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 9,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 3,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": 8,
+   "MATERIAL": 30
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10081,
+  "name": "SHN_MATERIAL_28",
+  "type": "ShotGun",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 7,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 5,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": 8,
+   "MATERIAL": 28
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10082,
+  "name": "SHN_MATERIAL_28",
+  "type": "ShotGun",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 8,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 5,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": 8,
+   "MATERIAL": 28
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10083,
+  "name": "SHN_MATERIAL_28",
+  "type": "ShotGun",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 9,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 5,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": 8,
+   "MATERIAL": 28
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10091,
+  "name": "SNR_MATERIAL_30",
+  "type": "SniperRifle",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 7,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 0,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": 8,
+   "MATERIAL": 30
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10092,
+  "name": "SNR_MATERIAL_30",
+  "type": "SniperRifle",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 8,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 0,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": 8,
+   "MATERIAL": 30
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 10093,
+  "name": "SNR_MATERIAL_30",
+  "type": "SniperRifle",
+  "rarity": "MetaEpic",
+  "level": 35,
+  "subparts": {
+   "ACC": 9,
+   "ACTION": -1,
+   "BARREL": 8,
+   "BODY": 0,
+   "GRIP": 8,
+   "MAG": 8,
+   "SIGHT": 8,
+   "STOCK": 8,
+   "MATERIAL": 30
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2012,
+  "name": "MATERIAL_Polaris_0",
+  "type": "CombatRifle",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 12,
+   "ACTION": -1,
+   "BARREL": 10,
+   "BODY": 3,
+   "GRIP": 9,
+   "MAG": 6,
+   "SIGHT": 8,
+   "STOCK": 9,
+   "MATERIAL": 24
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2013,
+  "name": "MATERIAL_Polaris_1",
+  "type": "CombatRifle",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 12,
+   "ACTION": -1,
+   "BARREL": 10,
+   "BODY": 3,
+   "GRIP": 9,
+   "MAG": 6,
+   "SIGHT": 8,
+   "STOCK": 9,
+   "MATERIAL": 25
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2014,
+  "name": "MATERIAL_Polaris_2",
+  "type": "CombatRifle",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 12,
+   "ACTION": -1,
+   "BARREL": 10,
+   "BODY": 3,
+   "GRIP": 9,
+   "MAG": 6,
+   "SIGHT": 8,
+   "STOCK": 9,
+   "MATERIAL": 26
+  },
+  "extraSlot": 6
+ },
+ {
+  "id": 2015,
+  "name": "MATERIAL_Polaris_3",
+  "type": "CombatRifle",
+  "rarity": "MetaEpic",
+  "level": 38,
+  "subparts": {
+   "ACC": 12,
+   "ACTION": -1,
+   "BARREL": 10,
+   "BODY": 3,
+   "GRIP": 9,
+   "MAG": 6,
+   "SIGHT": 8,
+   "STOCK": 9,
+   "MATERIAL": 27
+  },
+  "extraSlot": 6
+ }
+]

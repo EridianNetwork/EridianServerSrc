@@ -1,0 +1,47 @@
+<BHVTaskManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_settings>
+    <m_taskSettings xsi:type="BHVBlowUpAttackSettings">
+      <m_attackDamage>200</m_attackDamage>
+      <m_attackDamageMultiplier>1</m_attackDamageMultiplier>
+      <m_playerAttackDamageMultiplier>1.2</m_playerAttackDamageMultiplier>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVFirstPersonSettings">
+      <m_gravityAcceleration>14</m_gravityAcceleration>
+      <m_jumpHeight>0.3</m_jumpHeight>
+	  <m_crouchWalkSpeed>1.5</m_crouchWalkSpeed>
+      <m_crippleWalkSpeed>0.5</m_crippleWalkSpeed>
+	  <m_standWalkSpeed>2.0</m_standWalkSpeed>
+	  <m_standRunSpeed>4</m_standRunSpeed>
+	  <m_standSprintSpeed>5.1</m_standSprintSpeed>
+	  <m_velocityChangeGroundMax>2</m_velocityChangeGroundMax>
+      <m_velocityChangeAirMax>1</m_velocityChangeAirMax>
+      <m_velocityFallMax>15</m_velocityFallMax>
+      <m_standHeight>1.475</m_standHeight>
+      <m_crouchHeight>0.8</m_crouchHeight>
+      <m_crouchDownSpeed>7</m_crouchDownSpeed>
+      <m_standUpSpeed>7</m_standUpSpeed>
+      <m_cameraAngularSpeedYaw>15</m_cameraAngularSpeedYaw>
+      <m_cameraAngularSpeedPitch>15</m_cameraAngularSpeedPitch>
+      <m_cameraAngleMaxPitch>80</m_cameraAngleMaxPitch>
+      <m_cameraAngleMinPitch>-80</m_cameraAngleMinPitch>
+      <m_FOVDefault>45</m_FOVDefault>
+      <m_FOVSprintMultiplier>1.15</m_FOVSprintMultiplier>
+      <m_FOVDefaultToSprintTransitionSpeed>4</m_FOVDefaultToSprintTransitionSpeed>
+      <m_FOVSprintToDefaultTransitionSpeed>5</m_FOVSprintToDefaultTransitionSpeed>
+      <m_handsAngularSpeedMultiplierYaw>0.025</m_handsAngularSpeedMultiplierYaw>
+      <m_handsAngularSpeedEnterSpeedFactorYaw>0.2</m_handsAngularSpeedEnterSpeedFactorYaw>
+      <m_handsAngularSpeedExitSpeedFactorYaw>0.8</m_handsAngularSpeedExitSpeedFactorYaw>
+      <m_handsAngularSpeedMultiplierPitch>0.05</m_handsAngularSpeedMultiplierPitch>
+      <m_handsAngularSpeedEnterSpeedFactorPitch>0.2</m_handsAngularSpeedEnterSpeedFactorPitch>
+      <m_handsAngularSpeedExitSpeedFactorPitch>0.8</m_handsAngularSpeedExitSpeedFactorPitch>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVMeleeAttackSettings">
+      <m_attackDamage>100</m_attackDamage>
+      <m_attackDamageMultiplier>0.2</m_attackDamageMultiplier>
+      <m_playerAttackDamageMultiplier>0.75</m_playerAttackDamageMultiplier>
+    </m_taskSettings>
+  </m_settings>
+</BHVTaskManagerSetup>
+
+
+

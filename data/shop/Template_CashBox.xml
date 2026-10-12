@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AudioEventList ResourceStrategy="Automatic">
+  <AudioEvent EventName="open" Type="None" AudioPrefabName="CrateMilitary_Open" Interval="0" Delay="0" DistanceToTrigger="100" Behaviour="Play" FadeTime="0" ClassSpecific="False" LocalPlayer="False" />
+</AudioEventList>

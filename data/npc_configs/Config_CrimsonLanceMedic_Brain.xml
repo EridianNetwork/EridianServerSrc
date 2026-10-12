@@ -1,0 +1,102 @@
+<BHVBrainSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_fsmType>CHR_CrimsonLanceMedic</m_fsmType>
+  <m_BHVPropertySettingsList>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsMeleeAttack">
+      <m_attackMode>NAM_MeleeAttack</m_attackMode>
+      <m_attackChanceWeight>0</m_attackChanceWeight>
+      <m_meleeAttackDistanceMin>0.2</m_meleeAttackDistanceMin>
+      <m_meleeAttackDistanceMax>2</m_meleeAttackDistanceMax>
+      <m_meleeAttackAngle>90</m_meleeAttackAngle>
+      <m_meleeAttackIdleTime>0.5</m_meleeAttackIdleTime>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsBasic">
+      <m_healthPoint>125</m_healthPoint>
+      <m_shieldPoint>0</m_shieldPoint>
+      <m_beenShotAtDuration>20</m_beenShotAtDuration>
+      <m_startMoveDistance>2</m_startMoveDistance>
+      <m_bHasCoverAbility>false</m_bHasCoverAbility>
+	  <m_alertCoverChanceWeight>0</m_alertCoverChanceWeight>
+      <m_alertMoveToGPPChanceWeight>1</m_alertMoveToGPPChanceWeight>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsThreat">
+      <m_distanceFactor>-0.6</m_distanceFactor>
+      <m_damageFactor>0.4</m_damageFactor>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsRangeAttack">
+      <m_bestAttackDistanceMax>15</m_bestAttackDistanceMax>
+      <m_bestAttackDistanceMin>5</m_bestAttackDistanceMin>
+      <m_shootIdleTime>2</m_shootIdleTime>
+      <m_burstChainedFireLoopCount>5</m_burstChainedFireLoopCount>
+      <m_fireRange>30</m_fireRange>
+      <IdleSelectPositionTimer>5</IdleSelectPositionTimer>
+	  <OpenSpaceMoveDistanceMin>1</OpenSpaceMoveDistanceMin>
+	  <OpenSpaceMoveDistanceMax>4</OpenSpaceMoveDistanceMax>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsDetection">
+      <m_visualDetectionRange>25</m_visualDetectionRange>
+      <m_visualDetectionAngle>360</m_visualDetectionAngle>
+      <m_auditionDetectionRange>10</m_auditionDetectionRange>
+      <m_shootAtAngle>0.9</m_shootAtAngle>
+      <m_shootDistance>30</m_shootDistance>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsPatrol">
+      <m_patrolRadius>20</m_patrolRadius>
+      <m_patrolTime>10</m_patrolTime>
+      <m_chanceToIdleWhenReachPatrolPoint>100</m_chanceToIdleWhenReachPatrolPoint>
+      <m_stayIdleTimeMin>3</m_stayIdleTimeMin>
+      <m_stayIdleTimeMax>3</m_stayIdleTimeMax>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsTakeCover">
+      <m_initialCoverChance>1</m_initialCoverChance>
+      <m_dangerCoverChance>1</m_dangerCoverChance>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsTimers">
+      <m_selectTargetTimer>1</m_selectTargetTimer>
+      <m_selectPositionTimer>4</m_selectPositionTimer>
+      <m_alertFightTimer>3</m_alertFightTimer>
+      <m_alertTimer>8</m_alertTimer>
+      <m_selectPositionInCoverTimer>2</m_selectPositionInCoverTimer>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsCrouchRollDodge">
+      <m_dodgeRepeatTime>5</m_dodgeRepeatTime>
+      <m_dodgeChance>1</m_dodgeChance>
+      <m_rollChance>1</m_rollChance>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsDeployAidStation">
+      <m_deployChance>0.8</m_deployChance>
+      <m_healthPoints>10</m_healthPoints>
+      <m_healRange>10</m_healRange>
+      <m_healRate>3</m_healRate>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsThrowGrenade">
+      <m_throwGrenadeChance>0.3</m_throwGrenadeChance>
+    </m_BHVPropertySettings>		
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsCover">
+      <m_coverIdleTimeMin>1</m_coverIdleTimeMin>
+      <m_coverIdleTimeMax>3</m_coverIdleTimeMax>
+      <m_coverIdleCombatSafeTimeMin>0</m_coverIdleCombatSafeTimeMin>
+      <m_coverIdleCombatSafeTimeMax>1</m_coverIdleCombatSafeTimeMax>
+      <m_coverIdleCombatDangerTimeMin>2</m_coverIdleCombatDangerTimeMin>
+      <m_coverIdleCombatDangerTimeMax>4</m_coverIdleCombatDangerTimeMax>
+      <m_coverPeakOutLookAroundTimeMin>4.8</m_coverPeakOutLookAroundTimeMin>
+      <m_coverPeakOutLookAroundTimeMax>4.8</m_coverPeakOutLookAroundTimeMax>
+      <m_coverPeakOutCombatTimeMin>0.35</m_coverPeakOutCombatTimeMin>
+      <m_coverPeakOutCombatTimeMax>0.55</m_coverPeakOutCombatTimeMax>
+      <m_coverFireIdleTimeMin>0.5</m_coverFireIdleTimeMin>
+      <m_coverFireIdleTimeMax>1</m_coverFireIdleTimeMax>
+      <m_leaveCoverDistance>10</m_leaveCoverDistance>
+      <m_peakInTimer>1.5</m_peakInTimer>
+      <m_coverBurstChainedFireLoopCount>10</m_coverBurstChainedFireLoopCount>
+    </m_BHVPropertySettings>		
+  </m_BHVPropertySettingsList>
+</BHVBrainSetup>
+
+
+
+
+
+
+
+
+
+

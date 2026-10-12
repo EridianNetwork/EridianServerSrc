@@ -1,0 +1,45 @@
+<BHVBrainSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_fsmType>CHR_TheInsaneCrystal</m_fsmType>
+  <m_BHVPropertySettingsList>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsBasic">
+      <m_healthPoint>80</m_healthPoint>
+      <m_shieldPoint>0</m_shieldPoint>
+      <m_beenShotAtDuration>20</m_beenShotAtDuration>
+      <m_startMoveDistance>2</m_startMoveDistance>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsThreat">
+      <m_distanceFactor>-0.5</m_distanceFactor>
+      <m_damageFactor>0.5</m_damageFactor>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsDetection">
+      <m_visualDetectionRange>1000</m_visualDetectionRange>
+      <m_visualDetectionAngle>360</m_visualDetectionAngle>
+      <m_auditionDetectionRange>5</m_auditionDetectionRange>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsTimers">
+      <m_selectTargetTimer>2</m_selectTargetTimer>
+      <m_selectPositionTimer>5</m_selectPositionTimer>
+      <m_alertFightTimer>3.5</m_alertFightTimer>
+      <m_alertTimer>12</m_alertTimer>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsEnergyBlast">
+	  <m_coolDownTime>12</m_coolDownTime>
+	  <m_warningTime>3</m_warningTime>
+	  <m_blastDelay>1</m_blastDelay>
+	  <m_blastRange>3</m_blastRange>
+	  <m_blastDamage>20</m_blastDamage>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsCrystalDeathStruggle">
+	  <m_delayTime>1</m_delayTime>
+	  <m_damagePerSecond>60</m_damagePerSecond>
+	  <m_coolDownTime>15</m_coolDownTime>
+    </m_BHVPropertySettings>
+  </m_BHVPropertySettingsList>
+</BHVBrainSetup>
+
+
+
+
+
+
+

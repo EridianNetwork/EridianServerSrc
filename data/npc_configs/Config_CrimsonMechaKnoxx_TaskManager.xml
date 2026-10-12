@@ -1,0 +1,55 @@
+<BHVTaskManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<m_entityType>CHR_CrimsonMechaKnoxx</m_entityType>		
+  <m_settings>
+    <m_taskSettings xsi:type="BHVChargeAttackSettings">
+      <m_attackDamage>40</m_attackDamage>
+      <m_checkRadius>3</m_checkRadius>
+      <m_attackSubType>MeleeGeneric</m_attackSubType>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVDazeEffectSettings">
+      <m_bDazeResist>true</m_bDazeResist>
+      <m_dazeDuration>5</m_dazeDuration>
+      <m_speedRate>0.5</m_speedRate>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVJumpAttackSettings">
+      <m_attackDamage>20</m_attackDamage>
+      <m_canKnockBack>true</m_canKnockBack>
+	  <m_knockBackForce>7</m_knockBackForce>
+      <m_attackSubType>MeleeGeneric</m_attackSubType>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVMeleeAttackSettings">
+      <m_attackDamage>80</m_attackDamage>
+      <m_attackAngle>180</m_attackAngle>
+      <m_attackRange>7</m_attackRange>
+      <m_attackSubTypeList>
+        <m_attackSubType>MeleeGeneric</m_attackSubType>
+        <m_attackSubType>MeleeGeneric</m_attackSubType>
+        <m_attackSubType>MeleeGeneric</m_attackSubType>
+      </m_attackSubTypeList>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVNavAgentSettings">
+      <m_walkSpeed>1.8</m_walkSpeed>
+      <m_walkCombatSpeed>2.8</m_walkCombatSpeed>
+      <m_runSpeed>5</m_runSpeed>
+      <m_sprintSpeed>5.63</m_sprintSpeed>
+      <m_jumpSpeed>15</m_jumpSpeed>
+      <m_chargeSpeed>4</m_chargeSpeed>
+      <m_canUseFacingLogic>true</m_canUseFacingLogic>
+      <m_stopDistance>2</m_stopDistance>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVMortarAttackSettings">
+      <m_shellDamage>30</m_shellDamage>
+      <m_shellAmount>3</m_shellAmount>
+      <m_shellDamageRadius>2.5</m_shellDamageRadius>
+      <m_shellFlyingSpeed>5</m_shellFlyingSpeed>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVLaserSweepSetting">
+      <m_laserDamage>20</m_laserDamage>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVRechargeSettings">
+      <m_rechargeSpeed>0.5</m_rechargeSpeed>
+    </m_taskSettings>
+  </m_settings>
+</BHVTaskManagerSetup>
+
+

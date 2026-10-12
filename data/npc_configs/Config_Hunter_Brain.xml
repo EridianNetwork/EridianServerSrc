@@ -1,0 +1,3 @@
+<BHVBrainSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_fsmType>BHVPlayerFSM</m_fsmType>
+</BHVBrainSetup>

@@ -1,0 +1,5691 @@
+{
+  "quests": [
+    {
+      "id": 10300,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        1
+      ],
+      "boundInstanceIds": [
+        3
+      ],
+      "category": "Guidance",
+      "title": "Quest_10300_title",
+      "description": "Quest_10300_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 2
+        },
+        {
+          "type": "BondCurrency",
+          "count": 60
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10301
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10301,
+      "giverIds": [
+        1
+      ],
+      "reclaimerIds": [
+        2
+      ],
+      "boundInstanceIds": [
+        3
+      ],
+      "category": "Story",
+      "title": "Quest_10301_title",
+      "description": "Quest_10301_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 2
+        },
+        {
+          "type": "BondCurrency",
+          "count": 60
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 1
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10302
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 2,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10302,
+      "giverIds": [
+        2
+      ],
+      "reclaimerIds": [
+        1
+      ],
+      "boundInstanceIds": [
+        3
+      ],
+      "category": "Story",
+      "title": "Quest_10302_title",
+      "description": "Quest_10302_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 2
+        },
+        {
+          "type": "BondCurrency",
+          "count": 60
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10601
+        },
+        {
+          "type": "Instance",
+          "rewardId": 6
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10601,
+      "giverIds": [
+        1
+      ],
+      "reclaimerIds": [
+        1
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Story",
+      "title": "Quest_10601_title",
+      "description": "Quest_10601_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 14
+        },
+        {
+          "type": "BondCurrency",
+          "count": 420
+        },
+        {
+          "type": "Material",
+          "count": 3,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10303
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 5,
+          "timeLimit": 0
+        },
+        {
+          "taskId": 1,
+          "type": "Instance",
+          "target": 6,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 21
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 22
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 23
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 24
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 25
+        }
+      ]
+    },
+    {
+      "id": 10303,
+      "giverIds": [
+        1
+      ],
+      "reclaimerIds": [
+        2
+      ],
+      "boundInstanceIds": [
+        3
+      ],
+      "category": "Story",
+      "title": "Quest_10303_title",
+      "description": "Quest_10303_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 9
+        },
+        {
+          "type": "BondCurrency",
+          "count": 196
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10701
+        },
+        {
+          "type": "Instance",
+          "rewardId": 7
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 2,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10701,
+      "giverIds": [
+        2
+      ],
+      "reclaimerIds": [
+        2
+      ],
+      "boundInstanceIds": [
+        7
+      ],
+      "category": "Story",
+      "title": "Quest_10701_title",
+      "description": "Quest_10701_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 21
+        },
+        {
+          "type": "BondCurrency",
+          "count": 458
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 31
+        },
+        {
+          "type": "Material",
+          "count": 3,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 13301
+        },
+        {
+          "type": "Instance",
+          "rewardId": 33
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 7,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 13301,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        31
+      ],
+      "boundInstanceIds": [
+        33
+      ],
+      "category": "Guidance",
+      "title": "Quest_13301_title",
+      "description": "Quest_13301_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 4
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1300
+        },
+        {
+          "type": "Quest",
+          "rewardId": 13302
+        },
+        {
+          "type": "Material",
+          "count": 3,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Material",
+          "count": 7,
+          "materialType": "MT_TitaniumAxiscore"
+        },
+        {
+          "type": "Material",
+          "count": 14,
+          "materialType": "MT_MetalCoil"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 31,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 13302,
+      "giverIds": [
+        31
+      ],
+      "reclaimerIds": [
+        31
+      ],
+      "boundInstanceIds": [
+        33
+      ],
+      "category": "Story",
+      "title": "Quest_13302_title",
+      "description": "Quest_13302_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 4
+        },
+        {
+          "type": "BondCurrency",
+          "count": 10
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10304
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Craft",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10304,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        3
+      ],
+      "boundInstanceIds": [
+        3
+      ],
+      "category": "Guidance",
+      "title": "Quest_10304_title",
+      "description": "Quest_10304_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 8
+        },
+        {
+          "type": "BondCurrency",
+          "count": 142
+        },
+        {
+          "type": "Quest",
+          "rewardId": 13101
+        },
+        {
+          "type": "Instance",
+          "rewardId": 31
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 3,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 13101,
+      "giverIds": [
+        3
+      ],
+      "reclaimerIds": [
+        3
+      ],
+      "boundInstanceIds": [
+        31
+      ],
+      "category": "Story",
+      "title": "Quest_13101_title",
+      "description": "Quest_13101_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 24
+        },
+        {
+          "type": "BondCurrency",
+          "count": 424
+        },
+        {
+          "type": "Material",
+          "count": 3,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Material",
+          "count": 2,
+          "materialType": "MT_Purple_Crystal"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10305
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 31,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 41
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 42
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 43
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 44
+        }
+      ]
+    },
+    {
+      "id": 10305,
+      "giverIds": [
+        3
+      ],
+      "reclaimerIds": [
+        5
+      ],
+      "boundInstanceIds": [
+        3
+      ],
+      "category": "Story",
+      "title": "Quest_10305_title",
+      "description": "Quest_10305_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 15
+        },
+        {
+          "type": "BondCurrency",
+          "count": 228
+        },
+        {
+          "type": "Quest",
+          "rewardId": 12501
+        },
+        {
+          "type": "Instance",
+          "rewardId": 25
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 5,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 12501,
+      "giverIds": [
+        5
+      ],
+      "reclaimerIds": [
+        5
+      ],
+      "boundInstanceIds": [
+        25
+      ],
+      "category": "Story",
+      "title": "Quest_12501_title",
+      "description": "Quest_12501_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 35
+        },
+        {
+          "type": "BondCurrency",
+          "count": 532
+        },
+        {
+          "type": "Material",
+          "count": 3,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10306
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 25,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 51
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 52
+        }
+      ]
+    },
+    {
+      "id": 10306,
+      "giverIds": [
+        5
+      ],
+      "reclaimerIds": [
+        6
+      ],
+      "boundInstanceIds": [
+        3
+      ],
+      "category": "Story",
+      "title": "Quest_10306_title",
+      "description": "Quest_10306_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 20
+        },
+        {
+          "type": "BondCurrency",
+          "count": 163
+        },
+        {
+          "type": "Quest",
+          "rewardId": 11101
+        },
+        {
+          "type": "Instance",
+          "rewardId": 11
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 6,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 11101,
+      "giverIds": [
+        6
+      ],
+      "reclaimerIds": [
+        6
+      ],
+      "boundInstanceIds": [
+        11
+      ],
+      "category": "Story",
+      "title": "Quest_11101_title",
+      "description": "Quest_11101_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 40
+        },
+        {
+          "type": "BondCurrency",
+          "count": 325
+        },
+        {
+          "type": "Material",
+          "count": 5,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10307
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 11,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 61
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 62
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 63
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 64
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 65
+        }
+      ]
+    },
+    {
+      "id": 10307,
+      "giverIds": [
+        6
+      ],
+      "reclaimerIds": [
+        1
+      ],
+      "boundInstanceIds": [
+        3
+      ],
+      "category": "Story",
+      "title": "Quest_10307_title",
+      "description": "Quest_10307_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 30
+        },
+        {
+          "type": "BondCurrency",
+          "count": 173
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10308
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 6,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10308,
+      "giverIds": [
+        1
+      ],
+      "reclaimerIds": [
+        7
+      ],
+      "boundInstanceIds": [
+        3
+      ],
+      "category": "Story",
+      "title": "Quest_10308_title",
+      "description": "Quest_10308_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 30
+        },
+        {
+          "type": "BondCurrency",
+          "count": 173
+        },
+        {
+          "type": "Quest",
+          "rewardId": 11001
+        },
+        {
+          "type": "Instance",
+          "rewardId": 10
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 7,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 11001,
+      "giverIds": [
+        7
+      ],
+      "reclaimerIds": [
+        7
+      ],
+      "boundInstanceIds": [
+        10
+      ],
+      "category": "Story",
+      "title": "Quest_11001_title",
+      "description": "Quest_11001_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 90
+        },
+        {
+          "type": "BondCurrency",
+          "count": 519
+        },
+        {
+          "type": "Material",
+          "count": 5,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Material",
+          "count": 2,
+          "materialType": "MT_Purple_Crystal"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10309
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 10,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 71
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 72
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 73
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 74
+        }
+      ]
+    },
+    {
+      "id": 10309,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        1
+      ],
+      "boundInstanceIds": [
+        3
+      ],
+      "category": "Guidance",
+      "title": "Quest_10309_title",
+      "description": "Quest_10309_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 50
+        },
+        {
+          "type": "BondCurrency",
+          "count": 230
+        },
+        {
+          "type": "Quest",
+          "rewardId": 11301
+        },
+        {
+          "type": "Instance",
+          "rewardId": 13
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 11301,
+      "giverIds": [
+        1
+      ],
+      "reclaimerIds": [
+        1
+      ],
+      "boundInstanceIds": [
+        13
+      ],
+      "category": "Story",
+      "title": "Quest_11301_title",
+      "description": "Quest_11301_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 150
+        },
+        {
+          "type": "BondCurrency",
+          "count": 689
+        },
+        {
+          "type": "Material",
+          "count": 5,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10310
+        },
+        {
+          "type": "Instance",
+          "rewardId": 4
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 13,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 16
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 45
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 2
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 30
+        }
+      ]
+    },
+    {
+      "id": 10310,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        8
+      ],
+      "boundInstanceIds": [
+        4
+      ],
+      "category": "Guidance",
+      "title": "Quest_10310_title",
+      "description": "Quest_10310_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 50
+        },
+        {
+          "type": "BondCurrency",
+          "count": 195
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10401
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 8,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10401,
+      "giverIds": [
+        8
+      ],
+      "reclaimerIds": [
+        10
+      ],
+      "boundInstanceIds": [
+        4
+      ],
+      "category": "Story",
+      "title": "Quest_10401_title",
+      "description": "Quest_10401_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 50
+        },
+        {
+          "type": "BondCurrency",
+          "count": 195
+        },
+        {
+          "type": "Quest",
+          "rewardId": 12601
+        },
+        {
+          "type": "Instance",
+          "rewardId": 26
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 10,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 12601,
+      "giverIds": [
+        10
+      ],
+      "reclaimerIds": [
+        10
+      ],
+      "boundInstanceIds": [
+        26
+      ],
+      "category": "Story",
+      "title": "Quest_12601_title",
+      "description": "Quest_12601_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 150
+        },
+        {
+          "type": "BondCurrency",
+          "count": 583
+        },
+        {
+          "type": "Material",
+          "count": 5,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10402
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 26,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 91
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 92
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 93
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 94
+        }
+      ]
+    },
+    {
+      "id": 10402,
+      "giverIds": [
+        10
+      ],
+      "reclaimerIds": [
+        10
+      ],
+      "boundInstanceIds": [
+        4
+      ],
+      "category": "Story",
+      "title": "Quest_10402_title",
+      "description": "Quest_10402_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 100
+        },
+        {
+          "type": "BondCurrency",
+          "count": 256
+        },
+        {
+          "type": "Quest",
+          "rewardId": 11201
+        },
+        {
+          "type": "Instance",
+          "rewardId": 12
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 10,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 11201,
+      "giverIds": [
+        10
+      ],
+      "reclaimerIds": [
+        10
+      ],
+      "boundInstanceIds": [
+        12
+      ],
+      "category": "Story",
+      "title": "Quest_11201_title",
+      "description": "Quest_11201_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 300
+        },
+        {
+          "type": "BondCurrency",
+          "count": 768
+        },
+        {
+          "type": "Material",
+          "count": 6,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10403
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 12,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 91
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 92
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 93
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 94
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 95
+        }
+      ]
+    },
+    {
+      "id": 10403,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        11
+      ],
+      "boundInstanceIds": [
+        4
+      ],
+      "category": "Guidance",
+      "title": "Quest_10403_title",
+      "description": "Quest_10403_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 110
+        },
+        {
+          "type": "BondCurrency",
+          "count": 270
+        },
+        {
+          "type": "Quest",
+          "rewardId": 11401
+        },
+        {
+          "type": "Instance",
+          "rewardId": 14
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 11,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 11401,
+      "giverIds": [
+        11
+      ],
+      "reclaimerIds": [
+        11
+      ],
+      "boundInstanceIds": [
+        14
+      ],
+      "category": "Story",
+      "title": "Quest_11401_title",
+      "description": "Quest_11401_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 330
+        },
+        {
+          "type": "BondCurrency",
+          "count": 808
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10404
+        },
+        {
+          "type": "Material",
+          "count": 6,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Material",
+          "count": 2,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 14,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 101
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 102
+        }
+      ]
+    },
+    {
+      "id": 10404,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        10
+      ],
+      "boundInstanceIds": [
+        4
+      ],
+      "category": "Guidance",
+      "title": "Quest_10404_title",
+      "description": "Quest_10404_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 112
+        },
+        {
+          "type": "BondCurrency",
+          "count": 226
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10405
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 10,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10405,
+      "giverIds": [
+        10
+      ],
+      "reclaimerIds": [
+        16
+      ],
+      "boundInstanceIds": [
+        4
+      ],
+      "category": "Story",
+      "title": "Quest_10405_title",
+      "description": "Quest_10405_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 112
+        },
+        {
+          "type": "BondCurrency",
+          "count": 226
+        },
+        {
+          "type": "Quest",
+          "rewardId": 11501
+        },
+        {
+          "type": "Instance",
+          "rewardId": 15
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 16,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 11501,
+      "giverIds": [
+        16
+      ],
+      "reclaimerIds": [
+        16
+      ],
+      "boundInstanceIds": [
+        15
+      ],
+      "category": "Story",
+      "title": "Quest_11501_title",
+      "description": "Quest_11501_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 336
+        },
+        {
+          "type": "BondCurrency",
+          "count": 678
+        },
+        {
+          "type": "Material",
+          "count": 6,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10406
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 15,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 111
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 112
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 113
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 114
+        }
+      ]
+    },
+    {
+      "id": 10406,
+      "giverIds": [
+        16
+      ],
+      "reclaimerIds": [
+        15
+      ],
+      "boundInstanceIds": [
+        4
+      ],
+      "category": "Story",
+      "title": "Quest_10406_title",
+      "description": "Quest_10406_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 180
+        },
+        {
+          "type": "BondCurrency",
+          "count": 296
+        },
+        {
+          "type": "Quest",
+          "rewardId": 11701
+        },
+        {
+          "type": "Instance",
+          "rewardId": 17
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 15,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 11701,
+      "giverIds": [
+        15
+      ],
+      "reclaimerIds": [
+        16
+      ],
+      "boundInstanceIds": [
+        17
+      ],
+      "category": "Story",
+      "title": "Quest_11701_title",
+      "description": "Quest_11701_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 540
+        },
+        {
+          "type": "BondCurrency",
+          "count": 887
+        },
+        {
+          "type": "Material",
+          "count": 6,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 11601
+        },
+        {
+          "type": "Instance",
+          "rewardId": 16
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 17,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 121
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 122
+        }
+      ]
+    },
+    {
+      "id": 11601,
+      "giverIds": [
+        16
+      ],
+      "reclaimerIds": [
+        16
+      ],
+      "boundInstanceIds": [
+        16
+      ],
+      "category": "Story",
+      "title": "Quest_11601_title",
+      "description": "Quest_11601_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 470
+        },
+        {
+          "type": "BondCurrency",
+          "count": 618
+        },
+        {
+          "type": "Material",
+          "count": 6,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Material",
+          "count": 2,
+          "materialType": "MT_Purple_Crystal"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 21401
+        },
+        {
+          "type": "Quest",
+          "rewardId": 21402
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10407
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 16,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 21401,
+      "giverIds": [
+        13
+      ],
+      "reclaimerIds": [
+        13
+      ],
+      "boundInstanceIds": [
+        14
+      ],
+      "category": "Sidequest",
+      "title": "Quest_21401_title",
+      "description": "Quest_21401_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 600
+        },
+        {
+          "type": "BondCurrency",
+          "count": 645
+        },
+        {
+          "type": "Material",
+          "count": 3,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        },
+        {
+          "taskId": 1,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        },
+        {
+          "taskId": 2,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 141
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 142
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 143
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 144
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 145
+        }
+      ]
+    },
+    {
+      "id": 21402,
+      "giverIds": [
+        18
+      ],
+      "reclaimerIds": [
+        18
+      ],
+      "boundInstanceIds": [
+        14
+      ],
+      "category": "Sidequest",
+      "title": "Quest_21402_title",
+      "description": "Quest_21402_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 600
+        },
+        {
+          "type": "BondCurrency",
+          "count": 645
+        },
+        {
+          "type": "Material",
+          "count": 3,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 24
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 51
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 8
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 38
+        }
+      ]
+    },
+    {
+      "id": 10407,
+      "giverIds": [
+        16
+      ],
+      "reclaimerIds": [
+        17
+      ],
+      "boundInstanceIds": [
+        4
+      ],
+      "category": "Story",
+      "title": "Quest_10407_title",
+      "description": "Quest_10407_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 375
+        },
+        {
+          "type": "BondCurrency",
+          "count": 336
+        },
+        {
+          "type": "Quest",
+          "rewardId": 13001
+        },
+        {
+          "type": "Instance",
+          "rewardId": 30
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 17,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 13001,
+      "giverIds": [
+        17
+      ],
+      "reclaimerIds": [
+        17
+      ],
+      "boundInstanceIds": [
+        30
+      ],
+      "category": "Story",
+      "title": "Quest_13001_title",
+      "description": "Quest_13001_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 1125
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1006
+        },
+        {
+          "type": "Material",
+          "count": 6,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Instance",
+          "rewardId": 18
+        },
+        {
+          "type": "Quest",
+          "rewardId": 11801
+        },
+        {
+          "type": "Quest",
+          "rewardId": 21501
+        },
+        {
+          "type": "Quest",
+          "rewardId": 21503
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 30,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 151
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 152
+        }
+      ]
+    },
+    {
+      "id": 21501,
+      "giverIds": [
+        12
+      ],
+      "reclaimerIds": [
+        12
+      ],
+      "boundInstanceIds": [
+        15
+      ],
+      "category": "Sidequest",
+      "title": "Quest_21501_title",
+      "description": "Quest_21501_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 1000
+        },
+        {
+          "type": "BondCurrency",
+          "count": 698
+        },
+        {
+          "type": "Material",
+          "count": 4,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 10,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 161
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 162
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 163
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 164
+        }
+      ]
+    },
+    {
+      "id": 21503,
+      "giverIds": [
+        9
+      ],
+      "reclaimerIds": [
+        9
+      ],
+      "boundInstanceIds": [
+        15
+      ],
+      "category": "Sidequest",
+      "title": "Quest_21503_title",
+      "description": "Quest_21503_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 1000
+        },
+        {
+          "type": "BondCurrency",
+          "count": 698
+        },
+        {
+          "type": "Material",
+          "count": 4,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 11801,
+      "giverIds": [
+        17
+      ],
+      "reclaimerIds": [
+        17
+      ],
+      "boundInstanceIds": [
+        18
+      ],
+      "category": "Story",
+      "title": "Quest_11801_title",
+      "description": "Quest_11801_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 2600
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1448
+        },
+        {
+          "type": "Material",
+          "count": 8,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Material",
+          "count": 2,
+          "materialType": "MT_Purple_Crystal"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10408
+        },
+        {
+          "type": "Instance",
+          "rewardId": 5
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 18,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 27
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 54
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 12
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 40
+        }
+      ]
+    },
+    {
+      "id": 10408,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        19
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10408_title",
+      "description": "Quest_10408_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 204
+        },
+        {
+          "type": "BondCurrency",
+          "count": 90
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10501
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 19,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10501,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        20
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10501_title",
+      "description": "Quest_10501_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 204
+        },
+        {
+          "type": "BondCurrency",
+          "count": 90
+        },
+        {
+          "type": "Quest",
+          "count": 1,
+          "rewardId": 10502
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 20,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10502,
+      "giverIds": [
+        20
+      ],
+      "reclaimerIds": [
+        21
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Story",
+      "title": "Quest_10502_title",
+      "description": "Quest_10502_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 204
+        },
+        {
+          "type": "BondCurrency",
+          "count": 90
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10503
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 21,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10503,
+      "giverIds": [
+        21
+      ],
+      "reclaimerIds": [
+        26
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Story",
+      "title": "Quest_10503_title",
+      "description": "Quest_10503_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 204
+        },
+        {
+          "type": "BondCurrency",
+          "count": 90
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10504
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 26,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10504,
+      "giverIds": [
+        26
+      ],
+      "reclaimerIds": [
+        23
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Story",
+      "title": "Quest_10504_title",
+      "description": "Quest_10504_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 204
+        },
+        {
+          "type": "BondCurrency",
+          "count": 90
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10505
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 23,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10505,
+      "giverIds": [
+        23
+      ],
+      "reclaimerIds": [
+        28
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Story",
+      "title": "Quest_10505_title",
+      "description": "Quest_10505_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 204
+        },
+        {
+          "type": "BondCurrency",
+          "count": 90
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10506
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 28,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10506,
+      "giverIds": [
+        28
+      ],
+      "reclaimerIds": [
+        27
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Story",
+      "title": "Quest_10506_title",
+      "description": "Quest_10506_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 204
+        },
+        {
+          "type": "BondCurrency",
+          "count": 90
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10507
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 27,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10507,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10507_title",
+      "description": "Quest_10507_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 204
+        },
+        {
+          "type": "BondCurrency",
+          "count": 90
+        },
+        {
+          "type": "Quest",
+          "rewardId": 12901
+        },
+        {
+          "type": "Instance",
+          "rewardId": 29
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 25,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 12901,
+      "giverIds": [
+        25
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        29
+      ],
+      "category": "Story",
+      "title": "Quest_12901_title",
+      "description": "Quest_12901_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 1768
+        },
+        {
+          "type": "BondCurrency",
+          "count": 780
+        },
+        {
+          "type": "Material",
+          "count": 8,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10508
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 29,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 181
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 182
+        }
+      ]
+    },
+    {
+      "id": 10508,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        20
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10508_title",
+      "description": "Quest_10508_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 1125
+        },
+        {
+          "type": "BondCurrency",
+          "count": 389
+        },
+        {
+          "type": "Quest",
+          "rewardId": 11901
+        },
+        {
+          "type": "Quest",
+          "rewardId": 21701
+        },
+        {
+          "type": "Instance",
+          "rewardId": 19
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 20,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 21701,
+      "giverIds": [
+        29
+      ],
+      "reclaimerIds": [
+        29
+      ],
+      "boundInstanceIds": [
+        17
+      ],
+      "category": "Sidequest",
+      "title": "Quest_21701_title",
+      "description": "Quest_21701_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 3375
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1165
+        },
+        {
+          "type": "Material",
+          "count": 8,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 17,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 191
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 192
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 193
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 194
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 195
+        }
+      ]
+    },
+    {
+      "id": 11901,
+      "giverIds": [
+        20
+      ],
+      "reclaimerIds": [
+        20
+      ],
+      "boundInstanceIds": [
+        19
+      ],
+      "category": "Story",
+      "title": "Quest_11901_title",
+      "description": "Quest_11901_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 5800,
+          "rewardId": 0
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1606,
+          "rewardId": 0
+        },
+        {
+          "type": "Material",
+          "count": 8,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "count": 1,
+          "rewardId": 23001
+        },
+        {
+          "type": "Quest",
+          "count": 1,
+          "rewardId": 10509
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 19,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 201
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 202
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 203
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 204
+        }
+      ]
+    },
+    {
+      "id": 23001,
+      "giverIds": [
+        22
+      ],
+      "reclaimerIds": [
+        22
+      ],
+      "boundInstanceIds": [
+        30
+      ],
+      "category": "Sidequest",
+      "title": "Quest_23001_title",
+      "description": "Quest_23001_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 7600
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1659
+        },
+        {
+          "type": "Material",
+          "count": 9,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 30,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 211
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 212
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 213
+        }
+      ]
+    },
+    {
+      "id": 10509,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        21
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10509_title",
+      "description": "Quest_10509_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 3960
+        },
+        {
+          "type": "BondCurrency",
+          "count": 685
+        },
+        {
+          "type": "Quest",
+          "rewardId": 12001
+        },
+        {
+          "type": "Instance",
+          "rewardId": 20
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 21,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 12001,
+      "giverIds": [
+        21
+      ],
+      "reclaimerIds": [
+        21
+      ],
+      "boundInstanceIds": [
+        20
+      ],
+      "category": "Story",
+      "title": "Quest_12001_title",
+      "description": "Quest_12001_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 1980
+        },
+        {
+          "type": "BondCurrency",
+          "count": 343
+        },
+        {
+          "type": "Material",
+          "count": 9,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Material",
+          "count": 2,
+          "materialType": "MT_Purple_Crystal"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 21801
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10510
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 20,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 21801,
+      "giverIds": [
+        22
+      ],
+      "reclaimerIds": [
+        22
+      ],
+      "boundInstanceIds": [
+        18
+      ],
+      "category": "Sidequest",
+      "title": "Quest_21801_title",
+      "description": "Quest_21801_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 12800
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1765
+        },
+        {
+          "type": "Material",
+          "count": 9,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Material",
+          "count": 2,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 18,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 231
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 232
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 233
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 234
+        }
+      ]
+    },
+    {
+      "id": 10510,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10510_title",
+      "description": "Quest_10510_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 4175
+        },
+        {
+          "type": "BondCurrency",
+          "count": 455
+        },
+        {
+          "type": "Quest",
+          "rewardId": 12101
+        },
+        {
+          "type": "Instance",
+          "rewardId": 21
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 25,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 12101,
+      "giverIds": [
+        25
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        21
+      ],
+      "category": "Story",
+      "title": "Quest_12101_title",
+      "description": "Quest_12101_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 12525
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1364
+        },
+        {
+          "type": "Material",
+          "count": 9,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 13201
+        },
+        {
+          "type": "Quest",
+          "rewardId": 22901
+        },
+        {
+          "type": "Quest",
+          "rewardId": 22902
+        },
+        {
+          "type": "Quest",
+          "rewardId": 22903
+        },
+        {
+          "type": "Instance",
+          "rewardId": 32
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 21,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 241
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 242
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 243
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 244
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 245
+        }
+      ]
+    },
+    {
+      "id": 22901,
+      "giverIds": [
+        25
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        29
+      ],
+      "category": "Sidequest",
+      "title": "Quest_22901_title",
+      "description": "Quest_22901_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 8680
+        },
+        {
+          "type": "BondCurrency",
+          "count": 749
+        },
+        {
+          "type": "Material",
+          "count": 3,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 3,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 251
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 252
+        }
+      ]
+    },
+    {
+      "id": 22902,
+      "giverIds": [
+        25
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        29
+      ],
+      "category": "Sidequest",
+      "title": "Quest_22902_title",
+      "description": "Quest_22902_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 6510
+        },
+        {
+          "type": "BondCurrency",
+          "count": 562
+        },
+        {
+          "type": "Material",
+          "count": 3,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 3,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 22903,
+      "giverIds": [
+        21
+      ],
+      "reclaimerIds": [
+        21
+      ],
+      "boundInstanceIds": [
+        29
+      ],
+      "category": "Sidequest",
+      "title": "Quest_22903_title",
+      "description": "Quest_22903_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 6510
+        },
+        {
+          "type": "BondCurrency",
+          "count": 562
+        },
+        {
+          "type": "Material",
+          "count": 3,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 2,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 13201,
+      "giverIds": [
+        25
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        32
+      ],
+      "category": "Story",
+      "title": "Quest_13201_title",
+      "description": "Quest_13201_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 28200
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1924
+        },
+        {
+          "type": "Material",
+          "count": 11,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10511
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 32,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 14
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 43
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 0
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 28
+        }
+      ]
+    },
+    {
+      "id": 10511,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        19
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10511_title",
+      "description": "Quest_10511_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 7340
+        },
+        {
+          "type": "BondCurrency",
+          "count": 396
+        },
+        {
+          "type": "Quest",
+          "rewardId": 12401
+        },
+        {
+          "type": "Quest",
+          "rewardId": 21901
+        },
+        {
+          "type": "Quest",
+          "rewardId": 21902
+        },
+        {
+          "type": "Instance",
+          "rewardId": 24
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 19,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 21901,
+      "giverIds": [
+        29
+      ],
+      "reclaimerIds": [
+        29
+      ],
+      "boundInstanceIds": [
+        19
+      ],
+      "category": "Sidequest",
+      "title": "Quest_21901_title",
+      "description": "Quest_21901_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 14680
+        },
+        {
+          "type": "BondCurrency",
+          "count": 791
+        },
+        {
+          "type": "Material",
+          "count": 6,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 5,
+          "timeLimit": 0
+        },
+        {
+          "taskId": 1,
+          "type": "Kills",
+          "target": 3,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 271
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 272
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 273
+        }
+      ]
+    },
+    {
+      "id": 21902,
+      "giverIds": [
+        25
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        19
+      ],
+      "category": "Sidequest",
+      "title": "Quest_21902_title",
+      "description": "Quest_21902_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 14680
+        },
+        {
+          "type": "BondCurrency",
+          "count": 791
+        },
+        {
+          "type": "Material",
+          "count": 5,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 4,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 12401,
+      "giverIds": [
+        19
+      ],
+      "reclaimerIds": [
+        19
+      ],
+      "boundInstanceIds": [
+        24
+      ],
+      "category": "Story",
+      "title": "Quest_12401_title",
+      "description": "Quest_12401_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 47700
+        },
+        {
+          "type": "BondCurrency",
+          "count": 2030
+        },
+        {
+          "type": "Material",
+          "count": 11,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 12201
+        },
+        {
+          "type": "Quest",
+          "rewardId": 22101
+        },
+        {
+          "type": "Quest",
+          "rewardId": 22103
+        },
+        {
+          "type": "Quest",
+          "rewardId": 22104
+        },
+        {
+          "type": "Instance",
+          "rewardId": 22
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 24,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 281
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 282
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 283
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 284
+        }
+      ]
+    },
+    {
+      "id": 22101,
+      "giverIds": [
+        25
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        21
+      ],
+      "category": "Sidequest",
+      "title": "Quest_22101_title",
+      "description": "Quest_22101_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 24800
+        },
+        {
+          "type": "BondCurrency",
+          "count": 833
+        },
+        {
+          "type": "Material",
+          "count": 4,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 2,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 291
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 292
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 293
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 294
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 295
+        }
+      ]
+    },
+    {
+      "id": 22103,
+      "giverIds": [
+        21
+      ],
+      "reclaimerIds": [
+        21
+      ],
+      "boundInstanceIds": [
+        21
+      ],
+      "category": "Sidequest",
+      "title": "Quest_22103_title",
+      "description": "Quest_22103_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 18600
+        },
+        {
+          "type": "BondCurrency",
+          "count": 625
+        },
+        {
+          "type": "Material",
+          "count": 4,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 5,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 291
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 292
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 293
+        }
+      ]
+    },
+    {
+      "id": 22104,
+      "giverIds": [
+        28
+      ],
+      "reclaimerIds": [
+        28
+      ],
+      "boundInstanceIds": [
+        21
+      ],
+      "category": "Sidequest",
+      "title": "Quest_22104_title",
+      "description": "Quest_22104_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 18600
+        },
+        {
+          "type": "BondCurrency",
+          "count": 625
+        },
+        {
+          "type": "Material",
+          "count": 3,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 3,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 12201,
+      "giverIds": [
+        19
+      ],
+      "reclaimerIds": [
+        19
+      ],
+      "boundInstanceIds": [
+        22
+      ],
+      "category": "Story",
+      "title": "Quest_12201_title",
+      "description": "Quest_12201_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 40300
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1068
+        },
+        {
+          "type": "Material",
+          "count": 11,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10512
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 22,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10512,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        20
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10512_title",
+      "description": "Quest_10512_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 8384
+        },
+        {
+          "type": "BondCurrency",
+          "count": 176
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10513
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 20,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10513,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        21
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10513_title",
+      "description": "Quest_10513_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 8384
+        },
+        {
+          "type": "BondCurrency",
+          "count": 176
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10514
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 21,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10514,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        23
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10514_title",
+      "description": "Quest_10514_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 8384
+        },
+        {
+          "type": "BondCurrency",
+          "count": 176
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10515
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 23,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10515,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10515_title",
+      "description": "Quest_10515_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 8384
+        },
+        {
+          "type": "BondCurrency",
+          "count": 176
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10516
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 25,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10516,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        26
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10516_title",
+      "description": "Quest_10516_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 8384
+        },
+        {
+          "type": "BondCurrency",
+          "count": 176
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 241
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10517
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 26,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 10517,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        28
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10517_title",
+      "description": "Quest_10517_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 8384
+        },
+        {
+          "type": "BondCurrency",
+          "count": 176
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10518
+        },
+        {
+          "type": "Quest",
+          "rewardId": 23201
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 28,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 23201,
+      "giverIds": [
+        25
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        32
+      ],
+      "category": "Sidequest",
+      "title": "Quest_23201_title",
+      "description": "Quest_23201_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 54496
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1138
+        },
+        {
+          "type": "Material",
+          "count": 12,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 32,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 311
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 312
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 313
+        },
+        {
+          "type": "ClassMode",
+          "count": 1,
+          "rewardId": 314
+        }
+      ]
+    },
+    {
+      "id": 10518,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        22
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10518_title",
+      "description": "Quest_10518_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 25780
+        },
+        {
+          "type": "BondCurrency",
+          "count": 449
+        },
+        {
+          "type": "Quest",
+          "rewardId": 12301
+        },
+        {
+          "type": "Instance",
+          "rewardId": 23
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 22,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 12301,
+      "giverIds": [
+        22
+      ],
+      "reclaimerIds": [
+        22
+      ],
+      "boundInstanceIds": [
+        23
+      ],
+      "category": "Story",
+      "title": "Quest_12301_title",
+      "description": "Quest_12301_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 51560
+        },
+        {
+          "type": "BondCurrency",
+          "count": 897
+        },
+        {
+          "type": "Material",
+          "count": 12,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Material",
+          "count": 2,
+          "materialType": "MT_Purple_Crystal"
+        },
+        {
+          "type": "Quest",
+          "rewardId": 10519
+        },
+        {
+          "type": "Quest",
+          "rewardId": 22401
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 23,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 321
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 322
+        },
+        {
+          "type": "Shield",
+          "count": 1,
+          "rewardId": 323
+        }
+      ]
+    },
+    {
+      "id": 22401,
+      "giverIds": [
+        19
+      ],
+      "reclaimerIds": [
+        19
+      ],
+      "boundInstanceIds": [
+        24
+      ],
+      "category": "Sidequest",
+      "title": "Quest_22401_title",
+      "description": "Quest_22401_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 153100
+        },
+        {
+          "type": "BondCurrency",
+          "count": 2295
+        },
+        {
+          "type": "Material",
+          "count": 12,
+          "materialType": "MT_Diamond_Shell"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 24,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 331
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 332
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 333
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 334
+        },
+        {
+          "type": "Item",
+          "count": 1,
+          "rewardId": 335
+        }
+      ]
+    },
+    {
+      "id": 10519,
+      "giverIds": [
+        -1
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        5
+      ],
+      "category": "Guidance",
+      "title": "Quest_10519_title",
+      "description": "Quest_10519_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 44325
+        },
+        {
+          "type": "BondCurrency",
+          "count": 587
+        },
+        {
+          "type": "Quest",
+          "rewardId": 12701
+        },
+        {
+          "type": "Instance",
+          "rewardId": 27
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "TalkTo",
+          "target": 25,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 12701,
+      "giverIds": [
+        25
+      ],
+      "reclaimerIds": [
+        25
+      ],
+      "boundInstanceIds": [
+        27
+      ],
+      "category": "Story",
+      "title": "Quest_12701_title",
+      "description": "Quest_12701_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 132975
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1761
+        },
+        {
+          "type": "Material",
+          "count": 12,
+          "materialType": "MT_Diamond_Shell"
+        },
+        {
+          "type": "Material",
+          "count": 2,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Instance",
+          "target": 27,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 21
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 48
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 6
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 34
+        }
+      ]
+    },
+    {
+      "id": 22601,
+      "giverIds": [
+        9
+      ],
+      "reclaimerIds": [
+        9
+      ],
+      "boundInstanceIds": [
+        26
+      ],
+      "category": "Sidequest",
+      "title": "Quest_22601_title",
+      "description": "Quest_22601_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 1440
+        },
+        {
+          "type": "BondCurrency",
+          "count": 63
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 5,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 21201,
+      "giverIds": [
+        8
+      ],
+      "reclaimerIds": [
+        8
+      ],
+      "boundInstanceIds": [
+        12
+      ],
+      "category": "Sidequest",
+      "title": "Quest_21201_title",
+      "description": "Quest_21201_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 1100
+        },
+        {
+          "type": "BondCurrency",
+          "count": 76
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 3,
+          "timeLimit": 0
+        },
+        {
+          "taskId": 1,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 21203,
+      "giverIds": [
+        10
+      ],
+      "reclaimerIds": [
+        10
+      ],
+      "boundInstanceIds": [
+        12
+      ],
+      "category": "Sidequest",
+      "title": "Quest_21203_title",
+      "description": "Quest_21203_des",
+      "requiredLevel": 1,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 1100
+        },
+        {
+          "type": "BondCurrency",
+          "count": 76
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 40301,
+      "giverIds": [
+        5
+      ],
+      "reclaimerIds": [
+        5
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Sidequest",
+      "title": "Quest_40301_title",
+      "description": "Quest_40301_des",
+      "requiredLevel": 1,
+      "unlockLevel": 5,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 40
+        },
+        {
+          "type": "BondCurrency",
+          "count": 325
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "PVPMode",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 15
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 42
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 1
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 29
+        }
+      ]
+    },
+    {
+      "id": 40401,
+      "giverIds": [
+        14
+      ],
+      "reclaimerIds": [
+        14
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Sidequest",
+      "title": "Quest_40401_title",
+      "description": "Quest_40401_des",
+      "requiredLevel": 1,
+      "unlockLevel": 13,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 470
+        },
+        {
+          "type": "BondCurrency",
+          "count": 618
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "PVPMode",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 20
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 47
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 5
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 33
+        }
+      ]
+    },
+    {
+      "id": 40501,
+      "giverIds": [
+        26
+      ],
+      "reclaimerIds": [
+        26
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Sidequest",
+      "title": "Quest_40501_title",
+      "description": "Quest_40501_des",
+      "requiredLevel": 1,
+      "unlockLevel": 22,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 3960
+        },
+        {
+          "type": "BondCurrency",
+          "count": 685
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "PVPMode",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 17
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 46
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 4
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 31
+        }
+      ]
+    },
+    {
+      "id": 40502,
+      "giverIds": [
+        26
+      ],
+      "reclaimerIds": [
+        26
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Sidequest",
+      "title": "Quest_40502_title",
+      "description": "Quest_40502_des",
+      "requiredLevel": 1,
+      "unlockLevel": 30,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 40300
+        },
+        {
+          "type": "BondCurrency",
+          "count": 1068
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "PVPMode",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 23
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 50
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 9
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 37
+        }
+      ]
+    },
+    {
+      "id": 40503,
+      "giverIds": [
+        26
+      ],
+      "reclaimerIds": [
+        26
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Sidequest",
+      "title": "Quest_40503_title",
+      "description": "Quest_40503_des",
+      "requiredLevel": 1,
+      "unlockLevel": 32,
+      "rewards": [
+        {
+          "type": "Experience",
+          "count": 51560
+        },
+        {
+          "type": "BondCurrency",
+          "count": 897
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "PVPMode",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ],
+      "optionalRewardsCount": 1,
+      "optionalRewards": [
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 26
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 53
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 11
+        },
+        {
+          "type": "Outfit",
+          "count": 1,
+          "rewardId": 39
+        }
+      ]
+    }
+  ],
+  "dailyQuests": [
+    {
+      "id": 50001,
+      "giverIds": [
+        1,
+        8,
+        19
+      ],
+      "reclaimerIds": [
+        1,
+        8,
+        19
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_50001_title",
+      "description": "Quest_50001_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 10,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 51001,
+      "giverIds": [
+        1,
+        8,
+        19
+      ],
+      "reclaimerIds": [
+        1,
+        8,
+        19
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_51001_title",
+      "description": "Quest_51001_des",
+      "requiredLevel": 37,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 50,
+          "rewardId": 0
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 20,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50002,
+      "giverIds": [
+        7,
+        18,
+        25
+      ],
+      "reclaimerIds": [
+        7,
+        18,
+        25
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_50002_title",
+      "description": "Quest_50002_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 10,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 51002,
+      "giverIds": [
+        7,
+        18,
+        25
+      ],
+      "reclaimerIds": [
+        7,
+        18,
+        25
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_51002_title",
+      "description": "Quest_51002_des",
+      "requiredLevel": 37,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 50,
+          "rewardId": 0
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 10,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50003,
+      "giverIds": [
+        1,
+        8,
+        19
+      ],
+      "reclaimerIds": [
+        1,
+        8,
+        19
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_50003_title",
+      "description": "Quest_50003_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 20,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 51003,
+      "giverIds": [
+        1,
+        8,
+        19
+      ],
+      "reclaimerIds": [
+        1,
+        8,
+        19
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_51003_title",
+      "description": "Quest_51003_des",
+      "requiredLevel": 37,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 50,
+          "rewardId": 0
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 20,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50004,
+      "giverIds": [
+        6,
+        10,
+        21
+      ],
+      "reclaimerIds": [
+        6,
+        10,
+        21
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_50004_title",
+      "description": "Quest_50004_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 3,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 51004,
+      "giverIds": [
+        6,
+        10,
+        21
+      ],
+      "reclaimerIds": [
+        6,
+        10,
+        21
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_51004_title",
+      "description": "Quest_51004_des",
+      "requiredLevel": 37,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 50,
+          "rewardId": 0
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 3,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50005,
+      "giverIds": [
+        1,
+        8,
+        19
+      ],
+      "reclaimerIds": [
+        1,
+        8,
+        19
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_50005_title",
+      "description": "Quest_50005_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500,
+          "rewardId": 0
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 10,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 51005,
+      "giverIds": [
+        1,
+        8,
+        19
+      ],
+      "reclaimerIds": [
+        1,
+        8,
+        19
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_51005_title",
+      "description": "Quest_51005_des",
+      "requiredLevel": 37,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 50,
+          "rewardId": 0
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 10,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50006,
+      "giverIds": [
+        7,
+        18,
+        25
+      ],
+      "reclaimerIds": [
+        7,
+        18,
+        25
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_50006_title",
+      "description": "Quest_50006_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500,
+          "rewardId": 0
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 3,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 51006,
+      "giverIds": [
+        7,
+        18,
+        25
+      ],
+      "reclaimerIds": [
+        7,
+        18,
+        25
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_51006_title",
+      "description": "Quest_51006_des",
+      "requiredLevel": 37,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 50,
+          "rewardId": 0
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 3,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50007,
+      "giverIds": [
+        1,
+        8,
+        19
+      ],
+      "reclaimerIds": [
+        1,
+        8,
+        19
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_50007_title",
+      "description": "Quest_50007_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500,
+          "rewardId": 0
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 51007,
+      "giverIds": [
+        1,
+        8,
+        19
+      ],
+      "reclaimerIds": [
+        1,
+        8,
+        19
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_51007_title",
+      "description": "Quest_51007_des",
+      "requiredLevel": 37,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 50,
+          "rewardId": 0
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50008,
+      "giverIds": [
+        6,
+        10,
+        21
+      ],
+      "reclaimerIds": [
+        6,
+        10,
+        21
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_50008_title",
+      "description": "Quest_50008_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500,
+          "rewardId": 0
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 51008,
+      "giverIds": [
+        6,
+        10,
+        21
+      ],
+      "reclaimerIds": [
+        6,
+        10,
+        21
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_51008_title",
+      "description": "Quest_51008_des",
+      "requiredLevel": 37,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 50,
+          "rewardId": 0
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50009,
+      "giverIds": [
+        6,
+        10,
+        21
+      ],
+      "reclaimerIds": [
+        6,
+        10,
+        21
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_50009_title",
+      "description": "Quest_50009_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500,
+          "rewardId": 0
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 51009,
+      "giverIds": [
+        6,
+        10,
+        21
+      ],
+      "reclaimerIds": [
+        6,
+        10,
+        21
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_51009_title",
+      "description": "Quest_51009_des",
+      "requiredLevel": 37,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 50,
+          "rewardId": 0
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50010,
+      "giverIds": [
+        7,
+        18,
+        25
+      ],
+      "reclaimerIds": [
+        7,
+        18,
+        25
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_50010_title",
+      "description": "Quest_50010_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 51010,
+      "giverIds": [
+        7,
+        18,
+        25
+      ],
+      "reclaimerIds": [
+        7,
+        18,
+        25
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_51010_title",
+      "description": "Quest_51010_des",
+      "requiredLevel": 37,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 50,
+          "rewardId": 0
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50011,
+      "giverIds": [
+        1,
+        8,
+        19
+      ],
+      "reclaimerIds": [
+        1,
+        8,
+        19
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_50011_title",
+      "description": "Quest_50011_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500,
+          "rewardId": 0
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50012,
+      "giverIds": [
+        7,
+        18,
+        25
+      ],
+      "reclaimerIds": [
+        7,
+        18,
+        25
+      ],
+      "boundInstanceIds": [
+        6
+      ],
+      "category": "Daily",
+      "title": "Quest_50012_title",
+      "description": "Quest_50012_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50013,
+      "giverIds": [
+        7,
+        18,
+        25
+      ],
+      "reclaimerIds": [
+        7,
+        18,
+        25
+      ],
+      "boundInstanceIds": [
+        10
+      ],
+      "category": "Daily",
+      "title": "Quest_50013_title",
+      "description": "Quest_50013_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50014,
+      "giverIds": [
+        6,
+        10,
+        21
+      ],
+      "reclaimerIds": [
+        6,
+        10,
+        21
+      ],
+      "boundInstanceIds": [
+        20
+      ],
+      "category": "Daily",
+      "title": "Quest_50014_title",
+      "description": "Quest_50014_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50015,
+      "giverIds": [
+        1,
+        8,
+        19
+      ],
+      "reclaimerIds": [
+        1,
+        8,
+        19
+      ],
+      "boundInstanceIds": [
+        23
+      ],
+      "category": "Daily",
+      "title": "Quest_50015_title",
+      "description": "Quest_50015_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    },
+    {
+      "id": 50016,
+      "giverIds": [
+        6,
+        10,
+        21
+      ],
+      "reclaimerIds": [
+        6,
+        10,
+        21
+      ],
+      "boundInstanceIds": [
+        16
+      ],
+      "category": "Daily",
+      "title": "Quest_50016_title",
+      "description": "Quest_50016_des",
+      "requiredLevel": 35,
+      "unlockLevel": 0,
+      "rewards": [
+        {
+          "type": "BondCurrency",
+          "count": 500
+        },
+        {
+          "type": "Material",
+          "count": 1,
+          "materialType": "MT_Purple_Crystal"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": 0,
+          "type": "Kills",
+          "target": 1,
+          "timeLimit": 0
+        }
+      ]
+    }
+  ]
+}

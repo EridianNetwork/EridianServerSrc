@@ -1,0 +1,9 @@
+<BHVBrainSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_fsmType>BHVGrenadeFSM</m_fsmType>
+  <m_BHVPropertySettingsList>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsGrenade">
+		<m_timeBeforeExplosion>0.1</m_timeBeforeExplosion>
+	  </m_BHVPropertySettings>
+   </m_BHVPropertySettingsList>
+</BHVBrainSetup>
+

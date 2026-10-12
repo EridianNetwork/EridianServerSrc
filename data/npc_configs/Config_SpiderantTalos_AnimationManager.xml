@@ -1,0 +1,6 @@
+<BHVAnimationManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_settings>
+    <m_hasDeathAnimation>true</m_hasDeathAnimation>
+    <m_animationHostName>CHR_IceSpiderBoss</m_animationHostName>
+  </m_settings>
+</BHVAnimationManagerSetup>

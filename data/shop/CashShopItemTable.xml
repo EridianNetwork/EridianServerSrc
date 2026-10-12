@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CashShopItemTable>
+	<Item ItemId="100101" ItemName="Berserkenhead" Type="Outfit" SubType="Head" CanBeSold="false" SellPrice="0" MinLevel="1" Soldier="false" Hunter="false" Berserken="true" Siren="false" Maxstack="1" InInventory="true" Icon="Icon_Siren Skinhead" String_name="Item_Name_Siren_Skinhead" string_Explanation="Item_text_Siren_Skinhead" AssetID="siren_head_01"/>
+	<Item ItemId="100102" ItemName="Sirenshoes" Type="Outfit" SubType="Shoes" CanBeSold="false" SellPrice="0" MinLevel="1" Soldier="false" Hunter="false" Berserken="false" Siren="true" Maxstack="1" InInventory="true" Icon="Icon_Siren Skinhead" String_name="Item_Name_Siren_Skinhead" string_Explanation="Item_text_Siren_Skinhead" AssetID="siren_head_01"/>
+	<Item ItemId="100103" ItemName="Hunterpants" Type="Outfit" SubType="Pants" CanBeSold="true" SellPrice="0" MinLevel="2" Soldier="false" Hunter="true" Berserken="false" Siren="false" Maxstack="1" InInventory="true" Icon="Icon_Siren Skinhead" String_name="Item_Name_Siren_Skinhead" string_Explanation="Item_text_Siren_Skinhead" AssetID="siren_head_01"/>
+</CashShopItemTable>

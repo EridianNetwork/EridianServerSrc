@@ -1,0 +1,40 @@
+<BHVTaskManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_entityType>CHR_Crabworm</m_entityType>
+  <m_settings>
+    <m_taskSettings xsi:type="BHVTaskDrillAttackSettings">
+      <m_drillAttackDistance>5</m_drillAttackDistance>
+      <m_drillDuration>4</m_drillDuration>
+      <m_damagePoint>80</m_damagePoint>
+      <m_bKnockback>true</m_bKnockback>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVDazeEffectSettings">
+      <m_bDazeResist>false</m_bDazeResist>
+      <m_dazeDuration>3</m_dazeDuration>
+      <m_speedRate>0.5</m_speedRate>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVMeleeAttackSettings">
+      <m_attackDamage>50</m_attackDamage>
+      <m_attackRange>5</m_attackRange>
+      <m_canKnockBack>false</m_canKnockBack>
+	  <m_knockBackForce>7</m_knockBackForce>
+      <m_attackSubTypeList>
+        <m_attackSubType>MeleeGeneric</m_attackSubType>
+      </m_attackSubTypeList>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVNavAgentSettings">
+	  <m_radius>0.5</m_radius>
+      <m_walkSpeed>1.8</m_walkSpeed>
+      <m_walkCombatSpeed>2.8</m_walkCombatSpeed>
+      <m_runSpeed>5</m_runSpeed>
+      <m_sprintSpeed>5.63</m_sprintSpeed>
+      <m_canUseFacingLogic>false</m_canUseFacingLogic>
+      <m_combatSpawnDuration>0.4</m_combatSpawnDuration>
+    </m_taskSettings>
+  </m_settings>
+</BHVTaskManagerSetup>
+
+
+
+
+
+

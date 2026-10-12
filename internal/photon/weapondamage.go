@@ -1,0 +1,148 @@
+package photon
+
+import (
+	"encoding/json"
+	"log"
+	"os"
+	"sync"
+
+	"eridian/internal/domain"
+)
+
+type weaponAttrDelta struct {
+	Value      float64 `json:"value"`
+	AffectType string  `json:"affectType"`
+}
+
+type weaponSubpartEntry struct {
+	Index      int                        `json:"index"`
+	Slot       string                     `json:"slot"`
+	Name       string                     `json:"name"`
+	Attributes map[string]weaponAttrDelta `json:"attributes"`
+}
+
+var (
+	weaponStatsOnce sync.Once
+	weaponBaseStats map[string]map[string]weaponAttrDelta
+	weaponSubpartIndex map[string]map[string]map[int]weaponSubpartEntry
+)
+
+func loadWeaponDamageStats() {
+	weaponStatsOnce.Do(func() {
+		weaponBaseStats = map[string]map[string]weaponAttrDelta{}
+		weaponSubpartIndex = map[string]map[string]map[int]weaponSubpartEntry{}
+
+		raw, err := os.ReadFile("data/weapon_base_stats.json")
+		if err != nil {
+			log.Printf("[PHOTON] weapon_base_stats.json not loaded: %v", err)
+			return
+		}
+		if err := json.Unmarshal(raw, &weaponBaseStats); err != nil {
+			log.Printf("[PHOTON] weapon_base_stats.json parse error: %v", err)
+		}
+
+		raw2, err := os.ReadFile("data/weapon_subpart_stats.json")
+		if err != nil {
+			log.Printf("[PHOTON] weapon_subpart_stats.json not loaded: %v", err)
+			return
+		}
+		var bySubtype map[string][]weaponSubpartEntry
+		if err := json.Unmarshal(raw2, &bySubtype); err != nil {
+			log.Printf("[PHOTON] weapon_subpart_stats.json parse error: %v", err)
+			return
+		}
+		for wt, entries := range bySubtype {
+			bySlot := map[string]map[int]weaponSubpartEntry{}
+			for _, e := range entries {
+				if bySlot[e.Slot] == nil {
+					bySlot[e.Slot] = map[int]weaponSubpartEntry{}
+				}
+				bySlot[e.Slot][e.Index] = e
+			}
+			weaponSubpartIndex[wt] = bySlot
+		}
+		log.Printf("[PHOTON] loaded weapon damage stats for %d weapon types", len(weaponBaseStats))
+	})
+}
+
+func combineFloatAttribute(base float64, deltas []weaponAttrDelta) float64 {
+	var prevAdd, posScale, negScale, postAdd float64
+	for _, d := range deltas {
+		switch d.AffectType {
+		case "Scale":
+			if d.Value > 0 {
+				posScale += d.Value
+			} else {
+				negScale += d.Value
+			}
+		case "PostAdd":
+			postAdd += d.Value
+		case "PrevAdd":
+			prevAdd += d.Value
+		}
+	}
+	return (base+prevAdd)*((1+posScale)/(1-negScale)) + postAdd
+}
+
+func subpartSlotIndices(sp weaponSubparts) map[string]int {
+	return map[string]int{
+		"ACC": sp.ACC, "ACTION": sp.ACTION, "BARREL": sp.BARREL, "BODY": sp.BODY,
+		"GRIP": sp.GRIP, "MAG": sp.MAG, "SIGHT": sp.SIGHT, "STOCK": sp.STOCK,
+		"MATERIAL": sp.MATERIAL,
+	}
+}
+
+func computeWeaponDamage(wp *weaponPreset, level int) float64 {
+	if wp == nil {
+		return 0
+	}
+	loadWeaponDamageStats()
+	base := weaponBaseStats[wp.Type]
+	if base == nil {
+		return 0
+	}
+	slots := weaponSubpartIndex[wp.Type]
+	var dpsDeltas, fireRateDeltas []weaponAttrDelta
+	for slot, idx := range subpartSlotIndices(wp.Subparts) {
+		entry, ok := slots[slot][idx]
+		if !ok {
+			continue
+		}
+		if d, ok := entry.Attributes["WeaponDPS"]; ok {
+			dpsDeltas = append(dpsDeltas, d)
+		}
+		if d, ok := entry.Attributes["FireRate"]; ok {
+			fireRateDeltas = append(fireRateDeltas, d)
+		}
+	}
+	dps := combineFloatAttribute(base["WeaponDPS"].Value, dpsDeltas)
+	fireRate := combineFloatAttribute(base["FireRate"].Value, fireRateDeltas)
+	if fireRate <= 0 {
+		return 0
+	}
+	return (dps / fireRate) * powerRatingForLevel(level)
+}
+
+const playerWeaponDamageFallback = 20.0
+
+func (s *EnetServer) playerWeaponDamageAtLevel(sess *ClientSession) float64 {
+	if sess == nil || sess.hostChar == nil {
+		return playerWeaponDamageFallback
+	}
+	weapons := equippedWeaponsOrdered(sess.hostChar.CharID)
+	slot := int(sess.activeWeaponSlot)
+	if slot < 0 || slot >= len(weapons) || weapons[slot] == nil {
+		return playerWeaponDamageFallback
+	}
+	if dmg := resolveWeaponDamage(weapons[slot]); dmg > 0 {
+		return dmg * (1 + weaponDamageScale(sess.hostChar))
+	}
+	return playerWeaponDamageFallback
+}
+
+func resolveWeaponDamage(it *domain.InventoryItem) float64 {
+	if it.Damage > 0 {
+		return it.Damage
+	}
+	return computeWeaponDamage(weaponPresetByID(it.ResourceID), it.Level)
+}

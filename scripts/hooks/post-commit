@@ -1,0 +1,4 @@
+#!/bin/sh
+
+short_hash="$(git rev-parse --short=8 HEAD)"
+python scripts/update_build_hash.py "$short_hash" || python3 scripts/update_build_hash.py "$short_hash"

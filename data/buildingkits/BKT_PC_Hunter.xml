@@ -1,0 +1,2090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComposableCharacter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <bkID>3169502637</bkID>
+  <m_sTypeName>CHR</m_sTypeName>
+  <m_sCharacterName>Hunter</m_sCharacterName>
+  <m_sSkeletonName>Assets/Resources/Entities/Player_Mecanim/Hunter_3rd_Modelprefab.prefab</m_sSkeletonName>
+  <m_aParts>
+    <ComposablePart>
+      <m_sPartName>Hair</m_sPartName>
+      <m_aFbxs>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Hair_L1_01.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Hair_L1_01_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_01/TEX_Hu_Hair_L1_01_01_D.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Hair_L1_02.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Hair_L1_02_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_02/TEX_Hu_Hair_L1_02_01_D.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Hair_L1_03.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Hair_L1_03_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_03/TEX_Hu_Hair_L1_03_01_D.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hu_Hair_04.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Hair_L30_01_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_01/TEX_Hu_Hair_L30_01_01_D.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 1.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+      </m_aFbxs>
+    </ComposablePart>
+    <ComposablePart>
+      <m_sPartName>Head</m_sPartName>
+      <m_aFbxs>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Head_L1_01.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Head_L1_01_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_01/TEX_Hu_Head_L1_01_01_D.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Head_L1_02.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Head_L1_02_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_02/TEX_Hu_Head_L1_02_01_D.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Head_L1_03.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Head_L1_03_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_03/TEX_Hu_Head_L1_03_01_D.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+      </m_aFbxs>
+    </ComposablePart>
+    <ComposablePart>
+      <m_sPartName>Mask</m_sPartName>
+      <m_aFbxs>
+        <ComposableFBX>
+          <m_sFileName>empty</m_sFileName>
+          <m_aMaterials />
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Mask_L1_01.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Mask_L1_01_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_01/TEX_Hu_Mask_L1_01_01_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_01/TEX_Hu_Mask_L1_01_01_M.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.196, 0.859, 0.894, 0.294)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Mask_L1_02.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Mask_L1_02_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_02/TEX_Hu_Mask_L1_02_01_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_02/TEX_Hu_Mask_L1_02_01_M.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.196, 0.859, 0.894, 0.294)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Mask_L1_03.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Mask_L1_03_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_03/TEX_Hu_Mask_L1_03_01_D.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hu_Mask_04.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Mask_L30_01_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_01/TEX_Hu_Mask_L30_01_01_D.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hu_Mask_05.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Mask_L30_03_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_03/TEX_Hu_Mask_L30_03_01_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_03/TEX_Hu_Mask_L30_03_01_M.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.834, 1.000, 0.588)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+      </m_aFbxs>
+    </ComposablePart>
+    <ComposablePart>
+      <m_sPartName>Body</m_sPartName>
+      <m_aFbxs>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Body_L1_01.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Body_L1_01_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_01/TEX_Hu_Body_L1_01_01_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_01/TEX_Hu_Body_L1_01_01_M.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(1.000, 0.188, 0.000, 0.235)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Body_L1_01_02.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_02/TEX_Hu_Body_L1_01_02_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_02/TEX_Hu_Body_L1_01_02_M.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(1.000, 0.188, 0.000, 0.235)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Body_L1_01_03.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_03/TEX_Hu_Body_L1_01_03_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_03/TEX_Hu_Body_L1_01_03_M.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.196, 0.859, 0.894, 0.294)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hu_Body_L30_01.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Body_L30_01_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_01/TEX_Hu_Body_L30_01_01_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_01/TEX_Hu_Body_L30_01_01_M.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 1.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.545, 1.000, 0.588)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Body_L30_01_02.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_02/TEX_Hu_Body_L30_01_02_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_02/TEX_Hu_Body_L30_01_02_M.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 1.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.545, 1.000, 0.588)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Body_L30_01_03.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_03/TEX_Hu_Body_L30_01_03_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_03/TEX_Hu_Body_L30_01_03_M.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 1.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.545, 1.000, 0.588)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+      </m_aFbxs>
+    </ComposablePart>
+    <ComposablePart>
+      <m_sPartName>Pants</m_sPartName>
+      <m_aFbxs>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Pants_L1_01.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Pants_L1_01_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_01/TEX_Hu_Pants_L1_01_01_D.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Pants_L1_01_02.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_02/TEX_Hu_Pants_L1_01_02_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_02/TEX_Hu_Pants_L1_01_02_M.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(1.000, 0.188, 0.000, 0.235)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Pants_L1_01_03.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_03/TEX_Hu_Pants_L1_01_03_D.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hu_Pants_L30_01.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Pants_L30_01_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_01/TEX_Hu_Pants_L30_01_01_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_01/TEX_Hu_Pants_L30_01_01_M.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 1.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.545, 1.000, 0.588)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Pants_L30_01_02.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_02/TEX_Hu_Pants_L30_01_02_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_02/TEX_Hu_Pants_L30_01_02_M.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 1.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.545, 1.000, 0.588)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Pants_L30_01_03.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_03/TEX_Hu_Pants_L30_01_03_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_03/TEX_Hu_Pants_L30_01_03_M.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 1.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.545, 1.000, 0.588)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+      </m_aFbxs>
+    </ComposablePart>
+    <ComposablePart>
+      <m_sPartName>Shoe</m_sPartName>
+      <m_aFbxs>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Shoes_L1_01.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Shoe_L1_01_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_01/TEX_Hu_Shoe_L1_01_01_D.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Shoe_L1_01_02.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_02/TEX_Hu_Shoe_L1_01_02_D.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Shoe_L1_01_03.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_03/TEX_Hu_Shoe_L1_01_03_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_03/TEX_Hu_Shoe_L1_01_03_M.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.196, 0.859, 0.894, 0.294)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hu_Shoes_L30_01.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Shoes_L30_01_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_01/TEX_Hu_Shoes_L30_01_01_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_01/TEX_Hu_Shoes_L30_01_01_M.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 1.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.545, 1.000, 0.588)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Shoes_L30_01_02.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_02/TEX_Hu_Shoes_L30_01_02_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_02/TEX_Hu_Shoes_L30_01_02_M.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 1.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.545, 1.000, 0.588)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Shoes_L30_01_03.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_03/TEX_Hu_Shoes_L30_01_03_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L30_03/TEX_Hu_Shoes_L30_01_03_M.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 1.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.000, 0.545, 1.000, 0.588)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+      </m_aFbxs>
+    </ComposablePart>
+    <ComposablePart>
+      <m_sPartName>Cm</m_sPartName>
+      <m_aFbxs>
+        <ComposableFBX>
+          <m_sFileName>empty</m_sFileName>
+          <m_aMaterials />
+        </ComposableFBX>
+      </m_aFbxs>
+    </ComposablePart>
+    <ComposablePart>
+      <m_sPartName>Glover</m_sPartName>
+      <m_aFbxs>
+        <ComposableFBX>
+          <m_sFileName>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/CHR_Hunter_Hand_L1_01.FBX</m_sFileName>
+          <m_aMaterials>
+            <ComposableMaterial>
+              <m_sMaterial>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Materials/MAT_Hu_Glover_L1_01_01.mat</m_sMaterial>
+              <m_sShader>Assets/Resources/Shader/BOL_Charactor_BRDF.shader</m_sShader>
+              <m_sTexName>
+                <string>_MainTex</string>
+                <string>_MaskTex</string>
+                <string>_Ramp</string>
+              </m_sTexName>
+              <m_sTexFileName>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_01/TEX_Hu_Glover_L1_01_01_D.png</string>
+                <string>Assets/ArtResources/Characters/ThirdPerson/Characters/Hunter/ModelsMecanim/Textures/Hunter_L1_01/TEX_Hu_Glover_L1_01_01_M.png</string>
+                <string>Assets/ArtResources/Characters/BRDFmaps/TEX_BRDF2.png</string>
+              </m_sTexFileName>
+              <m_sShaderProperties>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_Color</mName>
+                  <mDesc>Main Color</mDesc>
+                  <mValue>RGBA(1.000, 1.000, 1.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_IllumnColor</mName>
+                  <mDesc>Emissive Color (Mask R)</mDesc>
+                  <mValue>RGBA(0.196, 0.859, 0.894, 0.294)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_MetalColor</mName>
+                  <mDesc>Variant Color (Mask G)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_SkinColor</mName>
+                  <mDesc>Variant Color (Mask B)</mDesc>
+                  <mValue>RGBA(0.590, 0.590, 0.590, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Color</mType>
+                  <mName>_ReflectColor</mName>
+                  <mDesc>Reflect Color (Mask A)</mDesc>
+                  <mValue>RGBA(0.000, 0.000, 0.000, 0.000)</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_BRDF_PARA</mName>
+                  <mDesc>BRDF Para</mDesc>
+                  <mValue>0.3</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Time</mName>
+                  <mDesc>Fading Time</mDesc>
+                  <mValue>5</mValue>
+                </ShaderProperty>
+                <ShaderProperty>
+                  <mType>Float</mType>
+                  <mName>_Fading_Scale</mName>
+                  <mDesc>Fading Scale</mDesc>
+                  <mValue>1</mValue>
+                </ShaderProperty>
+              </m_sShaderProperties>
+            </ComposableMaterial>
+          </m_aMaterials>
+        </ComposableFBX>
+      </m_aFbxs>
+    </ComposablePart>
+  </m_aParts>
+</ComposableCharacter>

@@ -1,0 +1,42 @@
+<BHVTaskManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<m_entityType>CHR_SpiderantTalos</m_entityType>		
+  <m_settings>
+    <m_taskSettings xsi:type="BHVChargeAttackSettings">
+      <m_attackDamage>35</m_attackDamage>
+      <m_checkRadius>3</m_checkRadius>
+      <m_attackSubType>MeleeGeneric</m_attackSubType>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVDazeEffectSettings">
+      <m_bDazeResist>true</m_bDazeResist>
+      <m_dazeDuration>7</m_dazeDuration>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVMeleeAttackSettings">
+      <m_attackDamage>80</m_attackDamage>
+      <m_attackRange>7</m_attackRange>
+      <m_canKnockBack>true</m_canKnockBack>
+	  <m_knockBackForce>6</m_knockBackForce>
+      <m_attackSubTypeList>
+        <m_attackSubType>MeleeClaw</m_attackSubType>
+        <m_attackSubType>MeleeClaw</m_attackSubType>
+      </m_attackSubTypeList>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVNavAgentSettings">
+      <m_walkSpeed>0.86</m_walkSpeed>
+      <m_walkCombatSpeed>0.86</m_walkCombatSpeed>
+      <m_runSpeed>4.5</m_runSpeed>
+      <m_jumpSpeed>24</m_jumpSpeed>
+      <m_chargeSpeed>6</m_chargeSpeed>
+      <m_canUseFacingLogic>false</m_canUseFacingLogic>
+      <m_stopDistance>1</m_stopDistance>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVEarthPikeAttackSettings">
+      <m_pikeDamage>0</m_pikeDamage>
+      <m_pikeAmount>8</m_pikeAmount>
+      <m_pikeDamageRadius>3.5</m_pikeDamageRadius>
+	  <m_distanceToPlayer>2.5</m_distanceToPlayer>
+    </m_taskSettings>
+  </m_settings>
+</BHVTaskManagerSetup>
+
+
+

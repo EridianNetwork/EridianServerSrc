@@ -1,0 +1,38 @@
+<BHVBrainSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_fsmType>CHR_TheInsaneTentacleLarge</m_fsmType>
+  <m_BHVPropertySettingsList>   
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsMeleeAttack">
+      <m_attackMode>NAM_MeleeAttack</m_attackMode>
+      <m_attackChanceWeight>1</m_attackChanceWeight>
+      <m_meleeAttackDistanceMin>0</m_meleeAttackDistanceMin>
+      <m_meleeAttackDistanceMax>15</m_meleeAttackDistanceMax>
+      <m_meleeAttackAngle>360</m_meleeAttackAngle>
+      <m_meleeAttackIdleTime>0.2</m_meleeAttackIdleTime>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsBasic">
+      <m_healthPoint>70</m_healthPoint>
+      <m_shieldPoint>0</m_shieldPoint>
+      <m_beenShotAtDuration>20</m_beenShotAtDuration>
+      <m_startMoveDistance>2</m_startMoveDistance>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsThreat">
+      <m_distanceFactor>-0.5</m_distanceFactor>
+      <m_damageFactor>0.5</m_damageFactor>
+    </m_BHVPropertySettings>    
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsDetection">
+      <m_visualDetectionRange>500</m_visualDetectionRange>
+      <m_visualDetectionAngle>360</m_visualDetectionAngle>
+      <m_auditionDetectionRange>200</m_auditionDetectionRange>
+    </m_BHVPropertySettings>    
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsTimers">
+      <m_selectTargetTimer>1</m_selectTargetTimer>
+      <m_selectPositionTimer>5</m_selectPositionTimer>
+      <m_alertFightTimer>3.5</m_alertFightTimer>
+      <m_alertTimer>12</m_alertTimer>
+    </m_BHVPropertySettings>
+  </m_BHVPropertySettingsList>
+</BHVBrainSetup>
+
+
+
+

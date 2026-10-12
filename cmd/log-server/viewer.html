@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BOL Log Viewer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:       #0d1117;
+  --surface:  #161b22;
+  --surface2: #1c2330;
+  --border:   #30363d;
+  --text:     #c9d1d9;
+  --muted:    #8b949e;
+  --accent:   #58a6ff;
+
+  --c-error:     #f85149;  --bg-error:     #1c0a09;
+  --c-warning:   #e3b341;  --bg-warning:   #1a1200;
+  --c-assert:    #db6d28;  --bg-assert:    #1a0e00;
+  --c-exception: #bc8cff;  --bg-exception: #130020;
+  --c-log:       #3d4d5e;
+
+  --tb-h: 42px;
+  --fb-h: 36px;
+}
+
+html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--text);
+  font-family: 'Cascadia Code', 'JetBrains Mono', 'Consolas', ui-monospace, monospace;
+  font-size: 12px; }
+
+/* ── toolbar ── */
+#toolbar {
+  position: fixed; top: 0; left: 0; right: 0; height: var(--tb-h);
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 8px; padding: 0 12px; z-index: 200;
+}
+#logo { font-weight: 700; font-size: 13px; color: var(--accent); white-space: nowrap; letter-spacing: -0.02em; }
+#status {
+  font-size: 11px; white-space: nowrap; padding: 2px 8px; border-radius: 10px;
+  border: 1px solid currentColor; transition: color .3s, border-color .3s;
+}
+#status.online  { color: #3fb950; }
+#status.offline { color: #f85149; }
+#status.connecting { color: var(--muted); }
+
+#stats { display: flex; gap: 5px; margin-right: auto; }
+.chip {
+  padding: 2px 7px; border-radius: 10px; font-size: 11px; white-space: nowrap;
+  border: 1px solid var(--border); background: var(--bg); cursor: default;
+}
+.chip b { font-weight: 700; }
+.chip-E { border-color: #3d1212; color: var(--c-error); }
+.chip-W { border-color: #3d2e00; color: var(--c-warning); }
+.chip-A { border-color: #3d2200; color: var(--c-assert); }
+.chip-X { border-color: #2d0e50; color: var(--c-exception); }
+.chip-T { color: var(--muted); }
+
+#search {
+  width: 190px; padding: 4px 9px; background: var(--bg);
+  border: 1px solid var(--border); border-radius: 5px;
+  color: var(--text); font-size: 12px; font-family: inherit;
+}
+#search:focus { outline: none; border-color: var(--accent); }
+#search::placeholder { color: var(--muted); }
+#search::-webkit-search-cancel-button { cursor: pointer; }
+
+#btn-clear { padding: 3px 9px; }
+#scroll-lbl {
+  display: flex; align-items: center; gap: 4px; cursor: pointer;
+  color: var(--muted); font-size: 11px; white-space: nowrap;
+  user-select: none;
+}
+#scroll-lbl:hover { color: var(--text); }
+#scroll-lbl input { cursor: pointer; accent-color: var(--accent); }
+
+button {
+  padding: 3px 9px; border-radius: 5px; border: 1px solid var(--border);
+  background: var(--bg); color: var(--muted); cursor: pointer;
+  font-size: 11px; font-family: inherit; transition: background .1s, color .1s;
+}
+button:hover { background: var(--surface2); color: var(--text); }
+
+/* ── filter bar ── */
+#filterbar {
+  position: fixed; top: var(--tb-h); left: 0; right: 0; height: var(--fb-h);
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 5px; padding: 0 12px;
+  overflow-x: auto; white-space: nowrap; z-index: 199;
+}
+#filterbar::-webkit-scrollbar { height: 3px; }
+#filterbar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+.fb-lbl { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
+.fb-sep { color: var(--border); margin: 0 4px; font-size: 14px; }
+
+.pill {
+  padding: 2px 9px; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--bg); color: var(--muted); cursor: pointer;
+  font-size: 11px; font-family: inherit; transition: all .1s;
+}
+.pill:hover { color: var(--text); }
+.pill.active { color: var(--text); }
+
+/* priority pills active colors */
+.pill.p-Log.active       { border-color: var(--c-log); background: #1a2030; color: #94a3b8; }
+.pill.p-Warning.active   { border-color: var(--c-warning); background: var(--bg-warning); color: var(--c-warning); }
+.pill.p-Error.active     { border-color: var(--c-error);   background: var(--bg-error);   color: var(--c-error); }
+.pill.p-Assert.active    { border-color: var(--c-assert);  background: var(--bg-assert);  color: var(--c-assert); }
+.pill.p-Exception.active { border-color: var(--c-exception); background: var(--bg-exception); color: var(--c-exception); }
+
+/* ── log list ── */
+#loglist {
+  position: fixed;
+  top: calc(var(--tb-h) + var(--fb-h));
+  bottom: 0; left: 0; right: 0;
+  overflow-y: scroll; overflow-x: hidden;
+  padding: 2px 0 8px;
+}
+#loglist::-webkit-scrollbar { width: 7px; }
+#loglist::-webkit-scrollbar-track { background: var(--bg); }
+#loglist::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+#loglist::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* ── entries ── */
+.ew { display: contents; }
+.ew.hidden .entry, .ew.hidden .e-stk { display: none !important; }
+
+.entry {
+  display: flex; align-items: baseline; gap: 0;
+  padding: 1px 12px 1px 0;
+  border-left: 2px solid transparent;
+  min-height: 20px; line-height: 1.55;
+}
+.entry:hover { background: var(--surface2) !important; }
+
+.entry.p-Error     { border-left-color: var(--c-error);     background: var(--bg-error); }
+.entry.p-Warning   { border-left-color: var(--c-warning);   background: var(--bg-warning); }
+.entry.p-Assert    { border-left-color: var(--c-assert);    background: var(--bg-assert); }
+.entry.p-Exception { border-left-color: var(--c-exception); background: var(--bg-exception); }
+.entry.p-Log       { border-left-color: var(--c-log); }
+
+.e-time {
+  flex-shrink: 0; width: 72px; text-align: right; padding-right: 10px;
+  color: var(--muted); font-size: 11px; padding-left: 10px;
+}
+.e-pri {
+  flex-shrink: 0; width: 68px; font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .04em; padding-right: 8px;
+}
+.entry.p-Error .e-pri     { color: var(--c-error); }
+.entry.p-Warning .e-pri   { color: var(--c-warning); }
+.entry.p-Assert .e-pri    { color: var(--c-assert); }
+.entry.p-Exception .e-pri { color: var(--c-exception); }
+.entry.p-Log .e-pri       { color: var(--muted); }
+
+.e-cat {
+  flex-shrink: 0; min-width: 72px; max-width: 100px; padding: 0 6px;
+  font-size: 10px; color: #7da2c8; background: #0d1e30;
+  border-radius: 3px; margin-right: 8px;
+  overflow: hidden; text-overflow: ellipsis;
+}
+.e-cat:empty { display: none; margin-right: 0; }
+
+.e-text { flex: 1; color: var(--text); word-break: break-word; min-width: 0; }
+.e-text mark { background: #f59e0b40; color: #f59e0b; border-radius: 2px; padding: 0 1px; }
+
+.e-stk-btn {
+  flex-shrink: 0; margin-left: 6px; padding: 0 5px;
+  font-size: 10px; border: 1px solid var(--border);
+  background: transparent; color: var(--muted); cursor: pointer;
+  border-radius: 3px; font-family: inherit;
+  align-self: center;
+}
+.e-stk-btn:hover { background: var(--border); color: var(--text); }
+
+.e-stk {
+  display: none; margin: 1px 12px 3px 152px;
+  padding: 4px 10px; background: #080c14;
+  border: 1px solid var(--border); border-radius: 4px;
+  font-size: 11px; color: var(--muted);
+  white-space: pre-wrap; word-break: break-word;
+}
+.e-stk.open { display: block; }
+
+/* ── empty state ── */
+#empty-msg {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  color: var(--muted); text-align: center; pointer-events: none;
+}
+#empty-msg p { margin: 4px 0; }
+#empty-msg .big { font-size: 32px; }
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <span id="logo">▶ BOL Logs</span>
+  <span id="status" class="connecting">● CONNECTING</span>
+  <div id="stats">
+    <span class="chip chip-E" title="Errors">E <b id="cnt-E">0</b></span>
+    <span class="chip chip-W" title="Warnings">W <b id="cnt-W">0</b></span>
+    <span class="chip chip-A" title="Asserts">A <b id="cnt-A">0</b></span>
+    <span class="chip chip-X" title="Exceptions">X <b id="cnt-X">0</b></span>
+    <span class="chip chip-T" title="Total">Total <b id="cnt-T">0</b></span>
+  </div>
+  <input id="search" type="search" placeholder="Filter logs…" autocomplete="off">
+  <button id="btn-clear" title="Clear display">Clear</button>
+  <label id="scroll-lbl" title="Scroll to newest entries">
+    <input type="checkbox" id="autoscroll" checked> Auto-scroll
+  </label>
+</div>
+
+<div id="filterbar">
+  <span class="fb-lbl">Priority</span>
+  <button class="pill p-Error     active" data-pri="Error">Error</button>
+  <button class="pill p-Warning   active" data-pri="Warning">Warning</button>
+  <button class="pill p-Assert    active" data-pri="Assert">Assert</button>
+  <button class="pill p-Exception active" data-pri="Exception">Exception</button>
+  <button class="pill p-Log       active" data-pri="Log">Log</button>
+  <span class="fb-sep" id="cat-sep" style="display:none">│</span>
+  <span class="fb-lbl" id="cat-lbl" style="display:none">Category</span>
+  <span id="cat-pills"></span>
+  <span id="cat-ctrl" style="display:none">
+    <button class="pill" id="btn-cat-all" title="Show all categories">All</button>
+    <button class="pill" id="btn-cat-none" title="Hide all categories">None</button>
+  </span>
+</div>
+
+<div id="loglist">
+  <div id="empty-msg">
+    <p class="big">○</p>
+    <p>Waiting for game connection on TCP :666</p>
+    <p style="margin-top:8px; font-size:11px; color:#555">
+      Add to hosts: 127.0.0.1  sghw-badass2.2kgames.t2.corp
+    </p>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  // ── state ────────────────────────────────────────────────────────────────────
+  const allEntries = [];
+  const counts     = { Error: 0, Warning: 0, Assert: 0, Exception: 0, Log: 0 };
+  const filterPri  = new Set(['Error', 'Warning', 'Assert', 'Exception', 'Log']);
+  const filterCat  = new Set();   // empty = all categories visible
+  const knownCats  = new Set();
+  let   searchText  = '';
+  let   autoScroll  = true;
+  let   userPaused  = false;
+  let   totalVis    = 0;          // visible entry count (after filters)
+
+  // ── dom refs ─────────────────────────────────────────────────────────────────
+  const loglist    = document.getElementById('loglist');
+  const emptyMsg   = document.getElementById('empty-msg');
+  const searchEl   = document.getElementById('search');
+  const autoScrollEl = document.getElementById('autoscroll');
+  const statusEl   = document.getElementById('status');
+  const catPillsEl = document.getElementById('cat-pills');
+  const catSep     = document.getElementById('cat-sep');
+  const catLbl     = document.getElementById('cat-lbl');
+  const catCtrl    = document.getElementById('cat-ctrl');
+
+  // ── utils ─────────────────────────────────────────────────────────────────────
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function hlText(text, q) {
+    const safe = esc(text);
+    if (!q) return safe;
+    const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    return safe.replace(re, m => '<mark>' + m + '</mark>');
+  }
+
+  // ── filter logic ──────────────────────────────────────────────────────────────
+  function entryVisible(e) {
+    if (!filterPri.has(e.priority)) return false;
+    if (e.category && filterCat.size > 0 && !filterCat.has(e.category)) return false;
+    if (searchText) {
+      const hay = (e.text + ' ' + (e.category || '')).toLowerCase();
+      if (!hay.includes(searchText)) return false;
+    }
+    return true;
+  }
+
+  // ── stats update ──────────────────────────────────────────────────────────────
+  function updateStats() {
+    document.getElementById('cnt-E').textContent = counts.Error     || 0;
+    document.getElementById('cnt-W').textContent = counts.Warning   || 0;
+    document.getElementById('cnt-A').textContent = counts.Assert    || 0;
+    document.getElementById('cnt-X').textContent = counts.Exception || 0;
+    document.getElementById('cnt-T').textContent = allEntries.length;
+  }
+
+  // ── scroll ────────────────────────────────────────────────────────────────────
+  function scrollToBottom() {
+    loglist.scrollTop = loglist.scrollHeight;
+  }
+
+  loglist.addEventListener('scroll', function () {
+    const atBottom = loglist.scrollHeight - loglist.scrollTop - loglist.clientHeight < 50;
+    userPaused = !atBottom;
+    if (atBottom && autoScroll) {
+      autoScrollEl.checked = true;
+    }
+  }, { passive: true });
+
+  autoScrollEl.addEventListener('change', function () {
+    autoScroll = autoScrollEl.checked;
+    userPaused = false;
+    if (autoScroll) scrollToBottom();
+  });
+
+  // ── build entry DOM ───────────────────────────────────────────────────────────
+  function buildEntryEl(e) {
+    const wrap = document.createElement('div');
+    wrap.className = 'ew';
+    wrap.dataset.id = e.id;
+    if (!entryVisible(e)) wrap.classList.add('hidden');
+
+    const row = document.createElement('div');
+    row.className = 'entry p-' + e.priority;
+
+    const timeEl = document.createElement('span');
+    timeEl.className = 'e-time';
+    timeEl.textContent = e.time;
+
+    const priEl = document.createElement('span');
+    priEl.className = 'e-pri';
+    priEl.textContent = e.priority;
+
+    const catEl = document.createElement('span');
+    catEl.className = 'e-cat';
+    catEl.textContent = e.category || '';
+
+    const txtEl = document.createElement('span');
+    txtEl.className = 'e-text';
+    txtEl.innerHTML = hlText(e.text, searchText);
+
+    row.append(timeEl, priEl, catEl, txtEl);
+
+    if (e.stack) {
+      const stkBtn = document.createElement('button');
+      stkBtn.className = 'e-stk-btn';
+      stkBtn.textContent = '▶ stack';
+      const stkEl = document.createElement('pre');
+      stkEl.className = 'e-stk';
+      stkEl.textContent = e.stack;
+      stkBtn.addEventListener('click', function () {
+        const open = stkEl.classList.toggle('open');
+        stkBtn.textContent = open ? '▼ stack' : '▶ stack';
+      });
+      row.append(stkBtn);
+      wrap.append(row, stkEl);
+    } else {
+      wrap.append(row);
+    }
+
+    return wrap;
+  }
+
+  // ── add entry ─────────────────────────────────────────────────────────────────
+  function addEntry(e) {
+    allEntries.push(e);
+    counts[e.priority] = (counts[e.priority] || 0) + 1;
+    if (e.category) ensureCatPill(e.category);
+    updateStats();
+
+    if (emptyMsg.parentNode) emptyMsg.remove();
+
+    const el = buildEntryEl(e);
+    loglist.appendChild(el);
+
+    if (autoScroll && !userPaused) scrollToBottom();
+  }
+
+  // ── category pills ────────────────────────────────────────────────────────────
+  function ensureCatPill(cat) {
+    if (!cat || knownCats.has(cat)) return;
+    knownCats.add(cat);
+    // filterCat empty = all visible; adding a new cat keeps it visible
+
+    const pill = document.createElement('button');
+    pill.className = 'pill active';
+    pill.textContent = cat;
+    pill.title = 'Toggle ' + cat;
+    pill.dataset.cat = cat;
+    pill.addEventListener('click', function () {
+      if (filterCat.size === 0) {
+        // all shown → switch to "all except cat"
+        knownCats.forEach(c => { if (c !== cat) filterCat.add(c); });
+        catPillsEl.querySelectorAll('.pill').forEach(function (p) {
+          p.classList.toggle('active', p.dataset.cat !== cat);
+        });
+      } else if (filterCat.has(cat)) {
+        filterCat.delete(cat);
+        pill.classList.remove('active');
+      } else {
+        filterCat.add(cat);
+        pill.classList.add('active');
+        // if now all are in filterCat, reset to "empty = all"
+        if (filterCat.size === knownCats.size) filterCat.clear();
+      }
+      applyFilters();
+    });
+    catPillsEl.appendChild(pill);
+
+    // show cat controls once we have at least one category
+    catSep.style.display = '';
+    catLbl.style.display = '';
+    catCtrl.style.display = '';
+  }
+
+  document.getElementById('btn-cat-all').addEventListener('click', function () {
+    filterCat.clear(); // empty = all visible
+    catPillsEl.querySelectorAll('.pill').forEach(function (p) { p.classList.add('active'); });
+    applyFilters();
+  });
+  document.getElementById('btn-cat-none').addEventListener('click', function () {
+    knownCats.forEach(c => filterCat.add(c));
+    filterCat.clear(); // paradox: need a "none" sentinel
+    // Use special approach: store all as inactive state via a "hiddenCats" set
+    // Simpler: add all, then special-case empty set → treat as "none"
+    // Actually let's just invert: store "hidden" cats instead.
+    // SIMPLEST: store a flag
+    window._catNone = true;
+    catPillsEl.querySelectorAll('.pill').forEach(function (p) { p.classList.remove('active'); });
+    applyFilters();
+  });
+
+  // Simpler approach: replace the "all/none" with a fresh design.
+  // "filterCat" is always used as "show only these".
+  // Empty filterCat = show all. Let's use a separate "hideCats" set.
+  // Refactor in place:
+
+  // ── apply filters (re-render visibility) ─────────────────────────────────────
+  function applyFilters() {
+    let visible = 0;
+    const wraps = loglist.querySelectorAll('.ew');
+    for (let i = 0; i < wraps.length; i++) {
+      const wrap = wraps[i];
+      const id = parseInt(wrap.dataset.id, 10);
+      const e = allEntries[id - 1]; // IDs are 1-based from server
+      if (!e) continue;
+
+      const show = entryVisible(e);
+      wrap.classList.toggle('hidden', !show);
+
+      if (show) {
+        // update search highlight
+        const txtEl = wrap.querySelector('.e-text');
+        if (txtEl) txtEl.innerHTML = hlText(e.text, searchText);
+        visible++;
+      }
+    }
+    totalVis = visible;
+  }
+
+  // ── priority filter pills ────────────────────────────────────────────────────
+  document.querySelectorAll('.pill[data-pri]').forEach(function (pill) {
+    pill.addEventListener('click', function () {
+      const pri = pill.dataset.pri;
+      if (filterPri.has(pri)) {
+        filterPri.delete(pri);
+        pill.classList.remove('active');
+      } else {
+        filterPri.add(pri);
+        pill.classList.add('active');
+      }
+      applyFilters();
+    });
+  });
+
+  // ── search ────────────────────────────────────────────────────────────────────
+  let searchDebounce;
+  searchEl.addEventListener('input', function () {
+    clearTimeout(searchDebounce);
+    searchDebounce = setTimeout(function () {
+      searchText = searchEl.value.toLowerCase().trim();
+      applyFilters();
+    }, 120);
+  });
+
+  // ── clear ─────────────────────────────────────────────────────────────────────
+  document.getElementById('btn-clear').addEventListener('click', function () {
+    allEntries.length = 0;
+    Object.keys(counts).forEach(function (k) { counts[k] = 0; });
+    knownCats.clear();
+    filterCat.clear();
+    catPillsEl.innerHTML = '';
+    catSep.style.display = 'none';
+    catLbl.style.display = 'none';
+    catCtrl.style.display = 'none';
+    loglist.innerHTML = '';
+    loglist.appendChild(emptyMsg);
+    updateStats();
+  });
+
+  // ── SSE connection ────────────────────────────────────────────────────────────
+  // Fix the cat-none issue by simplifying: remove the "none" button logic above
+  // and replace with a proper hidden-cats approach.
+  // The simple model: filterCat = set of HIDDEN categories.
+  // entryVisible: if (e.category && filterCat.has(e.category)) return false.
+
+  // Re-define to use HIDDEN approach (overwrite previous entryVisible):
+  const hiddenCats = new Set();
+
+  function entryVisibleV2(e) {
+    if (!filterPri.has(e.priority)) return false;
+    if (e.category && hiddenCats.has(e.category)) return false;
+    if (searchText) {
+      const hay = (e.text + ' ' + (e.category || '')).toLowerCase();
+      if (!hay.includes(searchText)) return false;
+    }
+    return true;
+  }
+
+  // Patch applyFilters to use V2:
+  applyFilters = function () {
+    const wraps = loglist.querySelectorAll('.ew');
+    for (let i = 0; i < wraps.length; i++) {
+      const wrap = wraps[i];
+      const id = parseInt(wrap.dataset.id, 10);
+      const e = allEntries[id - 1];
+      if (!e) continue;
+      const show = entryVisibleV2(e);
+      wrap.classList.toggle('hidden', !show);
+      if (show) {
+        const txtEl = wrap.querySelector('.e-text');
+        if (txtEl) txtEl.innerHTML = hlText(e.text, searchText);
+      }
+    }
+  };
+
+  // Patch entryVisible used in buildEntryEl:
+  // (re-assign the closure)
+  // We need buildEntryEl to also use the new one — patch with a shared fn var.
+  // Easier: just redefine both with a module-level fn.
+  window._entryVisible = entryVisibleV2;
+
+  // Patch ensureCatPill to use hiddenCats:
+  catPillsEl.addEventListener('click', function () {}); // clear old listeners via delegation
+
+  // Redefine ensureCatPill cleanly:
+  function ensureCatPill2(cat) {
+    if (!cat || knownCats.has(cat)) return;
+    knownCats.add(cat);
+
+    const pill = document.createElement('button');
+    pill.className = 'pill active';
+    pill.textContent = cat;
+    pill.dataset.cat = cat;
+    pill.addEventListener('click', function () {
+      if (hiddenCats.has(cat)) {
+        hiddenCats.delete(cat);
+        pill.classList.add('active');
+      } else {
+        hiddenCats.add(cat);
+        pill.classList.remove('active');
+      }
+      applyFilters();
+    });
+    catPillsEl.appendChild(pill);
+
+    catSep.style.display = '';
+    catLbl.style.display = '';
+    catCtrl.style.display = '';
+  }
+
+  document.getElementById('btn-cat-all').addEventListener('click', function () {
+    hiddenCats.clear();
+    catPillsEl.querySelectorAll('.pill').forEach(function (p) { p.classList.add('active'); });
+    applyFilters();
+  });
+  document.getElementById('btn-cat-none').addEventListener('click', function () {
+    knownCats.forEach(function (c) { hiddenCats.add(c); });
+    catPillsEl.querySelectorAll('.pill').forEach(function (p) { p.classList.remove('active'); });
+    applyFilters();
+  });
+
+  // ── final addEntry using clean approach ───────────────────────────────────────
+  function addEntry2(e) {
+    allEntries.push(e);
+    counts[e.priority] = (counts[e.priority] || 0) + 1;
+    if (e.category) ensureCatPill2(e.category);
+    updateStats();
+
+    if (emptyMsg.parentNode) emptyMsg.remove();
+
+    // build element
+    const wrap = document.createElement('div');
+    wrap.className = 'ew';
+    wrap.dataset.id = e.id;
+    if (!entryVisibleV2(e)) wrap.classList.add('hidden');
+
+    const row = document.createElement('div');
+    row.className = 'entry p-' + e.priority;
+
+    const timeEl = document.createElement('span');
+    timeEl.className = 'e-time';
+    timeEl.textContent = e.time;
+
+    const priEl = document.createElement('span');
+    priEl.className = 'e-pri';
+    priEl.textContent = e.priority;
+
+    const catEl = document.createElement('span');
+    catEl.className = 'e-cat';
+    catEl.textContent = e.category || '';
+
+    const txtEl = document.createElement('span');
+    txtEl.className = 'e-text';
+    txtEl.innerHTML = hlText(e.text, searchText);
+
+    row.append(timeEl, priEl, catEl, txtEl);
+
+    if (e.stack) {
+      const stkBtn = document.createElement('button');
+      stkBtn.className = 'e-stk-btn';
+      stkBtn.textContent = '▶ stack';
+      const stkEl = document.createElement('pre');
+      stkEl.className = 'e-stk';
+      stkEl.textContent = e.stack;
+      stkBtn.addEventListener('click', function () {
+        const open = stkEl.classList.toggle('open');
+        stkBtn.textContent = open ? '▼ stack' : '▶ stack';
+      });
+      row.append(stkBtn);
+      wrap.append(row, stkEl);
+    } else {
+      wrap.append(row);
+    }
+
+    loglist.appendChild(wrap);
+    if (autoScroll && !userPaused) scrollToBottom();
+  }
+
+  // ── SSE ───────────────────────────────────────────────────────────────────────
+  function connect() {
+    statusEl.textContent = '● CONNECTING';
+    statusEl.className   = 'connecting';
+
+    const es = new EventSource('/events');
+
+    es.addEventListener('entry', function (ev) {
+      try { addEntry2(JSON.parse(ev.data)); } catch (err) { /* ignore */ }
+    });
+
+    es.onopen = function () {
+      statusEl.textContent = '● LIVE';
+      statusEl.className   = 'online';
+    };
+
+    es.onerror = function () {
+      statusEl.textContent = '● OFFLINE';
+      statusEl.className   = 'offline';
+      es.close();
+      setTimeout(connect, 3000);
+    };
+  }
+
+  connect();
+})();
+</script>
+</body>
+</html>

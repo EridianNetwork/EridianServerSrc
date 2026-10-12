@@ -1,0 +1,35 @@
+<BHVTaskManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<m_entityType>CHR_SkagSpitter</m_entityType>	
+  <m_settings>
+    <m_taskSettings xsi:type="BHVDazeEffectSettings">
+      <m_bDazeResist>false</m_bDazeResist>
+      <m_dazeDuration>3</m_dazeDuration>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVMeleeAttackSettings">
+      <m_attackDamage>10</m_attackDamage>
+      <m_attackRange>2.5</m_attackRange>
+      <m_canKnockBack>false</m_canKnockBack>
+	  <m_knockBackForce>3</m_knockBackForce>
+      <m_attackSubTypeList>
+        <m_attackSubType>MeleeBite</m_attackSubType>
+        <m_attackSubType>MeleePaw</m_attackSubType>
+        <m_attackSubType>MeleeBite</m_attackSubType>
+        <m_attackSubType>MeleePaw</m_attackSubType>
+      </m_attackSubTypeList>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVNavAgentSettings">
+      <m_walkSpeed>0.98</m_walkSpeed>
+      <m_walkCombatSpeed>0.98</m_walkCombatSpeed>
+      <m_runSpeed>4.2</m_runSpeed>
+      <m_jumpSpeed>15</m_jumpSpeed>
+      <m_chargeSpeed>4.2</m_chargeSpeed>
+      <m_canUseFacingLogic>false</m_canUseFacingLogic>
+      <m_combatSpawnDuration>0.5</m_combatSpawnDuration>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVSpitAttackSettings">
+      <m_attackDamage>20</m_attackDamage>
+    </m_taskSettings>
+  </m_settings>
+</BHVTaskManagerSetup>
+
+

@@ -1,0 +1,898 @@
+[
+ {
+  "id": 0,
+  "name": "Siren_Hair_L1_01",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "HAIR",
+  "index": 2
+ },
+ {
+  "id": 1,
+  "name": "Siren_Hair_L1_02",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "HAIR",
+  "index": 1
+ },
+ {
+  "id": 2,
+  "name": "Siren_Mask_L1_01",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "MASK",
+  "index": 0
+ },
+ {
+  "id": 3,
+  "name": "Siren_Mask_L1_02",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "MASK",
+  "index": 1
+ },
+ {
+  "id": 4,
+  "name": "Siren_Mask_L1_03",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "MASK",
+  "index": 2
+ },
+ {
+  "id": 5,
+  "name": "Siren_Body_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "BODY",
+  "index": 0
+ },
+ {
+  "id": 6,
+  "name": "Siren_Body_L30_01_02",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "BODY",
+  "index": 1
+ },
+ {
+  "id": 7,
+  "name": "Siren_Body_L30_01_03",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "BODY",
+  "index": 2
+ },
+ {
+  "id": 8,
+  "name": "Siren_Pants_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "PANTS",
+  "index": 0
+ },
+ {
+  "id": 9,
+  "name": "Siren_Pants_L30_01_02",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "PANTS",
+  "index": 1
+ },
+ {
+  "id": 10,
+  "name": "Siren_Pants_L30_01_03",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "PANTS",
+  "index": 2
+ },
+ {
+  "id": 11,
+  "name": "Siren_Shoe_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "SHOE",
+  "index": 0
+ },
+ {
+  "id": 12,
+  "name": "Siren_Shoe_L30_01_02",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "SHOE",
+  "index": 1
+ },
+ {
+  "id": 13,
+  "name": "Siren_Shoe_L30_01_03",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "SHOE",
+  "index": 2
+ },
+ {
+  "id": 14,
+  "name": "Berserker_Hair_L1_02",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "HAIR",
+  "index": 1
+ },
+ {
+  "id": 15,
+  "name": "Berserker_Hair_L1_03",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "HAIR",
+  "index": 2
+ },
+ {
+  "id": 16,
+  "name": "Berserker_Mask_L1_02",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "MASK",
+  "index": 1
+ },
+ {
+  "id": 17,
+  "name": "Berserker_Mask_L30_01",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "MASK",
+  "index": 3
+ },
+ {
+  "id": 18,
+  "name": "Berserker_Mask_L30_02",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "MASK",
+  "index": 4
+ },
+ {
+  "id": 19,
+  "name": "Berserker_Body_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "BODY",
+  "index": 3
+ },
+ {
+  "id": 20,
+  "name": "Berserker_Body_L30_01_02",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "BODY",
+  "index": 4
+ },
+ {
+  "id": 21,
+  "name": "Berserker_Body_L30_01_03",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "BODY",
+  "index": 5
+ },
+ {
+  "id": 22,
+  "name": "Berserker_Pants_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "PANTS",
+  "index": 3
+ },
+ {
+  "id": 23,
+  "name": "Berserker_Pants_L30_01_02",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "PANTS",
+  "index": 4
+ },
+ {
+  "id": 24,
+  "name": "Berserker_Pants_L30_01_03",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "PANTS",
+  "index": 5
+ },
+ {
+  "id": 25,
+  "name": "Berserker_Shoe_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "SHOE",
+  "index": 3
+ },
+ {
+  "id": 26,
+  "name": "Berserker_Shoe_L30_01_02",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "SHOE",
+  "index": 4
+ },
+ {
+  "id": 27,
+  "name": "Berserker_Shoe_L30_01_03",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "SHOE",
+  "index": 5
+ },
+ {
+  "id": 28,
+  "name": "Soldier_Hair_L1_02",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "HAIR",
+  "index": 0
+ },
+ {
+  "id": 29,
+  "name": "Soldier_Hair_L1_03",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "HAIR",
+  "index": 2
+ },
+ {
+  "id": 30,
+  "name": "Soldier_Mask_L1_01",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "MASK",
+  "index": 0
+ },
+ {
+  "id": 31,
+  "name": "Soldier_Mask_L1_02",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "MASK",
+  "index": 1
+ },
+ {
+  "id": 32,
+  "name": "Soldier_Mask_L1_03",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "MASK",
+  "index": 2
+ },
+ {
+  "id": 33,
+  "name": "Soldier_Body_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "BODY",
+  "index": 0
+ },
+ {
+  "id": 34,
+  "name": "Soldier_Body_L30_01_02",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "BODY",
+  "index": 1
+ },
+ {
+  "id": 35,
+  "name": "Soldier_Body_L30_01_03",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "BODY",
+  "index": 2
+ },
+ {
+  "id": 36,
+  "name": "Soldier_Pants_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "PANTS",
+  "index": 0
+ },
+ {
+  "id": 37,
+  "name": "Soldier_Pants_L30_01_02",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "PANTS",
+  "index": 1
+ },
+ {
+  "id": 38,
+  "name": "Soldier_Pants_L30_01_03",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "PANTS",
+  "index": 2
+ },
+ {
+  "id": 39,
+  "name": "Soldier_Shoe_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "SHOE",
+  "index": 0
+ },
+ {
+  "id": 40,
+  "name": "Soldier_Shoe_L30_01_02",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "SHOE",
+  "index": 1
+ },
+ {
+  "id": 41,
+  "name": "Soldier_Shoe_L30_01_03",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "SHOE",
+  "index": 2
+ },
+ {
+  "id": 42,
+  "name": "Hunter_Hair_L1_03",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "HAIR",
+  "index": 2
+ },
+ {
+  "id": 43,
+  "name": "Hunter_Hair_L30_01",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "HAIR",
+  "index": 3
+ },
+ {
+  "id": 44,
+  "name": "Hunter_Mask_L1_01",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "MASK",
+  "index": 0
+ },
+ {
+  "id": 45,
+  "name": "Hunter_Mask_L1_03",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "MASK",
+  "index": 2
+ },
+ {
+  "id": 46,
+  "name": "Hunter_Mask_L30_01",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "MASK",
+  "index": 3
+ },
+ {
+  "id": 47,
+  "name": "Hunter_Body_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "BODY",
+  "index": 3
+ },
+ {
+  "id": 48,
+  "name": "Hunter_Body_L30_01_02",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "BODY",
+  "index": 4
+ },
+ {
+  "id": 49,
+  "name": "Hunter_Body_L30_01_03",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "BODY",
+  "index": 5
+ },
+ {
+  "id": 50,
+  "name": "Hunter_Pants_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "PANTS",
+  "index": 3
+ },
+ {
+  "id": 51,
+  "name": "Hunter_Pants_L30_01_02",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "PANTS",
+  "index": 4
+ },
+ {
+  "id": 52,
+  "name": "Hunter_Pants_L30_01_03",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "PANTS",
+  "index": 5
+ },
+ {
+  "id": 53,
+  "name": "Hunter_Shoe_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "SHOE",
+  "index": 3
+ },
+ {
+  "id": 54,
+  "name": "Hunter_Shoe_L30_01_02",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "SHOE",
+  "index": 4
+ },
+ {
+  "id": 55,
+  "name": "Hunter_Shoe_L30_01_03",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "SHOE",
+  "index": 5
+ },
+ {
+  "id": 56,
+  "name": "Siren_Hair_L1_03",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "HAIR",
+  "index": 0
+ },
+ {
+  "id": 57,
+  "name": "Siren_Hair_L30_01_01",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "HAIR",
+  "index": 3
+ },
+ {
+  "id": 58,
+  "name": "Siren_Head_L1_03",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "HEAD",
+  "index": 0
+ },
+ {
+  "id": 59,
+  "name": "Siren_Head_L1_02",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "HEAD",
+  "index": 1
+ },
+ {
+  "id": 60,
+  "name": "Siren_Head_L1_01",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "HEAD",
+  "index": 2
+ },
+ {
+  "id": 61,
+  "name": "Siren_Body_L1_01_01",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "BODY",
+  "index": 3
+ },
+ {
+  "id": 62,
+  "name": "Siren_Body_L1_01_02",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "BODY",
+  "index": 4
+ },
+ {
+  "id": 63,
+  "name": "Siren_Body_L1_01_03",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "BODY",
+  "index": 5
+ },
+ {
+  "id": 64,
+  "name": "Siren_Pants_L1_01_01",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "PANTS",
+  "index": 3
+ },
+ {
+  "id": 65,
+  "name": "Siren_Pants_L1_01_02",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "PANTS",
+  "index": 4
+ },
+ {
+  "id": 66,
+  "name": "Siren_Pants_L1_01_03",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "PANTS",
+  "index": 5
+ },
+ {
+  "id": 67,
+  "name": "Siren_Shoe_L1_01_01",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "SHOE",
+  "index": 3
+ },
+ {
+  "id": 68,
+  "name": "Siren_Shoe_L1_01_02",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "SHOE",
+  "index": 4
+ },
+ {
+  "id": 69,
+  "name": "Siren_Shoe_L1_01_03",
+  "rarity": "Common",
+  "avatarType": "SIREN",
+  "avatarSubpart": "SHOE",
+  "index": 5
+ },
+ {
+  "id": 70,
+  "name": "Berserker_Hair_L1_01",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "HAIR",
+  "index": 0
+ },
+ {
+  "id": 71,
+  "name": "Berserker_Hair_L30_02",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "HAIR",
+  "index": 4
+ },
+ {
+  "id": 72,
+  "name": "Berserker_Head_L1_01",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "HEAD",
+  "index": 0
+ },
+ {
+  "id": 73,
+  "name": "Berserker_Head_L1_02",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "HEAD",
+  "index": 1
+ },
+ {
+  "id": 74,
+  "name": "Berserker_Head_L1_03",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "HEAD",
+  "index": 2
+ },
+ {
+  "id": 75,
+  "name": "Berserker_Body_L1_01_01",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "BODY",
+  "index": 0
+ },
+ {
+  "id": 76,
+  "name": "Berserker_Body_L1_01_02",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "BODY",
+  "index": 1
+ },
+ {
+  "id": 77,
+  "name": "Berserker_Body_L1_01_03",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "BODY",
+  "index": 2
+ },
+ {
+  "id": 78,
+  "name": "Berserker_Pants_L1_01_01",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "PANTS",
+  "index": 0
+ },
+ {
+  "id": 79,
+  "name": "Berserker_Pants_L1_01_02",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "PANTS",
+  "index": 1
+ },
+ {
+  "id": 80,
+  "name": "Berserker_Pants_L1_01_03",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "PANTS",
+  "index": 2
+ },
+ {
+  "id": 81,
+  "name": "Berserker_Shoe_L1_01_01",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "SHOE",
+  "index": 0
+ },
+ {
+  "id": 82,
+  "name": "Berserker_Shoe_L1_01_02",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "SHOE",
+  "index": 1
+ },
+ {
+  "id": 83,
+  "name": "Berserker_Shoe_L1_01_03",
+  "rarity": "Common",
+  "avatarType": "BERSERKER",
+  "avatarSubpart": "SHOE",
+  "index": 2
+ },
+ {
+  "id": 84,
+  "name": "Soldier_Hair_L1_01",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "HAIR",
+  "index": 1
+ },
+ {
+  "id": 85,
+  "name": "Soldier_Hair_L30_01",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "HAIR",
+  "index": 3
+ },
+ {
+  "id": 86,
+  "name": "Soldier_Head_L1_02",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "HEAD",
+  "index": 0
+ },
+ {
+  "id": 87,
+  "name": "Soldier_Head_L1_01",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "HEAD",
+  "index": 1
+ },
+ {
+  "id": 88,
+  "name": "Soldier_Head_L1_03",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "HEAD",
+  "index": 2
+ },
+ {
+  "id": 89,
+  "name": "Soldier_Body_L1_01_01",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "BODY",
+  "index": 3
+ },
+ {
+  "id": 90,
+  "name": "Soldier_Body_L1_01_02",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "BODY",
+  "index": 4
+ },
+ {
+  "id": 91,
+  "name": "Soldier_Body_L1_01_03",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "BODY",
+  "index": 5
+ },
+ {
+  "id": 92,
+  "name": "Soldier_Pants_L1_01_01",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "PANTS",
+  "index": 3
+ },
+ {
+  "id": 93,
+  "name": "Soldier_Pants_L1_01_02",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "PANTS",
+  "index": 4
+ },
+ {
+  "id": 94,
+  "name": "Soldier_Pants_L1_01_03",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "PANTS",
+  "index": 5
+ },
+ {
+  "id": 95,
+  "name": "Soldier_Shoe_L1_01_01",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "SHOE",
+  "index": 3
+ },
+ {
+  "id": 96,
+  "name": "Soldier_Shoe_L1_01_02",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "SHOE",
+  "index": 4
+ },
+ {
+  "id": 97,
+  "name": "Soldier_Shoe_L1_01_03",
+  "rarity": "Common",
+  "avatarType": "SOLDIER",
+  "avatarSubpart": "SHOE",
+  "index": 5
+ },
+ {
+  "id": 98,
+  "name": "Hunter_Hair_L1_01",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "HAIR",
+  "index": 0
+ },
+ {
+  "id": 99,
+  "name": "Hunter_Hair_L1_02",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "HAIR",
+  "index": 1
+ },
+ {
+  "id": 100,
+  "name": "Hunter_Head_L1_01",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "HEAD",
+  "index": 0
+ },
+ {
+  "id": 101,
+  "name": "Hunter_Head_L1_02",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "HEAD",
+  "index": 1
+ },
+ {
+  "id": 102,
+  "name": "Hunter_Head_L1_03",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "HEAD",
+  "index": 2
+ },
+ {
+  "id": 103,
+  "name": "Hunter_Body_L1_01_01",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "BODY",
+  "index": 0
+ },
+ {
+  "id": 104,
+  "name": "Hunter_Body_L1_01_02",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "BODY",
+  "index": 1
+ },
+ {
+  "id": 105,
+  "name": "Hunter_Body_L1_01_03",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "BODY",
+  "index": 2
+ },
+ {
+  "id": 106,
+  "name": "Hunter_Pants_L1_01_01",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "PANTS",
+  "index": 0
+ },
+ {
+  "id": 107,
+  "name": "Hunter_Pants_L1_01_02",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "PANTS",
+  "index": 1
+ },
+ {
+  "id": 108,
+  "name": "Hunter_Pants_L1_01_03",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "PANTS",
+  "index": 2
+ },
+ {
+  "id": 109,
+  "name": "Hunter_Shoe_L1_01_01",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "SHOE",
+  "index": 0
+ },
+ {
+  "id": 110,
+  "name": "Hunter_Shoe_L1_01_02",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "SHOE",
+  "index": 1
+ },
+ {
+  "id": 111,
+  "name": "Hunter_Shoe_L1_01_03",
+  "rarity": "Common",
+  "avatarType": "HUNTER",
+  "avatarSubpart": "SHOE",
+  "index": 2
+ }
+]

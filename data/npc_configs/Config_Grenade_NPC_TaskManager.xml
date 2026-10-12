@@ -1,0 +1,15 @@
+<BHVTaskManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_settings>
+  <m_taskSettings xsi:type="BHVBlowUpAttackSettings">
+	<m_attackDamage>100</m_attackDamage>
+	<m_attackRange>8.0</m_attackRange>
+	<m_attackSubType>AreaExplosion</m_attackSubType>
+  </m_taskSettings>
+</m_settings>
+</BHVTaskManagerSetup>
+
+
+
+
+
+

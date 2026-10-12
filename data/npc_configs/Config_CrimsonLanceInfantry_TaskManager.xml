@@ -1,0 +1,41 @@
+<BHVTaskManagerSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<m_entityType>CHR_CrimsonLanceInfantry</m_entityType>	
+  <m_settings>
+    <m_taskSettings xsi:type="BHVDazeEffectSettings">
+      <m_bDazeResist>false</m_bDazeResist>
+      <m_dazeDuration>3</m_dazeDuration>
+      <m_speedRate>0.5</m_speedRate>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVFireStyleSettings">
+      <m_burstSingle_FireTimeMin>0.1</m_burstSingle_FireTimeMin>
+      <m_burstSingle_FireTimeMax>0.3</m_burstSingle_FireTimeMax>
+      <m_burstChained_IdleTimeMin>0.6</m_burstChained_IdleTimeMin>
+      <m_burstChained_IdleTimeMax>1</m_burstChained_IdleTimeMax>
+      <m_burstChained_FireTimeMin>0.4</m_burstChained_FireTimeMin>
+      <m_burstChained_FireTimeMax>0.6</m_burstChained_FireTimeMax>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVMeleeAttackSettings">
+      <m_attackDamage>15</m_attackDamage>
+      <m_attackRange>3</m_attackRange>
+      <m_canKnockBack>false</m_canKnockBack>
+	  <m_knockBackForce>5</m_knockBackForce>
+      <m_attackSubTypeList>
+        <m_attackSubType>MeleeGeneric</m_attackSubType>
+      </m_attackSubTypeList>
+    </m_taskSettings>
+    <m_taskSettings xsi:type="BHVNavAgentSettings">
+      <m_walkSpeed>1.8</m_walkSpeed>
+      <m_walkCombatSpeed>2.8</m_walkCombatSpeed>
+      <m_runSpeed>5</m_runSpeed>
+      <m_sprintSpeed>5.63</m_sprintSpeed>
+      <m_canUseFacingLogic>true</m_canUseFacingLogic>
+      <m_combatSpawnDuration>0.5</m_combatSpawnDuration>
+    </m_taskSettings>
+	<m_taskSettings xsi:type="BHVBlowUpAttackSettings">
+      <m_attackRange>10</m_attackRange>
+      <m_attackDamage>250</m_attackDamage>
+      <m_attackSubType>AreaExplosion</m_attackSubType>
+    </m_taskSettings>			
+  </m_settings>
+</BHVTaskManagerSetup>
+

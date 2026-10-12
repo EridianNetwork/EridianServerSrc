@@ -1,0 +1,68 @@
+<BHVBrainSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <m_fsmType>CHR_GuardianWraith</m_fsmType>
+  <m_BHVPropertySettingsList>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsRoundMeleeAttack">
+      <m_attackMode>NAM_MeleeAttack</m_attackMode>
+      <m_attackChanceWeight>1</m_attackChanceWeight>
+      <m_meleeAttackCountMin>1</m_meleeAttackCountMin>
+      <m_meleeAttackCountMax>4</m_meleeAttackCountMax>
+      <m_meleeAttackDistanceMin>1</m_meleeAttackDistanceMin>
+      <m_meleeAttackDistanceMax>4</m_meleeAttackDistanceMax>
+      <m_meleeAttackAngle>120</m_meleeAttackAngle>
+      <m_meleeAttackIdleTime>0.1</m_meleeAttackIdleTime>
+      <m_moveBackDistanceMin>7</m_moveBackDistanceMin>
+      <m_moveBackDistanceMax>10</m_moveBackDistanceMax>
+      <m_moveBackChance>1</m_moveBackChance>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsThrowDaggerAttack">
+      <m_attackMode>NAM_ThrowDaggerAttack</m_attackMode>
+      <m_damagePoint>15</m_damagePoint>
+      <m_throwChance>0.5</m_throwChance>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsBasic">
+      <m_healthPoint>50</m_healthPoint>
+      <m_shieldPoint>0</m_shieldPoint>
+      <m_beenShotAtDuration>20</m_beenShotAtDuration>
+      <m_startMoveDistance>2</m_startMoveDistance>
+      <m_bHasCoverAbility>false</m_bHasCoverAbility>
+      <m_alertCoverChanceWeight>0</m_alertCoverChanceWeight>
+      <m_alertMoveToGPPChanceWeight>1</m_alertMoveToGPPChanceWeight>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsThreat">
+      <m_distanceFactor>-0.5</m_distanceFactor>
+      <m_damageFactor>0.5</m_damageFactor>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsDetection">
+      <m_visualDetectionRange>20</m_visualDetectionRange>
+      <m_visualDetectionAngle>360</m_visualDetectionAngle>
+      <m_auditionDetectionRange>10</m_auditionDetectionRange>
+      <m_shootAtAngle>0.9</m_shootAtAngle>
+      <m_shootDistance>30</m_shootDistance>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsSlideMove">
+      <m_slideMoveSpeed>9</m_slideMoveSpeed>
+      <m_slideRushSpeed>20</m_slideRushSpeed>
+      <m_acceleration>10</m_acceleration>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsPatrol">
+      <m_patrolRadius>20</m_patrolRadius>
+      <m_patrolTime>10</m_patrolTime>
+      <m_chanceToIdleWhenReachPatrolPoint>100</m_chanceToIdleWhenReachPatrolPoint>
+      <m_stayIdleTimeMin>1</m_stayIdleTimeMin>
+      <m_stayIdleTimeMax>4</m_stayIdleTimeMax>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsTimers">
+      <m_selectTargetTimer>4</m_selectTargetTimer>
+      <m_selectPositionTimer>5</m_selectPositionTimer>
+      <m_alertFightTimer>3.5</m_alertFightTimer>
+      <m_alertTimer>12</m_alertTimer>
+    </m_BHVPropertySettings>
+    <m_BHVPropertySettings xsi:type="BHVFSMSettingsCrouchRollDodge">
+      <m_dodgeRepeatTime>3</m_dodgeRepeatTime>
+      <m_dodgeChance>0.3</m_dodgeChance>
+    </m_BHVPropertySettings>
+  </m_BHVPropertySettingsList>
+</BHVBrainSetup>
+
+
+

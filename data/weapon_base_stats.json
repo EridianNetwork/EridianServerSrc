@@ -1,0 +1,2128 @@
+{
+ "SMG": {
+  "AccuracyMin": {
+   "value": 75.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMax": {
+   "value": 40.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyDecrease": {
+   "value": 24.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateOnIdle": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationDelayOnIdle": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateActive": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMinZoom": {
+   "value": 40.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMaxZoom": {
+   "value": 16.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyDecreaseZoom": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateOnIdleZoom": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateActiveZoom": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchRandomOffsetMin": {
+   "value": 0.699999988079071,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchRandomOffsetMax": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchOffsetMin": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchOffsetMax": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchReducingRateActive": {
+   "value": 3.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchReducingRateOnIdle": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawRandomOffsetMin": {
+   "value": -0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawRandomOffsetMax": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawOffsetMin": {
+   "value": -1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawOffsetMax": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawReducingRateActive": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackRandomOffsetMin": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackRandomOffsetMax": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackOffsetMin": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackOffsetMax": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackReducingRateActive": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchRandomOffsetMin": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchRandomOffsetMax": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchOffsetMin": {
+   "value": 0.75,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchOffsetMax": {
+   "value": 1.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchReducingRateActive": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchReducingRateOnIdle": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawRandomOffsetMin": {
+   "value": -0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawRandomOffsetMax": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawOffsetMin": {
+   "value": -0.699999988079071,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawOffsetMax": {
+   "value": 0.699999988079071,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawReducingRateActive": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackRandomOffsetMin": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackRandomOffsetMax": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackOffsetMin": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackOffsetMax": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackReducingRateActive": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchMulMin": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchMulMax": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "AmmoRegenerationRate": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "ClipSize": {
+   "value": 18.0,
+   "affectType": "PrevAdd"
+  },
+  "MaxStoredAmmo": {
+   "value": 250.0,
+   "affectType": "PrevAdd"
+  },
+  "ShotCost": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "StartingAmmoCount": {
+   "value": 28.0,
+   "affectType": "PrevAdd"
+  },
+  "CurrentAmmoCount": {
+   "value": 28.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponProjectilesPerShot": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "FireRate": {
+   "value": 7.0,
+   "affectType": "PrevAdd"
+  },
+  "ReloadTime": {
+   "value": 2.200000047683716,
+   "affectType": "PrevAdd"
+  },
+  "ReloadPercentage": {
+   "value": 0.800000011920929,
+   "affectType": "PrevAdd"
+  },
+  "CanEjectBulletShells": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "BobDamping": {
+   "value": 1.5,
+   "affectType": "PrevAdd"
+  },
+  "FirstPersonMeshFOV": {
+   "value": 27.5,
+   "affectType": "PrevAdd"
+  },
+  "LeadingSpeed": {
+   "value": 0.05999999865889549,
+   "affectType": "PrevAdd"
+  },
+  "MaxPitchLead": {
+   "value": 125.0,
+   "affectType": "PrevAdd"
+  },
+  "MaxYawLead": {
+   "value": 125.0,
+   "affectType": "PrevAdd"
+  },
+  "ViewModelTranslationAmt": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "ViewModelRotationAmt": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponKickDownTime": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "WeaponKickUpSpeed": {
+   "value": 4.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomEndFOV": {
+   "value": 40.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomTime": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "ZoomTranslation": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "ZoomCameraAngularSpeedYaw": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomCameraAngularSpeedPitch": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderPitchAmplitude": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderPitchFrequency": {
+   "value": 4.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderSmoothingSpeed": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderYawAmplitude": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderYawFrequency": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "EquipTime": {
+   "value": 7.5,
+   "affectType": "PrevAdd"
+  },
+  "GrabTime": {
+   "value": 1.2999999523162842,
+   "affectType": "PrevAdd"
+  },
+  "PutDownTime": {
+   "value": 9.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponDamage": {
+   "value": 400.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponElementalDamage": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ElementalProcCoef": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderRadius": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderSpeed": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderAccel": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderDecel": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderAccelDistance": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderDecelDistance": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyNormal": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyZoom": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyRatioNormal": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyRatioZoom": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "RecoverTime": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "ZoomRecoverTime": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "CriticalHitScale": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponDPS": {
+   "value": 256.0,
+   "affectType": "Scale"
+  },
+  "FireRateMax": {
+   "value": 20.0,
+   "affectType": "Scale"
+  },
+  "BurstFireRate": {
+   "value": 20.0,
+   "affectType": "Scale"
+  },
+  "DelayTimeAfterBurst": {
+   "value": 1.0,
+   "affectType": "Scale"
+  },
+  "MinDamageScale": {
+   "value": 0.5,
+   "affectType": "Scale"
+  },
+  "FireRange": {
+   "value": 15.0,
+   "affectType": "PrevAdd"
+  },
+  "FireMaxRange": {
+   "value": 25.0,
+   "affectType": "Scale"
+  },
+  "RunSpeedModifier": {
+   "value": 0.949999988079071,
+   "affectType": "Scale"
+  },
+  "StandWalkSpeedModifier": {
+   "value": 0.949999988079071,
+   "affectType": "Scale"
+  },
+  "SprintSpeedModifier": {
+   "value": 0.949999988079071,
+   "affectType": "Scale"
+  },
+  "CrouchWalkSpeedModifier": {
+   "value": 0.949999988079071,
+   "affectType": "Scale"
+  }
+ },
+ "SniperRifle": {
+  "AccuracyMin": {
+   "value": 100.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMax": {
+   "value": 90.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyDecrease": {
+   "value": 32.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateOnIdle": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyDecreaseZoom": {
+   "value": 17.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateOnIdleZoom": {
+   "value": 0.004999999888241291,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchRandomOffsetMin": {
+   "value": 8.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchRandomOffsetMax": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchOffsetMin": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchOffsetMax": {
+   "value": 15.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchReducingRateActive": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchReducingRateOnIdle": {
+   "value": 15.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawRandomOffsetMin": {
+   "value": -2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawRandomOffsetMax": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawOffsetMin": {
+   "value": -2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawOffsetMax": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawReducingRateActive": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawReducingRateOnIdle": {
+   "value": 1.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackRandomOffsetMax": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackOffsetMin": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackOffsetMax": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackReducingRateActive": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackReducingRateOnIdle": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchRandomOffsetMin": {
+   "value": 4.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchRandomOffsetMax": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchOffsetMin": {
+   "value": 4.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchOffsetMax": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchReducingRateActive": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchReducingRateOnIdle": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawRandomOffsetMin": {
+   "value": -0.8999999761581421,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawRandomOffsetMax": {
+   "value": 0.8999999761581421,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawOffsetMin": {
+   "value": -0.8999999761581421,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawOffsetMax": {
+   "value": 0.8999999761581421,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawReducingRateActive": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawReducingRateOnIdle": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackRandomOffsetMax": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackOffsetMin": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackOffsetMax": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackReducingRateActive": {
+   "value": 20.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackReducingRateOnIdle": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchMulMin": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchMulMax": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "AmmoRegenerationRate": {
+   "value": 0.07999999821186066,
+   "affectType": "PrevAdd"
+  },
+  "ClipSize": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "MaxStoredAmmo": {
+   "value": 120.0,
+   "affectType": "PrevAdd"
+  },
+  "ShotCost": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "StartingAmmoCount": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "CurrentAmmoCount": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponProjectilesPerShot": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "FireRate": {
+   "value": 0.800000011920929,
+   "affectType": "PrevAdd"
+  },
+  "ReloadTime": {
+   "value": 1.2000000476837158,
+   "affectType": "PrevAdd"
+  },
+  "ReloadPercentage": {
+   "value": 0.800000011920929,
+   "affectType": "PrevAdd"
+  },
+  "BobDamping": {
+   "value": 1.5,
+   "affectType": "PrevAdd"
+  },
+  "FirstPersonMeshFOV": {
+   "value": 27.5,
+   "affectType": "PrevAdd"
+  },
+  "LeadingSpeed": {
+   "value": 0.05999999865889549,
+   "affectType": "PrevAdd"
+  },
+  "MaxPitchLead": {
+   "value": 125.0,
+   "affectType": "PrevAdd"
+  },
+  "MaxYawLead": {
+   "value": 125.0,
+   "affectType": "PrevAdd"
+  },
+  "ViewModelTranslationAmt": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "ThirdPersonMeshScale": {
+   "value": 0.800000011920929,
+   "affectType": "PrevAdd"
+  },
+  "WeaponKickDownTime": {
+   "value": 0.3499999940395355,
+   "affectType": "PrevAdd"
+  },
+  "WeaponKickUpSpeed": {
+   "value": 12.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponKickZoomMultiplier": {
+   "value": 0.8999999761581421,
+   "affectType": "PrevAdd"
+  },
+  "ZoomEndFOV": {
+   "value": 15.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomTime": {
+   "value": 0.15000000596046448,
+   "affectType": "PrevAdd"
+  },
+  "ZoomTranslation": {
+   "value": 0.3499999940395355,
+   "affectType": "PrevAdd"
+  },
+  "ZoomCameraAngularSpeedYaw": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomCameraAngularSpeedPitch": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderPitchAmplitude": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderPitchFrequency": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderSmoothingSpeed": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderYawAmplitude": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderYawFrequency": {
+   "value": 1.5,
+   "affectType": "PrevAdd"
+  },
+  "EquipTime": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "GrabTime": {
+   "value": 1.2999999523162842,
+   "affectType": "PrevAdd"
+  },
+  "PutDownTime": {
+   "value": 9.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponDamage": {
+   "value": 2000.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponElementalDamage": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ElementalProcCoef": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderRadius": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderSpeed": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderAccel": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderDecel": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderAccelDistance": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderDecelDistance": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyNormal": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyZoom": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoverTime": {
+   "value": 0.25,
+   "affectType": "PrevAdd"
+  },
+  "ZoomRecoverTime": {
+   "value": 0.3499999940395355,
+   "affectType": "PrevAdd"
+  },
+  "CriticalHitScale": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponDPS": {
+   "value": 90.0,
+   "affectType": "Scale"
+  },
+  "FireRateMax": {
+   "value": 10.0,
+   "affectType": "Scale"
+  },
+  "BurstFireRate": {
+   "value": 1.5,
+   "affectType": "Scale"
+  },
+  "DelayTimeAfterBurst": {
+   "value": 2.0,
+   "affectType": "Scale"
+  },
+  "MinDamageScale": {
+   "value": 0.5,
+   "affectType": "Scale"
+  },
+  "FireRange": {
+   "value": 50.0,
+   "affectType": "PrevAdd"
+  },
+  "FireMaxRange": {
+   "value": 100.0,
+   "affectType": "Scale"
+  },
+  "RunSpeedModifier": {
+   "value": 0.8500000238418579,
+   "affectType": "Scale"
+  },
+  "StandWalkSpeedModifier": {
+   "value": 0.8500000238418579,
+   "affectType": "Scale"
+  },
+  "SprintSpeedModifier": {
+   "value": 0.8999999761581421,
+   "affectType": "Scale"
+  },
+  "CrouchWalkSpeedModifier": {
+   "value": 0.8500000238418579,
+   "affectType": "Scale"
+  }
+ },
+ "ShotGun": {
+  "AccuracyMin": {
+   "value": 100.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMax": {
+   "value": 50.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyDecrease": {
+   "value": 50.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateOnIdle": {
+   "value": 0.04500000178813934,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateActive": {
+   "value": 0.019999999552965164,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMinZoom": {
+   "value": 100.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMaxZoom": {
+   "value": 35.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyDecreaseZoom": {
+   "value": 45.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateOnIdleZoom": {
+   "value": 0.04500000178813934,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchRandomOffsetMin": {
+   "value": 8.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchRandomOffsetMax": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchOffsetMin": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchOffsetMax": {
+   "value": 15.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchReducingRateActive": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchReducingRateOnIdle": {
+   "value": 15.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawRandomOffsetMin": {
+   "value": -1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawRandomOffsetMax": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawOffsetMin": {
+   "value": -1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawOffsetMax": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawReducingRateActive": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackRandomOffsetMin": {
+   "value": 0.25,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackRandomOffsetMax": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackOffsetMax": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackReducingRateActive": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackReducingRateOnIdle": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchRandomOffsetMin": {
+   "value": 8.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchRandomOffsetMax": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchOffsetMin": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchOffsetMax": {
+   "value": 15.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchReducingRateActive": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchReducingRateOnIdle": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawRandomOffsetMin": {
+   "value": -1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawRandomOffsetMax": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawOffsetMin": {
+   "value": -1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawOffsetMax": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawReducingRateActive": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackRandomOffsetMin": {
+   "value": 0.25,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackRandomOffsetMax": {
+   "value": 0.3499999940395355,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackOffsetMax": {
+   "value": 0.3499999940395355,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackReducingRateActive": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackReducingRateOnIdle": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchMulMin": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchMulMax": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "AmmoRegenerationRate": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "ClipSize": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "MaxStoredAmmo": {
+   "value": 120.0,
+   "affectType": "PrevAdd"
+  },
+  "ShotCost": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "StartingAmmoCount": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "CurrentAmmoCount": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponProjectilesPerShot": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "FireRate": {
+   "value": 0.800000011920929,
+   "affectType": "PrevAdd"
+  },
+  "ReloadTime": {
+   "value": 1.5,
+   "affectType": "PrevAdd"
+  },
+  "ReloadPercentage": {
+   "value": 0.800000011920929,
+   "affectType": "PrevAdd"
+  },
+  "BobDamping": {
+   "value": 1.5,
+   "affectType": "PrevAdd"
+  },
+  "FirstPersonMeshFOV": {
+   "value": 27.5,
+   "affectType": "PrevAdd"
+  },
+  "LeadingSpeed": {
+   "value": 0.05999999865889549,
+   "affectType": "PrevAdd"
+  },
+  "MaxPitchLead": {
+   "value": 125.0,
+   "affectType": "PrevAdd"
+  },
+  "MaxYawLead": {
+   "value": 125.0,
+   "affectType": "PrevAdd"
+  },
+  "ViewModelTranslationAmt": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "ThirdPersonMeshScale": {
+   "value": 0.8500000238418579,
+   "affectType": "PrevAdd"
+  },
+  "ZoomEndFOV": {
+   "value": 40.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomTime": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "ZoomTranslation": {
+   "value": 0.3499999940395355,
+   "affectType": "PrevAdd"
+  },
+  "ZoomCameraAngularSpeedYaw": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomCameraAngularSpeedPitch": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderPitchAmplitude": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderPitchFrequency": {
+   "value": 4.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderSmoothingSpeed": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderYawAmplitude": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderYawFrequency": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "EquipTime": {
+   "value": 6.5,
+   "affectType": "PrevAdd"
+  },
+  "GrabTime": {
+   "value": 1.2999999523162842,
+   "affectType": "PrevAdd"
+  },
+  "PutDownTime": {
+   "value": 9.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponDamage": {
+   "value": 2400.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponElementalDamage": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ElementalProcCoef": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderRadius": {
+   "value": 0.6000000238418579,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderSpeed": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderAccel": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderDecel": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderAccelDistance": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderDecelDistance": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyNormal": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyZoom": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyRatioNormal": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyRatioZoom": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "RecoverTime": {
+   "value": 1.0499999523162842,
+   "affectType": "PrevAdd"
+  },
+  "ZoomRecoverTime": {
+   "value": 1.0499999523162842,
+   "affectType": "PrevAdd"
+  },
+  "CriticalHitScale": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponDPS": {
+   "value": 204.8000030517578,
+   "affectType": "Scale"
+  },
+  "FireRateMax": {
+   "value": 3.0,
+   "affectType": "Scale"
+  },
+  "BurstFireRate": {
+   "value": 2.0,
+   "affectType": "Scale"
+  },
+  "DelayTimeAfterBurst": {
+   "value": 2.0,
+   "affectType": "Scale"
+  },
+  "MinDamageScale": {
+   "value": 0.20000000298023224,
+   "affectType": "Scale"
+  },
+  "FireRange": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "FireMaxRange": {
+   "value": 20.0,
+   "affectType": "Scale"
+  },
+  "RunSpeedModifier": {
+   "value": 0.8500000238418579,
+   "affectType": "Scale"
+  },
+  "StandWalkSpeedModifier": {
+   "value": 0.8500000238418579,
+   "affectType": "Scale"
+  },
+  "SprintSpeedModifier": {
+   "value": 0.8999999761581421,
+   "affectType": "Scale"
+  },
+  "CrouchWalkSpeedModifier": {
+   "value": 0.8500000238418579,
+   "affectType": "Scale"
+  }
+ },
+ "RepeaterPistol": {
+  "AccuracyMin": {
+   "value": 80.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMax": {
+   "value": 40.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyDecrease": {
+   "value": 25.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateOnIdle": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationDelayOnIdle": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateActive": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMinZoom": {
+   "value": 18.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMaxZoom": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyDecreaseZoom": {
+   "value": 8.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateOnIdleZoom": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateActiveZoom": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchRandomOffsetMin": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchRandomOffsetMax": {
+   "value": 4.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchOffsetMin": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchOffsetMax": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchReducingRateActive": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchReducingRateOnIdle": {
+   "value": 8.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawRandomOffsetMin": {
+   "value": -0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawRandomOffsetMax": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawOffsetMin": {
+   "value": -1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawOffsetMax": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawReducingRateActive": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackRandomOffsetMin": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackRandomOffsetMax": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackOffsetMin": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackOffsetMax": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackReducingRateActive": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchRandomOffsetMin": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchRandomOffsetMax": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchOffsetMin": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchOffsetMax": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchReducingRateActive": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchReducingRateOnIdle": {
+   "value": 8.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawRandomOffsetMin": {
+   "value": -0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawRandomOffsetMax": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawOffsetMin": {
+   "value": -0.699999988079071,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawOffsetMax": {
+   "value": 0.699999988079071,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawReducingRateActive": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackRandomOffsetMin": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackRandomOffsetMax": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackOffsetMin": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackOffsetMax": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackReducingRateActive": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchMulMin": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchMulMax": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "AmmoRegenerationRate": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "ClipSize": {
+   "value": 8.0,
+   "affectType": "PrevAdd"
+  },
+  "MaxStoredAmmo": {
+   "value": 120.0,
+   "affectType": "PrevAdd"
+  },
+  "ShotCost": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "StartingAmmoCount": {
+   "value": 12.0,
+   "affectType": "PrevAdd"
+  },
+  "CurrentAmmoCount": {
+   "value": 12.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponProjectilesPerShot": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "FireRate": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "ReloadTime": {
+   "value": 3.200000047683716,
+   "affectType": "PrevAdd"
+  },
+  "ReloadPercentage": {
+   "value": 0.6000000238418579,
+   "affectType": "PrevAdd"
+  },
+  "CanEjectBulletShells": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "BobDamping": {
+   "value": 1.5,
+   "affectType": "PrevAdd"
+  },
+  "FirstPersonMeshFOV": {
+   "value": 30.0,
+   "affectType": "PrevAdd"
+  },
+  "LeadingSpeed": {
+   "value": 0.05999999865889549,
+   "affectType": "PrevAdd"
+  },
+  "MaxPitchLead": {
+   "value": 125.0,
+   "affectType": "PrevAdd"
+  },
+  "MaxYawLead": {
+   "value": 125.0,
+   "affectType": "PrevAdd"
+  },
+  "ViewModelTranslationAmt": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "ViewModelRotationAmt": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponKickDownTime": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "WeaponKickUpSpeed": {
+   "value": 4.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomEndFOV": {
+   "value": 40.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomTime": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "ZoomTranslation": {
+   "value": 0.15000000596046448,
+   "affectType": "PrevAdd"
+  },
+  "ZoomCameraAngularSpeedYaw": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomCameraAngularSpeedPitch": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderPitchAmplitude": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderPitchFrequency": {
+   "value": 4.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderSmoothingSpeed": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderYawAmplitude": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderYawFrequency": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "EquipTime": {
+   "value": 9.0,
+   "affectType": "PrevAdd"
+  },
+  "GrabTime": {
+   "value": 1.2999999523162842,
+   "affectType": "PrevAdd"
+  },
+  "PutDownTime": {
+   "value": 9.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponDamage": {
+   "value": 640.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponElementalDamage": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ElementalProcCoef": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderRadius": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderSpeed": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderAccel": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderDecel": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderAccelDistance": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderDecelDistance": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyNormal": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyZoom": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyRatioNormal": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyRatioZoom": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "RecoverTime": {
+   "value": 0.550000011920929,
+   "affectType": "PrevAdd"
+  },
+  "ZoomRecoverTime": {
+   "value": 0.550000011920929,
+   "affectType": "PrevAdd"
+  },
+  "CriticalHitScale": {
+   "value": 1.5,
+   "affectType": "PrevAdd"
+  },
+  "WeaponDPS": {
+   "value": 83.33000183105469,
+   "affectType": "Scale"
+  },
+  "FireRateMax": {
+   "value": 8.0,
+   "affectType": "Scale"
+  },
+  "BurstFireRate": {
+   "value": 10.0,
+   "affectType": "Scale"
+  },
+  "DelayTimeAfterBurst": {
+   "value": 1.0,
+   "affectType": "Scale"
+  },
+  "MinDamageScale": {
+   "value": 0.5,
+   "affectType": "Scale"
+  },
+  "FireRange": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "FireMaxRange": {
+   "value": 20.0,
+   "affectType": "Scale"
+  },
+  "RunSpeedModifier": {
+   "value": 1.0,
+   "affectType": "Scale"
+  },
+  "StandWalkSpeedModifier": {
+   "value": 1.0,
+   "affectType": "Scale"
+  },
+  "SprintSpeedModifier": {
+   "value": 1.0,
+   "affectType": "Scale"
+  },
+  "CrouchWalkSpeedModifier": {
+   "value": 1.0,
+   "affectType": "Scale"
+  }
+ },
+ "CombatRifle": {
+  "AccuracyMin": {
+   "value": 80.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMax": {
+   "value": 25.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyDecrease": {
+   "value": 18.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateOnIdle": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationDelayOnIdle": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateActive": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMinZoom": {
+   "value": 50.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyMaxZoom": {
+   "value": 15.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyDecreaseZoom": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateOnIdleZoom": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "AccuracyRegenerationRateActiveZoom": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchRandomOffsetMin": {
+   "value": 0.4000000059604645,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchRandomOffsetMax": {
+   "value": 0.800000011920929,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchOffsetMin": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchOffsetMax": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchReducingRateActive": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchReducingRateOnIdle": {
+   "value": 12.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawRandomOffsetMin": {
+   "value": -0.800000011920929,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawRandomOffsetMax": {
+   "value": 0.800000011920929,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawOffsetMin": {
+   "value": -1.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawOffsetMax": {
+   "value": 1.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawReducingRateActive": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilYawReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackRandomOffsetMin": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackRandomOffsetMax": {
+   "value": 0.15000000596046448,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackOffsetMin": {
+   "value": 0.15000000596046448,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackOffsetMax": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackReducingRateActive": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilKickBackReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchRandomOffsetMin": {
+   "value": 0.4000000059604645,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchRandomOffsetMax": {
+   "value": 0.800000011920929,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchOffsetMin": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchOffsetMax": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchReducingRateActive": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomPitchReducingRateOnIdle": {
+   "value": 10.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawRandomOffsetMin": {
+   "value": -0.4000000059604645,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawRandomOffsetMax": {
+   "value": 0.4000000059604645,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawOffsetMin": {
+   "value": -1.2000000476837158,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawOffsetMax": {
+   "value": 1.2000000476837158,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawReducingRateActive": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomYawReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackRandomOffsetMin": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackRandomOffsetMax": {
+   "value": 0.15000000596046448,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackOffsetMin": {
+   "value": 0.15000000596046448,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackOffsetMax": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackReducingRateActive": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilZoomKickBackReducingRateOnIdle": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchMulMin": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "RecoilPitchMulMax": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "AmmoRegenerationRate": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "ClipSize": {
+   "value": 20.0,
+   "affectType": "PrevAdd"
+  },
+  "MaxStoredAmmo": {
+   "value": 400.0,
+   "affectType": "PrevAdd"
+  },
+  "ShotCost": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "StartingAmmoCount": {
+   "value": 35.0,
+   "affectType": "PrevAdd"
+  },
+  "CurrentAmmoCount": {
+   "value": 35.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponProjectilesPerShot": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "FireRate": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "ReloadTime": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "ReloadPercentage": {
+   "value": 0.800000011920929,
+   "affectType": "PrevAdd"
+  },
+  "CanEjectBulletShells": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "BobDamping": {
+   "value": 1.5,
+   "affectType": "PrevAdd"
+  },
+  "FirstPersonMeshFOV": {
+   "value": 27.5,
+   "affectType": "PrevAdd"
+  },
+  "LeadingSpeed": {
+   "value": 0.05999999865889549,
+   "affectType": "PrevAdd"
+  },
+  "MaxPitchLead": {
+   "value": 125.0,
+   "affectType": "PrevAdd"
+  },
+  "MaxYawLead": {
+   "value": 125.0,
+   "affectType": "PrevAdd"
+  },
+  "ViewModelTranslationAmt": {
+   "value": 6.0,
+   "affectType": "PrevAdd"
+  },
+  "ViewModelRotationAmt": {
+   "value": 2.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponKickDownTime": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "WeaponKickUpSpeed": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomEndFOV": {
+   "value": 40.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomTime": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "ZoomTranslation": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "ZoomCameraAngularSpeedYaw": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomCameraAngularSpeedPitch": {
+   "value": 5.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderPitchAmplitude": {
+   "value": 0.30000001192092896,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderPitchFrequency": {
+   "value": 4.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderSmoothingSpeed": {
+   "value": 3.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderYawAmplitude": {
+   "value": 0.10000000149011612,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderYawFrequency": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "EquipTime": {
+   "value": 8.0,
+   "affectType": "PrevAdd"
+  },
+  "GrabTime": {
+   "value": 1.2999999523162842,
+   "affectType": "PrevAdd"
+  },
+  "PutDownTime": {
+   "value": 9.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponDamage": {
+   "value": 600.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponElementalDamage": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ElementalProcCoef": {
+   "value": 0.05000000074505806,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderRadius": {
+   "value": 0.44999998807907104,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderSpeed": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderAccel": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderDecel": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderAccelDistance": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "ZoomWanderDecelDistance": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyNormal": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyZoom": {
+   "value": 0.5,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyRatioNormal": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "InnerAccuracyRatioZoom": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "RecoverTime": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "ZoomRecoverTime": {
+   "value": 0.20000000298023224,
+   "affectType": "PrevAdd"
+  },
+  "CriticalHitScale": {
+   "value": 1.0,
+   "affectType": "PrevAdd"
+  },
+  "WeaponDPS": {
+   "value": 240.0,
+   "affectType": "Scale"
+  },
+  "FireRateMax": {
+   "value": 16.0,
+   "affectType": "Scale"
+  },
+  "BurstFireRate": {
+   "value": 16.0,
+   "affectType": "Scale"
+  },
+  "DelayTimeAfterBurst": {
+   "value": 1.0,
+   "affectType": "Scale"
+  },
+  "MinDamageScale": {
+   "value": 0.5,
+   "affectType": "Scale"
+  },
+  "FireRange": {
+   "value": 25.0,
+   "affectType": "PrevAdd"
+  },
+  "FireMaxRange": {
+   "value": 40.0,
+   "affectType": "Scale"
+  },
+  "RunSpeedModifier": {
+   "value": 0.8999999761581421,
+   "affectType": "Scale"
+  },
+  "StandWalkSpeedModifier": {
+   "value": 0.8999999761581421,
+   "affectType": "Scale"
+  },
+  "SprintSpeedModifier": {
+   "value": 0.8999999761581421,
+   "affectType": "Scale"
+  },
+  "CrouchWalkSpeedModifier": {
+   "value": 0.8999999761581421,
+   "affectType": "Scale"
+  }
+ }
+}
