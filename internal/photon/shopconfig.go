@@ -299,27 +299,9 @@ func rollShopItem(avail xmlItemAvailability, level, class int) *domain.Inventory
 	}
 	switch avail.ItemType {
 	case "Weapon":
-		it.ItemKind = domain.ItemTypeWeapon
-		wt := weightedWeaponType(avail.WeaponDist)
-		it.PartA = wt
-		it.IsWeapon = true
-		element := rollWeaponElement(int32(it.Rarity)) // fallback for when no real preset resolves below
-		if wp := randomWeaponPresetAnyRarity(wt, level); wp != nil {
-			it.ResourceID = wp.ID
-			it.ItemName = wp.Name
-			it.Rarity = itemRarityValues[wp.Rarity]
-			it.Level = wp.Level
-			it.Damage = computeWeaponDamage(wp, wp.Level)
-			if e, ok := presetRealElement(wp); ok {
-				element = e
-			} else {
-				element = elementNone // real preset, no elemental ACC part, a plain weapon by design (see presetRealElement's doc comment)
-			}
-		} else {
-			it.ResourceID = wt + 1
-			it.ItemName = weaponTypeNames[wt]
-		}
-		it.ElementType = int(element)
+		gen := newGeneratedWeapon(weightedWeaponType(avail.WeaponDist), it.Rarity, it.Level, it.GenerationSource)
+		gen.UID = it.UID
+		it = gen
 	case "Shield":
 		it.ItemKind = domain.ItemTypeShield
 		if sp := randomShieldPresetAnyRarity(level); sp != nil {

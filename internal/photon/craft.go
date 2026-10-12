@@ -53,32 +53,9 @@ func (s *EnetServer) opCraftWeapon(sess *ClientSession, opCode byte, params map[
 
 	rarity := rollCraftRarity(cfg.Rarities)
 
-	resourceID := 1
-	element := rollWeaponElement(int32(rarity))
-	damage := 0.0
-	if wp := randomWeaponPresetAnyRarity(weaponType, ch.Level); wp != nil {
-		resourceID = wp.ID
-		damage = computeWeaponDamage(wp, ch.Level)
-		if e, ok := presetRealElement(wp); ok {
-			element = e
-		} else {
-			element = elementNone
-		}
-	}
-	newWeapon := &domain.InventoryItem{
-		CharID:           sess.selectedCharID,
-		ResourceID:       resourceID,
-		ItemKind:         domain.ItemTypeWeapon,
-		IsWeapon:         true,
-		Level:            ch.Level,
-		Rarity:           rarity,
-		Damage:           damage,
-		PartA:            weaponType,
-		ItemName:         weaponTypeNames[weaponType],
-		GenerationSource: domain.GenerationSourceCraft,
-		UID:              newRandomUID("craft"),
-		ElementType:      int(element),
-	}
+	newWeapon := newGeneratedWeapon(weaponType, rarity, ch.Level, domain.GenerationSourceCraft)
+	newWeapon.CharID = sess.selectedCharID
+	newWeapon.UID = newRandomUID("craft")
 	_, slot, err := db.AddItemToBackpack(newWeapon, clampBackpackSize(ch.BackpackSize))
 	if err != nil {
 		log.Printf("[PHOTON] CraftWeapon error adding weapon to backpack: %v", err)

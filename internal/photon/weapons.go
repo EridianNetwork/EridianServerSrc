@@ -2,7 +2,6 @@ package photon
 import (
 	"encoding/json"
 	"log"
-	"math/rand"
 	"os"
 	"sync"
 	"time"
@@ -57,21 +56,6 @@ func weaponTypeName(wantType int) string {
 	}
 	return ""
 }
-func randomWeaponPresetAnyRarity(wantType, maxLevel int) *weaponPreset {
-	loadWeaponPresets()
-	typeName := weaponTypeName(wantType)
-	var pool []*weaponPreset
-	for i := range weaponPresets {
-		if weaponPresets[i].Type == typeName {
-			pool = append(pool, &weaponPresets[i])
-		}
-	}
-	picked, ok := levelGatedPick(pool, func(wp *weaponPreset) int { return wp.Level }, maxLevel)
-	if !ok {
-		return nil
-	}
-	return picked
-}
 func weaponPresetByID(id int) *weaponPreset {
 	loadWeaponPresets()
 	for i := range weaponPresets {
@@ -88,30 +72,6 @@ const (
 	elementCorrosive = int32(3)
 	elementExplosive = int32(4)
 )
-var elementChanceByRarity = map[int32]float64{
-	0: 0.00, 
-	1: 0.10, 
-	2: 0.20, 
-	3: 0.35, 
-	4: 0.50, 
-	5: 0.65, 
-}
-func rollWeaponElement(rarity int32) int32 {
-	chance, ok := elementChanceByRarity[rarity]
-	if !ok || rand.Float64() >= chance {
-		return elementNone
-	}
-	switch rand.Intn(4) {
-	case 0:
-		return elementFire
-	case 1:
-		return elementShock
-	case 2:
-		return elementCorrosive
-	default:
-		return elementExplosive
-	}
-}
 type weaponSubpartElement struct {
 	Type     string  `json:"type"`
 	PartType string  `json:"partType"`
@@ -139,13 +99,10 @@ func loadWeaponElementalParts() {
 		log.Printf("[SHOP] loaded %d real weapon elemental subpart entries", len(weaponElementalParts))
 	})
 }
-func presetRealElement(wp *weaponPreset) (int32, bool) {
-	if wp == nil {
-		return elementNone, false
-	}
+func subpartElement(typeName string, acc int) (int32, bool) {
 	loadWeaponElementalParts()
 	for _, e := range weaponElementalParts {
-		if e.Type == wp.Type && e.PartType == "ACC" && e.Index == wp.Subparts.ACC {
+		if e.Type == typeName && e.PartType == "ACC" && e.Index == acc {
 			return e.Element, true
 		}
 	}

@@ -2523,10 +2523,7 @@ func weaponItemDNA(it *domain.InventoryItem) Custom {
 	putI32(0) // starLevel
 	putI32(0) // starExperience
 	putI32(9) // subPartsCode.Length
-	var sub [9]int
-	if wp := weaponPresetByID(it.ResourceID); wp != nil {
-		sub = wp.Subparts.AsSlice()
-	}
+	sub := weaponItemSubparts(it)
 	for i := int32(0); i < 9; i++ {
 		putI32(int32(it.PartA)<<24 | i<<16 | (int32(sub[i]) & 0xFFFF))
 	}

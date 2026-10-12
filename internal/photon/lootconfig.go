@@ -279,29 +279,11 @@ func rolledWeaponDNA(l rolledLoot, level int, band rarityBand, hardOverride bool
 	} else if hardOverride {
 		rarity = band.clamp(rarity)
 	}
-	resourceID := weaponType + 1
-	element := rollWeaponElement(int32(rarity))
-	damage := 0.0
-	if wp := randomWeaponPresetAnyRarity(weaponType, level); wp != nil {
-		resourceID = wp.ID
-		damage = computeWeaponDamage(wp, level)
-		if e, ok := presetRealElement(wp); ok {
-			element = e
-		} else {
-			element = elementNone
-		}
-	}
-	item := &domain.InventoryItem{
-		ItemKind:         domain.ItemTypeWeapon,
-		ResourceID:       resourceID,
-		Level:            level,
-		Rarity:           rarity,
-		Damage:           damage,
-		PartA:            weaponType,
-		ItemName:         weaponTypeNames[weaponType],
-		GenerationSource: domain.GenerationSourceLoot,
-		IsWeapon:         true,
-		ElementType:      int(element),
+	var item *domain.InventoryItem
+	if wp := weaponPresetByID(l.WeaponID); l.WeaponID > 0 && wp != nil {
+		item = newPresetWeapon(wp, level, domain.GenerationSourceLoot)
+	} else {
+		item = newGeneratedWeapon(weaponType, rarity, level, domain.GenerationSourceLoot)
 	}
 	return weaponItemDNA(item), item
 }

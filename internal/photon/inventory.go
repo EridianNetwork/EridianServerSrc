@@ -441,10 +441,7 @@ func starterWeaponHT() map[int]any {
 func itemDNAHashtable(it *domain.InventoryItem) map[int]any {
 	switch it.ItemKind {
 	case domain.ItemTypeWeapon:
-		var sub [9]int
-		if wp := weaponPresetByID(it.ResourceID); wp != nil {
-			sub = wp.Subparts.AsSlice()
-		}
+		sub := weaponItemSubparts(it)
 		return map[int]any{
 			0: int32(domain.ItemTypeWeapon), 1: int32(it.Level), 2: int32(it.Rarity), 3: int32(it.GenerationSource), 4: int32(it.ResourceID),
 			5: int32(it.Price), 6: int32(it.Expiration), 7: int32(it.OwnerID), 8: it.UID,

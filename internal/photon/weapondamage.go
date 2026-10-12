@@ -84,27 +84,16 @@ func combineFloatAttribute(base float64, deltas []weaponAttrDelta) float64 {
 	return (base+prevAdd)*((1+posScale)/(1-negScale)) + postAdd
 }
 
-func subpartSlotIndices(sp weaponSubparts) map[string]int {
-	return map[string]int{
-		"ACC": sp.ACC, "ACTION": sp.ACTION, "BARREL": sp.BARREL, "BODY": sp.BODY,
-		"GRIP": sp.GRIP, "MAG": sp.MAG, "SIGHT": sp.SIGHT, "STOCK": sp.STOCK,
-		"MATERIAL": sp.MATERIAL,
-	}
-}
-
-func computeWeaponDamage(wp *weaponPreset, level int) float64 {
-	if wp == nil {
-		return 0
-	}
+func computeWeaponDamage(typeName string, sp [9]int, level int) float64 {
 	loadWeaponDamageStats()
-	base := weaponBaseStats[wp.Type]
+	base := weaponBaseStats[typeName]
 	if base == nil {
 		return 0
 	}
-	slots := weaponSubpartIndex[wp.Type]
+	slots := weaponSubpartIndex[typeName]
 	var dpsDeltas, fireRateDeltas []weaponAttrDelta
-	for slot, idx := range subpartSlotIndices(wp.Subparts) {
-		entry, ok := slots[slot][idx]
+	for i, slot := range npcWeaponSubpartOrder {
+		entry, ok := slots[slot][sp[i]]
 		if !ok {
 			continue
 		}
@@ -144,5 +133,5 @@ func resolveWeaponDamage(it *domain.InventoryItem) float64 {
 	if it.Damage > 0 {
 		return it.Damage
 	}
-	return computeWeaponDamage(weaponPresetByID(it.ResourceID), it.Level)
+	return computeWeaponDamage(weaponTypeName(it.PartA), weaponItemSubparts(it), it.Level)
 }
