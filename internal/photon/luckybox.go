@@ -39,13 +39,12 @@ func (s *EnetServer) opOpenLuckyBox(sess *ClientSession, opCode byte, params map
 	playlistID := asInt32(room.Properties["PlaylistId"])
 	difficulty := asInt32(room.Properties["Difficulty"])
 	grade := playlistGrade(playlistID, difficulty, matchScore(room, roomSess, s.roomTopDamage(room)))
-	const difficultyHell = 2
-	if grade == "S" && difficulty == difficultyHell && !room.luckyKeyGranted {
+	if !room.luckyKeyGranted {
 		room.luckyKeyGranted = true
 		if err := db.GrantLuckyKey(ch.CharID, luckyBoxRankValues["Diamond"], 1, clampBackpackSize(ch.BackpackSize)); err != nil {
 			log.Printf("[LUCKYBOX] GrantLuckyKey char=%d: %v", ch.CharID, err)
 		} else {
-			log.Printf("[LUCKYBOX] GrantLuckyKey char=%d: +1 Diamond key (S-grade Hell clear)", ch.CharID)
+			log.Printf("[LUCKYBOX] GrantLuckyKey char=%d: +1 Diamond key (level clear, grade=%s)", ch.CharID, grade)
 		}
 	}
 	reward := findLuckyBoxReward(playlistID, difficulty, grade)
