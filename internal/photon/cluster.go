@@ -1289,7 +1289,7 @@ func (s *EnetServer) clusterRunAction(room *Room, m *clusterMachine, rt *cluster
 			}
 		}
 		log.Printf("[CLUSTER] next round targetScore=%d totals=%v room=%s", a.TargetScore, room.claptrapTeamScore, room.Name)
-	
+
 		s.hostSendRPC(room, sessionInfoViewID, "RPC_CloseRoundResultToClient", []any{})
 		if a.TargetScore > 0 && !room.pvpMatchEnded {
 			for team, score := range room.claptrapTeamScore {
@@ -1668,6 +1668,9 @@ func (s *EnetServer) hostTickNpcMovement(room *Room, dt float64) bool {
 					} else {
 						npcSetTask(npc, bhvTaskIdle, -1, npc.pos, -1)
 					}
+				} else if npc.taskType == bhvTaskChargeAttack {
+					npcSetTask(npc, bhvTaskChargeAttackHit, npc.chargeTargetView, npc.pos, 0)
+					npc.attackBusyUntil = time.Now().Add(npcMeleeSwingLock)
 				}
 			}
 		} else {

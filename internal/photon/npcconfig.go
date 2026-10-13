@@ -148,7 +148,7 @@ type npcConfig struct {
 }
 
 type xmlSettings struct {
-	Type              string  `xml:"http"`
+	Type              string  `xml:"http://www.w3.org/2001/XMLSchema-instance type,attr"`
 	AttackDamage      int32   `xml:"m_attackDamage"`
 	AttackRange       float64 `xml:"m_attackRange"`
 	DistanceToTarget  float64 `xml:"m_distanceToTarget"`
