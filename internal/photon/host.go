@@ -696,17 +696,7 @@ func (s *EnetServer) hostNextMap(room *Room, clusterName string) {
 		return
 	}
 	nextIdx := asInt32(room.Properties["SceneIdx"]) + 1
-	scene, ok := playlistSceneAt(pid, nextIdx)
-	if !ok {
-
-		pid = defaultTownPlaylistID
-		nextIdx = 0
-		scene, ok = playlistSceneAt(pid, nextIdx)
-		if !ok {
-			log.Printf("[HOST] NextMap (cluster %q) room=%s: no next scene and no town fallback, staying", clusterName, room.Name)
-			return
-		}
-	}
+	_, hasNext := playlistSceneAt(pid, nextIdx)
 
 	var travelers []*ClientSession
 	for _, uid := range room.Players {
@@ -719,19 +709,39 @@ func (s *EnetServer) hostNextMap(room *Room, clusterName string) {
 		return
 	}
 
-	log.Printf("[HOST] NextMap (cluster %q): %s → %s (scene[%d]) room=%s players=%d",
-		clusterName, getCurScnFromProps(room.Name, room.Properties), scene, nextIdx, room.Name, len(travelers))
-
 	nowMS := int32(msNow())
 	gamemode := gamemodeName(room)
 
 	payload := s.sessionStatsPayload(room)
 	for _, sess := range travelers {
+		destPID, destIdx := pid, nextIdx
+		if !hasNext {
+			destPID, destIdx = lastTownPlaylistFor(sess), 0
+		}
+		scene, ok := playlistSceneAt(destPID, destIdx)
+		if !ok {
+			log.Printf("[HOST] NextMap (cluster %q) room=%s user=%s: no scene for playlist %d[%d], staying", clusterName, room.Name, sess.userID, destPID, destIdx)
+			continue
+		}
+		log.Printf("[HOST] NextMap (cluster %q): %s → %s (playlist %d scene[%d]) room=%s user=%s",
+			clusterName, getCurScnFromProps(room.Name, room.Properties), scene, destPID, destIdx, room.Name, sess.userID)
 		s.bumpMapGen(sess)
 		s.hostSendRPCTo(sess, sessionInfoViewID, "RPC_RequestSendSessionStats", []any{payload})
 		s.hostSendSessionInfo(sess, room, nowMS, scene, "", gamemode)
-		s.pendingSceneIdx[sess.dbAccountID] = pendingScene{playlistID: pid, sceneIdx: nextIdx}
+		s.pendingSceneIdx[sess.dbAccountID] = pendingScene{playlistID: destPID, sceneIdx: destIdx}
 	}
+}
+
+// lastTownPlaylistFor is the town the player was last in (persisted by hostFinishMapReady), so finishing
+// a mission returns them there; falls back to the default town when unknown or not a real town.
+func lastTownPlaylistFor(sess *ClientSession) int32 {
+	if sess == nil || sess.hostChar == nil {
+		return defaultTownPlaylistID
+	}
+	if ch, _ := db.GetCharacterByID(sess.hostChar.CharID); ch != nil && realTownPlaylists[ch.LastTownPlaylistID] {
+		return ch.LastTownPlaylistID
+	}
+	return defaultTownPlaylistID
 }
 
 type pendingScene struct {
@@ -748,7 +758,7 @@ func (s *EnetServer) hostSendWrapupDestination(room *Room, sess *ClientSession) 
 	nextIdx := asInt32(room.Properties["SceneIdx"]) + 1
 	scene, ok := playlistSceneAt(pid, nextIdx)
 	if !ok {
-		pid = defaultTownPlaylistID
+		pid = lastTownPlaylistFor(sess)
 		nextIdx = 0
 		scene, ok = playlistSceneAt(pid, nextIdx)
 		if !ok {
