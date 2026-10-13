@@ -75,7 +75,7 @@
                 "target_score": 3
             }
         },
-        "player_melee_damage_ratio": 1.5,
+        "player_melee_damage_ratio": 1.0,
         "fire_bird_cooldown_seconds": 20,
         "berserk_cooldown_seconds": 30,
         "turret_cooldown_short_seconds": 10,

@@ -92,8 +92,10 @@ const actionTypeSkill = 14
 const actionTypeMelee = 13
 
 const (
-	playerMeleeRange   = 3.2
-	playerMeleeConeCos = 0.35
+	// playerMeleeBaseDamage is m_meleeDamage from BOL_DamageSettings.txt (flat 50 for every avatar/weapon).
+	playerMeleeBaseDamage = 50.0
+	playerMeleeRange      = 3.2
+	playerMeleeConeCos    = 0.35
 )
 
 const actionTypeSwitchWeapon = 21
@@ -2046,9 +2048,13 @@ func (s *EnetServer) hostPlayerMelee(room *Room, sess *ClientSession) {
 
 	ratio := s.PlayerMeleeDamageRatio
 	if ratio <= 0 {
-		ratio = 1.5
+		ratio = 1
 	}
-	dmg := int32(s.playerWeaponDamageAtLevel(sess) * ratio * (1 + berserkDespBonus(sess)))
+	level := 1
+	if sess.hostChar != nil {
+		level = sess.hostChar.Level
+	}
+	dmg := int32(playerMeleeBaseDamage * powerRatingForLevel(level) * ratio * (1 + berserkDespBonus(sess)))
 
 	if sess.berserkActive && time.Now().Before(sess.berserkEndAt) {
 		if punches := effectValue(sess.hostChar, "BerserkPunchCount"); punches > 0 {
