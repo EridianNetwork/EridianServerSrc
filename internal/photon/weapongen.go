@@ -154,6 +154,7 @@ func newGeneratedWeapon(weaponType, rarity, level int, source int) *domain.Inven
 	return &domain.InventoryItem{
 		ItemKind:         domain.ItemTypeWeapon,
 		IsWeapon:         true,
+		ExtraEffects:     encodeWeaponExtras(rollWeaponExtras(rarity, level)),
 		ResourceID:       0,
 		Level:            level,
 		Rarity:           rarity,
@@ -173,6 +174,7 @@ func newPresetWeapon(wp *weaponPreset, level int, source int) *domain.InventoryI
 		ItemKind:         domain.ItemTypeWeapon,
 		IsWeapon:         true,
 		ResourceID:       wp.ID,
+		ExtraEffects:     encodeWeaponExtras(rollWeaponExtras(itemRarityValues[wp.Rarity], level)),
 		Level:            level,
 		Rarity:           itemRarityValues[wp.Rarity],
 		PartA:            weaponTypeValues[wp.Type],
