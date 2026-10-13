@@ -109,6 +109,7 @@ func main() {
 	if err := db.MigratePvPStats(); err != nil {
 		log.Fatalf("[MAIN] database migrate pvp stats: %v", err)
 	}
+	photon.BackfillWeaponExtras()
 
 	log.Println("[MAIN] Borderlands Online Server starting...")
 	log.Printf("[MAIN] Advertised address for clients: %s", *host)
