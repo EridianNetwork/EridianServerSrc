@@ -143,9 +143,19 @@ func (s *EnetServer) playerWeaponDamageAtLevel(sess *ClientSession) float64 {
 	return playerWeaponDamageFallback
 }
 
-func resolveWeaponDamage(it *domain.InventoryItem) float64 {
-	if it.Damage > 0 {
-		return it.Damage
+var weaponRarityDamageMult = [...]float64{0.75, 1.0, 1.3, 1.7, 2.2, 3.0}
+
+func rarityDamageMult(rarity int) float64 {
+	if rarity < 0 || rarity >= len(weaponRarityDamageMult) {
+		return 1
 	}
-	return computeWeaponDamage(weaponTypeName(it.PartA), weaponItemSubparts(it), it.Level)
+	return weaponRarityDamageMult[rarity]
+}
+
+func resolveWeaponDamage(it *domain.InventoryItem) float64 {
+	dmg := it.Damage
+	if dmg <= 0 {
+		dmg = computeWeaponDamage(weaponTypeName(it.PartA), weaponItemSubparts(it), it.Level)
+	}
+	return dmg * rarityDamageMult(it.Rarity)
 }
