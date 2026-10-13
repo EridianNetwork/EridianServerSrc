@@ -68,27 +68,69 @@ func (s *EnetServer) hostSpawnLoot(room *Room, sess *ClientSession, level string
 	if sess.hostChar != nil && sess.hostChar.Level > 0 {
 		charLevel = sess.hostChar.Level
 	}
-	const attachID = int32(-1)
-	drops := rollBonusWeapon(rollLoot(lootingType, lootingSubType, charLevel))
+	chestID := int32(-1)
+	if idx, ok := levelObjectIndex(level, pid); ok {
+		chestID = int32(idx)
+	}
+	weaponSlots, itemSlots := 0, 0
+	if e != nil && chestID >= 0 {
+		weaponSlots, itemSlots = e.WeaponSlots, e.ItemSlots
+	}
+	// the weapons nolycome from chests that have weapon slots; the bonus weapon is rolled only there too.
+	drops := rollLoot(lootingType, lootingSubType, charLevel)
+	if weaponSlots > 0 {
+		drops = rollBonusWeapon(drops)
+	}
+	kept := drops[:0]
+	weaponDrops := 0
+	for _, d := range drops {
+		if d.ItemType == "Weapon" {
+			if weaponDrops >= weaponSlots {
+				continue
+			}
+			weaponDrops++
+		}
+		kept = append(kept, d)
+	}
+	drops = kept
 	if len(drops) == 0 {
-		s.hostSpawnWeaponDrop(room, sess, chestPos, attachID)
-		log.Printf("[LOOT] no LootSetup entry for lootingType=%d subType=%d level=%d, placeholder drop", lootingType, lootingSubType, charLevel)
+		log.Printf("[LOOT] nothing to drop for lootingType=%d subType=%d level=%d room=%s", lootingType, lootingSubType, charLevel, room.Name)
 		return
 	}
 	band, hardOverride := lootRarityBand(lootingType)
-	spawned := 0
-	weaponsSpawned, itemsSpawned := int32(0), int32(0)
+	totalWeapons, totalItems := 0, 0
+	for _, d := range drops {
+		if d.ItemType == "Weapon" {
+			totalWeapons++
+		} else {
+			totalItems++
+		}
+	}
+	spawned, free := 0, 0
+	weaponsSpawned, itemsSpawned := 0, 0
 	for _, d := range drops {
 		prefab, dna, item, reward, ok := lootDropPayload(d, charLevel, band, hardOverride)
 		if !ok {
 			continue
 		}
-		s.hostSpawnPickableDrop(room, sess, lootDropPos(chestPos, spawned), prefab, dna, item, reward, attachID, weaponsSpawned, itemsSpawned)
+		attachID, numWeapons, numItems := int32(-1), int32(0), int32(0)
 		if d.ItemType == "Weapon" {
+			if weaponsSpawned < weaponSlots {
+				attachID, numWeapons = chestID, int32(min(totalWeapons, weaponSlots))
+			}
 			weaponsSpawned++
 		} else {
+			if itemsSpawned < itemSlots {
+				attachID, numItems = chestID, int32(min(totalItems, itemSlots))
+			}
 			itemsSpawned++
 		}
+		pos := chestPos
+		if attachID == -1 {
+			pos = lootDropPos(chestPos, free)
+			free++
+		}
+		s.hostSpawnPickableDrop(room, sess, pos, prefab, dna, item, reward, attachID, numWeapons, numItems)
 		spawned++
 	}
 	log.Printf("[LOOT] rolled %d drop(s), spawned %d lootingType=%d subType=%d level=%d room=%s", len(drops), spawned, lootingType, lootingSubType, charLevel, room.Name)

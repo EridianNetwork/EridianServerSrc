@@ -7007,7 +7007,7 @@ func (s *EnetServer) hostSpawnPickableDrop(room *Room, sess *ClientSession, ches
 		return
 	}
 	view := room.NextAvatarViewBase()
-	const lootDropHeightOffset = 0.5
+	const lootDropHeightOffset = 0
 	spawnY := pos[1]
 	if attachID == -1 {
 		spawnY += lootDropHeightOffset
@@ -7039,7 +7039,6 @@ func (s *EnetServer) hostSpawnPickableDrop(room *Room, sess *ClientSession, ches
 		}
 		room.dropReward[view] = *reward
 	}
-	log.Printf("[HOST] item drop %q viewID=%d at [%.1f %.1f %.1f] room=%s", prefab, view, pos[0], pos[1], pos[2], room.Name)
 }
 
 func (s *EnetServer) hostPersistPickup(room *Room, sess *ClientSession, view int32) int {
