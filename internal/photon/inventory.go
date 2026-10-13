@@ -442,14 +442,20 @@ func itemDNAHashtable(it *domain.InventoryItem) map[int]any {
 	switch it.ItemKind {
 	case domain.ItemTypeWeapon:
 		sub := weaponItemSubparts(it)
-		return map[int]any{
+		ht := map[int]any{
 			0: int32(domain.ItemTypeWeapon), 1: int32(it.Level), 2: int32(it.Rarity), 3: int32(it.GenerationSource), 4: int32(it.ResourceID),
 			5: int32(it.Price), 6: int32(it.Expiration), 7: int32(it.OwnerID), 8: it.UID,
 			9: it.ItemName, 10: int32(it.PartA),
 			11: int32(sub[0]), 12: int32(sub[1]), 13: int32(sub[2]), 14: int32(sub[3]), 15: int32(sub[4]),
 			16: int32(sub[5]), 17: int32(sub[6]), 18: int32(sub[7]), 19: int32(sub[8]),
-			20: int32(it.StarLevel), 21: int32(it.StarExperience), 22: int32(0),
+			20: int32(it.StarLevel), 21: int32(it.StarExperience),
 		}
+		extras := decodeWeaponExtras(it.ExtraEffects)
+		ht[22] = int32(len(extras)) // extraEffectCount, then (effect, tier index) pairs
+		for i, e := range extras {
+			ht[23+2*i], ht[24+2*i] = e.Effect, e.Index
+		}
+		return ht
 	case domain.ItemTypeShield:
 		return map[int]any{
 			0: int32(domain.ItemTypeShield), 1: int32(it.Level), 2: int32(it.Rarity), 3: int32(it.GenerationSource), 4: int32(it.ResourceID),

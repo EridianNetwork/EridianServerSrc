@@ -2622,7 +2622,7 @@ func starterWeaponItemDNA() Custom {
 
 func weaponItemDNA(it *domain.InventoryItem) Custom {
 	name := utf16LEBytes(it.ItemName)
-	buf := make([]byte, 0, 36+9*4+len(name))
+	buf := make([]byte, 0, 36+9*4+maxWeaponExtraEffects*8+len(name))
 	putI32 := func(v int32) { buf = binary.LittleEndian.AppendUint32(buf, uint32(v)) }
 	putI32(2) // ItemType.Weapon
 	putI32(int32(it.ResourceID))
@@ -2637,7 +2637,14 @@ func weaponItemDNA(it *domain.InventoryItem) Custom {
 	for i := int32(0); i < 9; i++ {
 		putI32(int32(it.PartA)<<24 | i<<16 | (int32(sub[i]) & 0xFFFF))
 	}
-	putI32(0) // extraEffectCount
+	extras := decodeWeaponExtras(it.ExtraEffects)
+	putI32(int32(len(extras))) // extraEffectCount, then all effect types, then all tier indexes
+	for _, e := range extras {
+		putI32(e.Effect)
+	}
+	for _, e := range extras {
+		putI32(e.Index)
+	}
 	putI32(int32(len(name)))
 	buf = append(buf, name...)
 	return Custom{Code: 66, Data: buf}
