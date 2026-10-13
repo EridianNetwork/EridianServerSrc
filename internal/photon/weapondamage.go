@@ -157,5 +157,5 @@ func resolveWeaponDamage(it *domain.InventoryItem) float64 {
 	if dmg <= 0 {
 		dmg = computeWeaponDamage(weaponTypeName(it.PartA), weaponItemSubparts(it), it.Level)
 	}
-	return dmg * rarityDamageMult(it.Rarity)
+	return dmg * rarityDamageMult(it.Rarity) * (1 + weaponExtraBonus(it, "BulletDamageScale"))
 }
