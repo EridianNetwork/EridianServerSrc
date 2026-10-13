@@ -27,8 +27,8 @@ type ClientSession struct {
 	peerID      uint16
 	appName     string
 	userID      string
-	accountID   int64 
-	dbAccountID int64 
+	accountID   int64
+	dbAccountID int64
 	accountUsername string
 	guildTag       string
 	authenticated  bool
@@ -36,110 +36,110 @@ type ClientSession struct {
 	selectedCharID int64
 	seenReliableSeq map[byte]map[uint32]struct{}
 	charSelectedAt  time.Time
-	lastInputFrame  int32              
-	pickedWeapons   []int32            
-	equippedWeapons []weaponSlotEntity 
-	hp, maxHP       int32              
-	isDead          bool               
-	respawnPending  bool               
+	lastInputFrame  int32
+	pickedWeapons   []int32
+	equippedWeapons []weaponSlotEntity
+	hp, maxHP       int32
+	isDead          bool
+	respawnPending  bool
 	shield, maxShield int32
 	lastDamageAt time.Time
 	shieldRegenBaseline   int32
-	lastHealthRegenTickAt time.Time 
+	lastHealthRegenTickAt time.Time
 	lavaNextTickAt time.Time
 	shieldDNA Custom
 	shieldView          int32
-	downTaskUID         int32     
-	skillTaskUID        int32     
-	stunTaskUID         int32     
-	skillPhaseNext      int32     
-	skillCooldownEndAt  time.Time 
-	fireBirdActive      bool      
-	fireBirdEndAt       time.Time 
-	fireBirdLastTick    time.Time 
-	fireBirdBaseDamage  float64   
-	hunterDroidView     int32     
-	hunterDroidActive   bool      
-	hunterDroidEndAt    time.Time 
-	hunterDroidLastMark time.Time 
-	berserkActive       bool      
-	berserkEndAt        time.Time 
-	turretView          int32     
-	turretActive        bool      
-	turretEndAt         time.Time 
-	turretLastFireAt    time.Time 
-	turretLastAOEAt     time.Time 
-	turretArmedAt       time.Time 
-	turretBaseDamage    float64   
-	downedAt            time.Time 
-	weaponSlotDNAs      []any     
-	activeWeaponSlot    byte      
-	weaponTypes         []int32   
-	lastSupplyAt        time.Time 
-	ammoEst             int       
-	grenadeCount        int32     
-	grenadeCap          int32     
-	equipAt             time.Time 
+	downTaskUID         int32
+	skillTaskUID        int32
+	stunTaskUID         int32
+	skillPhaseNext      int32
+	skillCooldownEndAt  time.Time
+	fireBirdActive      bool
+	fireBirdEndAt       time.Time
+	fireBirdLastTick    time.Time
+	fireBirdBaseDamage  float64
+	hunterDroidView     int32
+	hunterDroidActive   bool
+	hunterDroidEndAt    time.Time
+	hunterDroidLastMark time.Time
+	berserkActive       bool
+	berserkEndAt        time.Time
+	turretView          int32
+	turretActive        bool
+	turretEndAt         time.Time
+	turretLastFireAt    time.Time
+	turretLastAOEAt     time.Time
+	turretArmedAt       time.Time
+	turretBaseDamage    float64
+	downedAt            time.Time
+	weaponSlotDNAs      []any
+	activeWeaponSlot    byte
+	weaponTypes         []int32
+	lastSupplyAt        time.Time
+	ammoEst             int
+	grenadeCount        int32
+	grenadeCap          int32
+	equipAt             time.Time
 	equipSlot           byte
-	lastEquipWeaponKey  int 
+	lastEquipWeaponKey  int
 	lastEquipWeaponAt   time.Time
-	crypto              *DiffieHellmanCryptoProvider 
-	connectedAt         time.Time                    
-	lastRecv            time.Time                    
+	crypto              *DiffieHellmanCryptoProvider
+	connectedAt         time.Time
+	lastRecv            time.Time
 	lastActivityAt time.Time
 	charName        string
 	charLevel       int32
 	charExp         int32
 	charCurrency    int32
 	charClassType   int32
-	charAvatarParts string 
-	charAvatarMats  string 
-	charAvatarID    int32  
+	charAvatarParts string
+	charAvatarMats  string
+	charAvatarID    int32
 	groupID         int32
 	lobbyID         int
-	currentTown     int32 
-	playlistId      int32 
+	currentTown     int32
+	playlistId      int32
 	mapGen byte
 	hostChar    *domain.Character
-	playerState byte 
+	playerState byte
 	teamID          byte
-	avatarBase      int32     
-	avatarSpawnedAt time.Time 
-	streamsSeen     bool      
-	realPosSeen     bool      
-	realActionsSeen bool      
-	lastMoveLog     time.Time 
-	lastYawDeg      float64   
-	lastPitch16     int16     
-	lastMoveFlg     byte      
+	avatarBase      int32
+	avatarSpawnedAt time.Time
+	streamsSeen     bool
+	realPosSeen     bool
+	realActionsSeen bool
+	lastMoveLog     time.Time
+	lastYawDeg      float64
+	lastPitch16     int16
+	lastMoveFlg     byte
 	navBlockedSince time.Time
 	raycastPatched bool
 	lastRaycastDamageAt time.Time
 	broadcastPos [3]float32
-	spawnFloorY  float32 
-	gatedSeq     int64   
+	spawnFloorY  float32
+	gatedSeq     int64
 	lastSkillTreeSig    string
 	lastWeaponStreamSig string
 	sessionInfoSent    bool
 	lastSessionInfoSig string
-	statHits, statCriticalHits     int32 
-	statTotalDamage, statCritDmg   int32 
-	statKills, statCriticalKills   int32 
-	statBadassKills, statBossKills int32 
-	statDeaths                     int32 
-	statSkillUses                  int32 
-	statExtraExp, statExtraMoney   int32 
-	pvpKillCount                   int32 
+	statHits, statCriticalHits     int32
+	statTotalDamage, statCritDmg   int32
+	statKills, statCriticalKills   int32
+	statBadassKills, statBossKills int32
+	statDeaths                     int32
+	statSkillUses                  int32
+	statExtraExp, statExtraMoney   int32
+	pvpKillCount                   int32
 	mu               sync.Mutex
 	outSeq           uint32
-	outUnreliableSeq uint32                 
-	pending          map[uint32]*pendingCmd 
+	outUnreliableSeq uint32
+	pending          map[uint32]*pendingCmd
 	srtt, rttvar, rto time.Duration
 }
 type pendingCmd struct {
 	cmd        []byte
-	sentAt     time.Time 
-	origSentAt time.Time 
+	sentAt     time.Time
+	origSentAt time.Time
 	attempts int
 }
 func (s *ClientSession) nextSeq() uint32 {
@@ -212,13 +212,13 @@ type fragBuf struct {
 	received int
 }
 type EnetServer struct {
-	host            string 
+	host            string
 	port            int
-	AdvertisedHost  string 
-	MaxPlayersTotal int    
+	AdvertisedHost  string
+	MaxPlayersTotal int
 	conn            *net.UDPConn
 	mu       sync.RWMutex
-	sessions map[string]*ClientSession 
+	sessions map[string]*ClientSession
 	rooms    map[string]*Room
 	rconActions chan func()
 	rconPassword string
@@ -259,7 +259,7 @@ type EnetServer struct {
 	PvPKillTarget           int32
 	ClaptrapRoundSeconds int
 	ClaptrapTargetScore  int32
-	GameHandler *GameHandlers 
+	GameHandler *GameHandlers
 	tickCount    int
 	tickTotalDur time.Duration
 	tickMaxDur   time.Duration
@@ -497,7 +497,7 @@ func (s *EnetServer) hostDestroyCrashedRoom(room *Room) {
 }
 func (s *EnetServer) hostTickRoom(room *Room, dt float64) {
 	gravityMoved := len(room.npcs) > 0 && s.hostTickNpcGravity(room, dt)
-	aiActed := s.hostTickNpcAI(room, dt) 
+	aiActed := s.hostTickNpcAI(room, dt)
 	walked := len(room.npcs) > 0 && s.hostTickNpcMovement(room, dt)
 	gravityMoved = gravityMoved || walked || aiActed
 	immediateSpawned := s.hostAdvanceImmediateNpcSpawns(room)
@@ -510,6 +510,7 @@ func (s *EnetServer) hostTickRoom(room *Room, dt float64) {
 	s.hostRunPendingVitalsResyncs(room)
 	s.hostRunPendingReviveCancels(room)
 	s.hostRunPendingPlayerRespawns(room)
+	s.hostRunPendingPlayerSpawnFx(room)
 	s.hostRunPendingPlayerUnstuns(room)
 	s.hostRunPendingOutfitResyncs(room)
 	s.hostRunPendingItemsResyncs(room)
@@ -623,15 +624,15 @@ func (s *EnetServer) Shutdown() {
 }
 func buildCmdAck(channel byte, seqNum, sentTime uint32) []byte {
 	out := []byte{CTAck, channel, 0, 4}
-	out = binary.BigEndian.AppendUint32(out, 20)       
-	out = binary.BigEndian.AppendUint32(out, 0)        
-	out = binary.BigEndian.AppendUint32(out, seqNum)   
-	out = binary.BigEndian.AppendUint32(out, sentTime) 
+	out = binary.BigEndian.AppendUint32(out, 20)
+	out = binary.BigEndian.AppendUint32(out, 0)
+	out = binary.BigEndian.AppendUint32(out, seqNum)
+	out = binary.BigEndian.AppendUint32(out, sentTime)
 	return out
 }
 func buildCmdVerifyConnect(peerID uint16, seqNum uint32) []byte {
 	out := []byte{CTVerifyConnect, 0, 1, 4}
-	out = binary.BigEndian.AppendUint32(out, 44) 
+	out = binary.BigEndian.AppendUint32(out, 44)
 	out = binary.BigEndian.AppendUint32(out, seqNum)
 	body := make([]byte, 32)
 	binary.BigEndian.PutUint16(body[0:], peerID)
@@ -645,7 +646,7 @@ func buildCmdSendReliable(channel byte, seqNum uint32, payload []byte) []byte {
 	return append(out, payload...)
 }
 func buildCmdSendUnreliable(channel byte, reliableSeq, unreliableSeq uint32, payload []byte) []byte {
-	size := 16 + len(payload) 
+	size := 16 + len(payload)
 	out := []byte{CTSendUnreliable, channel, 1, 4}
 	out = binary.BigEndian.AppendUint32(out, uint32(size))
 	out = binary.BigEndian.AppendUint32(out, reliableSeq)
@@ -685,7 +686,7 @@ func buildOpResponse(opCode byte, returnCode int16, params map[byte]any) []byte 
 	out := []byte{0xF3, MsgOpResponse, opCode}
 	out = binary.BigEndian.AppendUint16(out, uint16(returnCode))
 	out = append(out, TString)
-	out = binary.BigEndian.AppendUint16(out, 0) 
+	out = binary.BigEndian.AppendUint16(out, 0)
 	enc, _ := EncodeParams(params)
 	return append(out, enc...)
 }
@@ -694,7 +695,7 @@ func buildEvent(eventCode byte, params map[byte]any) []byte {
 	enc, err := EncodeParams(params)
 	if err != nil {
 		log.Printf("[PHOTON] buildEvent: encode error event=%d: %v", eventCode, err)
-		enc = []byte{0, 0} 
+		enc = []byte{0, 0}
 	}
 	return append(out, enc...)
 }
@@ -982,8 +983,8 @@ func (s *EnetServer) handlePacket(remote *net.UDPAddr, data []byte) {
 		}
 		cmdType := data[pos]
 		cmdChan := data[pos+1]
-		cmdSize := binary.BigEndian.Uint32(data[pos+4:]) 
-		seqNum := binary.BigEndian.Uint32(data[pos+8:])  
+		cmdSize := binary.BigEndian.Uint32(data[pos+4:])
+		seqNum := binary.BigEndian.Uint32(data[pos+8:])
 		cmdEnd := pos + int(cmdSize)
 		payloadStart := pos + 12
 		if int(cmdSize) < 12 || cmdEnd > len(data) {
@@ -1032,7 +1033,7 @@ func (s *EnetServer) handlePacket(remote *net.UDPAddr, data []byte) {
 					sess.seenReliableSeq[cmdChan] = seen
 				}
 				if _, dup := seen[seqNum]; dup {
-					continue 
+					continue
 				}
 				seen[seqNum] = struct{}{}
 				pruneSeenReliableSeq(seen, seqNum)
@@ -1059,7 +1060,7 @@ func (s *EnetServer) handleConnect(remote *net.UDPAddr, addrKey string, challeng
 			challenge:   challenge,
 			peerID:      peerID,
 			connectedAt: time.Now(),
-			currentTown: -1, 
+			currentTown: -1,
 		}
 		s.sessions[addrKey] = sess
 		log.Printf("[PHOTON] new connection from %s peerID=%d", "", peerID)
@@ -1195,7 +1196,7 @@ func (s *EnetServer) handleInitEncryption(sess *ClientSession, payload []byte) {
 	dh.DeriveSharedKey(clientPubKey)
 	sess.crypto = dh
 	resp := buildInternalOpResponse(0, 0, map[byte]any{
-		1: dh.PublicKey, 
+		1: dh.PublicKey,
 	})
 	s.sendReliable(sess, resp)
 }
@@ -1278,7 +1279,7 @@ func (s *EnetServer) removeFromRoom(sess *ClientSession) {
 		}
 		s.scriptFire(room, "OnPlayerLeave", lua.LNumber(actorNr))
 	}
-	if room.LowestActorNr() == 0 { 
+	if room.LowestActorNr() == 0 {
 		room.scriptClose()
 		delete(s.rooms, sess.roomName)
 		log.Printf("[PHOTON] room=%s emptied, instance destroyed", sess.roomName)

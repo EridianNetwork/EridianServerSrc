@@ -839,6 +839,10 @@ func (s *EnetServer) hostSpawnAvatar(room *Room, sess *ClientSession, actorNr in
 	}
 	s.scriptFire(room, "OnPlayerSpawn", lua.LNumber(actorNr), lua.LString(sess.hostChar.Name))
 
+	room.pendingPlayerSpawnFx = append(room.pendingPlayerSpawnFx, pendingPlayerSpawnFx{
+		sess: sess, avatarBase: base, at: time.Now().Add(playerSpawnFxDelay),
+	})
+
 	tutorial := gamemodeName(room) == "GamemodeTutorial"
 	sess.equippedWeapons = nil
 	sess.weaponTypes = sess.weaponTypes[:0]
@@ -1741,6 +1745,46 @@ func (s *EnetServer) hostRunPendingPlayerUnstuns(room *Room) {
 	}
 	room.pendingPlayerUnstuns = remaining
 }
+
+const (
+	playerSpawnFxDelay = 500 * time.Millisecond
+	playerSpawnFxDuration = 7 * time.Second
+)
+
+func (s *EnetServer) hostRunPendingPlayerSpawnFx(room *Room) {
+	if len (room.pendingPlayerSpawnFx) == 0 {
+		return
+	}
+
+	now := time.Now()
+	remaining := room.pendingPlayerSpawnFx[:0]
+	for _, p:= range room.pendingPlayerSpawnFx {
+		if now.Before(p.at) {
+			remaining = append(remaining, p)
+			continue
+		}
+		if p.sess.avatarBase != p.avatarBase || p.sess.isDead || p.sess.respawnPending {
+			continue
+		}
+		p.sess.stunTaskUID = (p.sess.stunTaskUID + 1) % 126
+		s.broadcastEvent(room, 201, map[byte]any {
+			ParamPlayerNr:HostActorNr,
+			ParamEventData: map[any]any {
+				byte(0): int32(msNow()),
+				Short(1): map[any]any {
+					byte(0): p.avatarBase + 2,
+					byte(1): playerBhvTaskStream(p.sess.stunTaskUID, bhvTaskPlayerSpawn, 0, -1, false),
+				},
+			},
+		}, nil, nil)
+		room.pendingPlayerUnstuns = append(room.pendingPlayerUnstuns, pendingPlayerUnstun{
+			sess: p.sess, at: now.Add(playerSpawnFxDuration),
+		})
+		 log.Printf("[HOST] actor view=%d spawn fx (PlayerSpawn task) room=%s", p.avatarBase, room.Name)
+	}
+	room.pendingPlayerSpawnFx = remaining
+}
+
 
 func playerBhvTaskStream(uid, taskType int32, durationSec float32, phase int32, hasKilledNPC bool) []any {
 	return []any{
@@ -6016,6 +6060,7 @@ const (
 	bhvTaskPlayerRevive = 100
 
 	bhvTaskPlayerDefault = 35
+	bhvTaskPlayerSpawn	 = 50
 )
 
 var npcCoverCapableKits = map[string]bool{

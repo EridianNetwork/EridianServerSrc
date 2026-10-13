@@ -39,6 +39,7 @@ type Room struct {
 	pendingPoisonAttacks    []pendingPoisonAttack
 	pendingNpcGrenades      []pendingNpcGrenade
 	pendingPlayerUnstuns    []pendingPlayerUnstun
+	pendingPlayerSpawnFx	[]pendingPlayerSpawnFx
 	pendingNpcAreaHits      []pendingNpcAreaHit
 	avatarViewCtr           int32
 
@@ -281,6 +282,12 @@ type pendingReviveCancel struct {
 	downTaskUID  int32
 	hasKilledNPC bool
 	at           time.Time
+}
+
+type pendingPlayerSpawnFx struct {
+	sess *ClientSession
+	avatarBase int32
+	at time.Time
 }
 
 type pendingPlayerUnstun struct {
