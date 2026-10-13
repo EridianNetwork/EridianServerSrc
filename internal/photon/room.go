@@ -322,6 +322,7 @@ type pendingWeaponClaim struct {
 	pickerView int32
 	weaponView int32
 	at         time.Time
+	equip bool
 }
 
 type pendingHunterDroidSpawn struct {

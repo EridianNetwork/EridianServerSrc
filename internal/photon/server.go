@@ -80,6 +80,7 @@ type ClientSession struct {
 	grenadeCount        int32
 	grenadeCap          int32
 	equipAt             time.Time
+	weaponsReadyAt      time.Time
 	equipSlot           byte
 	lastEquipWeaponKey  int
 	lastEquipWeaponAt   time.Time

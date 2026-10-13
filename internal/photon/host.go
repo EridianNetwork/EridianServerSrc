@@ -1035,13 +1035,12 @@ func (s *EnetServer) hostEquipWeaponFromBackpack(room *Room, sess *ClientSession
 	s.hostRespawnEquippedWeapons(room, sess)
 	s.hostSendBackpackItems(room, sess)
 
-	if weaponSlot == previousActive && sess.activeWeaponSlot == weaponSlot {
-		sess.activeWeaponSlot = (weaponSlot + 1) % 4
-		s.hostSendSerialize(room)
-		sess.equipSlot = weaponSlot
-		sess.equipAt = time.Now().Add(600 * time.Millisecond)
-	} else {
-		s.hostSendSerialize(room)
+	s.hostSendSerialize(room)
+	if weaponSlot == previousActive && sess.activeWeaponSlot == weaponSlot && int(weaponSlot) < len(sess.equippedWeapons) {
+		room.pendingWeaponClaims = append(room.pendingWeaponClaims, pendingWeaponClaim{
+			pickerView: sess.avatarBase, weaponView: sess.equippedWeapons[weaponSlot].view, equip: true,
+			at: time.Now().Add(weaponInstantiateDelay),
+		})
 	}
 }
 
@@ -1115,6 +1114,7 @@ func (s *EnetServer) hostRespawnEquippedWeapons(room *Room, sess *ClientSession)
 	}
 	for _, o := range old {
 		if !stillEquipped[o.itemID] {
+			dropPendingWeaponClaims(room, o.view)
 			s.hostBroadcastJournaled(room, 204, map[byte]any{
 				ParamPlayerNr:  HostActorNr,
 				ParamEventData: map[any]any{byte(0): o.view},
@@ -1146,8 +1146,12 @@ func (s *EnetServer) hostRespawnEquippedWeapons(room *Room, sess *ClientSession)
 				byte(7): weaponView,
 			},
 		}, true)
-		scheduleWeaponClaim(room, sess.avatarBase, weaponView)
-		fresh = append(fresh, weaponSlotEntity{view: weaponView, dna: dna, itemID: it.ItemID})
+		scheduleWeaponClaimAfter(room, sess.avatarBase, weaponView, weaponInstantiateDelay+weaponEquipLead)
+		readyAt := time.Now().Add(weaponInstantiateDelay)
+		if readyAt.After(sess.weaponsReadyAt) {
+			sess.weaponsReadyAt = readyAt
+		}
+		fresh = append(fresh, weaponSlotEntity{view: weaponView, dna: dna, itemID: it.ItemID, readyAt: readyAt})
 		sess.weaponTypes = append(sess.weaponTypes, int32(it.PartA))
 		if room.weaponElement == nil {
 			room.weaponElement = map[int32]int32{}
@@ -1191,11 +1195,25 @@ func findWeaponSlotEntityByItemID(list []weaponSlotEntity, itemID int64) *weapon
 const weaponClaimDelay = 250 * time.Millisecond
 
 func scheduleWeaponClaim(room *Room, pickerView, weaponView int32) {
+	scheduleWeaponClaimAfter(room, pickerView, weaponView, 0)
+}
+
+func scheduleWeaponClaimAfter(room *Room, pickerView, weaponView int32, offset time.Duration) {
 	for _, d := range []time.Duration{weaponClaimDelay, 1 * time.Second, 3 * time.Second} {
 		room.pendingWeaponClaims = append(room.pendingWeaponClaims, pendingWeaponClaim{
-			pickerView: pickerView, weaponView: weaponView, at: time.Now().Add(d),
+			pickerView: pickerView, weaponView: weaponView, at: time.Now().Add(offset + d),
 		})
 	}
+}
+
+func dropPendingWeaponClaims(room *Room, weaponView int32) {
+	kept := room.pendingWeaponClaims[:0]
+	for _, p := range room.pendingWeaponClaims {
+		if p.weaponView != weaponView {
+			kept = append(kept, p)
+		}
+	}
+	room.pendingWeaponClaims = kept
 }
 
 func (s *EnetServer) hostRunPendingWeaponClaims(room *Room) {
@@ -1207,6 +1225,10 @@ func (s *EnetServer) hostRunPendingWeaponClaims(room *Room) {
 	for _, p := range room.pendingWeaponClaims {
 		if now.Before(p.at) {
 			remaining = append(remaining, p)
+			continue
+		}
+		if p.equip {
+			s.hostSendRPC(room, p.pickerView, "RPC_RequestPickUpAndSwitchWeapon", []any{p.weaponView, int32(0), false})
 			continue
 		}
 		s.hostSendRPC(room, interactionManagerViewID, "RPC_H2C_OnPickUpItem", []any{p.pickerView, p.weaponView})
@@ -2636,7 +2658,12 @@ type weaponSlotEntity struct {
 	view   int32
 	dna    Custom
 	itemID int64
+	readyAt time.Time
 }
+
+const weaponInstantiateDelay = 450 * time.Millisecond
+
+const weaponEquipLead = 600 * time.Millisecond
 
 func equippedWeaponsOrdered(charID int64) []*domain.InventoryItem {
 	items, err := db.GetInventory(charID)
@@ -6624,6 +6651,10 @@ func (s *EnetServer) hostTickPendingEquips(room *Room) {
 	now := time.Now()
 	for _, uid := range room.Players {
 		sess := s.sessionInRoom(uid, room.Name)
+		if sess != nil && !sess.weaponsReadyAt.IsZero() && !now.Before(sess.weaponsReadyAt) {
+			sess.weaponsReadyAt = time.Time{}
+			s.hostSendSerialize(room)
+		}
 		if sess == nil || sess.equipAt.IsZero() || now.Before(sess.equipAt) {
 			continue
 		}
@@ -7375,9 +7406,12 @@ func (s *EnetServer) hostSendSerialize(room *Room) {
 		if target.avatarBase != 0 && gamemode != "GameModeTown" && gamemode != "GamemodeRV" {
 			var slots []int32
 			var dnas []Custom
+			var held []bool
+			streamNow := time.Now()
 			for _, we := range target.equippedWeapons {
 				slots = append(slots, we.view)
 				dnas = append(dnas, we.dna)
+				held = append(held, streamNow.Before(we.readyAt))
 			}
 			slots = append(slots, target.pickedWeapons...)
 			var shieldDNA any
@@ -7390,6 +7424,10 @@ func (s *EnetServer) hostSendSerialize(room *Room) {
 			}
 			for slot := 0; slot < 4; slot++ {
 				if slot >= len(slots) {
+					items = append(items, int32(0), nil)
+					continue
+				}
+				if slot < len(held) && held[slot] {
 					items = append(items, int32(0), nil)
 					continue
 				}
