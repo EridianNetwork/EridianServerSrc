@@ -21,7 +21,7 @@ const invCols = `item_id, char_id, slot, resource_id, quantity, flags, rarity,
        is_equipped, is_weapon, item_kind, level, uid, item_name,
        generation_source, price, expiration, owner_id,
        part_a, part_b, part_c, part_d, part_e, part_f, description,
-       star_level, star_experience, subparts`
+       star_level, star_experience, subparts, extra_effects`
 
 func scanInvItem(row interface{ Scan(...any) error }) (*domain.InventoryItem, error) {
 	it := &domain.InventoryItem{}
@@ -32,7 +32,7 @@ func scanInvItem(row interface{ Scan(...any) error }) (*domain.InventoryItem, er
 		&it.IsEquipped, &it.IsWeapon, &it.ItemKind, &it.Level, &it.UID, &it.ItemName,
 		&it.GenerationSource, &it.Price, &it.Expiration, &it.OwnerID,
 		&it.PartA, &it.PartB, &it.PartC, &it.PartD, &it.PartE, &it.PartF, &it.Description,
-		&it.StarLevel, &it.StarExperience, &it.Subparts)
+		&it.StarLevel, &it.StarExperience, &it.Subparts, &it.ExtraEffects)
 	if err != nil {
 		return nil, err
 	}
@@ -97,15 +97,15 @@ func AddInventoryItem(it *domain.InventoryItem) (int64, error) {
 		                       is_equipped, is_weapon, item_kind, level, uid, item_name,
 		                       generation_source, price, expiration, owner_id,
 		                       part_a, part_b, part_c, part_d, part_e, part_f, description,
-		                       star_level, star_experience, subparts)
-		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+		                       star_level, star_experience, subparts, extra_effects)
+		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
 		it.CharID, it.Slot, it.ResourceID, it.Quantity, it.Flags, it.Rarity,
 		it.Damage, it.Accuracy, it.FireRate, it.ReloadSpeed, it.Magazine,
 		it.ElementType, it.ElementDmg, it.ElementChance, it.Parts, it.Seed,
 		it.IsEquipped, it.IsWeapon, it.ItemKind, it.Level, it.UID, it.ItemName,
 		it.GenerationSource, it.Price, it.Expiration, it.OwnerID,
 		it.PartA, it.PartB, it.PartC, it.PartD, it.PartE, it.PartF, it.Description,
-		it.StarLevel, it.StarExperience, it.Subparts)
+		it.StarLevel, it.StarExperience, it.Subparts, it.ExtraEffects)
 	if err != nil {
 		return 0, err
 	}

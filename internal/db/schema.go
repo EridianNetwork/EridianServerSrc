@@ -118,6 +118,7 @@ CREATE TABLE IF NOT EXISTS inventory (
     star_level INTEGER NOT NULL DEFAULT 0,
     star_experience INTEGER NOT NULL DEFAULT 0,
     subparts TEXT NOT NULL DEFAULT '',
+    extra_effects TEXT NOT NULL DEFAULT '',
     FOREIGN KEY (char_id) REFERENCES characters(char_id)
 );
 
@@ -553,6 +554,7 @@ func migrateInventory() error {
 		{"star_level", "INTEGER NOT NULL DEFAULT 0"},
 		{"star_experience", "INTEGER NOT NULL DEFAULT 0"},
 		{"subparts", "TEXT NOT NULL DEFAULT ''"},
+		{"extra_effects", "TEXT NOT NULL DEFAULT ''"},
 	}
 	for _, m := range migrations {
 		if !existing[m.col] {
@@ -603,6 +605,7 @@ func migrateWarehouse() error {
 		{"star_level", "INTEGER NOT NULL DEFAULT 0"},
 		{"star_experience", "INTEGER NOT NULL DEFAULT 0"},
 		{"subparts", "TEXT NOT NULL DEFAULT ''"},
+		{"extra_effects", "TEXT NOT NULL DEFAULT ''"},
 	}
 	for _, m := range migrations {
 		if !existing[m.col] {
