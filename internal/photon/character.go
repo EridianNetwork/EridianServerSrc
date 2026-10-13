@@ -608,6 +608,7 @@ func (s *EnetServer) refreshSessionSkills(sess *ClientSession, charID int64, inv
 				continue
 			}
 			room.weaponDamage[slot.view] = resolveWeaponDamage(items[i]) * scale
+			setWeaponFireRate(room, slot.view, items[i])
 		}
 	}
 }

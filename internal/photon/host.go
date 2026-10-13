@@ -209,7 +209,7 @@ func (s *EnetServer) handleHostRPC(sess *ClientSession, room *Room, actorNr int3
 		if len(args) >= 2 {
 			wid := asInt32(args[0])
 			weaponView := asInt32(ht[byte(0)])
-			if s.hostThrottleRaycastDamage(sess, room.weaponType[weaponView]) {
+			if s.hostThrottleRaycastDamage(sess, room, weaponView) {
 				element := room.weaponElement[weaponView]
 				if wid != 0 {
 					strength := int32(-1)
@@ -894,6 +894,7 @@ func (s *EnetServer) hostSpawnAvatar(room *Room, sess *ClientSession, actorNr in
 			}
 			realDamage := resolveWeaponDamage(it) * (1 + weaponDamageScale(sess.hostChar))
 			room.weaponDamage[weaponView] = realDamage
+			setWeaponFireRate(room, weaponView, it)
 			log.Printf("[HOST] spawned real weapon %q slot=%d viewID=%d element=%d damage=%.1f for actor=%d", it.ItemName, it.Slot, weaponView, it.ElementType, realDamage, actorNr)
 		}
 		active := 0
@@ -1149,6 +1150,7 @@ func (s *EnetServer) hostRespawnEquippedWeapons(room *Room, sess *ClientSession)
 		}
 		realDamage := resolveWeaponDamage(it) * (1 + weaponDamageScale(sess.hostChar))
 		room.weaponDamage[weaponView] = realDamage
+		setWeaponFireRate(room, weaponView, it)
 		log.Printf("[HOST] re-equipped real weapon %q slot=%d viewID=%d element=%d damage=%.1f for actor view=%d", it.ItemName, it.Slot, weaponView, it.ElementType, realDamage, sess.avatarBase)
 	}
 	sess.equippedWeapons = fresh
@@ -1519,7 +1521,33 @@ func (s *EnetServer) hostRunPendingShieldResyncs(room *Room) {
 	room.pendingShieldResyncs = remaining
 }
 
+// npcVitalsDelay: the client buffers RPC_D damage and applies it in its next Update, while
+// RPC_SendLifeAndShield applies immediately. Sent together, the client subtracts the hit from an already
+// reduced value (bar empties one hit early). The vitals must land after that Update.
+const npcVitalsDelay = 150 * time.Millisecond
+
+func hostQueueNpcVitals(npc *spawnedNpc) {
+	if npc.vitalsAt.IsZero() {
+		npc.vitalsAt = time.Now().Add(npcVitalsDelay)
+	}
+}
+
+func (s *EnetServer) hostFlushNpcVitals(room *Room) {
+	now := time.Now()
+	for i := range room.npcs {
+		npc := &room.npcs[i]
+		if npc.vitalsAt.IsZero() || now.Before(npc.vitalsAt) {
+			continue
+		}
+		npc.vitalsAt = time.Time{}
+		if npc.hp > 0 {
+			s.hostSendRPC(room, npc.equipView(), "RPC_SendLifeAndShield", []any{npcVitalsTable(npc.kit, npc.maxHP, npc.hp)})
+		}
+	}
+}
+
 func (s *EnetServer) hostRunPendingNpcVitalsResyncs(room *Room) {
+	s.hostFlushNpcVitals(room)
 	if len(room.pendingNpcVitalsResyncs) == 0 {
 		return
 	}
@@ -3702,18 +3730,37 @@ func (s *EnetServer) hostTrackFire(room *Room, sess *ClientSession, weaponView i
 	s.hostDamageNearestNpc(room, sess.avatarBase, pos, sess.lastYawDeg, element)
 }
 
-func (s *EnetServer) hostThrottleRaycastDamage(sess *ClientSession, weaponType int32) bool {
+func setWeaponFireRate(room *Room, view int32, it *domain.InventoryItem) {
+	if room.weaponFireRate == nil {
+		room.weaponFireRate = map[int32]float64{}
+	}
+	room.weaponFireRate[view] = resolveWeaponFireRate(it)
+}
+
+// raycastBurstSlack is how far ahead of schedule hits may arrive (network jitter, batched
+// processing) without being dropped; the average rate is still capped at the weapon's fire rate.
+const raycastBurstSlack = 2
+
+func (s *EnetServer) hostThrottleRaycastDamage(sess *ClientSession, room *Room, weaponView int32) bool {
 	now := time.Now()
-	interval := weaponFireInterval(weaponType)
+	interval := weaponFireInterval(room.weaponType[weaponView])
+	if rate := room.weaponFireRate[weaponView]; rate > 0 {
+		interval = time.Duration(float64(time.Second) / rate)
+	}
 	if sess.berserkActive && now.Before(sess.berserkEndAt) {
 		if bonus := effectValue(sess.hostChar, "BerserkFireRate"); bonus > 0 {
 			interval = time.Duration(float64(interval) / (1 + bonus))
 		}
 	}
-	if now.Sub(sess.lastRaycastDamageAt) < interval {
+	slack := interval * raycastBurstSlack
+	next := sess.lastRaycastDamageAt
+	if now.Before(next.Add(-slack)) {
 		return false
 	}
-	sess.lastRaycastDamageAt = now
+	if floor := now.Add(-slack); next.Before(floor) {
+		next = floor
+	}
+	sess.lastRaycastDamageAt = next.Add(interval)
 	return true
 }
 
@@ -3732,12 +3779,16 @@ func berserkDespBonus(sess *ClientSession) float64 {
 	return perGrade * missingFrac
 }
 
+// npcHealthBarEmptyPercent is the remaining life (percent, rounded up) at which the client bar already
+// reads as empty: BadassVkag left at 1.57% (1301/82818) still needed one more shot to die.
+const npcHealthBarEmptyPercent = 1
+
 func npcHealthBarVisuallyEmpty(hp, maxHP int32) bool {
 	if hp <= 0 || maxHP <= 0 {
 		return false
 	}
 	num := int32(math.Ceil(100.0 * float64(hp) / float64(maxHP)))
-	return num <= 1
+	return num <= npcHealthBarEmptyPercent
 }
 
 func (s *EnetServer) hostDamageNpcByView(room *Room, attackerView, targetView, damage, weakPointIndex, element int32, isDOT bool) bool {
@@ -3829,12 +3880,15 @@ func (s *EnetServer) hostDamageNpcByView(room *Room, attackerView, targetView, d
 				log.Printf("[AI] npc %d (%s) enters Fury (hp=%d threshold=%.0f) room=%s", npc.viewBase, npc.kit, npc.hp, furyHP, room.Name)
 			}
 		}
+		if npc.maxHP > 0 {
+			log.Printf("[NPC] hit npc=%d kit=%s dmg=%d hp=%d/%d (%.2f%%) dot=%v room=%s", npc.viewBase, npc.kit, damage, npc.hp, npc.maxHP, 100*float64(npc.hp)/float64(npc.maxHP), isDOT, room.Name)
+		}
 		if npc.hp > 0 && npcHealthBarVisuallyEmpty(npc.hp, npc.maxHP) {
 			npc.hp = 0
 		}
 		if npc.hp > 0 {
 			s.hostDamageEntity(room, attackerView, npc.viewBase, damage, weakPointIndex, element, isDOT)
-			s.hostSendRPC(room, npc.equipView(), "RPC_SendLifeAndShield", []any{npcVitalsTable(npc.kit, npc.maxHP, npc.hp)})
+			hostQueueNpcVitals(npc)
 			if !isDOT {
 				attacker := sessionByAvatarBase(s, room, attackerView)
 				var procBoost float64
@@ -6331,7 +6385,7 @@ func (s *EnetServer) hostDamageNearestNpc(room *Room, attackerView int32, shoote
 	}
 	if npc.hp > 0 {
 		s.hostDamageEntity(room, attackerView, npc.viewBase, fireBurstDamage, 0, element, false)
-		s.hostSendRPC(room, npc.equipView(), "RPC_SendLifeAndShield", []any{npcVitalsTable(npc.kit, npc.maxHP, npc.hp)})
+		hostQueueNpcVitals(npc)
 		npcMaybeStartElementalDOT(npc, attackerView, element, fireBurstDamage, time.Now(), 0, false)
 		return
 	}
@@ -6943,7 +6997,7 @@ func (s *EnetServer) hostExplodeBarrel(room *Room, attackerView int32, st *stati
 		}
 		if npc.hp > 0 {
 			s.hostDamageEntity(room, attackerView, npc.viewBase, grenadeBlowUpDamage, 0, elementExplosive, false)
-			s.hostSendRPC(room, npc.equipView(), "RPC_SendLifeAndShield", []any{npcVitalsTable(npc.kit, npc.maxHP, npc.hp)})
+			hostQueueNpcVitals(npc)
 			npcMaybeStartElementalDOT(npc, attackerView, elementFire, grenadeBlowUpDamage, time.Now(), 0, false)
 			continue
 		}
@@ -7472,8 +7526,6 @@ func (s *EnetServer) hostSendSerialize(room *Room) {
 		}
 		if room.moveSyncDumps < 10 {
 			room.moveSyncDumps++
-			log.Printf("[HOST] TEMP sent MovementSync view=%d owner_actor=%d owner_user=%s room=%s pos=[%.1f %.1f %.1f] flags=%08b payload=%#v",
-				pm.avatarBase+1, room.ActorNrFor(pm.sess.userID), pm.sess.userID, room.Name, bpos[0], bpos[1], bpos[2], pm.sess.lastMoveFlg, payload)
 		}
 	}
 }

@@ -60,6 +60,8 @@ type Room struct {
 
 	weaponDamage map[int32]float64
 
+	weaponFireRate map[int32]float64
+
 	dropItem map[int32]*domain.InventoryItem
 
 	dropReward map[int32]dropReward
@@ -135,6 +137,8 @@ type Room struct {
 
 type spawnedNpc struct {
 	viewBase int32
+	// vitalsAt, when set, is when the deferred RPC_SendLifeAndShield is due (see hostQueueNpcVitals).
+	vitalsAt time.Time
 	kit      string
 	pos      [3]float32
 	groundY  float32

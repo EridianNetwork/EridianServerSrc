@@ -84,32 +84,46 @@ func combineFloatAttribute(base float64, deltas []weaponAttrDelta) float64 {
 	return (base+prevAdd)*((1+posScale)/(1-negScale)) + postAdd
 }
 
-func computeWeaponDamage(typeName string, sp [9]int, level int) float64 {
+func computeWeaponStats(typeName string, sp [9]int) (dps, fireRate float64, ok bool) {
 	loadWeaponDamageStats()
 	base := weaponBaseStats[typeName]
 	if base == nil {
-		return 0
+		return 0, 0, false
 	}
 	slots := weaponSubpartIndex[typeName]
 	var dpsDeltas, fireRateDeltas []weaponAttrDelta
 	for i, slot := range npcWeaponSubpartOrder {
-		entry, ok := slots[slot][sp[i]]
-		if !ok {
+		entry, found := slots[slot][sp[i]]
+		if !found {
 			continue
 		}
-		if d, ok := entry.Attributes["WeaponDPS"]; ok {
+		if d, found := entry.Attributes["WeaponDPS"]; found {
 			dpsDeltas = append(dpsDeltas, d)
 		}
-		if d, ok := entry.Attributes["FireRate"]; ok {
+		if d, found := entry.Attributes["FireRate"]; found {
 			fireRateDeltas = append(fireRateDeltas, d)
 		}
 	}
-	dps := combineFloatAttribute(base["WeaponDPS"].Value, dpsDeltas)
-	fireRate := combineFloatAttribute(base["FireRate"].Value, fireRateDeltas)
-	if fireRate <= 0 {
+	dps = combineFloatAttribute(base["WeaponDPS"].Value, dpsDeltas)
+	fireRate = combineFloatAttribute(base["FireRate"].Value, fireRateDeltas)
+	return dps, fireRate, true
+}
+
+func computeWeaponDamage(typeName string, sp [9]int, level int) float64 {
+	dps, fireRate, ok := computeWeaponStats(typeName, sp)
+	if !ok || fireRate <= 0 {
 		return 0
 	}
 	return (dps / fireRate) * powerRatingForLevel(level)
+}
+
+// resolveWeaponFireRate is the weapon's real shots per second (0 if unknown).
+func resolveWeaponFireRate(it *domain.InventoryItem) float64 {
+	_, fireRate, ok := computeWeaponStats(weaponTypeName(it.PartA), weaponItemSubparts(it))
+	if !ok || fireRate <= 0 {
+		return 0
+	}
+	return fireRate
 }
 
 const playerWeaponDamageFallback = 20.0
