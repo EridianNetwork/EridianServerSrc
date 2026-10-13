@@ -2,7 +2,6 @@ package photon
 
 import (
 	"log"
-	"math/rand"
 
 	"eridian/internal/db"
 	"eridian/internal/domain"
@@ -115,16 +114,15 @@ func (s *EnetServer) opOpenLuckyBox(sess *ClientSession, opCode byte, params map
 }
 
 var (
-	luckyBoxBandNoKey   = rarityBand{2, 3} // Rare/VeryRare
-	luckyBoxBandKeyHigh = rarityBand{3, 4} // VeryRare/Epic
+	luckyBoxBandNoKey = rarityBand{2, 3} // Rare/VeryRare
+	luckyBoxBandKey   = rarityBand{4, 5} // Epic (pink) / MetaEpic (orange)
 )
 
-const luckyBoxKeyHighChance = 0.60
-
+// Every call rolls fresh: key-opened boxes always yield brand-new Epic/MetaEpic weapons.
 func rollLuckyBoxItemForSlot(tableName string, level int, locked bool) *domain.InventoryItem {
 	band := luckyBoxBandNoKey
-	if locked && rand.Float64() < luckyBoxKeyHighChance {
-		band = luckyBoxBandKeyHigh
+	if locked {
+		band = luckyBoxBandKey
 	}
 	for i := 0; i < 20; i++ {
 		rolled := rollLuckyBoxSlot(tableName, level)
