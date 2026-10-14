@@ -813,6 +813,12 @@ func (s *EnetServer) hostSpawnAvatar(room *Room, sess *ClientSession, actorNr in
 		views[i] = base + int32(i)
 	}
 	pos, rot, rotOK := spawnPosition(room, getCurScnFromProps(room.Name, room.Properties), int32(sess.teamID))
+	if posOverride == nil {
+		if savedPos, savedRot, ok := townSpawnPosition(room, sess); ok {
+			pos, rot, rotOK = savedPos, savedRot, true
+			log.Printf("[HOST] town spawn restored to last position %v for charID=%d", pos, sess.hostChar.CharID)
+		}
+	}
 	if posOverride != nil {
 		pos = *posOverride
 		rotOK = false

@@ -80,6 +80,7 @@ type ClientSession struct {
 	grenadeCount        int32
 	grenadeCap          int32
 	equipAt             time.Time
+	townPosSavedAt      time.Time
 	weaponsReadyAt      time.Time
 	equipSlot           byte
 	lastEquipWeaponKey  int
@@ -538,6 +539,7 @@ func (s *EnetServer) hostTickRoom(room *Room, dt float64) {
 	s.hostTickShieldRegen(room)
 	s.hostTickHealthRegen(room)
 	s.hostTickPendingEquips(room)
+	s.hostTickTownPositionSave(room)
 	s.hostTickMissionTimer(room)
 	s.hostRunMissionTimerFail(room)
 	s.hostTickPvPMatchTimer(room)
@@ -1078,6 +1080,7 @@ func (s *EnetServer) handleDisconnect(sess *ClientSession) {
 		charID = sess.hostChar.CharID
 	}
 	if charID != 0 {
+		s.saveTownPosition(sess, s.rooms[sess.roomName])
 		flushCharacterPlayTime(sess)
 		if err := db.UpdateCharacterLastSeen(charID); err != nil {
 			log.Printf("[PHOTON] disconnect: UpdateCharacterLastSeen charID=%d: %v", charID, err)
@@ -1259,6 +1262,7 @@ func (s *EnetServer) removeFromRoom(sess *ClientSession) {
 		sess.roomName = ""
 		return
 	}
+	s.saveTownPosition(sess, room)
 	actorNr := room.ActorNrFor(sess.userID)
 	if actorNr != 0 {
 		wasMaster := room.IsMasterActor(actorNr)

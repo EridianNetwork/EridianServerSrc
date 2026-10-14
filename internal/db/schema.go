@@ -383,6 +383,11 @@ func MigrateCharacterAvatar() error {
 		{"energy", "INTEGER NOT NULL DEFAULT 20"},
 		{"energy_updated_at", "TEXT NOT NULL DEFAULT ''"},
 		{"last_town_playlist_id", "INTEGER NOT NULL DEFAULT 10000"},
+		{"town_pos_playlist_id", "INTEGER NOT NULL DEFAULT 0"},
+		{"town_pos_x", "REAL NOT NULL DEFAULT 0"},
+		{"town_pos_y", "REAL NOT NULL DEFAULT 0"},
+		{"town_pos_z", "REAL NOT NULL DEFAULT 0"},
+		{"town_pos_yaw", "REAL NOT NULL DEFAULT 0"},
 	}
 	lastSeenAdded := !existing["last_seen"]
 	for _, m := range migrations {
