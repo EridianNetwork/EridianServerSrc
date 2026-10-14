@@ -19,7 +19,11 @@ func CreateAccount(username, password, email string) (int64, error) {
 	if NewAccountCanPlayFn != nil {
 		canPlay = NewAccountCanPlayFn()
 	}
-	res, err := DB().Exec("INSERT INTO accounts (username, password, email, is_tester, can_play) VALUES (?, ?, ?, 1, ?)", username, password, email, canPlay)
+	hashed, err := HashPassword(password)
+	if err != nil {
+		return 0, err
+	}
+	res, err := DB().Exec("INSERT INTO accounts (username, password, email, is_tester, can_play) VALUES (?, ?, ?, 1, ?)", username, hashed, email, canPlay)
 	if err != nil {
 		return 0, err
 	}
@@ -28,8 +32,12 @@ func CreateAccount(username, password, email string) (int64, error) {
 
 // just allows a special account creation. extremely useful
 func CreateAccountWithFlags(username, password, email string, isTester, canPlay bool) (int64, error) {
+	hashed, err := HashPassword(password)
+	if err != nil {
+		return 0, err
+	}
 	res, err := DB().Exec("INSERT INTO accounts (username, password, email, is_tester, can_play) VALUES (?, ?, ?, ?, ?)",
-		username, password, email, isTester, canPlay)
+		username, hashed, email, isTester, canPlay)
 	if err != nil {
 		return 0, err
 	}
@@ -80,10 +88,6 @@ func SetAccountTester(accountID int64, isTester bool) error {
 func SetAccountCanPlay(accountID int64, canPlay bool) error {
 	_, err := DB().Exec("UPDATE accounts SET can_play = ? WHERE account_id = ?", canPlay, accountID)
 	return err
-}
-
-func CheckPassword(account *domain.Account, password string) bool {
-	return account.Password == password
 }
 
 // updates an accounts session token

@@ -100,6 +100,9 @@ func main() {
 	if err := db.MigrateCharacterAvatar(); err != nil {
 		log.Fatalf("[MAIN] database migrate avatar: %v", err)
 	}
+	if err := db.MigratePasswordHashes(); err != nil {
+		log.Fatalf("[MAIN] database hash passwords: %v", err)
+	}
 	if err := db.MigrateAccountSettings(); err != nil {
 		log.Fatalf("[MAIN] database migrate account settings: %v", err)
 	}
