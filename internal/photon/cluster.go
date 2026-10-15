@@ -1253,7 +1253,7 @@ func (s *EnetServer) clusterRunAction(room *Room, m *clusterMachine, rt *cluster
 			}
 			consumeEnergyForInstance(room, psess.hostChar.CharID)
 			s.grantInstanceRewards(room, psess)
-			s.hostAdvanceInstanceQuestTasks(psess, psess.hostChar.CharID, playlistID)
+			s.hostAdvanceInstanceQuestTasks(psess, room, psess.hostChar.CharID, playlistID)
 		}
 		log.Printf("[CLUSTER] instance complete (cluster %q) room=%s", rt.def.Name, room.Name)
 	case "ClusterAction_RespawnPlayers":

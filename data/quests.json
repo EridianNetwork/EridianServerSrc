@@ -16,6 +16,8 @@
       "description": "Quest_10300_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -55,6 +57,8 @@
       "description": "Quest_10301_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -99,6 +103,8 @@
       "description": "Quest_10302_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -142,6 +148,8 @@
       "description": "Quest_10601_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -220,6 +228,8 @@
       "description": "Quest_10303_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -263,6 +273,8 @@
       "description": "Quest_10701_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -316,6 +328,8 @@
       "description": "Quest_13301_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -370,6 +384,8 @@
       "description": "Quest_13302_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -409,6 +425,8 @@
       "description": "Quest_10304_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -452,6 +470,8 @@
       "description": "Quest_13101_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -524,6 +544,8 @@
       "description": "Quest_10305_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -567,6 +589,8 @@
       "description": "Quest_12501_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -624,6 +648,8 @@
       "description": "Quest_10306_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -667,6 +693,8 @@
       "description": "Quest_11101_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -739,6 +767,8 @@
       "description": "Quest_10307_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -778,6 +808,8 @@
       "description": "Quest_10308_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -821,6 +853,8 @@
       "description": "Quest_11001_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -893,6 +927,8 @@
       "description": "Quest_10309_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -936,6 +972,8 @@
       "description": "Quest_11301_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1007,6 +1045,8 @@
       "description": "Quest_10310_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1046,6 +1086,8 @@
       "description": "Quest_10401_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1089,6 +1131,8 @@
       "description": "Quest_12601_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1156,6 +1200,8 @@
       "description": "Quest_10402_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1199,6 +1245,8 @@
       "description": "Quest_11201_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1271,6 +1319,8 @@
       "description": "Quest_10403_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1314,6 +1364,8 @@
       "description": "Quest_11401_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1376,6 +1428,8 @@
       "description": "Quest_10404_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1415,6 +1469,8 @@
       "description": "Quest_10405_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1458,6 +1514,8 @@
       "description": "Quest_11501_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1525,6 +1583,8 @@
       "description": "Quest_10406_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1568,6 +1628,8 @@
       "description": "Quest_11701_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1629,6 +1691,8 @@
       "description": "Quest_11601_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1686,6 +1750,8 @@
       "description": "Quest_21401_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1771,6 +1837,8 @@
       "description": "Quest_21402_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1839,6 +1907,8 @@
       "description": "Quest_10407_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1882,6 +1952,8 @@
       "description": "Quest_13001_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -1951,6 +2023,8 @@
       "description": "Quest_21501_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2014,6 +2088,8 @@
       "description": "Quest_21503_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2054,6 +2130,8 @@
       "description": "Quest_11801_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2130,6 +2208,8 @@
       "description": "Quest_10408_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2169,6 +2249,8 @@
       "description": "Quest_10501_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2209,6 +2291,8 @@
       "description": "Quest_10502_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2248,6 +2332,8 @@
       "description": "Quest_10503_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2287,6 +2373,8 @@
       "description": "Quest_10504_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2326,6 +2414,8 @@
       "description": "Quest_10505_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2365,6 +2455,8 @@
       "description": "Quest_10506_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2404,6 +2496,8 @@
       "description": "Quest_10507_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2447,6 +2541,8 @@
       "description": "Quest_12901_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2504,6 +2600,8 @@
       "description": "Quest_10508_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2551,6 +2649,8 @@
       "description": "Quest_21701_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2619,6 +2719,8 @@
       "description": "Quest_11901_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2694,6 +2796,8 @@
       "description": "Quest_23001_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2752,6 +2856,8 @@
       "description": "Quest_10509_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2795,6 +2901,8 @@
       "description": "Quest_12001_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2848,6 +2956,8 @@
       "description": "Quest_21801_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2916,6 +3026,8 @@
       "description": "Quest_10510_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -2959,6 +3071,8 @@
       "description": "Quest_12101_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3047,6 +3161,8 @@
       "description": "Quest_22901_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3100,6 +3216,8 @@
       "description": "Quest_22902_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3140,6 +3258,8 @@
       "description": "Quest_22903_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3180,6 +3300,8 @@
       "description": "Quest_13201_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3247,6 +3369,8 @@
       "description": "Quest_10511_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3298,6 +3422,8 @@
       "description": "Quest_21901_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3362,6 +3488,8 @@
       "description": "Quest_21902_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3402,6 +3530,8 @@
       "description": "Quest_12401_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3485,6 +3615,8 @@
       "description": "Quest_22101_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3553,6 +3685,8 @@
       "description": "Quest_22103_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3611,6 +3745,8 @@
       "description": "Quest_22104_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3651,6 +3787,8 @@
       "description": "Quest_12201_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3695,6 +3833,8 @@
       "description": "Quest_10512_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3734,6 +3874,8 @@
       "description": "Quest_10513_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3773,6 +3915,8 @@
       "description": "Quest_10514_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3812,6 +3956,8 @@
       "description": "Quest_10515_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3851,6 +3997,8 @@
       "description": "Quest_10516_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3895,6 +4043,8 @@
       "description": "Quest_10517_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -3938,6 +4088,8 @@
       "description": "Quest_23201_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -4001,6 +4153,8 @@
       "description": "Quest_10518_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -4044,6 +4198,8 @@
       "description": "Quest_12301_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -4115,6 +4271,8 @@
       "description": "Quest_22401_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -4183,6 +4341,8 @@
       "description": "Quest_10519_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -4226,6 +4386,8 @@
       "description": "Quest_12701_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": -1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -4294,6 +4456,8 @@
       "description": "Quest_22601_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -4329,6 +4493,8 @@
       "description": "Quest_21201_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -4370,6 +4536,8 @@
       "description": "Quest_21203_des",
       "requiredLevel": 1,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "Experience",
@@ -4405,6 +4573,8 @@
       "description": "Quest_40301_des",
       "requiredLevel": 1,
       "unlockLevel": 5,
+      "requiredDifficulty": -1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "Experience",
@@ -4463,6 +4633,8 @@
       "description": "Quest_40401_des",
       "requiredLevel": 1,
       "unlockLevel": 13,
+      "requiredDifficulty": -1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "Experience",
@@ -4521,6 +4693,8 @@
       "description": "Quest_40501_des",
       "requiredLevel": 1,
       "unlockLevel": 22,
+      "requiredDifficulty": -1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "Experience",
@@ -4579,6 +4753,8 @@
       "description": "Quest_40502_des",
       "requiredLevel": 1,
       "unlockLevel": 30,
+      "requiredDifficulty": -1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "Experience",
@@ -4637,6 +4813,8 @@
       "description": "Quest_40503_des",
       "requiredLevel": 1,
       "unlockLevel": 32,
+      "requiredDifficulty": -1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "Experience",
@@ -4701,6 +4879,8 @@
       "description": "Quest_50001_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -4741,6 +4921,8 @@
       "description": "Quest_51001_des",
       "requiredLevel": 37,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -4777,6 +4959,8 @@
       "description": "Quest_50002_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -4817,6 +5001,8 @@
       "description": "Quest_51002_des",
       "requiredLevel": 37,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -4853,6 +5039,8 @@
       "description": "Quest_50003_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -4893,6 +5081,8 @@
       "description": "Quest_51003_des",
       "requiredLevel": 37,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -4929,6 +5119,8 @@
       "description": "Quest_50004_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -4969,6 +5161,8 @@
       "description": "Quest_51004_des",
       "requiredLevel": 37,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5005,6 +5199,8 @@
       "description": "Quest_50005_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5046,6 +5242,8 @@
       "description": "Quest_51005_des",
       "requiredLevel": 37,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5082,6 +5280,8 @@
       "description": "Quest_50006_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5123,6 +5323,8 @@
       "description": "Quest_51006_des",
       "requiredLevel": 37,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5159,6 +5361,8 @@
       "description": "Quest_50007_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5200,6 +5404,8 @@
       "description": "Quest_51007_des",
       "requiredLevel": 37,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5236,6 +5442,8 @@
       "description": "Quest_50008_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5277,6 +5485,8 @@
       "description": "Quest_51008_des",
       "requiredLevel": 37,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5313,6 +5523,8 @@
       "description": "Quest_50009_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5354,6 +5566,8 @@
       "description": "Quest_51009_des",
       "requiredLevel": 37,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5390,6 +5604,8 @@
       "description": "Quest_50010_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5430,6 +5646,8 @@
       "description": "Quest_51010_des",
       "requiredLevel": 37,
       "unlockLevel": 0,
+      "requiredDifficulty": 1,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5466,6 +5684,8 @@
       "description": "Quest_50011_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5507,6 +5727,8 @@
       "description": "Quest_50012_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": false,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5547,6 +5769,8 @@
       "description": "Quest_50013_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5587,6 +5811,8 @@
       "description": "Quest_50014_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5627,6 +5853,8 @@
       "description": "Quest_50015_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "BondCurrency",
@@ -5667,6 +5895,8 @@
       "description": "Quest_50016_des",
       "requiredLevel": 35,
       "unlockLevel": 0,
+      "requiredDifficulty": 2,
+      "isBoundInstance": true,
       "rewards": [
         {
           "type": "BondCurrency",

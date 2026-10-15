@@ -6571,7 +6571,7 @@ func (s *EnetServer) hostRecordNpcKill(room *Room, attackerView int32, kit strin
 	if xp := s.npcKillXP(kit); xp > 0 {
 		s.hostGrantExp(sess, xp)
 	}
-	s.hostAdvanceKillQuestTasks(sess, sess.hostChar.CharID)
+	s.hostAdvanceKillQuestTasks(sess, room, sess.hostChar.CharID)
 }
 
 func (s *EnetServer) xpMultiplier() float64 {

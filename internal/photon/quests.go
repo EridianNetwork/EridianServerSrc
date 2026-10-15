@@ -36,6 +36,9 @@ type QuestDef struct {
 	Description      string        `json:"description"`
 	RequiredLevel    int           `json:"requiredLevel"`
 	UnlockLevel      int           `json:"unlockLevel"`
+	// RequiredDifficulty is Quest.mRequiredDifficulty: -1 any, 1 hard (hero), 2 hell; matches the room "Difficulty" property.
+	RequiredDifficulty int  `json:"requiredDifficulty"`
+	IsBoundInstance    bool `json:"isBoundInstance"`
 	Rewards          []QuestReward `json:"rewards"`
 	Tasks            []QuestTask   `json:"tasks"`
 	OptionalRewardsCount int           `json:"optionalRewardsCount,omitempty"`
@@ -45,8 +48,8 @@ type QuestDef struct {
 var (
 	questsOnce    sync.Once
 	questByID     map[int]*QuestDef
-	questPrereq   map[int]int  
-	dailyQuestIDs map[int]bool 
+	questPrereq   map[int]int
+	dailyQuestIDs map[int]bool
 	questsAll     []QuestDef
 )
 
@@ -84,6 +87,25 @@ func loadQuestCatalog() {
 		}
 		log.Printf("[PHOTON] loaded %d quests from data/quests.json (%d daily)", len(questsAll), len(dailyQuestIDs))
 	})
+}
+
+func questCountsInRoom(q *QuestDef, room *Room) bool {
+	if room == nil {
+		return true
+	}
+	if q.RequiredDifficulty != -1 && int32(q.RequiredDifficulty) != asInt32(room.Properties["Difficulty"]) {
+		return false
+	}
+	if q.IsBoundInstance && len(q.BoundInstanceIDs) > 0 {
+		playlist := int(asInt32(room.Properties["PlaylistId"]))
+		for _, id := range q.BoundInstanceIDs {
+			if id == playlist {
+				return true
+			}
+		}
+		return false
+	}
+	return true
 }
 
 func questIsUnlocked(questID int, progress map[int]domain.QuestProgress) bool {
@@ -405,7 +427,7 @@ func (s *EnetServer) opTalkToNPC(sess *ClientSession, opCode byte, params map[by
 	})
 }
 
-func (s *EnetServer) hostAdvanceInstanceQuestTasks(sess *ClientSession, charID int64, playlistID int32) {
+func (s *EnetServer) hostAdvanceInstanceQuestTasks(sess *ClientSession, room *Room, charID int64, playlistID int32) {
 	if charID == 0 {
 		return
 	}
@@ -422,7 +444,7 @@ func (s *EnetServer) hostAdvanceInstanceQuestTasks(sess *ClientSession, charID i
 			continue
 		}
 		task := q.Tasks[p.CurrentTask]
-		if task.Type != "Instance" || int32(task.Target) != playlistID {
+		if task.Type != "Instance" || int32(task.Target) != playlistID || !questCountsInRoom(&q, room) {
 			continue
 		}
 		if p.CurrentTask == len(q.Tasks)-1 {
@@ -492,7 +514,7 @@ func (s *EnetServer) hostAdvanceCraftQuestTasks(sess *ClientSession, charID int6
 	}
 }
 
-func (s *EnetServer) hostAdvanceKillQuestTasks(sess *ClientSession, charID int64) {
+func (s *EnetServer) hostAdvanceKillQuestTasks(sess *ClientSession, room *Room, charID int64) {
 	if charID == 0 {
 		return
 	}
@@ -505,7 +527,7 @@ func (s *EnetServer) hostAdvanceKillQuestTasks(sess *ClientSession, charID int64
 			continue
 		}
 		task := q.Tasks[p.CurrentTask]
-		if task.Type != "Kills" {
+		if task.Type != "Kills" || !questCountsInRoom(&q, room) {
 			continue
 		}
 		newProgress := p.TaskProgress + 1
@@ -767,7 +789,7 @@ func (s *EnetServer) opCompleteInstance(sess *ClientSession, opCode byte, params
 		}
 		if charID != 0 {
 			consumeEnergyForInstance(room, charID)
-			s.hostAdvanceInstanceQuestTasks(sess, charID, asInt32(room.Properties["PlaylistId"]))
+			s.hostAdvanceInstanceQuestTasks(sess, room, charID, asInt32(room.Properties["PlaylistId"]))
 		}
 		s.grantInstanceRewards(room, sess)
 	}
