@@ -181,3 +181,31 @@ func triHeightAt(a, b, c [3]float32, x, z float32) (float32, bool) {
 	}
 	return w1*a[1] + w2*b[1] + w3*c[1], true
 }
+
+const (
+	navmeshLOSStep     = 0.5
+	navmeshLOSBlockRun = 3
+)
+
+func navmeshLineClear(level string, from, to [3]float32) bool {
+	if !levelHasNavmesh(level) {
+		return true
+	}
+	dx, dy, dz := to[0]-from[0], to[1]-from[1], to[2]-from[2]
+	dist := float32(math.Sqrt(float64(dx*dx + dz*dz)))
+	steps := int(dist / navmeshLOSStep)
+	run := 0
+	for i := 1; i < steps; i++ {
+		t := float32(i) / float32(steps)
+		x, y, z := from[0]+dx*t, from[1]+dy*t, from[2]+dz*t
+		if navmeshOnMesh(level, x, z, y) {
+			run = 0
+			continue
+		}
+		run++
+		if run >= navmeshLOSBlockRun {
+			return false
+		}
+	}
+	return true
+}

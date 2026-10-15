@@ -4558,6 +4558,17 @@ func (s *EnetServer) hostTickNpcAI(room *Room, dt float64) bool {
 
 		attackRange := npcAttackRangeFor(npc.kit)
 		alreadyInRealRange := bestD <= float32(attackRange*attackRange)
+		losBlocked := false
+		if npcUsesProjectileAttacks(npcConfigFor(npc.kit)) {
+			if now.Sub(npc.losAt) >= npcLOSRecheck {
+				npc.losAt = now
+				npc.losBlocked = !navmeshLineClear(level, npc.pos, p.pos)
+			}
+			losBlocked = npc.losBlocked
+			if losBlocked {
+				alreadyInRealRange = false
+			}
+		}
 		engaged := npc.moving || alreadyInRealRange || !npc.nextRangedAtkAt.IsZero()
 		if engaged && !npc.moving && now.After(npc.nextGrenadeRollAt) {
 			if cfg := npcConfigFor(npc.kit); cfg != nil && cfg.ThrowGrenadeChance > 0 {
@@ -4577,6 +4588,9 @@ func (s *EnetServer) hostTickNpcAI(room *Room, dt float64) bool {
 			if chosenAtk == atkJump {
 				log.Printf("[AI] npc %d (%s) chose atkJump realDistToPlayer=%.2f attackRange=%.2f room=%s",
 					npc.viewBase, npc.kit, math.Sqrt(float64(bestD)), attackRange, room.Name)
+			}
+			if losBlocked && (chosenAtk == atkSpit || chosenAtk == atkThrowAxe || chosenAtk == atkPoisonSpit) {
+				chosenAtk = atkNone
 			}
 			if chosenAtk != atkNone && chosenAtk != atkMelee &&
 				chosenAtk != atkJump && chosenAtk != atkCharge && chosenAtk != atkPoisonDash {
@@ -4668,8 +4682,13 @@ func (s *EnetServer) hostTickNpcAI(room *Room, dt float64) bool {
 					dest[2] = p.pos[2] + apz*scale
 				}
 			}
+			if losBlocked {
+				dest = p.pos
+			}
 			dest = npcApplySpacing(room, npc, dest)
-			dest = npcClampDestToRange(dest, p.pos, ringDist)
+			if !losBlocked {
+				dest = npcClampDestToRange(dest, p.pos, ringDist)
+			}
 		}
 		if forceRelocate {
 			ddx, ddz := dest[0]-npc.pos[0], dest[2]-npc.pos[2]
@@ -4678,7 +4697,7 @@ func (s *EnetServer) hostTickNpcAI(room *Room, dt float64) bool {
 			}
 		}
 		engage := attackRange
-		if bestD > float32(engage*engage) || forceRelocate {
+		if bestD > float32(engage*engage) || forceRelocate || losBlocked {
 			if !npc.moving && usedForcedAggro {
 				npc.pendingAggroAt = time.Time{}
 				if !npc.aggroEngaged && now.Sub(npc.lastForcedAggroLogAt) > 2*time.Second {
@@ -4783,6 +4802,13 @@ const (
 	atkMortar
 	atkLaserSweep
 )
+
+const npcLOSRecheck = 300 * time.Millisecond
+
+// npcUsesProjectileAttacks is true for kits whose ranged attacks (spit, thrown axe) need a clear line to the target.
+func npcUsesProjectileAttacks(cfg *npcConfig) bool {
+	return cfg != nil && (cfg.SpitWeight > 0 || cfg.ThrowAxeDistanceMin > 0 || cfg.PoisonSpitDist > 0)
+}
 
 func npcChooseAttack(cfg *npcConfig, dist, meleeRange float64, bossPhase int) npcAttackKind {
 	type cand struct {

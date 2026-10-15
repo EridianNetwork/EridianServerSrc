@@ -177,6 +177,8 @@ type spawnedNpc struct {
 	dazeDurationMult float32
 
 	markSlowFrac  float32
+	losAt         time.Time
+	losBlocked    bool
 	markSlowUntil time.Time
 
 	forcedAggroView  int32
