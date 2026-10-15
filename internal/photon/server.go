@@ -64,6 +64,8 @@ type ClientSession struct {
 	hunterDroidLastMark time.Time
 	berserkActive       bool
 	berserkEndAt        time.Time
+	berserkRageLeft     int
+	berserkDmgTaken     int32
 	turretView          int32
 	turretActive        bool
 	turretEndAt         time.Time
@@ -522,6 +524,7 @@ func (s *EnetServer) hostTickRoom(room *Room, dt float64) {
 	s.hostRunPendingWeaponClaims(room)
 	s.hostRunPendingFireBirdSpawns(room)
 	s.hostTickFireBirds(room)
+	s.hostTickBerserk(room)
 	s.hostTickElementalDOT(room)
 	s.hostTickHurtZones(room)
 	s.hostRunPendingHunterDroidSpawns(room)

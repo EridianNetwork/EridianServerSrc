@@ -230,7 +230,7 @@ func (s *EnetServer) handleHostRPC(sess *ClientSession, room *Room, actorNr int3
 					if wpMult > 1 {
 						wpMult *= 1 + criticalHitDamageScale(sess.hostChar)
 					}
-					damage := int32(baseDamage * wpMult * (1 + berserkDespBonus(sess)))
+					damage := int32(baseDamage * wpMult)
 					if !s.hostDamageNpcByView(room, sess.avatarBase, wid, damage, weakPointIndex, element, false) {
 						s.hostDamageStaticByView(room, sess.avatarBase, wid, damage, element)
 					}
@@ -1637,25 +1637,24 @@ func (s *EnetServer) hostDamagePlayer(room *Room, sess *ClientSession, attackerV
 			return false
 		}
 	}
-	if resist := effectValue(sess.hostChar, "LowHealthDmgResist"); resist > 0 {
-		dmg = int32(float64(dmg) * (1 - resist))
-		if dmg < 0 {
-			dmg = 0
+	if sess.maxHP > 0 && float64(sess.hp) < float64(sess.maxHP)*berserkLowHealthResist {
+		if resist := effectValue(sess.hostChar, "LowHealthDmgResist"); resist > 0 {
+			dmg = int32(float64(dmg) * (1 - resist))
+			if dmg < 0 {
+				dmg = 0
+			}
 		}
 	}
-	if isNpcAttacker {
+	rageOn := sess.berserkActive && time.Now().Before(sess.berserkEndAt)
+	if rageOn && isNpcAttacker {
 		if reflectPct := effectValue(sess.hostChar, "ReflectDamage"); reflectPct > 0 {
 			if reflectDmg := int32(float64(dmg) * reflectPct); reflectDmg > 0 {
 				s.hostDamageNpcByView(room, sess.avatarBase, attackerView, reflectDmg, 0, element, false)
 			}
 		}
 	}
-	if explosionPct := effectValue(sess.hostChar, "DamageAsExplosion"); explosionPct > 0 {
-		if explDmg := int32(float64(dmg) * explosionPct); explDmg > 0 {
-			if pos, ok := playerStreamPos(room, sess.avatarBase); ok {
-				s.hostAreaDamageNpcs(room, sess.avatarBase+1, pos, damageAsExplosionRadius, explDmg, elementExplosive, false)
-			}
-		}
+	if rageOn {
+		sess.berserkDmgTaken += dmg
 	}
 	if chance := effectValue(sess.hostChar, "AutoMarkAttackerChance"); chance > 0 && rand.Float64() < chance {
 		if sessionByAvatarBase(s, room, attackerView-1) == nil {
@@ -2025,9 +2024,10 @@ func (s *EnetServer) hostTriggerPlayerSkill(room *Room, sess *ClientSession) {
 	}
 
 	if phase == 0 && sess.hostChar != nil && avatarClassName(sess.hostChar) == "Berserker" {
-		dur := time.Duration(float64(berserkDuration) * (1 + effectValue(sess.hostChar, "BerserkRageDuration")))
 		sess.berserkActive = true
-		sess.berserkEndAt = time.Now().Add(dur)
+		sess.berserkEndAt = time.Now().Add(berserkDuration)
+		sess.berserkRageLeft = berserkRageExtensions
+		sess.berserkDmgTaken = 0
 	}
 
 	if phase == 1 && sess.hostChar != nil && avatarClassName(sess.hostChar) == "Berserker" {
@@ -2036,28 +2036,57 @@ func (s *EnetServer) hostTriggerPlayerSkill(room *Room, sess *ClientSession) {
 			dmg := int32(float64(berserkStompDamage) * powerRatingForLevel(sess.hostChar.Level) * (1 + effectValue(sess.hostChar, "BerserkStompDamage")))
 			s.hostBerserkStomp(room, sess, pos, radius, dmg)
 		}
-		sess.berserkActive = false
-		sess.skillCooldownEndAt = time.Now().Add(s.berserkCooldown(sess.hostChar))
-		refillHP := effectValue(sess.hostChar, "SkillExitRefillHP")
-		refillShield := effectValue(sess.hostChar, "SkillExitRefillShield")
-		if refillHP > 0 || refillShield > 0 {
-			if sess.maxHP > 0 {
-				sess.hp += int32(float64(sess.maxHP) * refillHP)
-				if sess.hp > sess.maxHP {
-					sess.hp = sess.maxHP
-				}
-			}
-			if sess.maxShield > 0 {
-				sess.shield += int32(float64(sess.maxShield) * refillShield)
-				if sess.shield > sess.maxShield {
-					sess.shield = sess.maxShield
-				}
-				sess.shieldRegenBaseline = sess.shield
-			}
-			s.hostSendRPC(room, sess.avatarBase, "RPC_RequestAllLifeAndShield", []any{
-				map[int]any{0: int32(1), 1: sess.avatarBase, 2: playerLifeTable(sess.hp, sess.maxHP, sess.shield, sess.maxShield)},
-			})
+		s.hostEndBerserk(room, sess)
+	}
+}
+
+func (s *EnetServer) hostEndBerserk(room *Room, sess *ClientSession) {
+	if !sess.berserkActive {
+		return
+	}
+	sess.berserkActive = false
+	sess.skillPhaseNext = 0
+	taken := sess.berserkDmgTaken
+	sess.berserkDmgTaken = 0
+	if sess.isDead || sess.hostChar == nil {
+		return
+	}
+	sess.skillCooldownEndAt = time.Now().Add(s.berserkCooldown(sess.hostChar))
+	if pct := effectValue(sess.hostChar, "DamageAsExplosion"); pct > 0 && taken > 0 {
+		if pos, ok := playerStreamPos(room, sess.avatarBase); ok {
+			s.hostAreaDamageNpcs(room, sess.avatarBase+1, pos, damageAsExplosionRadius, int32(float64(taken)*pct), elementExplosive, false)
 		}
+	}
+	refillHP := effectValue(sess.hostChar, "SkillExitRefillHP")
+	refillShield := effectValue(sess.hostChar, "SkillExitRefillShield")
+	if refillHP > 0 || refillShield > 0 {
+		if sess.maxHP > 0 {
+			sess.hp += int32(float64(sess.maxHP) * refillHP)
+			if sess.hp > sess.maxHP {
+				sess.hp = sess.maxHP
+			}
+		}
+		if sess.maxShield > 0 {
+			sess.shield += int32(float64(sess.maxShield) * refillShield)
+			if sess.shield > sess.maxShield {
+				sess.shield = sess.maxShield
+			}
+			sess.shieldRegenBaseline = sess.shield
+		}
+		s.hostSendRPC(room, sess.avatarBase, "RPC_RequestAllLifeAndShield", []any{
+			map[int]any{0: int32(1), 1: sess.avatarBase, 2: playerLifeTable(sess.hp, sess.maxHP, sess.shield, sess.maxShield)},
+		})
+	}
+}
+
+func (s *EnetServer) hostTickBerserk(room *Room) {
+	now := time.Now()
+	for _, uid := range room.Players {
+		sess := s.sessionInRoom(uid, room.Name)
+		if sess == nil || !sess.berserkActive || now.Before(sess.berserkEndAt) {
+			continue
+		}
+		s.hostEndBerserk(room, sess)
 	}
 }
 
@@ -2092,7 +2121,7 @@ func (s *EnetServer) hostPlayerMelee(room *Room, sess *ClientSession) {
 	if sess.hostChar != nil {
 		level = sess.hostChar.Level
 	}
-	dmg := int32(playerMeleeBaseDamage * powerRatingForLevel(level) * ratio * (1 + berserkDespBonus(sess)))
+	dmg := int32(playerMeleeBaseDamage * powerRatingForLevel(level) * ratio)
 
 	if sess.berserkActive && time.Now().Before(sess.berserkEndAt) {
 		if punches := effectValue(sess.hostChar, "BerserkPunchCount"); punches > 0 {
@@ -2139,6 +2168,8 @@ const (
 	berserkStompRadius = float32(5)
 	berserkStompDamage = int32(60)
 	berserkStompStun   = 3 * time.Second
+	berserkRageExtensions = 3
+	berserkLowHealthResist = 0.2
 )
 
 func (s *EnetServer) fireBirdCooldown() time.Duration {
@@ -3841,21 +3872,6 @@ func (s *EnetServer) hostThrottleRaycastDamage(sess *ClientSession, room *Room, 
 	}
 	sess.lastRaycastDamageAt = next.Add(interval)
 	return true
-}
-
-func berserkDespBonus(sess *ClientSession) float64 {
-	if sess == nil || sess.maxHP <= 0 {
-		return 0
-	}
-	perGrade := effectValue(sess.hostChar, "DespHealthPercent")
-	if perGrade <= 0 {
-		return 0
-	}
-	missingFrac := 1 - float64(sess.hp)/float64(sess.maxHP)
-	if missingFrac < 0 {
-		missingFrac = 0
-	}
-	return perGrade * missingFrac
 }
 
 // npcHealthBarEmptyPercent is the remaining life (percent, rounded up) at which the client bar already
@@ -6557,6 +6573,12 @@ func (s *EnetServer) hostKillNpc(room *Room, npc *spawnedNpc, attackerView, dama
 			if extend > 0 {
 				attacker.hunterDroidEndAt = attacker.hunterDroidEndAt.Add(time.Duration(extend * float64(time.Second)))
 			}
+		}
+	}
+	if killer := sessionByAvatarBase(s, room, attackerView); killer != nil && killer.berserkActive && killer.berserkRageLeft > 0 && time.Now().Before(killer.berserkEndAt) {
+		if extend := effectValue(killer.hostChar, "BerserkRageDuration"); extend > 0 {
+			killer.berserkEndAt = killer.berserkEndAt.Add(time.Duration(extend * float64(time.Second)))
+			killer.berserkRageLeft--
 		}
 	}
 	npcSetTask(npc, bhvTaskDie, 0, npcDeathOrigin(npc), 0)
