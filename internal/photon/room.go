@@ -358,6 +358,10 @@ type pendingGrenade struct {
 	spawnAt   time.Time
 	spawned   bool
 	sess      *ClientSession
+	scattered bool
+	origin    [3]float32
+	vel       [3]float32
+	dmgMult   float64
 }
 
 type pendingSuicideBomb struct {

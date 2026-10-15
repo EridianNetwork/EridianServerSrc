@@ -1669,14 +1669,28 @@ func (s *EnetServer) hostDamagePlayer(room *Room, sess *ClientSession, attackerV
 	if rageOn {
 		sess.berserkDmgTaken += dmg
 	}
+	if reduction := s.turretShieldReduction(room, sess); reduction > 0 {
+		dmg = int32(float64(dmg) * (1 - reduction))
+	}
 	sess.lastDamageAt = time.Now()
 	shieldDmg := int32(0)
+	shieldBefore := sess.shield
 	if sess.shield > 0 {
 		shieldDmg = dmg
 		if shieldDmg > sess.shield {
 			shieldDmg = sess.shield
 		}
 		sess.shield -= shieldDmg
+	}
+	if shieldBefore > 0 && sess.shield <= 0 {
+		if count := int(effectValue(sess.hostChar, "ShieldDepleteGrenadeCount")); count > 0 {
+			if pos, ok := playerStreamPos(room, sess.avatarBase); ok || room.playerPos[sess.avatarBase+1] != ([3]float32{}) {
+				if !ok {
+					pos = room.playerPos[sess.avatarBase+1]
+				}
+				s.hostScatterGrenades(room, sess, pos, count, 1+effectValue(sess.hostChar, "ShieldDepleteGrenadeDmg"))
+			}
+		}
 	}
 	sess.shieldRegenBaseline = sess.shield
 	healthDmg := dmg - shieldDmg
@@ -2190,11 +2204,12 @@ func (s *EnetServer) berserkCooldown(ch *domain.Character) time.Duration {
 	return time.Duration(float64(base) * (1 + skillCooldownScale(ch, "BerserkCoolDownDuration")))
 }
 
-func (s *EnetServer) turretCooldownShort() time.Duration {
+func (s *EnetServer) turretCooldownShort(ch *domain.Character) time.Duration {
+	base := defaultTurretCooldownShort
 	if s.TurretCooldownShortSeconds > 0 {
-		return time.Duration(s.TurretCooldownShortSeconds * float64(time.Second))
+		base = time.Duration(s.TurretCooldownShortSeconds * float64(time.Second))
 	}
-	return defaultTurretCooldownShort
+	return time.Duration(float64(base) * (1 + skillCooldownScale(ch, "TurretCooldown")))
 }
 
 func (s *EnetServer) turretCooldownLong(ch *domain.Character) time.Duration {
@@ -2223,6 +2238,7 @@ func (s *EnetServer) hunterCooldownLong(ch *domain.Character) time.Duration {
 const (
 	skillEventTurretSpawned       = 28
 	skillEventTurretCooldownStart = 30
+	skillEventTurretRepulseExplode = 32
 	skillEventHunterDroidSpawned  = 33
 	skillEventHunterDroidEnd      = 34
 	skillEventHunterCooldownStart = 35
@@ -6964,6 +6980,9 @@ func (s *EnetServer) hostLaunchGrenade(room *Room, g *pendingGrenade) {
 	dir, handOffset := grenadeThrowVectors(sess.lastYawDeg, sess.lastPitch16)
 	vel := [3]float32{dir[0] * grenadeThrowSpeed, dir[1] * grenadeThrowSpeed, dir[2] * grenadeThrowSpeed}
 	hand := [3]float32{pos[0] + handOffset[0], pos[1] + 1.5, pos[2] + handOffset[2]}
+	if g.scattered {
+		hand, vel = g.origin, g.vel
+	}
 
 	base := room.NextAvatarViewBase()
 	g.view = base
@@ -7084,6 +7103,9 @@ func (s *EnetServer) hostExplodeGrenade(room *Room, g pendingGrenade) {
 		blowUpDamage = int32(float64(blowUpDamage) * powerRatingForLevel(int(g.sess.hostChar.Level)))
 		blowUpDamage = int32(float64(blowUpDamage) * (1 + effectValue(g.sess.hostChar, "GrenadeDmg")))
 	}
+	if g.dmgMult > 0 {
+		blowUpDamage = int32(float64(blowUpDamage) * g.dmgMult)
+	}
 	for i := range room.npcs {
 		npc := &room.npcs[i]
 		if npc.hp <= 0 {
@@ -7117,6 +7139,9 @@ func (s *EnetServer) hostExplodeGrenade(room *Room, g pendingGrenade) {
 		}
 		dx, dz := g.pos[0]-ppos[0], g.pos[2]-ppos[2]
 		if dx*dx+dz*dz > r2 {
+			continue
+		}
+		if g.scattered && g.sess != nil && target.teamID == g.sess.teamID {
 			continue
 		}
 		s.hostRecordDamageStat(room, g.ownerView, blowUpDamage, false, false)

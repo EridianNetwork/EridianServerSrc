@@ -71,6 +71,8 @@ type ClientSession struct {
 	hunterDroidEndAt    time.Time
 	hunterDroidLastMark time.Time
 	chargeShotArmed     bool
+	ammoRegenCarry      float64
+	turretLastRepelAt   time.Time
 	berserkActive       bool
 	berserkEndAt        time.Time
 	berserkRageLeft     int
