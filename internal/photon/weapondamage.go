@@ -158,7 +158,7 @@ func (s *EnetServer) playerWeaponDamageAtLevel(sess *ClientSession) float64 {
 		return playerWeaponDamageFallback
 	}
 	if dmg := resolveWeaponDamage(weapons[slot]); dmg > 0 {
-		return dmg * (1 + weaponDamageScale(sess.hostChar))
+		return dmg
 	}
 	return playerWeaponDamageFallback
 }

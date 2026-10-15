@@ -225,6 +225,13 @@ func criticalHitDamageScale(ch *domain.Character) float64 {
 	return effectValue(ch, "CriticalHitDamage")
 }
 
+func turretWeaponDamageMult(sess *ClientSession) float64 {
+	if sess == nil || !sess.turretActive {
+		return 1
+	}
+	return 1 + weaponDamageScale(sess.hostChar)
+}
+
 func skillCooldownScale(ch *domain.Character, effectType string) float64 {
 	return effectValue(ch, effectType)
 }

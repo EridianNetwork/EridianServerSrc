@@ -226,7 +226,7 @@ func (s *EnetServer) handleHostRPC(sess *ClientSession, room *Room, actorNr int3
 					if baseDamage <= 0 {
 						baseDamage = fireBurstDamage
 					}
-					baseDamage *= berserkExtraPelletMult(sess, room, weaponView)
+					baseDamage *= berserkExtraPelletMult(sess, room, weaponView) * turretWeaponDamageMult(sess)
 					wpMult := weakpointMultiplier(strength)
 					if wpMult > 1 {
 						wpMult *= 1 + criticalHitDamageScale(sess.hostChar)
@@ -915,7 +915,7 @@ func (s *EnetServer) hostSpawnAvatar(room *Room, sess *ClientSession, actorNr in
 			if room.weaponDamage == nil {
 				room.weaponDamage = map[int32]float64{}
 			}
-			realDamage := resolveWeaponDamage(it) * (1 + weaponDamageScale(sess.hostChar))
+			realDamage := resolveWeaponDamage(it)
 			room.weaponDamage[weaponView] = realDamage
 			setWeaponFireRate(room, weaponView, it)
 			log.Printf("[HOST] spawned real weapon %q slot=%d viewID=%d element=%d damage=%.1f for actor=%d", it.ItemName, it.Slot, weaponView, it.ElementType, realDamage, actorNr)
@@ -1175,7 +1175,7 @@ func (s *EnetServer) hostRespawnEquippedWeapons(room *Room, sess *ClientSession)
 		if room.weaponDamage == nil {
 			room.weaponDamage = map[int32]float64{}
 		}
-		realDamage := resolveWeaponDamage(it) * (1 + weaponDamageScale(sess.hostChar))
+		realDamage := resolveWeaponDamage(it)
 		room.weaponDamage[weaponView] = realDamage
 		setWeaponFireRate(room, weaponView, it)
 		log.Printf("[HOST] re-equipped real weapon %q slot=%d viewID=%d element=%d damage=%.1f for actor view=%d", it.ItemName, it.Slot, weaponView, it.ElementType, realDamage, sess.avatarBase)

@@ -602,12 +602,11 @@ func (s *EnetServer) refreshSessionSkills(sess *ClientSession, charID int64, inv
 
 	if len(sess.equippedWeapons) > 0 {
 		items := equippedWeaponsOrdered(sess.hostChar.CharID)
-		scale := 1 + weaponDamageScale(sess.hostChar)
 		for i, slot := range sess.equippedWeapons {
 			if i >= len(items) || items[i] == nil || room.weaponDamage == nil {
 				continue
 			}
-			room.weaponDamage[slot.view] = resolveWeaponDamage(items[i]) * scale
+			room.weaponDamage[slot.view] = resolveWeaponDamage(items[i])
 			setWeaponFireRate(room, slot.view, items[i])
 		}
 	}
