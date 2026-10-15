@@ -2028,14 +2028,14 @@ func (s *EnetServer) hostTriggerPlayerSkill(room *Room, sess *ClientSession) {
 		dur := time.Duration(float64(berserkDuration) * (1 + effectValue(sess.hostChar, "BerserkRageDuration")))
 		sess.berserkActive = true
 		sess.berserkEndAt = time.Now().Add(dur)
-		if pos, ok := room.playerPos[sess.avatarBase+1]; ok {
-			radius := berserkStompRadius * (1 + float32(effectValue(sess.hostChar, "BerserkStompRadius")))
-			dmg := int32(float64(berserkStompDamage) * (1 + effectValue(sess.hostChar, "BerserkStompDamage")))
-			s.hostAreaDamageNpcs(room, sess.avatarBase, pos, radius, dmg, elementNone, false)
-		}
 	}
 
 	if phase == 1 && sess.hostChar != nil && avatarClassName(sess.hostChar) == "Berserker" {
+		if pos, ok := room.playerPos[sess.avatarBase+1]; ok {
+			radius := berserkStompRadius * (1 + float32(effectValue(sess.hostChar, "BerserkStompRadius")))
+			dmg := int32(float64(berserkStompDamage) * powerRatingForLevel(sess.hostChar.Level) * (1 + effectValue(sess.hostChar, "BerserkStompDamage")))
+			s.hostBerserkStomp(room, sess, pos, radius, dmg)
+		}
 		sess.berserkActive = false
 		sess.skillCooldownEndAt = time.Now().Add(s.berserkCooldown(sess.hostChar))
 		refillHP := effectValue(sess.hostChar, "SkillExitRefillHP")
@@ -2138,6 +2138,7 @@ const (
 	berserkDuration    = 15 * time.Second
 	berserkStompRadius = float32(5)
 	berserkStompDamage = int32(60)
+	berserkStompStun   = 3 * time.Second
 )
 
 func (s *EnetServer) fireBirdCooldown() time.Duration {
@@ -2428,6 +2429,28 @@ func (s *EnetServer) hostTickElementalDOT(room *Room) {
 			tickDmg = 1
 		}
 		s.hostDamageNpcByView(room, npc.dotAttackerView, npc.viewBase, tickDmg, 0, npc.dotElement, true)
+	}
+}
+
+func (s *EnetServer) hostBerserkStomp(room *Room, sess *ClientSession, center [3]float32, radius float32, damage int32) {
+	r2 := radius * radius
+	for i := range room.npcs {
+		npc := &room.npcs[i]
+		if npc.hp <= 0 || npc.friendly {
+			continue
+		}
+		dx, dz := center[0]-npc.pos[0], center[2]-npc.pos[2]
+		if dx*dx+dz*dz > r2 {
+			continue
+		}
+		if !s.hostDamageNpcByView(room, sess.avatarBase, npc.viewBase, damage, 0, elementNone, false) || npc.hp <= 0 {
+			continue
+		}
+		npc.dazedUntil = time.Now().Add(berserkStompStun)
+		npc.dazeEffectUID = (npc.dazeEffectUID + 1) % 126
+		npc.dazeDurationMult = 1
+		npc.moving, npc.path = false, nil
+		npcSetTask(npc, bhvTaskIdle, -1, npc.pos, -1)
 	}
 }
 
