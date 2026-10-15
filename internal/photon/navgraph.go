@@ -9,7 +9,7 @@ import (
 
 type navGraphEdge struct {
 	to  int
-	mid [3]float32 
+	mid [3]float32
 }
 
 type navGraphPoly struct {
@@ -153,6 +153,32 @@ func (q *navPQ) Pop() any {
 	return item
 }
 
+const navmeshSnapTol = 8.0
+
+func (g *navGraph) nearestPoint(x, z, refY float32) (int, [3]float32, bool) {
+	best := -1
+	var bp [3]float32
+	bestScore := float32(navmeshSnapTol)
+	for i := range g.polys {
+		verts := g.polys[i].verts
+		for j := range verts {
+			a, b := verts[j], verts[(j+1)%len(verts)]
+			d, yy := segPointDistXZ(a, b, x, z)
+			if sc := d + absf32(yy-refY)*0.25; sc < bestScore {
+				dx, dz := b[0]-a[0], b[2]-a[2]
+				t := float32(0)
+				if l2 := dx*dx + dz*dz; l2 > 0 {
+					t = ((x-a[0])*dx + (z-a[2])*dz) / l2
+					t = min(max(t, 0), 1)
+				}
+				bestScore, best = sc, i
+				bp = [3]float32{a[0] + t*dx, yy, a[2] + t*dz}
+			}
+		}
+	}
+	return best, bp, best >= 0
+}
+
 func navmeshFindPath(level string, sx, sz, gx, gz, refY float32) ([][3]float32, bool) {
 	g := getNavGraph(level)
 	if g == nil || len(g.polys) == 0 {
@@ -160,11 +186,19 @@ func navmeshFindPath(level string, sx, sz, gx, gz, refY float32) ([][3]float32, 
 	}
 	startPoly, startY, ok := g.findPoly(sx, sz, refY)
 	if !ok {
-		return nil, false
+		var sp [3]float32
+		if startPoly, sp, ok = g.nearestPoint(sx, sz, refY); !ok {
+			return nil, false
+		}
+		startY = sp[1]
 	}
 	goalPoly, goalY, ok := g.findPoly(gx, gz, startY)
 	if !ok {
-		return nil, false
+		var gp [3]float32
+		if goalPoly, gp, ok = g.nearestPoint(gx, gz, startY); !ok {
+			return nil, false
+		}
+		gx, gz, goalY = gp[0], gp[2], gp[1]
 	}
 	goal := [3]float32{gx, goalY, gz}
 	if startPoly == goalPoly {
@@ -223,6 +257,13 @@ func navmeshFindPath(level string, sx, sz, gx, gz, refY float32) ([][3]float32, 
 	}
 	waypoints = append(waypoints, goal)
 	return waypoints, true
+}
+
+func navmeshFallbackPath(level string, from, dest [3]float32) [][3]float32 {
+	if navmeshWallBlocked(level, from, dest) {
+		return nil
+	}
+	return [][3]float32{dest}
 }
 
 func dist3(a, b [3]float32) float32 {

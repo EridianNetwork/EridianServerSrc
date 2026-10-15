@@ -4605,9 +4605,13 @@ func (s *EnetServer) hostTickNpcAI(room *Room, dt float64) bool {
 				if wps, ok := navmeshFindPath(m2level(room), npc.pos[0], npc.pos[2], dest[0], dest[2], npc.pos[1]); ok {
 					npc.path = wps
 				} else {
-					npc.path = [][3]float32{dest}
+					npc.path = navmeshFallbackPath(m2level(room), npc.pos, dest)
 				}
 				npc.nextRepathAt = now.Add(navmeshRepathInterval)
+			}
+			if len(npc.path) == 0 {
+				npc.moving = false
+				continue
 			}
 			npc.moving = true
 			npcSetTask(npc, npcMoveTask(npc.kit), -1, dest, 2)
