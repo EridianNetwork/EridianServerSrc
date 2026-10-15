@@ -205,7 +205,7 @@ func (s *EnetServer) handleHostRPC(sess *ClientSession, room *Room, actorNr int3
 		sess.playerState = PlayerStateSpawned
 		s.hostSendSerialize(room)
 	case "RPC_SetChargeShot":
-		log.Printf("[HOST] actor=%d charge shot armed (RPC_SetChargeShot, no bonus applied, no verified design data for the bonus amount)", actorNr)
+		sess.chargeShotArmed = true
 	case "RPC_ReportRaycastHit":
 		sess.raycastPatched = true
 		if len(args) >= 2 {
@@ -230,6 +230,10 @@ func (s *EnetServer) handleHostRPC(sess *ClientSession, room *Room, actorNr int3
 					wpMult := weakpointMultiplier(strength)
 					if wpMult > 1 {
 						wpMult *= 1 + criticalHitDamageScale(sess.hostChar)
+					}
+					if sess.chargeShotArmed {
+						sess.chargeShotArmed = false
+						baseDamage *= 1 + effectValue(sess.hostChar, "ChargeShotDmg")
 					}
 					damage := int32(baseDamage * wpMult)
 					if !s.hostDamageNpcByView(room, sess.avatarBase, wid, damage, weakPointIndex, element, false) {
@@ -1638,6 +1642,14 @@ func (s *EnetServer) hostDamagePlayer(room *Room, sess *ClientSession, attackerV
 			return false
 		}
 	}
+	if isNpcAttacker && sess.hunterDroidActive {
+		if chance := effectValue(sess.hostChar, "TransferDamageToMarked"); chance > 0 && rand.Float64() < chance {
+			if target := markedTransferTarget(room, attackerView); target != 0 {
+				s.hostDamageNpcByView(room, sess.avatarBase, target, dmg, 0, element, false)
+				return false
+			}
+		}
+	}
 	if sess.maxHP > 0 && float64(sess.hp) < float64(sess.maxHP)*berserkLowHealthResist {
 		if resist := effectValue(sess.hostChar, "LowHealthDmgResist"); resist > 0 {
 			dmg = int32(float64(dmg) * (1 - resist))
@@ -1656,19 +1668,6 @@ func (s *EnetServer) hostDamagePlayer(room *Room, sess *ClientSession, attackerV
 	}
 	if rageOn {
 		sess.berserkDmgTaken += dmg
-	}
-	if chance := effectValue(sess.hostChar, "AutoMarkAttackerChance"); chance > 0 && rand.Float64() < chance {
-		if sessionByAvatarBase(s, room, attackerView-1) == nil {
-			for i := range room.npcs {
-				if room.npcs[i].viewBase == attackerView && room.npcs[i].hp > 0 {
-					if room.markedNpcs == nil {
-						room.markedNpcs = map[int32]markedNpc{}
-					}
-					room.markedNpcs[attackerView] = markedNpc{until: time.Now().Add(hunterMarkDuration)}
-					break
-				}
-			}
-		}
 	}
 	sess.lastDamageAt = time.Now()
 	shieldDmg := int32(0)
@@ -2227,6 +2226,9 @@ const (
 	skillEventHunterDroidSpawned  = 33
 	skillEventHunterDroidEnd      = 34
 	skillEventHunterCooldownStart = 35
+
+	skillEventHunterExplodeMarked   = 39
+	skillEventHunterDurationExtend  = 40
 )
 
 const fireBirdSpawnDelay = 600 * time.Millisecond
@@ -3915,7 +3917,23 @@ func (s *EnetServer) hostDamageNpcByView(room *Room, attackerView, targetView, d
 			return false
 		}
 		npc := &room.npcs[i]
+		if !isDOT {
+			if attacker := sessionByAvatarBase(s, room, attackerView); attacker != nil && attacker.hunterDroidActive {
+				if chance := effectValue(attacker.hostChar, "AutoMarkAttackerChance"); chance > 0 && rand.Float64() < chance {
+					if room.markedNpcs == nil {
+						room.markedNpcs = map[int32]markedNpc{}
+					}
+					room.markedNpcs[targetView] = markedNpc{until: time.Now().Add(hunterMarkDuration)}
+				}
+			}
+		}
 		if m, ok := room.markedNpcs[targetView]; ok && time.Now().Before(m.until) {
+			if attacker := sessionByAvatarBase(s, room, attackerView); !isDOT && attacker != nil {
+				if chance := effectValue(attacker.hostChar, "ElementalChanceToMarked"); chance > 0 && rand.Float64() < chance {
+					extra, _ := hunterExplosionForElement(int32(1 + rand.Intn(3)))
+					damage += extra
+				}
+			}
 			bonus := float64(hunterTrackshotBonus)
 			if attacker := sessionByAvatarBase(s, room, attackerView); attacker != nil {
 				bonus *= 1 + effectValue(attacker.hostChar, "DamamgeBonusToMarked")
@@ -3942,21 +3960,6 @@ func (s *EnetServer) hostDamageNpcByView(room *Room, attackerView, targetView, d
 			if attacker := sessionByAvatarBase(s, room, attackerView); attacker != nil {
 				if bonus := effectValue(attacker.hostChar, "ElementDamage"); bonus > 0 {
 					damage = int32(float64(damage) * (1 + bonus))
-				}
-			}
-		}
-		if !isDOT {
-			if attacker := sessionByAvatarBase(s, room, attackerView); attacker != nil {
-				if transferPct := effectValue(attacker.hostChar, "TransferDamageToMarked"); transferPct > 0 {
-					transferDmg := int32(float64(damage) * transferPct)
-					if transferDmg > 0 {
-						for mv, m := range room.markedNpcs {
-							if mv == targetView || !time.Now().Before(m.until) {
-								continue
-							}
-							s.hostApplyTransferredDamage(room, attackerView, mv, transferDmg, element)
-						}
-					}
 				}
 			}
 		}
@@ -4024,28 +4027,6 @@ func (s *EnetServer) hostDamageNpcByView(room *Room, attackerView, targetView, d
 		return true
 	}
 	return false
-}
-
-func (s *EnetServer) hostApplyTransferredDamage(room *Room, attackerView, targetView, damage, element int32) {
-	for i := range room.npcs {
-		npc := &room.npcs[i]
-		if npc.viewBase != targetView || npc.hp <= 0 {
-			continue
-		}
-		npc.hp -= damage
-		if npc.hp < 0 {
-			npc.hp = 0
-		}
-		if npc.hp > 0 && npcHealthBarVisuallyEmpty(npc.hp, npc.maxHP) {
-			npc.hp = 0
-		}
-		if npc.hp > 0 {
-			s.hostSendRPC(room, npc.equipView(), "RPC_SendLifeAndShield", []any{npcVitalsTable(npc.kit, npc.maxHP, npc.hp)})
-			return
-		}
-		s.hostKillNpc(room, npc, attackerView, damage, element, false)
-		return
-	}
 }
 
 func (s *EnetServer) hostAlertNearbyNpcs(room *Room, source *spawnedNpc, attackerView int32) {
@@ -6580,19 +6561,28 @@ func npcDeathOrigin(npc *spawnedNpc) [3]float32 {
 }
 
 func (s *EnetServer) hostKillNpc(room *Room, npc *spawnedNpc, attackerView, damage, element int32, criticalHit bool) {
+	attacker := sessionByAvatarBase(s, room, attackerView)
 	if m, ok := room.markedNpcs[npc.viewBase]; ok && time.Now().Before(m.until) {
 		delete(room.markedNpcs, npc.viewBase)
-		burstDamage, burstElement := hunterExplosionForElement(element)
-		attacker := sessionByAvatarBase(s, room, attackerView)
 		if attacker != nil {
-			burstDamage = int32(float64(burstDamage) * (1 + effectValue(attacker.hostChar, "MarkedExplodeOnKill")))
-		}
-		s.hostAreaDamageNpcs(room, attackerView, npc.pos, hunterMarkExplosionRadius, burstDamage, burstElement, false)
-		if attacker != nil && attacker.hunterDroidActive {
-			extend := effectValue(attacker.hostChar, "OnKillDroidDuration")
-			if extend > 0 {
-				attacker.hunterDroidEndAt = attacker.hunterDroidEndAt.Add(time.Duration(extend * float64(time.Second)))
+			if scale := effectValue(attacker.hostChar, "MarkedExplodeOnKill"); scale > 0 {
+				burstDamage, burstElement := hunterExplosionForElement(element)
+				burstDamage = int32(float64(burstDamage) * (1 + scale))
+				s.hostSendRPC(room, sessionInfoViewID, "RPC_H2C_SkillEvent", []any{
+					int32(1), attacker.avatarBase, int32(skillEventHunterExplodeMarked),
+					float32(0), vector3Custom(npc.pos[0], npc.pos[1], npc.pos[2]),
+				})
+				s.hostAreaDamageNpcs(room, attackerView, npc.pos, hunterMarkExplosionRadius, burstDamage, burstElement, false)
 			}
+		}
+	}
+	if attacker != nil && attacker.hunterDroidActive {
+		if extend := effectValue(attacker.hostChar, "OnKillDroidDuration"); extend > 0 {
+			attacker.hunterDroidEndAt = attacker.hunterDroidEndAt.Add(time.Duration(extend * float64(time.Second)))
+			s.hostSendRPC(room, sessionInfoViewID, "RPC_H2C_SkillEvent", []any{
+				int32(0), attacker.avatarBase, int32(skillEventHunterDurationExtend),
+				float32(extend), vector3Custom(0, 0, 0),
+			})
 		}
 	}
 	if killer := sessionByAvatarBase(s, room, attackerView); killer != nil && killer.hostChar != nil {

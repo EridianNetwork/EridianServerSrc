@@ -1,7 +1,9 @@
 package photon
 
 import (
+	"encoding/binary"
 	"log"
+	"math/rand"
 	"time"
 
 	"eridian/internal/domain"
@@ -71,11 +73,79 @@ func (s *EnetServer) hostSpawnHunterDroid(room *Room, sess *ClientSession) {
 	s.hostMarkNearestNpcs(room, pos, sess.hostChar)
 }
 
+// markedTransferTarget picks the marked npc that absorbs damage redirected by
+// Total Fraud: the attacker itself if it is marked, otherwise any live marked one.
+func markedTransferTarget(room *Room, attackerView int32) int32 {
+	now := time.Now()
+	alive := func(view int32) bool {
+		for i := range room.npcs {
+			if room.npcs[i].viewBase == view {
+				return room.npcs[i].hp > 0
+			}
+		}
+		return false
+	}
+	if m, ok := room.markedNpcs[attackerView]; ok && now.Before(m.until) && alive(attackerView) {
+		return attackerView
+	}
+	for view, m := range room.markedNpcs {
+		if now.Before(m.until) && alive(view) {
+			return view
+		}
+	}
+	return 0
+}
+
+// hostGaleShot is the second F press: every marked enemy takes an explosion and the marks are consumed.
+func (s *EnetServer) hostGaleShot(room *Room, sess *ClientSession) {
+	now := time.Now()
+	var views []int32
+	for view, m := range room.markedNpcs {
+		if now.Before(m.until) {
+			views = append(views, view)
+		}
+	}
+	for _, view := range views {
+		delete(room.markedNpcs, view)
+	}
+	var weaponElement int32
+	if int(sess.activeWeaponSlot) < len(sess.equippedWeapons) {
+		weaponElement = room.weaponElement[sess.equippedWeapons[sess.activeWeaponSlot].view]
+	}
+	damage, element := hunterExplosionForElement(weaponElement)
+	damage = int32(float64(damage) * (1 + effectValue(sess.hostChar, "DroidBlastDamage")))
+	dazeChance := effectValue(sess.hostChar, "DroidBlastDazeChance")
+	for _, view := range views {
+		for i := range room.npcs {
+			npc := &room.npcs[i]
+			if npc.viewBase != view || npc.hp <= 0 {
+				continue
+			}
+			s.hostSendRPC(room, sessionInfoViewID, "RPC_H2C_SkillEvent", []any{
+				int32(1), sess.avatarBase, int32(skillEventHunterExplodeMarked),
+				float32(0), vector3Custom(npc.pos[0], npc.pos[1], npc.pos[2]),
+			})
+			if dazeChance > 0 && rand.Float64() < dazeChance {
+				npc.dazedUntil = now.Add(3 * time.Second)
+				npc.dazeEffectUID = (npc.dazeEffectUID + 1) % 126
+				npc.dazeDurationMult = 1
+				npc.moving, npc.path = false, nil
+				npcSetTask(npc, bhvTaskIdle, -1, npc.pos, -1)
+			}
+			s.hostDamageNpcByView(room, sess.avatarBase, view, damage, 0, element, true)
+			break
+		}
+	}
+}
+
 func (s *EnetServer) hostRetrieveHunterDroid(room *Room, sess *ClientSession, manual bool) {
 	if !sess.hunterDroidActive {
 		return
 	}
 	sess.hunterDroidActive = false
+	if manual {
+		s.hostGaleShot(room, sess)
+	}
 	cooldown := s.hunterCooldownLong(sess.hostChar)
 	if manual {
 		cooldown = s.hunterCooldownShort()
@@ -121,7 +191,68 @@ func (s *EnetServer) hostRunPendingHunterDroidSpawns(room *Room) {
 	room.pendingHunterDroidSpawns = remaining
 }
 
+// markBroadcastViewID is the MarkBroadcast component of the Session prefab (6th view).
+const markBroadcastViewID = hostViewBase + 6
+
+const hunterMarkLevel = 1
+
+// hostBroadcastMarks streams (entityID, markLevel) pairs to MarkBroadcast.OnPhotonSerializeView so
+// clients draw the Hunter mark on marked npcs. Only changes are sent; level 0 clears a mark.
+func (s *EnetServer) hostBroadcastMarks(room *Room) {
+	if len(room.markedNpcs) == 0 && len(room.markSent) == 0 {
+		return
+	}
+	now := time.Now()
+	current := map[int32]bool{}
+	for view, m := range room.markedNpcs {
+		if !now.Before(m.until) {
+			delete(room.markedNpcs, view)
+			continue
+		}
+		current[view] = true
+	}
+	for i := range room.npcs {
+		if room.npcs[i].hp <= 0 {
+			delete(current, room.npcs[i].viewBase)
+		}
+	}
+	var changes []int32
+	var levels []int32
+	for view := range current {
+		if !room.markSent[view] {
+			changes = append(changes, view)
+			levels = append(levels, hunterMarkLevel)
+		}
+	}
+	for view := range room.markSent {
+		if !current[view] {
+			changes = append(changes, view)
+			levels = append(levels, 0)
+		}
+	}
+	if len(changes) == 0 {
+		return
+	}
+	room.markSent = current
+	buf := make([]byte, 0, len(changes)*8)
+	for i, view := range changes {
+		buf = binary.LittleEndian.AppendUint32(buf, uint32(view))
+		buf = binary.LittleEndian.AppendUint32(buf, uint32(levels[i]))
+	}
+	s.broadcastEvent(room, 201, map[byte]any{
+		ParamPlayerNr: HostActorNr,
+		ParamEventData: map[any]any{
+			byte(0): int32(msNow()),
+			Short(1): map[any]any{
+				byte(0): int32(markBroadcastViewID),
+				byte(1): []any{buf},
+			},
+		},
+	}, nil, nil)
+}
+
 func (s *EnetServer) hostTickHunterDroids(room *Room) {
+	s.hostBroadcastMarks(room)
 	now := time.Now()
 	for _, uid := range room.Players {
 		sess := s.sessionInRoom(uid, room.Name)

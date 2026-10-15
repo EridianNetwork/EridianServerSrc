@@ -77,6 +77,7 @@ type Room struct {
 	pendingHunterDroidSpawns []pendingHunterDroidSpawn
 
 	markedNpcs map[int32]markedNpc
+	markSent   map[int32]bool
 
 	pendingTurretSpawns []pendingTurretSpawn
 

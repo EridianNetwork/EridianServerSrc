@@ -70,6 +70,7 @@ type ClientSession struct {
 	hunterDroidActive   bool
 	hunterDroidEndAt    time.Time
 	hunterDroidLastMark time.Time
+	chargeShotArmed     bool
 	berserkActive       bool
 	berserkEndAt        time.Time
 	berserkRageLeft     int
