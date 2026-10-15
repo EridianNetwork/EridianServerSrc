@@ -2,6 +2,7 @@ package photon
 
 
 import (
+	"slices"
 	"encoding/json"
 	"log"
 	"maps"
@@ -704,6 +705,18 @@ func (s *EnetServer) grantQuestRewards(sess *ClientSession, charID int64, reward
 			} else {
 				grantedCurrencyOrItems = true
 			}
+		case "Outfit":
+			if s.grantQuestOutfit(charID, ch, r, backpackSize) {
+				grantedCurrencyOrItems = true
+			}
+		case "ClassMode":
+			if s.grantQuestClassMode(charID, ch, r, backpackSize) {
+				grantedCurrencyOrItems = true
+			}
+		case "Item":
+			if s.grantQuestWeapon(charID, ch, r, backpackSize) {
+				grantedCurrencyOrItems = true
+			}
 		case "Quest", "Instance":
 		default:
 			log.Printf("[PHOTON] grantQuestRewards char=%d: reward type %q not implemented yet (rewardId=%d count=%d)", charID, r.Type, r.RewardID, r.Count)
@@ -715,17 +728,141 @@ func (s *EnetServer) grantQuestRewards(sess *ClientSession, charID int64, reward
 	}
 }
 
+func (s *EnetServer) grantQuestOutfit(charID int64, ch *domain.Character, r QuestReward, backpackSize int) bool {
+	preset := outfitPresetByID(r.RewardID)
+	if preset == nil {
+		log.Printf("[PHOTON] grantQuestRewards char=%d: no outfit preset id=%d", charID, r.RewardID)
+		return false
+	}
+	if avatarTypeValues[preset.AvatarType] != ch.ClassType {
+		log.Printf("[PHOTON] grantQuestRewards char=%d: outfit %q is for %s, not class=%d", charID, preset.Name, preset.AvatarType, ch.ClassType)
+		return false
+	}
+	it := &domain.InventoryItem{
+		CharID:     charID,
+		ItemKind:   domain.ItemTypeOutfit,
+		ResourceID: preset.ID,
+		ItemName:   preset.Name,
+		Rarity:     itemRarityValues[preset.Rarity],
+		Level:      1,
+		UID:        newRandomUID("quest"),
+		PartA:      avatarTypeValues[preset.AvatarType],
+		PartB:      avatarSubPartValues[preset.AvatarSubpart],
+		PartC:      preset.Index,
+	}
+	if _, _, err := db.AddItemToBackpack(it, backpackSize); err != nil {
+		log.Printf("[PHOTON] grantQuestRewards char=%d: AddItemToBackpack outfit=%q: %v", charID, preset.Name, err)
+		return false
+	}
+	log.Printf("[PHOTON] grantQuestRewards char=%d: granted outfit %q (id=%d)", charID, preset.Name, preset.ID)
+	return true
+}
+
+func (s *EnetServer) grantQuestClassMode(charID int64, ch *domain.Character, r QuestReward, backpackSize int) bool {
+	loadClassModePresets()
+	var cp *classModePreset
+	for i := range classModePresets {
+		if classModePresets[i].ID == r.RewardID {
+			cp = &classModePresets[i]
+			break
+		}
+	}
+	if cp == nil {
+		log.Printf("[PHOTON] grantQuestRewards char=%d: no class mod preset id=%d", charID, r.RewardID)
+		return false
+	}
+	if !slices.Contains(classModeTypesForAvatar[ch.ClassType], cp.CMType) {
+		log.Printf("[PHOTON] grantQuestRewards char=%d: class mod %q is not for class=%d", charID, cp.Name, ch.ClassType)
+		return false
+	}
+	it := &domain.InventoryItem{
+		CharID:           charID,
+		ItemKind:         domain.ItemTypeClassMode,
+		ResourceID:       cp.ID,
+		ItemName:         cp.Name,
+		Rarity:           itemRarityValues[cp.Rarity],
+		PartA:            classModeTypeValues[cp.CMType],
+		PartB:            cp.Adapter,
+		PartC:            cp.Body,
+		PartD:            cp.Chassis,
+		PartE:            cp.Drum,
+		PartF:            cp.Material,
+		Level:            1,
+		UID:              newRandomUID("quest"),
+		GenerationSource: domain.GenerationSourceLoot,
+	}
+	if _, _, err := db.AddItemToBackpack(it, backpackSize); err != nil {
+		log.Printf("[PHOTON] grantQuestRewards char=%d: AddItemToBackpack classmod=%q: %v", charID, cp.Name, err)
+		return false
+	}
+	log.Printf("[PHOTON] grantQuestRewards char=%d: granted class mod %q (id=%d)", charID, cp.Name, cp.ID)
+	return true
+}
+
+func (s *EnetServer) grantQuestWeapon(charID int64, ch *domain.Character, r QuestReward, backpackSize int) bool {
+	wp := weaponPresetByID(r.RewardID)
+	if wp == nil {
+		log.Printf("[PHOTON] grantQuestRewards char=%d: no weapon preset id=%d", charID, r.RewardID)
+		return false
+	}
+	level := wp.Level
+	if level < 1 {
+		level = 1
+	}
+	it := newPresetWeapon(wp, level, domain.GenerationSourceLoot)
+	it.CharID = charID
+	it.UID = newRandomUID("quest")
+	if _, _, err := db.AddItemToBackpack(it, backpackSize); err != nil {
+		log.Printf("[PHOTON] grantQuestRewards char=%d: AddItemToBackpack weapon=%q: %v", charID, wp.Name, err)
+		return false
+	}
+	log.Printf("[PHOTON] grantQuestRewards char=%d: granted weapon %q (id=%d)", charID, wp.Name, wp.ID)
+	return true
+}
+
+func chosenOptionalRewards(def *QuestDef, picks any) []QuestReward {
+	if def == nil || def.OptionalRewardsCount <= 0 || len(def.OptionalRewards) == 0 {
+		return nil
+	}
+	var idx []int
+	switch t := picks.(type) {
+	case []byte:
+		for _, b := range t {
+			idx = append(idx, int(b))
+		}
+	case []any:
+		for _, v := range t {
+			idx = append(idx, int(asInt32(v)))
+		}
+	}
+	seen := map[int]bool{}
+	var out []QuestReward
+	for _, i := range idx {
+		if i < 0 || i >= len(def.OptionalRewards) || seen[i] || len(out) >= def.OptionalRewardsCount {
+			continue
+		}
+		seen[i] = true
+		out = append(out, def.OptionalRewards[i])
+	}
+	return out
+}
+
 func (s *EnetServer) opClaimQuestRewards(sess *ClientSession, opCode byte, params map[byte]any) {
 	arr := toSlice(params[112])
 	charID := int32(sessCharID(sess))
 	questID := int32(0)
+	var picks any
 	if len(arr) > 0 {
 		charID = asInt32(arr[0])
 	}
 	if len(arr) > 1 {
 		questID = asInt32(arr[1])
 	}
+	if len(arr) > 2 {
+		picks = arr[2]
+	}
 	level := charLevel(int64(charID))
+	alreadyClaimed := playerQuestProgress(int64(charID), level)[int(questID)].Status == domain.QuestStateRewardClaimed
 	before := unlockedInstancesForChar(int64(charID), level)
 	if err := db.SetQuestStatus(int64(charID), int(questID), domain.QuestStateRewardClaimed); err != nil {
 		log.Printf("[PHOTON] ClaimQuestRewards error char=%d quest=%d: %v", charID, questID, err)
@@ -735,8 +872,12 @@ func (s *EnetServer) opClaimQuestRewards(sess *ClientSession, opCode byte, param
 	log.Printf("[PHOTON] ClaimQuestRewards char=%d quest=%d", charID, questID)
 	loadQuestCatalog()
 	def, hasDef := questByID[int(questID)]
-	if hasDef {
-		s.grantQuestRewards(sess, int64(charID), def.Rewards)
+	if hasDef && !alreadyClaimed {
+		rewards := append([]QuestReward{}, def.Rewards...)
+		rewards = append(rewards, chosenOptionalRewards(def, picks)...)
+		s.grantQuestRewards(sess, int64(charID), rewards)
+	} else if hasDef {
+		log.Printf("[PHOTON] ClaimQuestRewards char=%d quest=%d already claimed, no rewards granted", charID, questID)
 	}
 	progress := playerQuestProgress(int64(charID), level)
 	progressTable := make(map[int]any, len(progress))
