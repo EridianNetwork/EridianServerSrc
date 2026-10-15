@@ -226,6 +226,7 @@ func (s *EnetServer) handleHostRPC(sess *ClientSession, room *Room, actorNr int3
 					if baseDamage <= 0 {
 						baseDamage = fireBurstDamage
 					}
+					baseDamage *= berserkExtraPelletMult(sess, room, weaponView)
 					wpMult := weakpointMultiplier(strength)
 					if wpMult > 1 {
 						wpMult *= 1 + criticalHitDamageScale(sess.hostChar)
@@ -2027,6 +2028,7 @@ func (s *EnetServer) hostTriggerPlayerSkill(room *Room, sess *ClientSession) {
 		sess.berserkActive = true
 		sess.berserkEndAt = time.Now().Add(berserkDuration)
 		sess.berserkRageLeft = berserkRageExtensions
+		sess.berserkMeleeUsed = 0
 		sess.berserkDmgTaken = 0
 	}
 
@@ -2123,10 +2125,11 @@ func (s *EnetServer) hostPlayerMelee(room *Room, sess *ClientSession) {
 	}
 	dmg := int32(playerMeleeBaseDamage * powerRatingForLevel(level) * ratio)
 
-	if sess.berserkActive && time.Now().Before(sess.berserkEndAt) {
-		if punches := effectValue(sess.hostChar, "BerserkPunchCount"); punches > 0 {
-			dmg = int32(float64(dmg) * (1 + punches))
-		}
+	// Pegasus Meteor Fist: during the rage the first BerserkPunchCount melee presses are the rush punch
+	// (client MeleeSkill state), which hits for m_punchDamage instead of the plain melee damage.
+	if sess.berserkActive && time.Now().Before(sess.berserkEndAt) && sess.berserkMeleeUsed < int(effectValue(sess.hostChar, "BerserkPunchCount")) {
+		sess.berserkMeleeUsed++
+		dmg = int32(berserkPunchDamage * powerRatingForLevel(level) * ratio)
 	}
 	if dmg < 1 {
 		dmg = 1
@@ -2167,6 +2170,7 @@ const (
 	berserkDuration    = 15 * time.Second
 	berserkStompRadius = float32(5)
 	berserkStompDamage = int32(60)
+	berserkPunchDamage = 60.0
 	berserkStompStun   = 3 * time.Second
 	berserkRageExtensions = 3
 	berserkLowHealthResist = 0.2
@@ -3845,6 +3849,22 @@ func setWeaponFireRate(room *Room, view int32, it *domain.InventoryItem) {
 		room.weaponFireRate = map[int32]float64{}
 	}
 	room.weaponFireRate[view] = resolveWeaponFireRate(it)
+	if room.weaponPellets == nil {
+		room.weaponPellets = map[int32]float64{}
+	}
+	room.weaponPellets[view] = weaponPelletCount(it)
+}
+
+func berserkExtraPelletMult(sess *ClientSession, room *Room, weaponView int32) float64 {
+	if !sess.berserkActive || !time.Now().Before(sess.berserkEndAt) || room.weaponType[weaponView] != weaponTypeShotGun {
+		return 1
+	}
+	extra := math.Floor(effectValue(sess.hostChar, "BulletPerShot"))
+	pellets := room.weaponPellets[weaponView]
+	if extra <= 0 || pellets < 1 {
+		return 1
+	}
+	return (pellets + extra) / pellets
 }
 
 // raycastBurstSlack is how far ahead of schedule hits may arrive (network jitter, batched
@@ -6575,6 +6595,14 @@ func (s *EnetServer) hostKillNpc(room *Room, npc *spawnedNpc, attackerView, dama
 			}
 		}
 	}
+	if killer := sessionByAvatarBase(s, room, attackerView); killer != nil && killer.hostChar != nil {
+		if speed := effectValue(killer.hostChar, "FixedTimeRegenHealthSpeed"); speed > 0 {
+			if len(killer.killRegens) == 0 {
+				killer.killRegenLastTickAt = time.Now()
+			}
+			killer.killRegens = append(killer.killRegens, killRegen{speed: speed, until: time.Now().Add(bloodSuckerDuration)})
+		}
+	}
 	if killer := sessionByAvatarBase(s, room, attackerView); killer != nil && killer.berserkActive && killer.berserkRageLeft > 0 && time.Now().Before(killer.berserkEndAt) {
 		if extend := effectValue(killer.hostChar, "BerserkRageDuration"); extend > 0 {
 			killer.berserkEndAt = killer.berserkEndAt.Add(time.Duration(extend * float64(time.Second)))
@@ -6804,14 +6832,57 @@ func (s *EnetServer) hostTickShieldRegen(room *Room) {
 	}
 }
 
+const (
+	bloodSuckerDuration = time.Second
+	killRegenTickEvery  = 200 * time.Millisecond
+)
+
+func (s *EnetServer) hostTickKillRegen(room *Room, sess *ClientSession, now time.Time) {
+	if len(sess.killRegens) == 0 {
+		return
+	}
+	dt := now.Sub(sess.killRegenLastTickAt)
+	if dt < killRegenTickEvery {
+		return
+	}
+	sess.killRegenLastTickAt = now
+	heal, live := 0.0, sess.killRegens[:0]
+	for _, r := range sess.killRegens {
+		span := dt
+		if now.After(r.until) {
+			span -= now.Sub(r.until)
+		}
+		if span > 0 {
+			heal += r.speed * span.Seconds()
+		}
+		if now.Before(r.until) {
+			live = append(live, r)
+		}
+	}
+	sess.killRegens = live
+	if sess.isDead || sess.maxHP <= 0 || sess.hp >= sess.maxHP {
+		return
+	}
+	sess.hp += int32(math.Ceil(float64(sess.maxHP) * heal))
+	if sess.hp > sess.maxHP {
+		sess.hp = sess.maxHP
+	}
+	s.hostSendRPC(room, sess.avatarBase, "RPC_RequestAllLifeAndShield", []any{
+		map[int]any{0: int32(1), 1: sess.avatarBase, 2: playerLifeTable(sess.hp, sess.maxHP, sess.shield, sess.maxShield)},
+	})
+}
+
 func (s *EnetServer) hostTickHealthRegen(room *Room) {
 	now := time.Now()
 	for _, uid := range room.Players {
 		sess := s.sessionInRoom(uid, room.Name)
+		if sess != nil && sess.avatarBase != 0 {
+			s.hostTickKillRegen(room, sess, now)
+		}
 		if sess == nil || sess.avatarBase == 0 || sess.isDead || sess.maxHP <= 0 || sess.hp >= sess.maxHP {
 			continue
 		}
-		regenRate := effectValue(sess.hostChar, "FlexibleTimeRegenHealthSpeed") + effectValue(sess.hostChar, "FixedTimeRegenHealthSpeed")
+		regenRate := effectValue(sess.hostChar, "FlexibleTimeRegenHealthSpeed")
 		if regenRate <= 0 {
 			continue
 		}

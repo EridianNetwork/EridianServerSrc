@@ -62,6 +62,8 @@ type Room struct {
 
 	weaponFireRate map[int32]float64
 
+	weaponPellets map[int32]float64
+
 	dropItem map[int32]*domain.InventoryItem
 
 	dropReward map[int32]dropReward

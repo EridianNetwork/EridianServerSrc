@@ -109,6 +109,26 @@ func computeWeaponStats(typeName string, sp [9]int) (dps, fireRate float64, ok b
 	return dps, fireRate, true
 }
 
+func weaponPelletCount(it *domain.InventoryItem) float64 {
+	loadWeaponDamageStats()
+	typeName := weaponTypeName(it.PartA)
+	base := weaponBaseStats[typeName]
+	if base == nil {
+		return 1
+	}
+	sp := weaponItemSubparts(it)
+	var deltas []weaponAttrDelta
+	for i, slot := range npcWeaponSubpartOrder {
+		if d, found := weaponSubpartIndex[typeName][slot][sp[i]].Attributes["WeaponProjectilesPerShot"]; found {
+			deltas = append(deltas, d)
+		}
+	}
+	if n := combineFloatAttribute(base["WeaponProjectilesPerShot"].Value, deltas); n >= 1 {
+		return n
+	}
+	return 1
+}
+
 func computeWeaponDamage(typeName string, sp [9]int, level int) float64 {
 	dps, fireRate, ok := computeWeaponStats(typeName, sp)
 	if !ok || fireRate <= 0 {

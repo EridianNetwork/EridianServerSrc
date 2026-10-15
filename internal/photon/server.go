@@ -20,6 +20,12 @@ import (
 func msNow() uint32 {
 	return uint32(time.Now().UnixMilli() & 0xFFFFFFFF)
 }
+
+type killRegen struct {
+	speed float64
+	until time.Time
+}
+
 type ClientSession struct {
 	addr        string
 	udpAddr     *net.UDPAddr
@@ -46,6 +52,8 @@ type ClientSession struct {
 	lastDamageAt time.Time
 	shieldRegenBaseline   int32
 	lastHealthRegenTickAt time.Time
+	killRegens           []killRegen
+	killRegenLastTickAt time.Time
 	lavaNextTickAt time.Time
 	shieldDNA Custom
 	shieldView          int32
@@ -65,6 +73,7 @@ type ClientSession struct {
 	berserkActive       bool
 	berserkEndAt        time.Time
 	berserkRageLeft     int
+	berserkMeleeUsed    int
 	berserkDmgTaken     int32
 	turretView          int32
 	turretActive        bool
