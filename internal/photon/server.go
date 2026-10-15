@@ -222,7 +222,8 @@ type fragKey struct {
 type fragBuf struct {
 	data     []byte
 	total    int
-	received int
+	got      map[uint32]struct{}
+	created  time.Time
 }
 type EnetServer struct {
 	host            string
@@ -311,6 +312,8 @@ func (s *EnetServer) Serve() error {
 		return fmt.Errorf("photon: listen %s: %w", addr, err)
 	}
 	defer s.conn.Close()
+	_ = s.conn.SetReadBuffer(4 << 20)
+	_ = s.conn.SetWriteBuffer(4 << 20)
 	log.Printf("[PHOTON] ENet UDP listening on %s", addr)
 	go s.sessionWatchdog()
 	go s.retransmitLoop()
@@ -318,7 +321,7 @@ func (s *EnetServer) Serve() error {
 		remote *net.UDPAddr
 		data   []byte
 	}
-	pkts := make(chan udpPkt, 256)
+	pkts := make(chan udpPkt, 4096)
 	go func() {
 		buf := make([]byte, 4096)
 		for {
@@ -613,7 +616,12 @@ func (s *EnetServer) checkAFKSessions() {
 const staleConnectionTimeout = 30 * time.Second
 func (s *EnetServer) reapStaleSessions() {
 	now := time.Now()
-	for _, sess := range s.sessions {
+	for k, fb := range s.fragBufs {
+		if now.Sub(fb.created) > staleConnectionTimeout {
+			delete(s.fragBufs, k)
+		}
+	}
+	for _, sess := range s.snapshotSessions() {
 		if sess.lastRecv.IsZero() {
 			if now.Sub(sess.connectedAt) < staleConnectionTimeout {
 				continue
@@ -799,7 +807,7 @@ func (s *EnetServer) retransmitLoop() {
 	const (
 		interval = 100 * time.Millisecond
 		defaultRTO = minRTO
-		giveupWindow = 15 * time.Second
+		giveupWindow = 120 * time.Second
 	)
 	for {
 		time.Sleep(interval)
@@ -947,17 +955,63 @@ func (s *EnetServer) sessionOnline(userID string) *ClientSession {
 	return nil
 }
 func (s *EnetServer) sessionInRoom(userID, roomName string) *ClientSession {
-	var fallback *ClientSession
+	var match, fallback *ClientSession
 	for _, sess := range s.sessions {
 		if sess.userID != userID {
 			continue
 		}
 		if sess.roomName == roomName {
-			return sess
+			if match == nil || sess.lastRecv.After(match.lastRecv) {
+				match = sess
+			}
+			continue
 		}
-		fallback = sess
+		if fallback == nil || sess.lastRecv.After(fallback.lastRecv) {
+			fallback = sess
+		}
+	}
+	if match != nil {
+		return match
 	}
 	return fallback
+}
+
+// snapshotSessions copies the session set so callers can disconnect while iterating.
+func (s *EnetServer) snapshotSessions() []*ClientSession {
+	out := make([]*ClientSession, 0, len(s.sessions))
+	for _, sess := range s.sessions {
+		out = append(out, sess)
+	}
+	return out
+}
+
+func (s *EnetServer) migrateSession(sess *ClientSession, remote *net.UDPAddr) {
+	oldKey := sess.addr
+	newKey := remote.String()
+	log.Printf("[PHOTON] session resumed from new address user=%s peerID=%d %s -> %s", sess.userID, sess.peerID, oldKey, newKey)
+	s.mu.Lock()
+	delete(s.sessions, oldKey)
+	sess.addr = newKey
+	sess.udpAddr = remote
+	s.sessions[newKey] = sess
+	s.mu.Unlock()
+	for k, fb := range s.fragBufs {
+		if k.addr == oldKey {
+			delete(s.fragBufs, k)
+			k.addr = newKey
+			s.fragBufs[k] = fb
+		}
+	}
+}
+
+func (s *EnetServer) dropStaleRoomSessions(sess *ClientSession) {
+	for _, other := range s.snapshotSessions() {
+		if other == sess || other.userID != sess.userID || other.roomName == "" {
+			continue
+		}
+		log.Printf("[PHOTON] dropping stale room membership user=%s room=%s oldAddr=%s", other.userID, other.roomName, other.addr)
+		s.removeFromRoom(other)
+	}
 }
 func (s *EnetServer) bumpMapGen(sess *ClientSession) {
 	s.accountMapGen[sess.dbAccountID]++
@@ -980,7 +1034,7 @@ func (s *EnetServer) handlePacketRecoverable(remote *net.UDPAddr, data []byte) {
 	s.handlePacket(remote, data)
 }
 func (s *EnetServer) handlePacket(remote *net.UDPAddr, data []byte) {
-	if len(data) < 12 {
+	if len(data) < 13 {
 		return
 	}
 	cmdCount := int(data[3])
@@ -988,6 +1042,16 @@ func (s *EnetServer) handlePacket(remote *net.UDPAddr, data []byte) {
 	challenge := binary.BigEndian.Uint32(data[8:])
 	addrKey := remote.String()
 	sess := s.sessions[addrKey]
+	if sess == nil && data[12] != CTConnect {
+		peerID := binary.BigEndian.Uint16(data[0:])
+		for _, cand := range s.sessions {
+			if cand.peerID == peerID && cand.challenge == challenge && !db.IsIPBanned(remote.IP.String()) {
+				s.migrateSession(cand, remote)
+				sess = cand
+				break
+			}
+		}
+	}
 	if sess != nil {
 		sess.lastRecv = time.Now()
 	}
@@ -1062,6 +1126,11 @@ func (s *EnetServer) handlePacket(remote *net.UDPAddr, data []byte) {
 }
 func (s *EnetServer) handleConnect(remote *net.UDPAddr, addrKey string, challenge uint32, sentTime uint32, cmdChan byte, seqNum uint32) *ClientSession {
 	sess := s.sessions[addrKey]
+	if sess != nil && sess.challenge != challenge {
+		log.Printf("[PHOTON] reconnect from %s with new challenge, resetting stale session user=%s", addrKey, sess.userID)
+		s.handleDisconnect(sess)
+		sess = nil
+	}
 	if sess == nil {
 		if db.IsIPBanned(remote.IP.String()) {
 			log.Printf("[PHOTON] connection from banned IP %s dropped", remote.IP)
@@ -1077,7 +1146,9 @@ func (s *EnetServer) handleConnect(remote *net.UDPAddr, addrKey string, challeng
 			connectedAt: time.Now(),
 			currentTown: -1,
 		}
+		s.mu.Lock()
 		s.sessions[addrKey] = sess
+		s.mu.Unlock()
 		log.Printf("[PHOTON] new connection from %s peerID=%d", "", peerID)
 	}
 	ack := buildCmdAck(cmdChan, seqNum, sentTime)
@@ -1111,7 +1182,19 @@ func (s *EnetServer) handleDisconnect(sess *ClientSession) {
 	if s.activeGameSession[sess.userID] == sess {
 		delete(s.activeGameSession, sess.userID)
 	}
-	delete(s.sessions, sess.addr)
+	s.mu.Lock()
+	if s.sessions[sess.addr] == sess {
+		delete(s.sessions, sess.addr)
+	}
+	s.mu.Unlock()
+	for k := range s.fragBufs {
+		if k.addr == sess.addr {
+			delete(s.fragBufs, k)
+		}
+	}
+	sess.mu.Lock()
+	sess.pending = nil
+	sess.mu.Unlock()
 	if charID != 0 {
 		s.broadcastPresenceUpdate(charID)
 	}
@@ -1123,18 +1206,26 @@ func (s *EnetServer) handleFragment(sess *ClientSession, addrKey string, data []
 	}
 	startSeq := binary.BigEndian.Uint32(data[payloadStart:])
 	fragCount := int(binary.BigEndian.Uint32(data[payloadStart+4:]))
+	fragNum := binary.BigEndian.Uint32(data[payloadStart+8:])
 	totalLen := int(binary.BigEndian.Uint32(data[payloadStart+12:]))
 	fragOff := int(binary.BigEndian.Uint32(data[payloadStart+16:]))
 	fragData := data[payloadStart+20 : cmdEnd]
+	if fragCount <= 0 || totalLen < 0 || totalLen > 8<<20 || fragOff < 0 || fragOff+len(fragData) > totalLen {
+		log.Printf("[PHOTON] bad fragment from %s (count=%d total=%d off=%d len=%d)", sess.addr, fragCount, totalLen, fragOff, len(fragData))
+		return
+	}
 	key := fragKey{addr: addrKey, channel: cmdChan, startSeq: startSeq}
 	fb := s.fragBufs[key]
 	if fb == nil {
-		fb = &fragBuf{data: make([]byte, totalLen), total: fragCount}
+		fb = &fragBuf{data: make([]byte, totalLen), total: fragCount, got: map[uint32]struct{}{}, created: time.Now()}
 		s.fragBufs[key] = fb
 	}
+	if _, dup := fb.got[fragNum]; dup {
+		return
+	}
+	fb.got[fragNum] = struct{}{}
 	copy(fb.data[fragOff:], fragData)
-	fb.received++
-	if fb.received == fb.total {
+	if len(fb.got) == fb.total {
 		payload := fb.data
 		delete(s.fragBufs, key)
 		s.handleMessage(sess, payload)
@@ -1275,6 +1366,14 @@ func (s *EnetServer) removeFromRoom(sess *ClientSession) {
 		return
 	}
 	s.saveTownPosition(sess, room)
+	for _, other := range s.sessions {
+		if other != sess && other.userID == sess.userID && other.roomName == sess.roomName && other.hostChar != nil {
+			sess.roomName = ""
+			sess.avatarBase = 0
+			sess.hostChar = nil
+			return
+		}
+	}
 	actorNr := room.ActorNrFor(sess.userID)
 	if actorNr != 0 {
 		wasMaster := room.IsMasterActor(actorNr)

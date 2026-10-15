@@ -61,6 +61,7 @@ func (s *EnetServer) opCreateRoom(sess *ClientSession, opCode byte, params map[b
 	}
 	roomProps, _ := params[ParamRoomProps].(map[any]any)
 
+	s.dropStaleRoomSessions(sess)
 	if _, exists := s.rooms[roomName]; !exists {
 		s.rooms[roomName] = newRoom(roomName, anyMapToAny(roomProps))
 	}
@@ -89,6 +90,7 @@ func (s *EnetServer) opCancelJoin(sess *ClientSession, opCode byte, params map[b
 
 func (s *EnetServer) opJoinRoom(sess *ClientSession, opCode byte, params map[byte]any) {
 	roomName := fmt.Sprintf("%v", params[ParamRoomName])
+	s.dropStaleRoomSessions(sess)
 	if _, exists := s.rooms[roomName]; !exists {
 		s.rooms[roomName] = newRoom(roomName, nil)
 	}
