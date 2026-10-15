@@ -73,6 +73,7 @@ type Room struct {
 	pendingWeaponClaims []pendingWeaponClaim
 
 	pendingFireBirdSpawns []pendingFireBirdSpawn
+	pendingFireChains     []pendingFireChain
 
 	pendingHunterDroidSpawns []pendingHunterDroidSpawn
 
@@ -538,4 +539,11 @@ func (r *Room) NextViewID() int32 {
 		r.viewIDCtr = 9000
 	}
 	return r.viewIDCtr
+}
+
+type pendingFireChain struct {
+	sess *ClientSession
+	pos  [3]float32
+	at   time.Time
+	dmg  int32
 }

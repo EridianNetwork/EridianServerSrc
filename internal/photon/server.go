@@ -66,6 +66,14 @@ type ClientSession struct {
 	fireBirdEndAt       time.Time
 	fireBirdLastTick    time.Time
 	fireBirdBaseDamage  float64
+	fireBirdPos         [3]float32
+	fireBirdDir         [2]float32
+	fireBirdLanded      bool
+	fireBirdOffRun      float32
+	fireBirdStepAt      time.Time
+	fireBirdAngles      [3]int32
+	evadeUntil          time.Time
+	reviveReadyAt       time.Time
 	hunterDroidView     int32
 	hunterDroidActive   bool
 	hunterDroidEndAt    time.Time

@@ -1632,6 +1632,10 @@ func (s *EnetServer) hostDamagePlayer(room *Room, sess *ClientSession, attackerV
 
 	isNpcAttacker := sessionByAvatarBase(s, room, attackerView-1) == nil
 
+	if time.Now().Before(sess.evadeUntil) {
+		return false
+	}
+
 	if isNpcAttacker {
 		if evade := effectValue(sess.hostChar, "EvadeChance"); evade > 0 && rand.Float64() < evade {
 			if reflectPct := effectValue(sess.hostChar, "OnEvadeReflectDmgPercent"); reflectPct > 0 {
@@ -1696,7 +1700,8 @@ func (s *EnetServer) hostDamagePlayer(room *Room, sess *ClientSession, attackerV
 	healthDmg := dmg - shieldDmg
 	sess.hp -= healthDmg
 	if sess.hp <= 0 {
-		if reviveChance := effectValue(sess.hostChar, "ReviveChance"); reviveChance > 0 && rand.Float64() < reviveChance {
+		if reviveChance := effectValue(sess.hostChar, "ReviveChance"); reviveChance > 0 && !time.Now().Before(sess.reviveReadyAt) && rand.Float64() < reviveChance {
+			sess.reviveReadyAt = time.Now().Add(phoenixNirvanaCooldown)
 			reviveHP := effectValue(sess.hostChar, "ReviveHealthPoint")
 			sess.hp = int32(float64(sess.maxHP) * reviveHP)
 			if sess.hp < 1 {
@@ -1752,6 +1757,7 @@ func (s *EnetServer) hostDamagePlayer(room *Room, sess *ClientSession, attackerV
 				sess.hunterDroidActive = false
 				sess.hunterDroidView = 0
 			}
+			s.hostFireBirdPlayerDown(sess)
 			sess.skillPhaseNext = 0
 		}
 	}
@@ -2165,6 +2171,9 @@ func (s *EnetServer) hostPlayerMelee(room *Room, sess *ClientSession) {
 		}
 		if s.hostDamageNpcByView(room, sess.avatarBase, npc.viewBase, dmg, 0, elementNone, false) {
 			hits++
+			if ignite := effectValue(sess.hostChar, "MeleeIgnite"); ignite > 0 && npc.hp > 0 && rand.Float64() < ignite {
+				npcMaybeStartElementalDOT(npc, sess.avatarBase, elementFire, dmg, time.Now(), 0, true)
+			}
 		}
 	}
 	log.Printf("[HOST] player melee actor=%d dmg=%d hits=%d room=%s", room.ActorNrFor(sess.userID), dmg, hits, room.Name)
@@ -2188,6 +2197,11 @@ const (
 	berserkRageExtensions = 3
 	berserkLowHealthResist = 0.2
 )
+
+// fireBirdFlybackCooldown is m_cooldown_flyback: the cooldown when the bird is absorbed instead of detonated.
+func (s *EnetServer) fireBirdFlybackCooldown() time.Duration {
+	return s.fireBirdCooldown()
+}
 
 func (s *EnetServer) fireBirdCooldown() time.Duration {
 	if s.FireBirdCooldownSeconds > 0 {
@@ -2265,161 +2279,6 @@ func (s *EnetServer) hostRunPendingFireBirdSpawns(room *Room) {
 		}
 	}
 	room.pendingFireBirdSpawns = remaining
-}
-
-func (s *EnetServer) hostSpawnFireBird(room *Room, sess *ClientSession) {
-	base := hostViewBase + 1000 + room.npcViewCtr*10
-	room.npcViewCtr++
-	pos, ok := room.playerPos[sess.avatarBase+1]
-	if !ok {
-		return
-	}
-	baseDmg := s.playerWeaponDamageAtLevel(sess)
-	sess.fireBirdBaseDamage = baseDmg
-	s.hostFireBirdIgnitePath(room, sess, pos, baseDmg)
-	angles := []any{int32(rand.Intn(360)), int32(rand.Intn(360)), int32(rand.Intn(360))}
-	s.hostBroadcastJournaled(room, 202, map[byte]any{
-		ParamPlayerNr: HostActorNr,
-		ParamEventData: map[any]any{
-			byte(0): "BKT|NPC|BloodWing",
-			byte(1): vector3Custom(pos[0], pos[1]+1.5, pos[2]),
-			byte(4): IntArray{Items: []int32{base}},
-			byte(5): append([]any{sess.avatarBase}, angles...),
-			byte(6): int32(msNow()),
-			byte(7): base,
-		},
-	}, true)
-	sess.fireBirdActive = true
-	dur := time.Duration(float64(fireBirdDuration) * (1 + effectValue(sess.hostChar, "FirebirdDuration")))
-	sess.fireBirdEndAt = time.Now().Add(dur)
-	sess.fireBirdLastTick = time.Time{} // eligible to tick immediately
-	log.Printf("[HOST] actor view=%d spawned FireBird view=%d baseDmg=%.1f room=%s", sess.avatarBase, base, baseDmg, room.Name)
-}
-
-const (
-	fireBirdFireRadius      = float32(3)
-	fireBirdDuration        = 10 * time.Second
-	fireBirdExplosionRadius = float32(5)
-
-	fireBirdBaseDamagePct = 0.45
-	fireBirdExplosionPct  = 0.80
-
-	fireBirdDotTickInterval = 1 * time.Second
-)
-
-func (s *EnetServer) hostTickFireBirds(room *Room) {
-	now := time.Now()
-	for _, uid := range room.Players {
-		sess := s.sessionInRoom(uid, room.Name)
-		if sess == nil || !sess.fireBirdActive || sess.avatarBase == 0 {
-			continue
-		}
-		ppos, ok := room.playerPos[sess.avatarBase+1]
-		if !ok {
-			continue
-		}
-		if now.After(sess.fireBirdEndAt) {
-			sess.fireBirdActive = false
-			cd := time.Duration(float64(s.fireBirdCooldown()) * (1 + effectValue(sess.hostChar, "FirebirdExplodeCooldown")))
-			sess.skillCooldownEndAt = now.Add(cd)
-			s.hostResetSkillPhaseAfterTimeout(room, sess)
-			explDmg := int32(sess.fireBirdBaseDamage * fireBirdExplosionPct * (1 + effectValue(sess.hostChar, "FirebirdExplosionDamage")))
-			s.hostAreaDamageNpcs(room, sess.avatarBase, ppos, fireBirdExplosionRadius, explDmg, elementFire, false)
-			s.hostFireBirdExplosionExtras(room, sess, ppos, explDmg)
-			log.Printf("[HOST] actor view=%d FireBird exploded dmg=%d room=%s", sess.avatarBase, explDmg, room.Name)
-			continue
-		}
-		if now.Sub(sess.fireBirdLastTick) < fireBirdDotTickInterval {
-			continue
-		}
-		sess.fireBirdLastTick = now
-		dotDmg := int32(sess.fireBirdBaseDamage * fireBirdBaseDamagePct)
-		s.hostAreaDamageNpcs(room, sess.avatarBase, ppos, fireBirdFireRadius, dotDmg, elementFire, true)
-	}
-}
-
-const fireBirdChainRadius = float32(2)
-
-func (s *EnetServer) hostFireBirdExplosionExtras(room *Room, sess *ClientSession, center [3]float32, explDmg int32) {
-	if refillPct := effectValue(sess.hostChar, "RefillShield"); refillPct > 0 && sess.maxShield > 0 {
-		sess.shield += int32(float64(sess.maxShield) * refillPct)
-		if sess.shield > sess.maxShield {
-			sess.shield = sess.maxShield
-		}
-		sess.shieldRegenBaseline = sess.shield
-		s.hostSendRPC(room, sess.avatarBase, "RPC_RequestAllLifeAndShield", []any{
-			map[int]any{0: int32(1), 1: sess.avatarBase, 2: playerLifeTable(sess.hp, sess.maxHP, sess.shield, sess.maxShield)},
-		})
-	}
-	chainNum := int(effectValue(sess.hostChar, "FirebirdExplodeChainNum"))
-	if chainNum <= 0 {
-		return
-	}
-	r2 := fireBirdChainRadius * fireBirdChainRadius
-	hit := 0
-	for i := range room.npcs {
-		if hit >= chainNum {
-			break
-		}
-		npc := &room.npcs[i]
-		if npc.hp <= 0 || npc.friendly {
-			continue
-		}
-		dx, dz := npc.pos[0]-center[0], npc.pos[2]-center[2]
-		if dx*dx+dz*dz > r2 || (dx == 0 && dz == 0) {
-			continue // skip the exact center point, already hit by the main blast
-		}
-		s.hostDamageNpcByView(room, sess.avatarBase, npc.viewBase, explDmg, 0, elementFire, false)
-		hit++
-	}
-}
-
-func (s *EnetServer) hostDetonateFireBird(room *Room, sess *ClientSession) {
-	if !sess.fireBirdActive {
-		return
-	}
-	sess.fireBirdActive = false
-	cd := time.Duration(float64(s.fireBirdCooldown()) * (1 + effectValue(sess.hostChar, "FirebirdExplodeCooldown")))
-	sess.skillCooldownEndAt = time.Now().Add(cd)
-	if ppos, ok := room.playerPos[sess.avatarBase+1]; ok {
-		explDmg := int32(sess.fireBirdBaseDamage * fireBirdExplosionPct * (1 + effectValue(sess.hostChar, "FirebirdExplosionDamage")))
-		s.hostAreaDamageNpcs(room, sess.avatarBase, ppos, fireBirdExplosionRadius, explDmg, elementFire, false)
-		s.hostFireBirdExplosionExtras(room, sess, ppos, explDmg)
-	}
-	log.Printf("[HOST] actor view=%d manually detonated FireBird room=%s", sess.avatarBase, room.Name)
-}
-
-const fireBirdThrowDistance = 15.0
-
-func (s *EnetServer) hostFireBirdIgnitePath(room *Room, sess *ClientSession, castPos [3]float32, baseDmg float64) {
-	yawRad := sess.lastYawDeg * math.Pi / 180
-	dirX, dirZ := float32(math.Sin(yawRad)), float32(math.Cos(yawRad))
-	end := [3]float32{
-		castPos[0] + dirX*fireBirdThrowDistance,
-		castPos[1],
-		castPos[2] + dirZ*fireBirdThrowDistance,
-	}
-	setting, _ := elementalDOTFor(elementFire) // always present. See elementalDOTTable
-	dotDPS := int32(baseDmg * fireBirdBaseDamagePct)
-	now := time.Now()
-	for i := range room.npcs {
-		npc := &room.npcs[i]
-		if npc.hp <= 0 || npc.friendly {
-			continue
-		}
-		if d, _ := segPointDistXZ(castPos, end, npc.pos[0], npc.pos[2]); d > fireBirdFireRadius {
-			continue
-		}
-		npc.dotElement = elementFire
-		npc.dotAttackerView = sess.avatarBase
-		npc.dotDPS = dotDPS
-		npc.dotEndAt = now.Add(setting.duration)
-		if npc.dotNextTickAt.IsZero() || npc.dotNextTickAt.Before(now) {
-			npc.dotNextTickAt = now.Add(elementalDOTTickInterval)
-		}
-		log.Printf("[HOST] actor view=%d FireBird throw ignites npc %d (%s) room=%s",
-			sess.avatarBase, npc.viewBase, npc.kit, room.Name)
-	}
 }
 
 type elementalDOTSetting struct {
@@ -3972,8 +3831,8 @@ func (s *EnetServer) hostDamageNpcByView(room *Room, attackerView, targetView, d
 				}
 			}
 		}
-		if !isDOT && element == elementShock {
-			if attacker := sessionByAvatarBase(s, room, attackerView); attacker != nil {
+		if !isDOT && element != elementNone && element != elementExplosive {
+			if attacker := sessionByAvatarBase(s, room, attackerView); attacker != nil && avatarClassName(attacker.hostChar) == "Siren" {
 				if bonus := effectValue(attacker.hostChar, "ElementDamage"); bonus > 0 {
 					damage = int32(float64(damage) * (1 + bonus))
 				}
@@ -4030,9 +3889,15 @@ func (s *EnetServer) hostDamageNpcByView(room *Room, attackerView, targetView, d
 					procBoost = effectValue(attacker.hostChar, "WpnElementalProc")
 				}
 				npcMaybeStartElementalDOT(npc, attackerView, element, damage, time.Now(), procBoost, false)
-				if attacker != nil && element != elementFire {
+				if attacker != nil && attacker.fireBirdActive {
 					if ignite := effectValue(attacker.hostChar, "IgniteEnemyChance"); ignite > 0 && rand.Float64() < ignite {
 						npcMaybeStartElementalDOT(npc, attackerView, elementFire, damage, time.Now(), 0, true)
+						durMult := float32(1 + effectValue(attacker.hostChar, "DazeDuration"))
+						npc.dazedUntil = time.Now().Add(time.Duration(float64(fireBirdStunBase) * float64(durMult)))
+						npc.dazeEffectUID = (npc.dazeEffectUID + 1) % 126
+						npc.dazeDurationMult = durMult
+						npc.moving, npc.path = false, nil
+						npcSetTask(npc, bhvTaskIdle, -1, npc.pos, -1)
 					}
 				}
 			}
@@ -6915,10 +6780,7 @@ func (s *EnetServer) hostTickHealthRegen(room *Room) {
 			continue
 		}
 		regenRate := effectValue(sess.hostChar, "FlexibleTimeRegenHealthSpeed")
-		if regenRate <= 0 {
-			continue
-		}
-		if now.Sub(sess.lastDamageAt) < shieldRegenDelay {
+		if regenRate <= 0 || !sess.fireBirdActive {
 			continue
 		}
 		if now.Sub(sess.lastHealthRegenTickAt) < time.Second {
