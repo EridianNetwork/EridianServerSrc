@@ -561,6 +561,7 @@ func (s *EnetServer) hostTickRoom(room *Room, dt float64) {
 	s.hostTickGrenades(room)
 	s.hostTickSuicideBombs(room)
 	s.hostTickNpcGrenades(room)
+	s.hostTickAutoPickups(room)
 	s.hostTickPendingSpitDamages(room)
 	s.hostTickPendingPoisonAttacks(room)
 	s.hostTickPendingNpcAreaHits(room)

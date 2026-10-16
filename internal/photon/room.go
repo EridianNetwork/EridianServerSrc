@@ -54,6 +54,8 @@ type Room struct {
 
 	dropPos map[int32][3]float32
 
+	dropSpawnedAt map[int32]time.Time
+	pickedDrops   []pickedDrop
 
 	weaponElement map[int32]int32
 

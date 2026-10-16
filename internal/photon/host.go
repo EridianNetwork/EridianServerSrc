@@ -279,6 +279,7 @@ func (s *EnetServer) handleHostRPC(sess *ClientSession, room *Room, actorNr int3
 					isWeapon = false
 					isDrop = true
 					delete(room.dropReward, weaponView)
+					room.pickedDrops = append(room.pickedDrops, pickedDrop{view: weaponView, at: time.Now().Add(pickedDropLinger)})
 					s.hostApplyDropReward(room, sess, reward)
 				}
 
@@ -6602,6 +6603,7 @@ func (s *EnetServer) hostKillNpc(room *Room, npc *spawnedNpc, attackerView, dama
 		})
 	}
 	log.Printf("[HOST] npc %d (%s) killed by actor=%d room=%s", npc.viewBase, npc.kit, attackerView, room.Name)
+	s.hostDropNpcAmmo(room, npc, sessionByAvatarBase(s, room, attackerView))
 	s.hostRecordNpcKill(room, attackerView, npc.kit, criticalHit)
 	s.scriptFire(room, "OnNpcDeath",
 		lua.LNumber(npc.viewBase), lua.LString(npc.kit),
@@ -7240,6 +7242,10 @@ func (s *EnetServer) hostSpawnPickableDrop(room *Room, sess *ClientSession, ches
 		room.dropPos = map[int32][3]float32{}
 	}
 	room.dropPos[view] = pos
+	if room.dropSpawnedAt == nil {
+		room.dropSpawnedAt = map[int32]time.Time{}
+	}
+	room.dropSpawnedAt[view] = time.Now()
 	if item != nil {
 		if room.dropItem == nil {
 			room.dropItem = map[int32]*domain.InventoryItem{}

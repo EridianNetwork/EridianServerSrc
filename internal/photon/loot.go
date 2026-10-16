@@ -3,6 +3,7 @@ package photon
 import (
 	"log"
 	"math"
+	"math/rand"
 	"strings"
 	"sync"
 	"time"
@@ -218,5 +219,131 @@ func (s *EnetServer) hostApplyDropReward(room *Room, sess *ClientSession, r drop
 		}
 		s.hostSendGrenadeCount(room, sess)
 		log.Printf("[LOOT] user=%s picked up grenade ammo, now %d/%d", sess.userID, sess.grenadeCount, sess.grenadeCap)
+	}
+}
+
+const (
+	npcAmmoDropChance       = 0.4
+	npcAmmoDropChanceBadass = 0.8
+)
+
+var npcWeaponAmmoType = map[string]string{
+	"SMG": "SMG", "ShotGun": "ShotGun", "SniperRifle": "SniperRifle",
+	"RepeaterPistol": "Pistol", "CombatRifle": "AssaultRifle",
+}
+
+func (s *EnetServer) hostDropNpcAmmo(room *Room, npc *spawnedNpc, killer *ClientSession) {
+	if npc.friendly || npc.kit == "SoldierTurretBasic" {
+		return
+	}
+	w := npcWeaponFor(npc.kit)
+	if w == nil {
+		return
+	}
+	ammo, ok := npcWeaponAmmoType[w.Type]
+	if !ok {
+		return
+	}
+	chance := npcAmmoDropChance
+	if bossKits[npc.kit] || isBadassKit(npc.kit) {
+		chance = npcAmmoDropChanceBadass
+	}
+	if rand.Float64() >= chance {
+		return
+	}
+	prefab, dna, item, reward, ok := lootDropPayload(rolledLoot{ItemType: "Ammo", AmmoType: ammo}, 1, rarityBand{}, false)
+	if !ok {
+		return
+	}
+	s.hostSpawnPickableDrop(room, killer, []float32{npc.pos[0], npc.pos[1], npc.pos[2]}, prefab, dna, item, reward, -1, 0, 0)
+	log.Printf("[LOOT] npc %d (%s) dropped %s ammo room=%s", npc.viewBase, npc.kit, ammo, room.Name)
+}
+
+const (
+	autoPickupRadius = 2.0
+	autoPickupHeight = 2.5
+	autoPickupDelay  = 2500 * time.Millisecond
+)
+
+func (s *EnetServer) dropNeededBy(sess *ClientSession, r dropReward) bool {
+	switch r.kind {
+	case "HealthPack":
+		maxLife := sess.maxHP
+		if maxLife <= 0 && sess.hostChar != nil {
+			maxLife = maxLifeForCharacter(sess.hostChar)
+		}
+		return maxLife > 0 && sess.hp < maxLife
+	case "AmmoPack":
+		return sess.ammoEst < 360
+	case "GrenadeAmmo":
+		return sess.grenadeCount < sess.grenadeCap
+	}
+	return false
+}
+
+const pickedDropLinger = 500 * time.Millisecond
+
+type pickedDrop struct {
+	view int32
+	at   time.Time
+}
+
+func (s *EnetServer) hostFlushPickedDrops(room *Room) {
+	if len(room.pickedDrops) == 0 {
+		return
+	}
+	now := time.Now()
+	kept := room.pickedDrops[:0]
+	for _, d := range room.pickedDrops {
+		if now.Before(d.at) {
+			kept = append(kept, d)
+			continue
+		}
+		s.hostBroadcastJournaled(room, 204, map[byte]any{
+			ParamPlayerNr:  HostActorNr,
+			ParamEventData: map[any]any{byte(0): d.view},
+		}, true)
+		delete(room.dropPos, d.view)
+	}
+	room.pickedDrops = kept
+}
+
+func (s *EnetServer) hostTickAutoPickups(room *Room) {
+	s.hostFlushPickedDrops(room)
+	if len(room.dropReward) == 0 {
+		return
+	}
+	for view, r := range room.dropReward {
+		if r.kind != "HealthPack" && r.kind != "AmmoPack" && r.kind != "GrenadeAmmo" {
+			continue
+		}
+		dp, ok := room.dropPos[view]
+		if !ok {
+			continue
+		}
+		if at, ok := room.dropSpawnedAt[view]; !ok || time.Since(at) < autoPickupDelay {
+			continue
+		}
+		for _, uid := range room.Players {
+			sess := s.sessionInRoom(uid, room.Name)
+			if sess == nil || sess.avatarBase == 0 || sess.isDead || !s.dropNeededBy(sess, r) {
+				continue
+			}
+			pos, ok := playerStreamPos(room, sess.avatarBase)
+			if !ok {
+				pos = room.playerPos[sess.avatarBase+1]
+			}
+			dx, dz, dy := pos[0]-dp[0], pos[2]-dp[2], pos[1]-dp[1]
+			if dx*dx+dz*dz > autoPickupRadius*autoPickupRadius || dy > autoPickupHeight || dy < -autoPickupHeight {
+				continue
+			}
+			s.hostSendRPC(room, interactionManagerViewID, "RPC_H2C_OnPickUpItem", []any{sess.avatarBase, view})
+			delete(room.dropReward, view)
+			delete(room.dropSpawnedAt, view)
+			room.pickedDrops = append(room.pickedDrops, pickedDrop{view: view, at: time.Now().Add(pickedDropLinger)})
+			s.hostApplyDropReward(room, sess, r)
+			s.hostClusterPickup(room)
+			break
+		}
 	}
 }
