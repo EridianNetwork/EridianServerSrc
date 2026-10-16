@@ -54,6 +54,7 @@ type Room struct {
 
 	dropPos map[int32][3]float32
 
+
 	weaponElement map[int32]int32
 
 	weaponType map[int32]int32
@@ -201,6 +202,17 @@ type spawnedNpc struct {
 
 	coverAggroView  int32
 	coverAggroUntil time.Time
+
+	visYaw   float32
+	visSpeed float32
+	visInit  bool
+
+	combatIdle    bool
+	settleUntil   time.Time
+	stopHoldUntil time.Time
+	moveHoldUntil time.Time
+	dangerAt      time.Time
+	noCoverUntil  time.Time
 
 	nextRepathAt time.Time
 

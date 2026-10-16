@@ -1654,7 +1654,7 @@ func (s *EnetServer) hostTickNpcMovement(room *Room, dt float64) bool {
 		dx := float64(waypoint[0] - npc.pos[0])
 		dz := float64(waypoint[2] - npc.pos[2])
 		dist := math.Sqrt(dx*dx + dz*dz)
-		step := npcMoveSpeed(npc) * dt
+		step := npcRampSpeed(npc, npcMoveSpeed(npc), dt) * dt
 		if dist <= step {
 			npc.pos[0], npc.pos[2] = waypoint[0], waypoint[2]
 			npc.path = npc.path[1:]
@@ -1683,6 +1683,56 @@ func (s *EnetServer) hostTickNpcMovement(room *Room, dt float64) bool {
 		moved = true
 	}
 	return moved
+}
+
+const (
+	npcAccelTime     = 0.25
+	npcDecelTime     = 0.2
+	npcStartSpeedMin = 0.3
+	npcTurnRateDeg   = 420.0
+)
+
+func npcIsBurstMove(npc *spawnedNpc) bool {
+	return npc.jumping || npc.taskType == bhvTaskChargeAttack || npc.taskType == bhvTaskPoisonDash
+}
+
+// npcRampSpeed eases the walking speed in so a run starts gradually instead of at full pace.
+func npcRampSpeed(npc *spawnedNpc, target, dt float64) float64 {
+	if npcIsBurstMove(npc) {
+		npc.visSpeed = float32(target)
+		return target
+	}
+	v := float64(npc.visSpeed)
+	if floor := target * npcStartSpeedMin; v < floor {
+		v = floor
+	}
+	v = math.Min(target, v+target/npcAccelTime*dt)
+	npc.visSpeed = float32(v)
+	return v
+}
+
+// npcSmoothVisuals turns the yaw at a limited rate and eases the speed out, for what clients see.
+func (s *EnetServer) npcSmoothVisuals(room *Room, dt float64) {
+	for i := range room.npcs {
+		npc := &room.npcs[i]
+		if !npc.visInit || npcIsBurstMove(npc) || npc.hp <= 0 {
+			npc.visYaw, npc.visInit = npc.yawDeg, true
+			if !npc.moving {
+				npc.visSpeed = 0
+			}
+			continue
+		}
+		d := math.Mod(float64(npc.yawDeg-npc.visYaw)+540, 360) - 180
+		limit := npcTurnRateDeg * dt
+		d = math.Max(-limit, math.Min(limit, d))
+		npc.visYaw = float32(math.Mod(float64(npc.visYaw)+d+360, 360))
+		if !npc.moving && npc.visSpeed > 0 {
+			npc.visSpeed -= float32(npcMoveSpeed(npc) / npcDecelTime * dt)
+			if npc.visSpeed < 0 {
+				npc.visSpeed = 0
+			}
+		}
+	}
 }
 
 // anchors npc.pos[1] toward the navmesh floor at its current XZ, rate limited by

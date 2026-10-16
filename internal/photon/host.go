@@ -3856,6 +3856,7 @@ func (s *EnetServer) hostDamageNpcByView(room *Room, attackerView, targetView, d
 		}
 		npc.forcedAggroView = attackerView
 		npc.forcedAggroUntil = time.Now().Add(forcedAggroWindow)
+		npc.dangerAt = time.Now()
 		s.hostAlertNearbyNpcs(room, npc, attackerView)
 		s.hostRecordDamageStat(room, attackerView, damage, weakPointIndex >= 0, isDOT)
 		npc.hp -= damage
@@ -4153,7 +4154,7 @@ func npcUsesTrueRunPace(kit string) bool {
 	if kit == "ClapTrapTutor" {
 		return false
 	}
-	if npcForceFullRunPaceKits[kit] {
+	if npcForceFullRunPaceKits[kit] || npcRunInCombatKits[kit] {
 		return true
 	}
 	cfg := npcConfigFor(kit)
@@ -4161,6 +4162,13 @@ func npcUsesTrueRunPace(kit string) bool {
 		return false
 	}
 	return cfg.CombatSpeed < cfg.WalkSpeed*1.3
+}
+
+var npcRunInCombatKits = map[string]bool{
+	"BanditKiller": true, "BadassBanditKiller": true, "BanditRaider": true, "BanditScout": true,
+	"BanditPsycho": true, "BadassBanditPsycho": true, "BanditSuicidePsycho": true,
+	"CrimsonLanceInfantry": true, "CrimsonLanceMedic": true, "CrimsonLanceSniper": true,
+	"CrimsonLanceDefender": true, "BadassCrimsonLanceDefender": true, "CrimsonLanceAssassin": true,
 }
 
 var npcForceFullRunPaceKits = map[string]bool{
@@ -4188,8 +4196,10 @@ func npcMoveSpeed(npc *spawnedNpc) float64 {
 	if npc.markSlowFrac > 0 && time.Now().Before(npc.markSlowUntil) {
 		speed *= float64(1 - npc.markSlowFrac)
 	}
-	return speed
+	return speed * npcSpeedScale
 }
+
+const npcSpeedScale = 0.65
 
 func npcMoveWireSpeed(kit string, taskSpeed int32) (movementSpeed, stress int32) {
 	if taskSpeed != 2 {
@@ -4601,6 +4611,10 @@ func (s *EnetServer) hostTickNpcAI(room *Room, dt float64) bool {
 					continue
 				}
 			}
+			if !npc.moving && npcWeaponFor(npc.kit) != nil && now.Before(npc.stopHoldUntil) {
+				acted = true
+				continue
+			}
 			if len(npc.path) == 0 || now.After(npc.nextRepathAt) {
 				if wps, ok := navmeshFindPath(m2level(room), npc.pos[0], npc.pos[2], dest[0], dest[2], npc.pos[1]); ok {
 					npc.path = wps
@@ -4612,6 +4626,9 @@ func (s *EnetServer) hostTickNpcAI(room *Room, dt float64) bool {
 			if len(npc.path) == 0 {
 				npc.moving = false
 				continue
+			}
+			if !npc.moving {
+				npc.moveHoldUntil = now.Add(npcMoveHold)
 			}
 			npc.moving = true
 			npcSetTask(npc, npcMoveTask(npc.kit), -1, dest, 2)
@@ -5783,7 +5800,12 @@ func (s *EnetServer) hostExplodeSuicideBomb(room *Room, b pendingSuicideBomb) {
 	log.Printf("[HOST] suicide bomb exploded viewID=%d room=%s", b.view, room.Name)
 }
 
-const npcDefaultFireRange = 30.0
+const (
+	npcDefaultFireRange = 30.0
+	npcSettleDelay      = 180 * time.Millisecond
+	npcStopHold         = 400 * time.Millisecond
+	npcMoveHold         = 350 * time.Millisecond
+)
 
 func (s *EnetServer) hostTickNpcRangedEngage(room *Room, npc *spawnedNpc, p aiTarget, now time.Time) (acted, handled bool) {
 	fireRange := npcDefaultFireRange
@@ -5807,9 +5829,17 @@ func (s *EnetServer) hostTickNpcRangedEngage(room *Room, npc *spawnedNpc, p aiTa
 	if navmeshWallBlocked(m2level(room), npc.pos, p.pos) {
 		return false, false
 	}
+	if npc.moving && now.Before(npc.moveHoldUntil) {
+		return false, true
+	}
 	npc.moving, npc.path = false, nil
+	npc.stopHoldUntil = now.Add(npcStopHold)
 	npc.yawDeg = float32(math.Mod(math.Atan2(float64(dx), float64(dz))*180/math.Pi+360, 360))
-	if now.Before(npc.nextRangedAtkAt) {
+	if npc.taskType == bhvTaskMoveTo || npc.taskType == bhvTaskSlideMoveTo || (npc.taskType == bhvTaskIdle && !npc.combatIdle) {
+		npcSetCombatIdle(npc)
+		npc.settleUntil = now.Add(npcSettleDelay)
+	}
+	if now.Before(npc.settleUntil) || now.Before(npc.nextRangedAtkAt) {
 		return true, true
 	}
 
@@ -5864,6 +5894,12 @@ const coverAvoidWindow = 20 * time.Second
 
 const coverRerollInterval = 2 * time.Second
 
+const (
+	coverDangerWindow  = 1500 * time.Millisecond
+	coverDangerSeekMul = 1.6
+	coverFacingMinDot  = 0.2
+)
+
 const coverAggroLockWindow = 6 * time.Second
 
 func (s *EnetServer) hostTickNpcCoverEngage(room *Room, npc *spawnedNpc, p aiTarget, now time.Time) (acted, handled bool) {
@@ -5872,14 +5908,29 @@ func (s *EnetServer) hostTickNpcCoverEngage(room *Room, npc *spawnedNpc, p aiTar
 	}
 	cfg := npcConfigFor(npc.kit)
 
-	if npc.coverIdx < 0 && now.After(npc.nextCoverRollAt) {
+	if npc.coverIdx >= 0 && cfg != nil && cfg.LeaveCoverDistance > 0 {
+		dx, dz := p.pos[0]-npc.pos[0], p.pos[2]-npc.pos[2]
+		if dx*dx+dz*dz < float32(cfg.LeaveCoverDistance*cfg.LeaveCoverDistance) {
+			// player is too close for cover to help: fight in the open for a while
+			npc.noCoverUntil = now.Add(coverAggroLockWindow)
+			npc.avoidCoverIdx = npc.coverIdx
+			npc.avoidCoverUntil = now.Add(coverAvoidWindow)
+			releaseCover(room, npc)
+		}
+	}
+	danger := !npc.dangerAt.IsZero() && now.Sub(npc.dangerAt) < coverDangerWindow
+	if npc.coverIdx < 0 && now.After(npc.noCoverUntil) && (danger || now.After(npc.nextCoverRollAt)) {
 		npc.nextCoverRollAt = now.Add(coverRerollInterval)
-		chance := 0.5
-		if cfg != nil && cfg.InitialCoverChance > 0 {
+		chance, seekMul := 0.5, 1.0
+		if cfg != nil {
 			chance = cfg.InitialCoverChance
+			if danger {
+				chance, seekMul = cfg.DangerCoverChance, coverDangerSeekMul
+				npc.dangerAt = time.Time{}
+			}
 		}
 		if rand.Float64() < chance {
-			s.npcClaimNearestCover(room, npc, cfg, now)
+			s.npcClaimNearestCover(room, npc, cfg, now, p.pos, seekMul)
 		}
 	}
 	if npc.coverIdx < 0 {
@@ -5960,7 +6011,7 @@ func (s *EnetServer) hostTickNpcCoverEngage(room *Room, npc *spawnedNpc, p aiTar
 	return true, true
 }
 
-func (s *EnetServer) npcClaimNearestCover(room *Room, npc *spawnedNpc, cfg *npcConfig, now time.Time) {
+func (s *EnetServer) npcClaimNearestCover(room *Room, npc *spawnedNpc, cfg *npcConfig, now time.Time, threat [3]float32, seekMul float64) {
 	points := levelCoverPoints(m2level(room))
 	if len(points) == 0 {
 		return
@@ -5969,7 +6020,10 @@ func (s *EnetServer) npcClaimNearestCover(room *Room, npc *spawnedNpc, cfg *npcC
 	if cfg != nil && cfg.SeekCoverDistance > 0 {
 		seekDist = cfg.SeekCoverDistance
 	}
+	seekDist *= seekMul
 	seekDistSq := float32(seekDist * seekDist)
+	tdx, tdz := float64(threat[0]-npc.pos[0]), float64(threat[2]-npc.pos[2])
+	tlen := math.Hypot(tdx, tdz)
 
 	avoidActive := now.Before(npc.avoidCoverUntil)
 	best := -1
@@ -5987,6 +6041,13 @@ func (s *EnetServer) npcClaimNearestCover(room *Room, npc *spawnedNpc, cfg *npcC
 		d := dx*dx + dz*dz
 		if d > seekDistSq || d >= bestDist {
 			continue
+		}
+		// a cover point only protects if it faces the threat (and isn't a retreat past the player)
+		if px, pz := float64(threat[0]-cp.Pos[0]), float64(threat[2]-cp.Pos[2]); tlen > 0.01 {
+			if pl := math.Hypot(px, pz); pl > 0.01 &&
+				(float64(cp.Facing[0])*px+float64(cp.Facing[2])*pz)/pl < coverFacingMinDot {
+				continue
+			}
 		}
 		best, bestDist = i, d
 	}
@@ -6256,6 +6317,9 @@ func bhvTaskStream(npc *spawnedNpc) []any {
 		float0 = npc.taskForce
 	}
 	wireSpeed, wireStress := npcMoveWireSpeed(npc.kit, npc.taskSpeed)
+	if npc.taskType == bhvTaskIdle && npc.combatIdle {
+		wireStress = 1
+	}
 	return []any{
 		int32(1),
 		npc.taskUID,
@@ -6339,6 +6403,17 @@ func npcSetTask(npc *spawnedNpc, typ, target int32, dest [3]float32, speed int32
 	npc.taskDest = dest
 	npc.taskSpeed = speed
 	npc.taskAction = 0
+	npc.combatIdle = false
+}
+
+func npcSetCombatIdle(npc *spawnedNpc) {
+	npc.taskUID = (npc.taskUID + 1) % 126
+	npc.taskType = bhvTaskIdle
+	npc.taskTarget = -1
+	npc.taskDest = npc.pos
+	npc.taskSpeed = -1
+	npc.taskAction = 0
+	npc.combatIdle = true
 }
 
 func npcSetTutorialAction(npc *spawnedNpc, action int32) {
@@ -6381,6 +6456,7 @@ func (s *EnetServer) hostDamageNearestNpc(room *Room, attackerView int32, shoote
 	npc := &room.npcs[best]
 	npc.forcedAggroView = attackerView
 	npc.forcedAggroUntil = time.Now().Add(forcedAggroWindow)
+	npc.dangerAt = time.Now()
 	s.hostAlertNearbyNpcs(room, npc, attackerView)
 	s.hostRecordDamageStat(room, attackerView, fireBurstDamage, false, false)
 	npc.hp -= fireBurstDamage
@@ -7513,14 +7589,20 @@ func (s *EnetServer) hostSendSerialize(room *Room) {
 		npc := &room.npcs[i]
 		if npcSendsMovementSync(npc) {
 			speed := Short(0)
-			if npc.moving {
+			if sp := float64(npc.visSpeed); npc.moving && sp <= 0 {
 				speed = Short(int16(npcMoveSpeed(npc) * 100))
+			} else if sp > 0 {
+				speed = Short(int16(sp * 100))
+			}
+			yaw := npc.yawDeg
+			if npc.visInit {
+				yaw = npc.visYaw
 			}
 			outer[Short(idx)] = map[any]any{
 				byte(0): npc.viewBase + 2,
 				byte(1): []any{
 					vector3Custom(npc.pos[0], npc.pos[1], npc.pos[2]),
-					Short(int16(npc.yawDeg * 100)),
+					Short(int16(yaw * 100)),
 					Short(0),
 					speed,
 					Short(0),

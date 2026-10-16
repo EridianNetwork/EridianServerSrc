@@ -526,6 +526,9 @@ func (s *EnetServer) hostTickRoom(room *Room, dt float64) {
 	gravityMoved := len(room.npcs) > 0 && s.hostTickNpcGravity(room, dt)
 	aiActed := s.hostTickNpcAI(room, dt)
 	walked := len(room.npcs) > 0 && s.hostTickNpcMovement(room, dt)
+	if len(room.npcs) > 0 {
+		s.npcSmoothVisuals(room, dt)
+	}
 	gravityMoved = gravityMoved || walked || aiActed
 	immediateSpawned := s.hostAdvanceImmediateNpcSpawns(room)
 	wavesReleased := s.hostAdvanceWaves(room)
